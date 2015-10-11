@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência ao ficheiro Exceptions.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<h1>Referência ao ficheiro Exceptions.cpp</h1>  </div>
+</div>
+<div class="contents">
+
+<p>Ficheiro com a implementação da classe exception e suas subclasses.  
+<a href="#_details">Mais...</a></p>
+<code>#include &quot;<a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>&quot;</code><br/>
+
+<p><a href="_exceptions_8cpp_source.html">Ir para o código fonte deste ficheiro.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">ostream &amp;&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="_exceptions_8cpp.html#ae08c6bc7997ba77573bf22acce320e1a">operator&lt;&lt;</a> (ostream &amp;obj, const <a class="el" href="class_ex_element_already_exists.html">ExElementAlreadyExists</a>&lt; T &gt; &amp;exception)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador que imprime a mensagem de erro da excepção do tipo <a class="el" href="class_ex_element_already_exists.html" title="Classe usada no tratamento de excepções que sinaliza que um dado elemento já existe num dado contento...">ExElementAlreadyExists</a>.  <a href="#ae08c6bc7997ba77573bf22acce320e1a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exceptions_8cpp.html#a6e3b8e2f1267c7a0f4a8f9617df22d6f">operator&lt;&lt;</a> (ostream &amp;obj, const <a class="el" href="class_ex_invalid_date_time.html">ExInvalidDateTime</a> &amp;data)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador que imprime a mensagem de erro da excepção do tipo <a class="el" href="class_ex_invalid_date_time.html" title="Classe usada no tratamento de excepções que sinaliza que o utilizador introduziu uma DataHora num for...">ExInvalidDateTime</a>.  <a href="#a6e3b8e2f1267c7a0f4a8f9617df22d6f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exceptions_8cpp.html#a0dd76fc48618eae6b450794b9f0607be">operator&lt;&lt;</a> (ostream &amp;obj, const <a class="el" href="class_ex_invalid_atraso.html">ExInvalidAtraso</a> &amp;atraso)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador que imprime a mensagem de erro da excepção do tipo <a class="el" href="class_ex_invalid_atraso.html" title="Classe usada no tratamento de excepções que sinaliza que o utilizador introduziu um Atraso num format...">ExInvalidAtraso</a>.  <a href="#a0dd76fc48618eae6b450794b9f0607be"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exceptions_8cpp.html#ab98d7dea00157a5b11eca7e1c3fa5691">operator&lt;&lt;</a> (ostream &amp;obj, const <a class="el" href="class_ex_corrupted_file.html">ExCorruptedFile</a> &amp;exception)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador que imprime a mensagem de erro da excepção do tipo <a class="el" href="class_ex_corrupted_file.html" title="Classe usado no tratamento de excepções que sinaliza que um dado ficheiro que de dados está corrupto ...">ExCorruptedFile</a>.  <a href="#ab98d7dea00157a5b11eca7e1c3fa5691"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_exceptions_8cpp.html#a2451eb2bf9dfa5fe4dcb64bd798e4de8">operator&lt;&lt;</a> (ostream &amp;obj, const <a class="el" href="class_ex_no_open_file.html">ExNoOpenFile</a> &amp;exception)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador que imprime a mensagem de erro da excepção do tipo <a class="el" href="class_ex_no_open_file.html" title="Classe usado no tratamento de excepções que sinaliza que não foi possível abrir o ficheiro especifica...">ExNoOpenFile</a>.  <a href="#a2451eb2bf9dfa5fe4dcb64bd798e4de8"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<p>Ficheiro com a implementação da classe exception e suas subclasses. </p>
+<p>PROJECTO: Projecto 2 - Gestão do embarque dos passageiros num aeroporto (check-in/embarque) <br/>
+ FICHEIRO: exception.cpp <br/>
+ DESCRIÇÃO: Ficheiro com a implementação da classe exception e suas subclasses. <br/>
+</p>
+<p>TURMA / GRUPO: 2MIEIC1 / 4 <br/>
+ AUTORES:</p>
+<ul>
+<li>Carlos Miguel Correia da Costa</li>
+<li>Daniela Filipa Neves Cardeano</li>
+<li>Vítor Amálio Maia Martins Moreira </li>
+</ul>
+
+<p>Definido no ficheiro <a class="el" href="_exceptions_8cpp_source.html">Exceptions.cpp</a>.</p>
+<hr/><h2>Documentação das funções</h2>
+<a class="anchor" id="ae08c6bc7997ba77573bf22acce320e1a"></a><!-- doxytag: member="Exceptions.cpp::operator&lt;&lt;" ref="ae08c6bc7997ba77573bf22acce320e1a" args="(ostream &amp;obj, const ExElementAlreadyExists&lt; T &gt; &amp;exception)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&nbsp;</td>
+          <td class="paramname"> <em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_ex_element_already_exists.html">ExElementAlreadyExists</a>&lt; T &gt; &amp;&nbsp;</td>
+          <td class="paramname"> <em>exception</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operador que imprime a mensagem de erro da excepção do tipo <a class="el" href="class_ex_element_already_exists.html" title="Classe usada no tratamento de excepções que sinaliza que um dado elemento já existe num dado contento...">ExElementAlreadyExists</a>. </p>
+
+<p>Definido na linha <a class="el" href="_exceptions_8cpp_source.html#l00018">18</a> do ficheiro <a class="el" href="_exceptions_8cpp_source.html">Exceptions.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2451eb2bf9dfa5fe4dcb64bd798e4de8"></a><!-- doxytag: member="Exceptions.cpp::operator&lt;&lt;" ref="a2451eb2bf9dfa5fe4dcb64bd798e4de8" args="(ostream &amp;obj, const ExNoOpenFile &amp;exception)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&nbsp;</td>
+          <td class="paramname"> <em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_ex_no_open_file.html">ExNoOpenFile</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>exception</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operador que imprime a mensagem de erro da excepção do tipo <a class="el" href="class_ex_no_open_file.html" title="Classe usado no tratamento de excepções que sinaliza que não foi possível abrir o ficheiro especifica...">ExNoOpenFile</a>. </p>
+
+<p>Definido na linha <a class="el" href="_exceptions_8cpp_source.html#l00038">38</a> do ficheiro <a class="el" href="_exceptions_8cpp_source.html">Exceptions.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_exceptions_8h_source.html#l00194">ExNoOpenFile::getFilename()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab98d7dea00157a5b11eca7e1c3fa5691"></a><!-- doxytag: member="Exceptions.cpp::operator&lt;&lt;" ref="ab98d7dea00157a5b11eca7e1c3fa5691" args="(ostream &amp;obj, const ExCorruptedFile &amp;exception)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&nbsp;</td>
+          <td class="paramname"> <em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_ex_corrupted_file.html">ExCorruptedFile</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>exception</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operador que imprime a mensagem de erro da excepção do tipo <a class="el" href="class_ex_corrupted_file.html" title="Classe usado no tratamento de excepções que sinaliza que um dado ficheiro que de dados está corrupto ...">ExCorruptedFile</a>. </p>
+
+<p>Definido na linha <a class="el" href="_exceptions_8cpp_source.html#l00033">33</a> do ficheiro <a class="el" href="_exceptions_8cpp_source.html">Exceptions.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_exceptions_8h_source.html#l00176">ExCorruptedFile::getFilename()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0dd76fc48618eae6b450794b9f0607be"></a><!-- doxytag: member="Exceptions.cpp::operator&lt;&lt;" ref="a0dd76fc48618eae6b450794b9f0607be" args="(ostream &amp;obj, const ExInvalidAtraso &amp;atraso)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&nbsp;</td>
+          <td class="paramname"> <em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_ex_invalid_atraso.html">ExInvalidAtraso</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>atraso</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operador que imprime a mensagem de erro da excepção do tipo <a class="el" href="class_ex_invalid_atraso.html" title="Classe usada no tratamento de excepções que sinaliza que o utilizador introduziu um Atraso num format...">ExInvalidAtraso</a>. </p>
+
+<p>Definido na linha <a class="el" href="_exceptions_8cpp_source.html#l00028">28</a> do ficheiro <a class="el" href="_exceptions_8cpp_source.html">Exceptions.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_exceptions_8h_source.html#l00160">ExInvalidAtraso::getAtraso()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6e3b8e2f1267c7a0f4a8f9617df22d6f"></a><!-- doxytag: member="Exceptions.cpp::operator&lt;&lt;" ref="a6e3b8e2f1267c7a0f4a8f9617df22d6f" args="(ostream &amp;obj, const ExInvalidDateTime &amp;data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&nbsp;</td>
+          <td class="paramname"> <em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_ex_invalid_date_time.html">ExInvalidDateTime</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>data</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operador que imprime a mensagem de erro da excepção do tipo <a class="el" href="class_ex_invalid_date_time.html" title="Classe usada no tratamento de excepções que sinaliza que o utilizador introduziu uma DataHora num for...">ExInvalidDateTime</a>. </p>
+
+<p>Definido na linha <a class="el" href="_exceptions_8cpp_source.html#l00023">23</a> do ficheiro <a class="el" href="_exceptions_8cpp_source.html">Exceptions.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_exceptions_8h_source.html#l00137">ExInvalidDateTime::getData()</a>.</p>
+
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:37 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Language" content="en" />
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javaScript" src="search/search.js"></script>
+    <link rel="stylesheet" href="doxygen.css"/>
+    <title>TreeView</title>
+    <script type="text/javascript">
+    <!-- // Hide script from old browsers
+    
+    function toggleFolder(id, imageNode) 
+    {
+      var folder = document.getElementById(id);
+      var l = imageNode.src.length;
+      if (imageNode.src.substring(l-20,l)=="ftv2folderclosed.png" || 
+          imageNode.src.substring(l-18,l)=="ftv2folderopen.png")
+      {
+        imageNode = imageNode.previousSibling;
+        l = imageNode.src.length;
+      }
+      if (folder == null) 
+      {
+      } 
+      else if (folder.style.display == "block") 
+      {
+        if (imageNode != null) 
+        {
+          imageNode.nextSibling.src = "ftv2folderclosed.png";
+          if (imageNode.src.substring(l-13,l) == "ftv2mnode.png")
+          {
+            imageNode.src = "ftv2pnode.png";
+          }
+          else if (imageNode.src.substring(l-17,l) == "ftv2mlastnode.png")
+          {
+            imageNode.src = "ftv2plastnode.png";
+          }
+        }
+        folder.style.display = "none";
+      } 
+      else 
+      {
+        if (imageNode != null) 
+        {
+          imageNode.nextSibling.src = "ftv2folderopen.png";
+          if (imageNode.src.substring(l-13,l) == "ftv2pnode.png")
+          {
+            imageNode.src = "ftv2mnode.png";
+          }
+          else if (imageNode.src.substring(l-17,l) == "ftv2plastnode.png")
+          {
+            imageNode.src = "ftv2mlastnode.png";
+          }
+        }
+        folder.style.display = "block";
+      }
+    }
+
+    // End script hiding -->        
+    </script>
+  </head>
+
+  <body class="ftvtree" onload='searchBox.OnSelectItem(0);'>
+      <script type="text/javascript"><!--
+      var searchBox = new SearchBox("searchBox", "search", true, 'Localizar');
+      --></script>
+      <div class="tabsearch">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+          <span class="left">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+            <input type="text" id="MSearchField" value="Localizar" accesskey="S"
+                   onfocus="searchBox.OnSearchFieldFocus(true)" 
+                   onblur="searchBox.OnSearchFieldFocus(false)" 
+                   onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <img id="MSearchSelect" src="search/mag_sel.png"
+                 onmouseover="return searchBox.OnSearchSelectShow()"
+                 onmouseout="return searchBox.OnSearchSelectHide()"
+                 alt=""/>
+          </span>
+        </div>
+      </div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Tudo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Ficheiros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&nbsp;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&nbsp;</span>Definições de tipos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&nbsp;</span>Enumerações</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&nbsp;</span>Valores da enumeração</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&nbsp;</span>Amigos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&nbsp;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+    <div class="directory">
+      <h3 class="swap"><span>AEDA-2MIEIC1-T4</span></h3>
+      <div style="display: block;">
+        <p><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="main.html" target="basefrm">Documentação do projecto 2 de AEDA - 2MIEIC1 - T4</a></p>
+        <p><img src="ftv2pnode.png" alt="o" width="16" height="22" onclick="toggleFolder('folder1', this)"/><img src="ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder1', this)"/><a class="el" href="annotated.html" target="basefrm">Lista de componentes</a></p>
+        <div id="folder1">
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_aeroporto.html" target="basefrm">Aeroporto</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_atraso.html" target="basefrm">Atraso</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_aviao.html" target="basefrm">Aviao</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_binary_node.html" target="basefrm">BinaryNode&lt; Comparable &gt;</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_b_s_t.html" target="basefrm">BST&lt; Comparable &gt;</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_b_s_t_itr_in.html" target="basefrm">BSTItrIn&lt; Comparable &gt;</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_b_s_t_itr_level.html" target="basefrm">BSTItrLevel&lt; Comparable &gt;</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_b_s_t_itr_post.html" target="basefrm">BSTItrPost&lt; Comparable &gt;</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_b_s_t_itr_pre.html" target="basefrm">BSTItrPre&lt; Comparable &gt;</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_comandos.html" target="basefrm">Comandos</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_companhia.html" target="basefrm">Companhia</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_data_hora.html" target="basefrm">DataHora</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_exceptions.html" target="basefrm">Exceptions</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_corrupted_file.html" target="basefrm">ExCorruptedFile</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_element_already_exists.html" target="basefrm">ExElementAlreadyExists&lt; T &gt;</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_element_doesnt_exists.html" target="basefrm">ExElementDoesntExists&lt; T &gt;</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_element_in_use.html" target="basefrm">ExElementInUse&lt; T &gt;</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_empty_vector.html" target="basefrm">ExEmptyVector</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_invalid_atraso.html" target="basefrm">ExInvalidAtraso</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_invalid_date_time.html" target="basefrm">ExInvalidDateTime</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_no_interval.html" target="basefrm">ExNoInterval</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_no_open_file.html" target="basefrm">ExNoOpenFile</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_out_of_range.html" target="basefrm">ExOutOfRange</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_portas_full.html" target="basefrm">ExPortasFull</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_menu_1_1_function_entry.html" target="basefrm">Menu::FunctionEntry</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="classhash__voo__operators.html" target="basefrm">hash_voo_operators</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_hospedeiro.html" target="basefrm">Hospedeiro</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_menu.html" target="basefrm">Menu</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_menu_1_1_menu_entry.html" target="basefrm">Menu::MenuEntry</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_passageiro.html" target="basefrm">Passageiro</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_pessoa.html" target="basefrm">Pessoa</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_piloto.html" target="basefrm">Piloto</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_porta_embarque.html" target="basefrm">PortaEmbarque</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_porta_embarque_ptr.html" target="basefrm">PortaEmbarquePtr</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_menu_1_1_sub_menu_entry.html" target="basefrm">Menu::SubMenuEntry</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_tipo_aviao.html" target="basefrm">TipoAviao</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_tipo_aviao_d_b.html" target="basefrm">TipoAviaoDB</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_tripulante.html" target="basefrm">Tripulante</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_voo.html" target="basefrm">Voo</a></p>
+        </div>
+        <p><img src="ftv2pnode.png" alt="o" width="16" height="22" onclick="toggleFolder('folder2', this)"/><img src="ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder2', this)"/><a class="el" href="hierarchy.html" target="basefrm">Hierarquia de classes</a></p>
+        <div id="folder2">
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_aeroporto.html" target="basefrm">Aeroporto</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_atraso.html" target="basefrm">Atraso</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_aviao.html" target="basefrm">Aviao</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_binary_node.html" target="basefrm">BinaryNode&lt; Comparable &gt;</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_b_s_t.html" target="basefrm">BST&lt; Comparable &gt;</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_b_s_t_itr_in.html" target="basefrm">BSTItrIn&lt; Comparable &gt;</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_b_s_t_itr_level.html" target="basefrm">BSTItrLevel&lt; Comparable &gt;</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_b_s_t_itr_post.html" target="basefrm">BSTItrPost&lt; Comparable &gt;</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_b_s_t_itr_pre.html" target="basefrm">BSTItrPre&lt; Comparable &gt;</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_comandos.html" target="basefrm">Comandos</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_companhia.html" target="basefrm">Companhia</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_data_hora.html" target="basefrm">DataHora</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2pnode.png" alt="o" width="16" height="22" onclick="toggleFolder('folder3', this)"/><img src="ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder3', this)"/><a class="el" href="class_exceptions.html" target="basefrm">Exceptions</a></p>
+          <div id="folder3">
+            <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_corrupted_file.html" target="basefrm">ExCorruptedFile</a></p>
+            <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_element_already_exists.html" target="basefrm">ExElementAlreadyExists&lt; T &gt;</a></p>
+            <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_element_doesnt_exists.html" target="basefrm">ExElementDoesntExists&lt; T &gt;</a></p>
+            <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_element_in_use.html" target="basefrm">ExElementInUse&lt; T &gt;</a></p>
+            <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_empty_vector.html" target="basefrm">ExEmptyVector</a></p>
+            <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_invalid_atraso.html" target="basefrm">ExInvalidAtraso</a></p>
+            <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_invalid_date_time.html" target="basefrm">ExInvalidDateTime</a></p>
+            <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_no_interval.html" target="basefrm">ExNoInterval</a></p>
+            <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_no_open_file.html" target="basefrm">ExNoOpenFile</a></p>
+            <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_out_of_range.html" target="basefrm">ExOutOfRange</a></p>
+            <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_ex_portas_full.html" target="basefrm">ExPortasFull</a></p>
+          </div>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="classhash__voo__operators.html" target="basefrm">hash_voo_operators</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_menu.html" target="basefrm">Menu</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2pnode.png" alt="o" width="16" height="22" onclick="toggleFolder('folder4', this)"/><img src="ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder4', this)"/><a class="el" href="class_menu_1_1_menu_entry.html" target="basefrm">Menu::MenuEntry</a></p>
+          <div id="folder4">
+            <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_menu_1_1_function_entry.html" target="basefrm">Menu::FunctionEntry</a></p>
+            <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_menu_1_1_sub_menu_entry.html" target="basefrm">Menu::SubMenuEntry</a></p>
+          </div>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2pnode.png" alt="o" width="16" height="22" onclick="toggleFolder('folder5', this)"/><img src="ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder5', this)"/><a class="el" href="class_pessoa.html" target="basefrm">Pessoa</a></p>
+          <div id="folder5">
+            <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_passageiro.html" target="basefrm">Passageiro</a></p>
+            <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2plastnode.png" alt="\" width="16" height="22" onclick="toggleFolder('folder6', this)"/><img src="ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder6', this)"/><a class="el" href="class_tripulante.html" target="basefrm">Tripulante</a></p>
+            <div id="folder6">
+              <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_hospedeiro.html" target="basefrm">Hospedeiro</a></p>
+              <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_piloto.html" target="basefrm">Piloto</a></p>
+            </div>
+          </div>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_porta_embarque.html" target="basefrm">PortaEmbarque</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_porta_embarque_ptr.html" target="basefrm">PortaEmbarquePtr</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_tipo_aviao.html" target="basefrm">TipoAviao</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_tipo_aviao_d_b.html" target="basefrm">TipoAviaoDB</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="class_voo.html" target="basefrm">Voo</a></p>
+        </div>
+        <p><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="functions.html" target="basefrm">Componentes membro</a></p>
+        <p><img src="ftv2pnode.png" alt="o" width="16" height="22" onclick="toggleFolder('folder7', this)"/><img src="ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder7', this)"/><a class="el" href="namespaces.html" target="basefrm">Lista de namespaces</a></p>
+        <div id="folder7">
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="namespace_c_r_u_d.html" target="basefrm">CRUD</a></p>
+        </div>
+        <p><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="namespacemembers.html" target="basefrm">Membros do namespace</a></p>
+        <p><img src="ftv2pnode.png" alt="o" width="16" height="22" onclick="toggleFolder('folder8', this)"/><img src="ftv2folderclosed.png" alt="+" width="24" height="22" onclick="toggleFolder('folder8', this)"/><a class="el" href="files.html" target="basefrm">Lista de ficheiros</a></p>
+        <div id="folder8">
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_aeroporto_8cpp.html" target="basefrm">Aeroporto.cpp</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_aeroporto_8h.html" target="basefrm">Aeroporto.h</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_atraso_8cpp.html" target="basefrm">Atraso.cpp</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_atraso_8h.html" target="basefrm">Atraso.h</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_aviao_8cpp.html" target="basefrm">Aviao.cpp</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_aviao_8h.html" target="basefrm">Aviao.h</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_b_s_t_8h.html" target="basefrm">BST.h</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_comandos_8cpp.html" target="basefrm">Comandos.cpp</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_comandos_8h.html" target="basefrm">Comandos.h</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_companhia_8cpp.html" target="basefrm">Companhia.cpp</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_companhia_8h.html" target="basefrm">Companhia.h</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_data_hora_8cpp.html" target="basefrm">DataHora.cpp</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_data_hora_8h.html" target="basefrm">DataHora.h</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_exceptions_8cpp.html" target="basefrm">Exceptions.cpp</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_exceptions_8h.html" target="basefrm">Exceptions.h</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_gestao_aeroporto_8cpp.html" target="basefrm">GestaoAeroporto.cpp</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_gestao_aeroporto_8h.html" target="basefrm">GestaoAeroporto.h</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_hospedeiro_8cpp.html" target="basefrm">Hospedeiro.cpp</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_hospedeiro_8h.html" target="basefrm">Hospedeiro.h</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="main_8cpp.html" target="basefrm">main.cpp</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="mainpage_8h.html" target="basefrm">mainpage.h</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_menu_8cpp.html" target="basefrm">Menu.cpp</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_menu_8h.html" target="basefrm">Menu.h</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_passageiro_8cpp.html" target="basefrm">Passageiro.cpp</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_passageiro_8h.html" target="basefrm">Passageiro.h</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_pessoa_8cpp.html" target="basefrm">Pessoa.cpp</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_pessoa_8h.html" target="basefrm">Pessoa.h</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_piloto_8cpp.html" target="basefrm">Piloto.cpp</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_piloto_8h.html" target="basefrm">Piloto.h</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_porta_embarque_8cpp.html" target="basefrm">PortaEmbarque.cpp</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_porta_embarque_8h.html" target="basefrm">PortaEmbarque.h</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_tipo_aviao_8cpp.html" target="basefrm">TipoAviao.cpp</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_tipo_aviao_8h.html" target="basefrm">TipoAviao.h</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_tipo_aviao_d_b_8cpp.html" target="basefrm">TipoAviaoDB.cpp</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_tipo_aviao_d_b_8h.html" target="basefrm">TipoAviaoDB.h</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_tripulante_8cpp.html" target="basefrm">Tripulante.cpp</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_tripulante_8h.html" target="basefrm">Tripulante.h</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="utils_8cpp.html" target="basefrm">utils.cpp</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="utils_8h.html" target="basefrm">utils.h</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_voo_8cpp.html" target="basefrm">Voo.cpp</a></p>
+          <p><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="_voo_8h.html" target="basefrm">Voo.h</a></p>
+        </div>
+        <p><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2doc.png" alt="*" width="24" height="22" /><a class="el" href="globals.html" target="basefrm">Ficheiros membro</a></p>
+      </div>
+    </div>
+  </body>
+</html>

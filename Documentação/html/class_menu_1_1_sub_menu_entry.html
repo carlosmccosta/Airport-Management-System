@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência à classe Menu::SubMenuEntry</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&nbsp;dos&nbsp;componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath">
+    <ul>
+      <li><a class="el" href="class_menu.html">Menu</a>      </li>
+      <li><a class="el" href="class_menu_1_1_sub_menu_entry.html">Menu::SubMenuEntry</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pub-attribs">Atributos Públicos</a>  </div>
+  <div class="headertitle">
+<h1>Referência à classe Menu::SubMenuEntry</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Menu::SubMenuEntry" --><!-- doxytag: inherits="Menu::MenuEntry" --><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png"/> Diagrama de heranças da classe Menu::SubMenuEntry</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+ <div class="center">
+  <img src="class_menu_1_1_sub_menu_entry.png" usemap="#Menu::SubMenuEntry_map" alt=""/>
+  <map id="Menu::SubMenuEntry_map" name="Menu::SubMenuEntry_map">
+<area href="class_menu_1_1_menu_entry.html" alt="Menu::MenuEntry" shape="rect" coords="0,0,134,24"/>
+</map>
+</div>
+
+<p><a href="class_menu_1_1_sub_menu_entry-members.html">Mostrar lista completa dos membros</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu_1_1_sub_menu_entry.html#a41c1aabe32896c1df39152ecf78ec323">SubMenuEntry</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu_1_1_sub_menu_entry.html#a25a34ad31e696c1eb95cf9094afea504">SubMenuEntry</a> (string nome, <a class="el" href="class_menu.html">Menu</a> *submenu, void(*menu_function)()=NULL)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu_1_1_sub_menu_entry.html#a64200d1b5b476d56d347892e27fe6941">execute</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Entra no submenu e executa a função associada a essa entrada caso exista.  <a href="#a64200d1b5b476d56d347892e27fe6941"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Atributos Públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_menu.html">Menu</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu_1_1_sub_menu_entry.html#adf2cd9d0935727e00acd7bb7fbc85540">_submenu</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apontador para outro <a class="el" href="class_menu.html" title="Classe que gera e processa menus.">Menu</a>.  <a href="#adf2cd9d0935727e00acd7bb7fbc85540"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<p>Subclasse de <a class="el" href="class_menu_1_1_menu_entry.html" title="Classe abstrata privada nested de Menu.">MenuEntry</a>, que representa um submenu que aponta para outro menu. </p>
+
+<p>Definido na linha <a class="el" href="_menu_8h_source.html#l00069">69</a> do ficheiro <a class="el" href="_menu_8h_source.html">Menu.h</a>.</p>
+<hr/><h2>Documentação dos Construtores &amp; Destrutor</h2>
+<a class="anchor" id="a41c1aabe32896c1df39152ecf78ec323"></a><!-- doxytag: member="Menu::SubMenuEntry::SubMenuEntry" ref="a41c1aabe32896c1df39152ecf78ec323" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Menu::SubMenuEntry::SubMenuEntry </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_menu_8h_source.html#l00071">71</a> do ficheiro <a class="el" href="_menu_8h_source.html">Menu.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a25a34ad31e696c1eb95cf9094afea504"></a><!-- doxytag: member="Menu::SubMenuEntry::SubMenuEntry" ref="a25a34ad31e696c1eb95cf9094afea504" args="(string nome, Menu *submenu, void(*menu_function)()=NULL)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Menu::SubMenuEntry::SubMenuEntry </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_menu.html">Menu</a> *&nbsp;</td>
+          <td class="paramname"> <em>submenu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)()&nbsp;</td>
+          <td class="paramname"> <em>menu_function</em> = <code>NULL</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_menu_8h_source.html#l00072">72</a> do ficheiro <a class="el" href="_menu_8h_source.html">Menu.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos métodos</h2>
+<a class="anchor" id="a64200d1b5b476d56d347892e27fe6941"></a><!-- doxytag: member="Menu::SubMenuEntry::execute" ref="a64200d1b5b476d56d347892e27fe6941" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Menu::SubMenuEntry::execute </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Entra no submenu e executa a função associada a essa entrada caso exista. </p>
+
+<p>Implementa <a class="el" href="class_menu_1_1_menu_entry.html#accf8b7404042969877d63e786f1b6502">Menu::MenuEntry</a>.</p>
+
+<p>Definido na linha <a class="el" href="_menu_8cpp_source.html#l00080">80</a> do ficheiro <a class="el" href="_menu_8cpp_source.html">Menu.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_menu_8h_source.html#l00049">Menu::MenuEntry::_function</a>, <a class="el" href="_menu_8h_source.html#l00073">_submenu</a> e <a class="el" href="_menu_8cpp_source.html#l00042">Menu::go()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos dados membro</h2>
+<a class="anchor" id="adf2cd9d0935727e00acd7bb7fbc85540"></a><!-- doxytag: member="Menu::SubMenuEntry::_submenu" ref="adf2cd9d0935727e00acd7bb7fbc85540" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_menu.html">Menu</a>* <a class="el" href="class_menu_1_1_sub_menu_entry.html#adf2cd9d0935727e00acd7bb7fbc85540">Menu::SubMenuEntry::_submenu</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Apontador para outro <a class="el" href="class_menu.html" title="Classe que gera e processa menus.">Menu</a>. </p>
+
+<p>Definido na linha <a class="el" href="_menu_8h_source.html#l00073">73</a> do ficheiro <a class="el" href="_menu_8h_source.html">Menu.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_menu_8cpp_source.html#l00080">execute()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
+<li><a class="el" href="_menu_8h_source.html">Menu.h</a></li>
+<li><a class="el" href="_menu_8cpp_source.html">Menu.cpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:39 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

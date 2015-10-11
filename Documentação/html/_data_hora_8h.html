@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência ao ficheiro DataHora.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Componentes</a> &#124;
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<h1>Referência ao ficheiro DataHora.h</h1>  </div>
+</div>
+<div class="contents">
+
+<p>Classe que contém informação associada a uma data e hora.  
+<a href="#_details">Mais...</a></p>
+<code>#include &lt;string&gt;</code><br/>
+<code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;iostream&gt;</code><br/>
+<code>#include &lt;cstdlib&gt;</code><br/>
+<code>#include &lt;sstream&gt;</code><br/>
+<code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_atraso_8h_source.html">Atraso.h</a>&quot;</code><br/>
+
+<p><a href="_data_hora_8h_source.html">Ir para o código fonte deste ficheiro.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Componentes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html">DataHora</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).  <a href="class_data_hora.html#_details">Mais...</a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_data_hora_8h.html#a9ac36fe9585c2c4b65392e6123a5c5e9">operator&lt;&lt;</a> (ostream &amp;os, const <a class="el" href="class_data_hora.html">DataHora</a> &amp;obj)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador que imprime um objecto do tipo <a class="el" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> no formato AAAA/MM/DD HH:mm.  <a href="#a9ac36fe9585c2c4b65392e6123a5c5e9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">istream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_data_hora_8h.html#a26c58a013a0b12d91728af741724ee1e">operator&gt;&gt;</a> (istream &amp;is, <a class="el" href="class_data_hora.html">DataHora</a> &amp;obj)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador que permite a leitura de dados para um objecto do tipo <a class="el" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a>.  <a href="#a26c58a013a0b12d91728af741724ee1e"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<p>Classe que contém informação associada a uma data e hora. </p>
+<p>PROJECTO: Projecto 2 - Gestão do embarque dos passageiros num aeroporto (check-in/embarque) <br/>
+ FICHEIRO: <a class="el" href="_data_hora_8h.html" title="Classe que contém informação associada a uma data e hora.">DataHora.h</a> <br/>
+ DESCRIÇÃO: Classe que contém informação associada a uma data e hora. <br/>
+</p>
+<p>TURMA / GRUPO: 2MIEIC1 / 4 <br/>
+ AUTORES:</p>
+<ul>
+<li>Carlos Miguel Correia da Costa</li>
+<li>Daniela Filipa Neves Cardeano</li>
+<li>Vítor Amálio Maia Martins Moreira </li>
+</ul>
+
+<p>Definido no ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+<hr/><h2>Documentação das funções</h2>
+<a class="anchor" id="a9ac36fe9585c2c4b65392e6123a5c5e9"></a><!-- doxytag: member="DataHora.h::operator&lt;&lt;" ref="a9ac36fe9585c2c4b65392e6123a5c5e9" args="(ostream &amp;os, const DataHora &amp;obj)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&nbsp;</td>
+          <td class="paramname"> <em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_data_hora.html">DataHora</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>obj</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operador que imprime um objecto do tipo <a class="el" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> no formato AAAA/MM/DD HH:mm. </p>
+
+<p>Definido na linha <a class="el" href="_data_hora_8cpp_source.html#l00109">109</a> do ficheiro <a class="el" href="_data_hora_8cpp_source.html">DataHora.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_data_hora_8h_source.html#l00052">DataHora::getAno()</a>, <a class="el" href="_data_hora_8h_source.html#l00054">DataHora::getDia()</a>, <a class="el" href="_data_hora_8h_source.html#l00055">DataHora::getHora()</a>, <a class="el" href="_data_hora_8h_source.html#l00053">DataHora::getMes()</a> e <a class="el" href="_data_hora_8h_source.html#l00056">DataHora::getMin()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a26c58a013a0b12d91728af741724ee1e"></a><!-- doxytag: member="DataHora.h::operator&gt;&gt;" ref="a26c58a013a0b12d91728af741724ee1e" args="(istream &amp;is, DataHora &amp;obj)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">istream&amp; operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&nbsp;</td>
+          <td class="paramname"> <em>is</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_data_hora.html">DataHora</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>obj</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operador que permite a leitura de dados para um objecto do tipo <a class="el" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a>. </p>
+
+<p>Definido na linha <a class="el" href="_data_hora_8cpp_source.html#l00116">116</a> do ficheiro <a class="el" href="_data_hora_8cpp_source.html">DataHora.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_data_hora_8cpp_source.html#l00018">DataHora::Parser_DataHora()</a>.</p>
+
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:37 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: utils.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>utils.h</h1>  </div>
+</div>
+<div class="contents">
+<a href="utils_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00015"></a>00015 <span class="preprocessor">#ifndef UTILS_H_</span>
+<a name="l00016"></a>00016 <span class="preprocessor"></span><span class="preprocessor">#define UTILS_H_</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;sstream&gt;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;iomanip&gt;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;limits&gt;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &lt;climits&gt;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &lt;algorithm&gt;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="_exceptions_8h.html" title="Classe que contém a informação associada a todas as excepcoes implementadas.">Exceptions.h</a>&quot;</span>
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 <span class="keyword">using</span> std::string;
+<a name="l00030"></a>00030 <span class="keyword">using</span> std::stringstream;
+<a name="l00031"></a>00031 <span class="keyword">using</span> std::vector;
+<a name="l00032"></a>00032 <span class="keyword">using</span> std::cin;
+<a name="l00033"></a>00033 <span class="keyword">using</span> std::cout;
+<a name="l00034"></a>00034 <span class="keyword">using</span> std::setw;
+<a name="l00035"></a>00035 <span class="keyword">using</span> std::flush;
+<a name="l00036"></a>00036 <span class="keyword">using</span> std::endl;
+<a name="l00037"></a>00037 <span class="keyword">using</span> std::max;
+<a name="l00038"></a>00038 <span class="keyword">using</span> std::getline;
+<a name="l00039"></a>00039 <span class="keyword">using</span> std::istream;
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042 <span class="comment">//Ficheiro de base de dados do programa</span>
+<a name="l00043"></a><a class="code" href="utils_8h.html#a0cc1a2069c5dd9832178a0df4de9be28">00043</a> <span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code" href="utils_8h.html#a0cc1a2069c5dd9832178a0df4de9be28">FILE_SAVE_DB</a> = <span class="stringliteral">&quot;AeroportoDB.txt&quot;</span>;
+<a name="l00044"></a><a class="code" href="utils_8h.html#ae2f1051dab2f5ca920a4d7f78d0c0bed">00044</a> <span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code" href="utils_8h.html#ae2f1051dab2f5ca920a4d7f78d0c0bed">FILE_SAVE_DB_TIPOS_AVIAO</a> = <span class="stringliteral">&quot;TipoAviaoDB.txt&quot;</span>;
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 <span class="comment">//Delimitador usado ao guardar a base de dados</span>
+<a name="l00047"></a><a class="code" href="utils_8h.html#aec96c42054844c11adc3e25a50349b28">00047</a> <span class="keyword">const</span> <span class="keywordtype">char</span> <a class="code" href="utils_8h.html#aec96c42054844c11adc3e25a50349b28">SAVE_DELIM</a> = <span class="charliteral">&#39;|&#39;</span>;
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 <span class="comment">//Atributos gerais das classes</span>
+<a name="l00050"></a><a class="code" href="utils_8h.html#a0986082206a62d76e17d4ea5b9908588">00050</a> <span class="preprocessor">#define CLASS_AEROPORTO_ATTR_SIZE       8</span>
+<a name="l00051"></a><a class="code" href="utils_8h.html#a5c11f875fd70640ab038f9db6af32835">00051</a> <span class="preprocessor"></span><span class="preprocessor">#define CLASS_COMPANHIA_ATTR_SIZE       7</span>
+<a name="l00052"></a><a class="code" href="utils_8h.html#a653bfde7e5976a049d5ae54efded2d64">00052</a> <span class="preprocessor"></span><span class="preprocessor">#define CLASS_AVIAO_ATTR_SIZE           10</span>
+<a name="l00053"></a><a class="code" href="utils_8h.html#a5210faf48258cc4ab6245fb8dc68bd72">00053</a> <span class="preprocessor"></span><span class="preprocessor">#define CLASS_TRIPULANTE_ATTR_SIZE      13</span>
+<a name="l00054"></a><a class="code" href="utils_8h.html#acfd503efed7450935bbd696b3c3115ee">00054</a> <span class="preprocessor"></span><span class="preprocessor">#define CLASS_VOO_ATTR_SIZE                     15</span>
+<a name="l00055"></a><a class="code" href="utils_8h.html#a55cf6b0290847b7e8d64f55afde7eeae">00055</a> <span class="preprocessor"></span><span class="preprocessor">#define CLASS_FROTA_ATTR_SIZE           1</span>
+<a name="l00056"></a><a class="code" href="utils_8h.html#a1078186bfa8707edc8828838712a5244">00056</a> <span class="preprocessor"></span><span class="preprocessor">#define CLASS_PORTAE_ATTR_SIZE          6</span>
+<a name="l00057"></a><a class="code" href="utils_8h.html#a724b4b98fbbca9bef715bb4b9e5686f2">00057</a> <span class="preprocessor"></span><span class="preprocessor">#define CLASS_PASSAGEIRO_ATTR_SIZE      11</span>
+<a name="l00058"></a><a class="code" href="utils_8h.html#acdd28ee034075386eec3a17f68a7dd07">00058</a> <span class="preprocessor"></span><span class="preprocessor">#define CLASS_TIPO_AVIAO_ATTR_SIZE      16</span>
+<a name="l00059"></a>00059 <span class="preprocessor"></span>
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 
+<a name="l00066"></a>00066 <span class="keywordtype">void</span> <a class="code" href="utils_8cpp.html#a385f5a2e2bc6628450b6280692396851" title="Limpa as flags do cin e fica à espera de um input para prosseguir.">getch</a>();
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 
+<a name="l00070"></a>00070 <span class="keywordtype">void</span> <a class="code" href="utils_8cpp.html#aec9a81a0766b1243f091fa5e47abde63" title="getline que faz o sync para não ler lixo do buffer.">getlineCin</a>(<span class="keywordtype">string</span> &amp;output);
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072 
+<a name="l00077"></a>00077 <span class="keywordtype">int</span> <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message, <span class="keywordtype">int</span> size = INT_MAX, <span class="keywordtype">int</span> min = 0);
+<a name="l00078"></a>00078 
+<a name="l00083"></a>00083 <span class="keyword">template</span> &lt;<span class="keyword">class</span> Tipo&gt;
+<a name="l00084"></a><a class="code" href="utils_8h.html#ac9672a3dce6f69b4d1a82cbcc253a2e8">00084</a> Tipo <a class="code" href="utils_8h.html#ac9672a3dce6f69b4d1a82cbcc253a2e8" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_uint_cin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message, Tipo size = UINT_MAX, Tipo min = 0, <span class="keywordtype">bool</span> menu = <span class="keyword">false</span>, <span class="keyword">const</span> <span class="keywordtype">char</span>* error_message = <span class="stringliteral">&quot;Número fora do intervalo!&quot;</span>) {
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086         <span class="keywordflow">if</span>( (size == min) &amp;&amp; min == 0)
+<a name="l00087"></a>00087                 <span class="keywordflow">throw</span> <a class="code" href="class_ex_no_interval.html" title="Classe usada no tratamento de excepções que sinaliza que um vector se encontra vazio.">ExNoInterval</a>();
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089         Tipo numero;
+<a name="l00090"></a>00090         <span class="keywordflow">do</span> {
+<a name="l00091"></a>00091                 cout &lt;&lt; message &lt;&lt; flush;
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093                 <span class="comment">/*</span>
+<a name="l00094"></a>00094 <span class="comment">                 * Enquanto cin devolver um apontador NULL (e como tal no teste do if dar true (por estar negado)),</span>
+<a name="l00095"></a>00095 <span class="comment">                 * devido ao facto de estar a ler dados que não são números, (ex: caracteres...)</span>
+<a name="l00096"></a>00096 <span class="comment">                 * informa ao utilizador que tem que introduzir um nº e pede para introduzir os dados novamente.</span>
+<a name="l00097"></a>00097 <span class="comment">                 */</span>
+<a name="l00098"></a>00098                 <span class="keywordflow">if</span> (!(cin &gt;&gt; numero)) {
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100                         <span class="comment">//Limpa as flags do cin</span>
+<a name="l00101"></a>00101                         cin.clear();
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103                         <span class="comment">//Extrai e ignora todos os caracteres que estavam no buffer de cin, visto que ao tentar-se introduzir</span>
+<a name="l00104"></a>00104                         <span class="comment">//caracteres num int (por ex), o cin entra em estado de erro e não remove os caracteres que leu do buffer</span>
+<a name="l00105"></a>00105                         cin.ignore(std::numeric_limits&lt;std::streamsize&gt;::max(), <span class="charliteral">&#39;\n&#39;</span>);
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107                         cout &lt;&lt; <span class="stringliteral">&quot;Introduza um número!&quot;</span> &lt;&lt; endl &lt;&lt; endl;
+<a name="l00108"></a>00108                 } <span class="keywordflow">else</span>
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110                         <span class="comment">//Testa se os números introduzidos estão dentro do intervalo pedido</span>
+<a name="l00111"></a>00111                         <span class="keywordflow">if</span> (menu)
+<a name="l00112"></a>00112                                 <span class="keywordflow">if</span> (numero &gt;= min &amp;&amp; numero &lt;= size)
+<a name="l00113"></a>00113                                         <span class="keywordflow">break</span>; <span class="comment">//Se estiverem sai-se do loop</span>
+<a name="l00114"></a>00114                                 <span class="keywordflow">else</span>
+<a name="l00115"></a>00115                                         cout &lt;&lt; error_message &lt;&lt; endl &lt;&lt; endl; <span class="comment">//Senão informasse o utilizador e pede-se novamente o nº</span>
+<a name="l00116"></a>00116                         <span class="keywordflow">else</span>
+<a name="l00117"></a>00117                                 <span class="keywordflow">if</span> (numero &gt;= min &amp;&amp; numero &lt; size)
+<a name="l00118"></a>00118                                         <span class="keywordflow">break</span>; <span class="comment">//Se estiverem sai-se do loop</span>
+<a name="l00119"></a>00119                                 <span class="keywordflow">else</span>
+<a name="l00120"></a>00120                                         cout &lt;&lt; error_message &lt;&lt; endl &lt;&lt; endl; <span class="comment">//Senão informasse o utilizador e pede-se novamente o nº</span>
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122         } <span class="keywordflow">while</span> (<span class="keyword">true</span>);
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124         <span class="keywordflow">if</span> (menu)
+<a name="l00125"></a>00125                 <span class="keywordflow">if</span>(numero == 0)
+<a name="l00126"></a>00126                         <span class="keywordflow">throw</span> <a class="code" href="class_ex_out_of_range.html" title="Classe usada no tratamento de excepções que sinaliza que um elemento que se está a tentar aceder está...">ExOutOfRange</a>(<span class="stringliteral">&quot;&quot;</span>);
+<a name="l00127"></a>00127                 <span class="keywordflow">else</span>
+<a name="l00128"></a>00128                         <span class="keywordflow">return</span> (numero - 1);
+<a name="l00129"></a>00129         <span class="keywordflow">else</span>
+<a name="l00130"></a>00130                 <span class="keywordflow">return</span> numero;
+<a name="l00131"></a>00131 }
+<a name="l00132"></a>00132 
+<a name="l00134"></a>00134 <span class="keywordtype">bool</span> <a class="code" href="utils_8cpp.html#a555c71c65819b8bca6c4a733d2d601b9" title="Pergunta message ao utilizador e retorna Sim/Não.">get_yes_no</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message,
+<a name="l00135"></a>00135                                 <span class="keyword">const</span> <span class="keywordtype">char</span>* message_erro = <span class="stringliteral">&quot;Introduziu uma opção incorrecta!\nIntroduza S para continuar ou N para parar: &quot;</span>);
+<a name="l00136"></a>00136 
+<a name="l00138"></a>00138 <span class="keywordtype">string</span> <a class="code" href="utils_8cpp.html#a3a298aea409b5d7355c3c0e53ba0e628" title="Converte uma string para maiúsculas.">to_upper</a>(<span class="keywordtype">string</span> str);
+<a name="l00139"></a>00139 
+<a name="l00140"></a>00140 
+<a name="l00142"></a>00142 <span class="keywordtype">string</span> <a class="code" href="utils_8cpp.html#a175c09f4dd01c8ae3f1ef6392a8f865a" title="Converte uma string para minúsculas.">to_lower</a>(<span class="keywordtype">string</span> str);
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144 
+<a name="l00146"></a>00146 vector &lt;string&gt; <a class="code" href="utils_8cpp.html#a7db7a33a90c53907236c65b823712ffb" title="Função que separa uma string em substrings sempre que encontrar o caracter delimitador (&amp;quot;delim&amp;q...">split</a>(<span class="keywordtype">string</span> in, <span class="keywordtype">char</span> delim);
+<a name="l00147"></a>00147 
+<a name="l00149"></a>00149 <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
+<a name="l00150"></a><a class="code" href="utils_8h.html#aff3996aeeba2c9e699edc162b3c52495">00150</a> <span class="keywordtype">string</span> <a class="code" href="utils_8h.html#aff3996aeeba2c9e699edc162b3c52495" title="Função de conversão de objecto para string usando o operador &amp;lt;&amp;lt;.">to_string</a>(T obj) {
+<a name="l00151"></a>00151         stringstream ss;
+<a name="l00152"></a>00152         ss &lt;&lt; obj;
+<a name="l00153"></a>00153         <span class="keywordflow">return</span> ss.str();
+<a name="l00154"></a>00154 }
+<a name="l00155"></a>00155 
+<a name="l00156"></a>00156 
+<a name="l00167"></a>00167 <span class="keywordtype">bool</span> <a class="code" href="utils_8cpp.html#a0daf13ac8da9785b3895a6d1e48d4a2f" title="Método que imprime uma tabela com os dados de um vector de colunas (vector de strings).">printMenu</a>(<span class="keywordtype">string</span> &amp; title, <span class="keyword">const</span> vector&lt; vector &lt;string&gt; &gt; &amp; columns, <span class="keyword">const</span> vector &lt;string&gt; &amp; colNames, <span class="keywordtype">bool</span> menu = <span class="keyword">false</span>, <span class="keywordtype">bool</span> reverse = <span class="keyword">false</span>, <span class="keywordtype">bool</span> hide_index = <span class="keyword">false</span>, <span class="keywordtype">bool</span> hide_colnames = <span class="keyword">false</span>);
+<a name="l00168"></a>00168 
+<a name="l00169"></a>00169 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:37 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: GestaoAeroporto.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>GestaoAeroporto.h</h1>  </div>
+</div>
+<div class="contents">
+<a href="_gestao_aeroporto_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00016"></a>00016 <span class="preprocessor">#ifndef GESTAOAEROPORTO_H_</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span><span class="preprocessor">#define GESTAOAEROPORTO_H_</span>
+<a name="l00018"></a>00018 <span class="preprocessor"></span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="_aeroporto_8h.html" title="Classe que contém a informação associada ao Aeroporto.">Aeroporto.h</a>&quot;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="code" href="_data_hora_8h.html" title="Classe que contém informação associada a uma data e hora.">DataHora.h</a>&quot;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;<a class="code" href="_aviao_8h.html" title="Classe que contém a informação associada a um avião.">Aviao.h</a>&quot;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &quot;<a class="code" href="_tipo_aviao_8h.html" title="Classe que contém a informação associada a cada tipo de avião.">TipoAviao.h</a>&quot;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="_companhia_8h.html" title="Classe que contém informação associada a uma Companhia.">Companhia.h</a>&quot;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="_tripulante_8h.html" title="Classe que contém a informação associada a cada Tripulante Aéreo.">Tripulante.h</a>&quot;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="_piloto_8h.html" title="Classe que contém a informação associada a cada plano de voos de uma companhia aérea.">Piloto.h</a>&quot;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="_hospedeiro_8h.html" title="Classe que contém a informação associada a cada plano de voos de uma companhia aérea.">Hospedeiro.h</a>&quot;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="_voo_8h.html" title="Classe que contém a informação associada a cada plano de voos de uma companhia aérea.">Voo.h</a>&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="_porta_embarque_8h.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque.h</a>&quot;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="_exceptions_8h.html" title="Classe que contém a informação associada a todas as excepcoes implementadas.">Exceptions.h</a>&quot;</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="utils_8h.html" title="Ficheiro com funções úteis para a interface com o utilizador.">utils.h</a>&quot;</span>
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 <span class="comment">// remover no fim as que não são necessárias</span>
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00035"></a>00035 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00036"></a>00036 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00037"></a>00037 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00038"></a>00038 <span class="preprocessor">#include &lt;sstream&gt;</span>
+<a name="l00039"></a>00039 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00040"></a>00040 <span class="preprocessor">#include &lt;cstdio&gt;</span>
+<a name="l00041"></a>00041 <span class="preprocessor">#include &lt;iomanip&gt;</span>
+<a name="l00042"></a>00042 <span class="preprocessor">#include &lt;limits&gt;</span>
+<a name="l00043"></a>00043 <span class="preprocessor">#include &lt;time.h&gt;</span>
+<a name="l00044"></a>00044 <span class="preprocessor">#include &lt;algorithm&gt;</span>
+<a name="l00045"></a>00045 <span class="preprocessor">#include &lt;utility&gt;</span>
+<a name="l00046"></a>00046 <span class="preprocessor">#include &lt;functional&gt;</span>
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 <span class="keyword">using</span> std::ifstream;
+<a name="l00049"></a>00049 <span class="keyword">using</span> std::ofstream;
+<a name="l00050"></a>00050 <span class="keyword">using</span> std::stringstream;
+<a name="l00051"></a>00051 <span class="keyword">using</span> std::endl;
+<a name="l00052"></a>00052 <span class="keyword">using</span> std::cout;
+<a name="l00053"></a>00053 <span class="keyword">using</span> std::cin;
+<a name="l00054"></a>00054 <span class="keyword">using</span> std::setw;
+<a name="l00055"></a>00055 <span class="keyword">using</span> std::getline;
+<a name="l00056"></a>00056 <span class="keyword">using</span> std::string;
+<a name="l00057"></a>00057 <span class="keyword">using</span> std::vector;
+<a name="l00058"></a>00058 <span class="keyword">using</span> std::sort;
+<a name="l00059"></a>00059 <span class="keyword">using</span> std::find_if;
+<a name="l00060"></a>00060 <span class="keyword">using</span> std::bind2nd;
+<a name="l00061"></a>00061 <span class="keyword">using</span> std::equal_to;
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="keyword">extern</span> <a class="code" href="class_tipo_aviao_d_b.html" title="Classe que contém uma base de dados de tipos de aviões.  .">TipoAviaoDB</a> <a class="code" href="_gestao_aeroporto_8h.html#a4994e68789d5089c86d5d2d93999b3aa">tipo_aviao_DB</a>;
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 <span class="keyword">extern</span> <a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> <a class="code" href="_gestao_aeroporto_8h.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>;
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 <span class="comment">//############################### Métodos CRUD (create, read, update, delete) para as classes #####################################</span>
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Apontadores usados entre chamadas a funções  CRUD &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00071"></a>00071 <span class="keyword">extern</span> <a class="code" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a>* <a class="code" href="_gestao_aeroporto_8h.html#ab63067c6d255c35788072e39942b5a49">porta_embarque_actual</a>;
+<a name="l00072"></a>00072 <span class="keyword">extern</span> <a class="code" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a>* <a class="code" href="_gestao_aeroporto_8h.html#a2f9f609decd4e4491130f06151ae6201">passageiro_actual</a>;
+<a name="l00073"></a>00073 <span class="keyword">extern</span> <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a>* <a class="code" href="_gestao_aeroporto_8h.html#afe45cd3ba547703f801336605aad01ca">companhia_actual</a>;
+<a name="l00074"></a>00074 <span class="keyword">extern</span> <a class="code" href="class_aviao.html" title="Classe que armazena informação acerca de um avião de uma dada companhia.">Aviao</a> *<a class="code" href="_gestao_aeroporto_8h.html#a27838f69d8293300ba5b0e89d00c373b">aviao_actual</a>;
+<a name="l00075"></a>00075 <span class="keyword">extern</span> <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a> *<a class="code" href="_gestao_aeroporto_8h.html#a199fc6b6d89c1e75bea5f646a667b4fc">tipo_aviao_actual</a>;
+<a name="l00076"></a>00076 <span class="keyword">extern</span> <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> *<a class="code" href="_gestao_aeroporto_8h.html#a3d9d610fded6d0d28885a0c5421c8a10">tripulante_actual</a>;
+<a name="l00077"></a>00077 <span class="keyword">extern</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *<a class="code" href="_gestao_aeroporto_8h.html#a1bb45e4d680721a4df0ca10f94a35dbf">voo_actual</a>;
+<a name="l00078"></a>00078 
+<a name="l00079"></a><a class="code" href="namespace_c_r_u_d.html">00079</a> <span class="keyword">namespace </span>CRUD {
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Aviao &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00082"></a>00082 
+<a name="l00084"></a>00084 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a97c29a8c421a476911fb79e82887e154" title="Adiciona um Avião a uma companhia com os dados introduzidos pelo utilizador.">addAviao</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia);
+<a name="l00086"></a>00086 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a97c29a8c421a476911fb79e82887e154" title="Adiciona um Avião a uma companhia com os dados introduzidos pelo utilizador.">addAviao</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia, <a class="code" href="class_aviao.html" title="Classe que armazena informação acerca de um avião de uma dada companhia.">Aviao</a> *aviao);
+<a name="l00087"></a>00087 
+<a name="l00089"></a>00089 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#af275583bc4c8ade7d2b4a0c604421122" title="Função usada para a ordenação do vector de aviões segundo a Matricula.">cmpAviaoMatricula</a>(<span class="keyword">const</span> <a class="code" href="class_aviao.html" title="Classe que armazena informação acerca de um avião de uma dada companhia.">Aviao</a> *av1, <span class="keyword">const</span> <a class="code" href="class_aviao.html" title="Classe que armazena informação acerca de um avião de uma dada companhia.">Aviao</a> *av2);
+<a name="l00091"></a>00091 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#aecbb4b4130cd5e50a9bf04619ed61f6d" title="Função usada para a ordenação do vector de aviões segundo o nome.">cmpAviaoNome</a>(<span class="keyword">const</span> <a class="code" href="class_aviao.html" title="Classe que armazena informação acerca de um avião de uma dada companhia.">Aviao</a> *av1, <span class="keyword">const</span> <a class="code" href="class_aviao.html" title="Classe que armazena informação acerca de um avião de uma dada companhia.">Aviao</a> *av2);
+<a name="l00093"></a>00093 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#aab417fe2c623ffb62edf974ad93bf6da" title="Função usada para a ordenação do vector de aviões segundo a DataProximaRevisao.">cmpAviaoProximaRevisao</a>(<span class="keyword">const</span> <a class="code" href="class_aviao.html" title="Classe que armazena informação acerca de um avião de uma dada companhia.">Aviao</a> *av1, <span class="keyword">const</span> <a class="code" href="class_aviao.html" title="Classe que armazena informação acerca de um avião de uma dada companhia.">Aviao</a> *av2);
+<a name="l00094"></a>00094 
+<a name="l00100"></a>00100 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a93d562d68e20b890b21cf6148b36c38e" title="Mostra todas os Aviões de uma Companhia numa tabela, pedindo ao utilizador o parâmetro que quer usar ...">listAviao</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia, <span class="keywordtype">bool</span> final_pause = <span class="keyword">true</span>);
+<a name="l00101"></a>00101 
+<a name="l00107"></a>00107 <span class="keywordtype">size_t</span> <a class="code" href="namespace_c_r_u_d.html#a2115b8974a4713a77d6d688f4447d208" title="Selecciona um Avião de uma Companhia, de uma lista de aviões.">selAviao</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia);
+<a name="l00108"></a>00108 
+<a name="l00113"></a>00113 <a class="code" href="class_aviao.html" title="Classe que armazena informação acerca de um avião de uma dada companhia.">Aviao</a>* <a class="code" href="namespace_c_r_u_d.html#a409303e144641aef0a8f73221ecaa5ba" title="Selecciona um Avião de uma Companhia, de uma lista de aviões.">selAviaoPtr</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia);
+<a name="l00114"></a>00114 
+<a name="l00116"></a>00116 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a6ea2822405b50724fa256842ecd309ed" title="Método que mostra ao utilizador os atributos dum avião.">infoAviao</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia);
+<a name="l00117"></a>00117 
+<a name="l00119"></a>00119 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#aed6dec6084043c9c09b5d5afafe9dd84" title="Método que permite ao utilizador editar os atributos de um avião.">editAviao</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia);
+<a name="l00120"></a>00120 
+<a name="l00125"></a>00125 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a214da311c5e57d732860a53b9dc94ce1" title="Método que elimina um dado avião caso não esteja associado a um voo.">delAviao</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia);
+<a name="l00126"></a>00126 
+<a name="l00131"></a>00131 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a214da311c5e57d732860a53b9dc94ce1" title="Método que elimina um dado avião caso não esteja associado a um voo.">delAviao</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia, <span class="keywordtype">size_t</span> indice);
+<a name="l00132"></a>00132 
+<a name="l00137"></a>00137 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#ad70ecdc706be4708ea06a87205376158" title="Método que remove do vector de *Aviao de uma companhia o apontador aviao_ptr. Não apaga o aviao...">delAviaoPtr</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia, <a class="code" href="class_aviao.html" title="Classe que armazena informação acerca de um avião de uma dada companhia.">Aviao</a> *aviao_ptr);
+<a name="l00138"></a>00138 
+<a name="l00140"></a>00140 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#aa66940134d988d2fc30109c70a28aba1" title="Método que remove da frota o tipo de avião, se não estiver a ser utilizado.">delTipoAviaoAviao</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a>* companhia, <a class="code" href="class_aviao.html" title="Classe que armazena informação acerca de um avião de uma dada companhia.">Aviao</a>* aviao);
+<a name="l00141"></a>00141 
+<a name="l00142"></a>00142 
+<a name="l00143"></a>00143 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Tripulante &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00144"></a>00144 
+<a name="l00149"></a>00149 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#af57f3a566f5dc0f61fbdd7a03569eae8" title="Adiciona um tripulante a uma companhia com os dados introduzidos pelo utilizador.">addTripulante</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia);
+<a name="l00150"></a>00150 
+<a name="l00152"></a>00152 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#af57f3a566f5dc0f61fbdd7a03569eae8" title="Adiciona um tripulante a uma companhia com os dados introduzidos pelo utilizador.">addTripulante</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia, <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> *tripulante);
+<a name="l00153"></a>00153 
+<a name="l00155"></a>00155 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#a8de060e9b18850936e78aad287b137d0" title="Compara se o nome de um tripulante é menor do que outro.">cmpTripulanteNome</a>(<span class="keyword">const</span> <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> *tripulante_1, <span class="keyword">const</span> <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> *tripulante_2);
+<a name="l00157"></a>00157 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#a6263c9e6d2d969c9b4e2f73de5c6822d" title="Compara se o número de um tripulante é menor do que outro.">cmpTripulanteNumero</a>(<span class="keyword">const</span> <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> *tripulante_1, <span class="keyword">const</span> <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> *tripulante_2);
+<a name="l00159"></a>00159 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#a1b65ba1ee0b6c87b194b5d3d12914d73" title="Compara se a categoria de um tripulante é menor do que outra.">cmpTripulanteCategoria</a>(<span class="keyword">const</span> <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> *tripulante_1, <span class="keyword">const</span> <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> *tripulante_2);
+<a name="l00161"></a>00161 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#aff184481a3b44a2c331521df89886b6a" title="Compara se o salário/hora de um tripulante é menor do que outro.">cmpTripulanteSalarioHora</a>(<span class="keyword">const</span> <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> *tripulante_1, <span class="keyword">const</span> <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> *tripulante_2);
+<a name="l00163"></a>00163 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#a1d98e86d69dbb5b4570b329707e68340" title="Compara se o número de horas de trabalho de um tripulante é menor do que outro.">cmpTripulanteNumeroHorasTrabalho</a>(<span class="keyword">const</span> <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> *tripulante_1, <span class="keyword">const</span> <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> *tripulante_2);
+<a name="l00165"></a>00165 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#aba319e3a73979e629ba4f3961b758b74" title="Compara se o tipo de contrato de um tripulante é menor do que outro.">cmpTripulanteTipoContrato</a>(<span class="keyword">const</span> <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> *tripulante_1, <span class="keyword">const</span> <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> *tripulante_2);
+<a name="l00167"></a>00167 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#a3a35f0450b90e3c78195dafb6de40bb2" title="Compara se o data de expiração do contrato de um tripulante é menor do que outra.">cmpTripulanteExpiracaoContrato</a>(<span class="keyword">const</span> <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> *tripulante_1, <span class="keyword">const</span> <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> *tripulante_2);
+<a name="l00168"></a>00168 
+<a name="l00169"></a>00169 
+<a name="l00175"></a>00175 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a11d2b8e4a251124482366d501af0183a" title="Mostra todos os tripulantes de uma companhia, segundo o critério de ordenação que o utilizador seleci...">listTripulante</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia, <span class="keywordtype">bool</span> final_pause = <span class="keyword">true</span>);
+<a name="l00176"></a>00176 
+<a name="l00181"></a>00181 <span class="keywordtype">size_t</span> <a class="code" href="namespace_c_r_u_d.html#ae5f90258685e1e722d3b46010e5cce54" title="Selecciona um Tripulante de uma Companhia, de uma lista de tripulantes.">selTripulante</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia);
+<a name="l00182"></a>00182 
+<a name="l00187"></a>00187 <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a>* <a class="code" href="namespace_c_r_u_d.html#aedaae08a826460c290c90639d63253a5" title="Selecciona um Tripulante de uma Companhia, de uma lista de tripulantes.">selTripulantePtr</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia);
+<a name="l00188"></a>00188 
+<a name="l00189"></a>00189 
+<a name="l00191"></a>00191 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a3e4a7bb31f42db5e5397bd0a79bca254" title="Método que mostra ao utilizador os atributos dum tripulante.">infoTripulante</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia);
+<a name="l00192"></a>00192 
+<a name="l00193"></a>00193 
+<a name="l00195"></a>00195 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a185959224e7bc4b30793dfd252fa4a55" title="Método que permite ao utilizador editar os atributos de um Tripulante.">editTripulante</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia);
+<a name="l00196"></a>00196 
+<a name="l00203"></a>00203 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a4310d5884fda0863327ddfbe4f8c66d8" title="Elimina um Tripulante de uma Companhia.">delTripulante</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia);
+<a name="l00204"></a>00204 
+<a name="l00211"></a>00211 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a4310d5884fda0863327ddfbe4f8c66d8" title="Elimina um Tripulante de uma Companhia.">delTripulante</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia, <span class="keywordtype">size_t</span> indice);
+<a name="l00212"></a>00212 
+<a name="l00218"></a>00218 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a56ba6f30054320267290dd1ddf6fe8fc" title="Método que remove do vector de *Tripulante de uma companhia o apontador tripulante_ptr. Não apaga o tripulante, só o apontador.">delTripulantePtr</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia, <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> *tripulante_ptr);
+<a name="l00219"></a>00219 
+<a name="l00220"></a>00220 
+<a name="l00221"></a>00221 
+<a name="l00222"></a>00222 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; PlanoVoo &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00223"></a>00223 
+<a name="l00225"></a>00225 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a78d826fa8f2b1f900ebdabfa8c51ebda" title="Adiciona um Plano de Voo a uma companhia com os dados introduzidos pelo utilizador.">addPlanoVoo</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia);
+<a name="l00227"></a>00227 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#a78d826fa8f2b1f900ebdabfa8c51ebda" title="Adiciona um Plano de Voo a uma companhia com os dados introduzidos pelo utilizador.">addPlanoVoo</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia, <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a>* voo);
+<a name="l00228"></a>00228 
+<a name="l00230"></a>00230 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#a39d273d72b15fb9f7f4d565a118d73fe" title="Compara se o número de um voo é menor do que outro.">cmpVooNumeroVoo</a>(<span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo1, <span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo2);
+<a name="l00232"></a>00232 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#aa320aa5ce0443534f46bae2ad87e116f" title="Compara se a origem de um voo é menor do que outra.">cmpVooOrigem</a>(<span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo1, <span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo2);
+<a name="l00234"></a>00234 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#a408389d535459cc8969e54e1b86f67eb" title="Compara se o destino de um voo é menor do que outro.">cmpVooDestino</a>(<span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo1, <span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo2);
+<a name="l00236"></a>00236 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#a7a673112718ff3931947f3d802144d84" title="Compara se a data de saida de um voo é menor do que outra.">cmpVooDataSaida</a>(<span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo1, <span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo2);
+<a name="l00238"></a>00238 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#a118f28047ceebf662a6764b2b016ecde" title="Compara se a data de chegada de um voo é menor do que outra.">cmpVooDataChegada</a>(<span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo1, <span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo2);
+<a name="l00240"></a>00240 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#a0b20d07359ae739573f4ab9ae8644173" title="Compara se o atraso de um voo é menor do que outro.">cmpVooAtraso</a>(<span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo1, <span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo2);
+<a name="l00242"></a>00242 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#a103d10cd7a44e1a4cda11250f49baa8a" title="Verifica se o primeiro voo foi cancelado.">cmpVooCancelado</a>(<span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo1, <span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo2);
+<a name="l00243"></a>00243 
+<a name="l00249"></a>00249 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a9cb3b711757edecbf3f6110797017024" title="Lista todas os Planos de voo de uma Companhia, ordenados segundo o critério que o utilizador seleccio...">listPlanoVoo</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia, <span class="keywordtype">bool</span> final_pause = <span class="keyword">true</span>);
+<a name="l00250"></a>00250 
+<a name="l00255"></a>00255 <span class="keywordtype">size_t</span> <a class="code" href="namespace_c_r_u_d.html#aa3378c67723f889acdf660c528dfd145" title="Selecciona um plano de voo de uma Companhia, de uma lista de planos de voo.">selPlanoVoo</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a>* companhia);
+<a name="l00256"></a>00256 
+<a name="l00262"></a>00262 <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a>* <a class="code" href="namespace_c_r_u_d.html#a7d829ff6ef5916b54813224b797175c0" title="Selecciona um plano de voo de uma Companhia, de uma lista de planos de voo (retorna o apontador)...">selPlanoVooPtr</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a>* companhia);
+<a name="l00263"></a>00263 
+<a name="l00264"></a>00264 
+<a name="l00266"></a>00266 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#abfb11d818854fed25cca7fbd930fe178" title="Método que mostra ao utilizador os atributos dum plano de voo.">infoPlanoVoo</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia, <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo = NULL);
+<a name="l00267"></a>00267 
+<a name="l00268"></a>00268 
+<a name="l00270"></a>00270 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a1ebd242271ee4688ee993534000d2274" title="Método que permite ao utilizador editar os atributos de um Voo.">editPlanoVoo</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia);
+<a name="l00271"></a>00271 
+<a name="l00278"></a>00278 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a915c40b5d12b2f053eaef60ed2768d77" title="Elimina um Plano de Voo de uma Companhia perguntando ao utilizador o índice.">delPlanoVoo</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a>* companhia);
+<a name="l00279"></a>00279 
+<a name="l00286"></a>00286 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a915c40b5d12b2f053eaef60ed2768d77" title="Elimina um Plano de Voo de uma Companhia perguntando ao utilizador o índice.">delPlanoVoo</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a>* companhia, <span class="keywordtype">size_t</span> indice);
+<a name="l00287"></a>00287 
+<a name="l00293"></a>00293 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a374085644fe12ddc745810c8543ad802" title="Método que remove do vector de *Voo de uma companhia o apontador voo_ptr. Não apaga o voo...">delPlanoVooPtr</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia, <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo_ptr);
+<a name="l00294"></a>00294 
+<a name="l00295"></a>00295 
+<a name="l00296"></a>00296 
+<a name="l00297"></a>00297 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Aeroporto &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00299"></a>00299 <span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a46335f86db676b32222c965a4c25cb51" title="Adiciona um aeroporto com os dados forneceidos pelo utilizador.">addAeroporto</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00300"></a>00300 
+<a name="l00302"></a>00302 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#afabd88ec06d4e7717cb20b669b9df13a" title="Altera um aeroporto com os dados introduzidos pelo utilizador.">editAeroporto</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00303"></a>00303 
+<a name="l00305"></a>00305 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a8de0d4585bd990a2ae7fd89172929b6d" title="Imprime as informações acerca do aeroporto.">infoAeroporto</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00306"></a>00306 
+<a name="l00307"></a>00307 
+<a name="l00308"></a>00308 
+<a name="l00309"></a>00309 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Companhia &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00310"></a>00310 
+<a name="l00312"></a>00312 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a7edc37ee39cd2dda75e78022424da2d6" title="Adiciona uma companhia a um aeroporto com os dados introduzidos pelo utilizador.">addCompanhia</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00314"></a>00314 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a7edc37ee39cd2dda75e78022424da2d6" title="Adiciona uma companhia a um aeroporto com os dados introduzidos pelo utilizador.">addCompanhia</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia);
+<a name="l00315"></a>00315 
+<a name="l00317"></a>00317 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#a1ac209ed4a2e1b3fc93d0d874679c3e2" title="Função usada para a ordenação do vector de companhias segundo a Sigla.">cmpCompanhiaSigla</a>(<span class="keyword">const</span> <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *c1, <span class="keyword">const</span> <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *c2);
+<a name="l00319"></a>00319 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#a1228ef407e817039aac17e347e9d734b" title="Função usada para a ordenação do vector de companhias segundo o Nome.">cmpCompanhiaNome</a>(<span class="keyword">const</span> <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *c1, <span class="keyword">const</span> <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *c2);
+<a name="l00321"></a>00321 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#a4576c2be1375e4945c54b3a27b85a878" title="Função usada para a ordenação do vector de companhia segundo a taxa de utilização dos blacões de chec...">cmpCompanhiaTaxa</a>(<span class="keyword">const</span> <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *c1, <span class="keyword">const</span> <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *c2);
+<a name="l00322"></a>00322 
+<a name="l00328"></a>00328 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a3fb46714aabd67d87d7165ba01e86d80" title="Lista todas as companhias de um aeroporto.">listCompanhia</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <span class="keywordtype">bool</span> final_pause = <span class="keyword">false</span>);
+<a name="l00329"></a>00329 
+<a name="l00335"></a>00335 <span class="keywordtype">size_t</span> <a class="code" href="namespace_c_r_u_d.html#a8329cc2dc4bf3e40d808a2a8d2ad326d" title="Selecciona uma companhia de um aeroporto, de uma lista de Companhias.">selCompanhia</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00336"></a>00336 
+<a name="l00342"></a>00342 <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a>* <a class="code" href="namespace_c_r_u_d.html#a7562909f38a326f6ff0c81162288ef35" title="Selecciona uma companhia de um aeroporto, de uma lista de Companhias (retorna apontador).">selCompanhiaPtr</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00343"></a>00343 
+<a name="l00344"></a>00344 
+<a name="l00346"></a>00346 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#aa8a0e3c699283e91951a94086e8c9346" title="Método que mostra ao utilizador os atributos dum plano de uma companhia.">infoCompanhia</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia);
+<a name="l00347"></a>00347 
+<a name="l00348"></a>00348 
+<a name="l00350"></a>00350 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a28d15b0ceea1ea4ce68904a50272fcd3" title="Método que permite ao utilizador editar os atributos de uma Companhia.">editCompanhia</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia = NULL);
+<a name="l00351"></a>00351 
+<a name="l00358"></a>00358 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#aa19b997a03d3baf8940b8f910beeacc7" title="Elimina uma companhia de um aeroporto selecionada pelo utilizador.">delCompanhia</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00359"></a>00359 
+<a name="l00367"></a>00367 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#aa19b997a03d3baf8940b8f910beeacc7" title="Elimina uma companhia de um aeroporto selecionada pelo utilizador.">delCompanhia</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <span class="keywordtype">size_t</span> indice);
+<a name="l00368"></a>00368 
+<a name="l00374"></a>00374 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a5238a86280234b522b5252e295c32e52" title="Método que remove do vector de *Companhia o apontador companhia_ptr. Não apaga a companhia, só o apontador.">delCompanhiaPtr</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia_ptr);
+<a name="l00375"></a>00375 
+<a name="l00376"></a>00376 
+<a name="l00377"></a>00377 
+<a name="l00378"></a>00378 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Passageiro &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00379"></a>00379 
+<a name="l00381"></a>00381 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a203c708fead23afb7b933ce60897ee55" title="Adiciona um passageiro a um aeroporto com os dados introduzidos pelo utilizador.">addPassageiro</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a>* aeroporto);
+<a name="l00383"></a>00383 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a203c708fead23afb7b933ce60897ee55" title="Adiciona um passageiro a um aeroporto com os dados introduzidos pelo utilizador.">addPassageiro</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a>* aeroporto, <a class="code" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a> *passageiro);
+<a name="l00384"></a>00384 
+<a name="l00386"></a>00386 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#a59a2e98b080a0b116067e148ebe650cb" title="Função usada para a ordenação do vector de Passageiros segundo o Nome.">cmpPassageiroNome</a>(<span class="keyword">const</span> <a class="code" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a> *p1, <span class="keyword">const</span> <a class="code" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a> *p2);
+<a name="l00388"></a>00388 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#aa70bae8e80f956d1da54842e6934f625" title="Função usada para a ordenação do vector de Passageiros segundo o BI.">cmpPassageiroBI</a>(<span class="keyword">const</span> <a class="code" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a> *p1, <span class="keyword">const</span> <a class="code" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a> *p2);
+<a name="l00390"></a>00390 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#ac28787664abbb701daed2ee1cea8914a" title="Função usada para a ordenação do vector de Passageiros segundo o Numero de voo.">cmpPassageiroNumero</a>(<span class="keyword">const</span> <a class="code" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a> *p1, <span class="keyword">const</span> <a class="code" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a> *p2);
+<a name="l00391"></a>00391 
+<a name="l00393"></a>00393 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a4b91de9efccb5fe7ed02a3c53d12a4a4" title="Lista todas os passageiros de um aeroporto.">listPassageiro</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <span class="keywordtype">bool</span> final_pause = <span class="keyword">true</span>);
+<a name="l00395"></a>00395 <span class="keywordtype">size_t</span> <a class="code" href="namespace_c_r_u_d.html#a5cc759c35209a9fec94f7e7dbe1d8dcd" title="Selecciona um passageiro de um aeroporto, de uma lista de passageiros.">selPassageiro</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a>* aeroporto);
+<a name="l00397"></a>00397 <a class="code" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a>* <a class="code" href="namespace_c_r_u_d.html#a40421c1e611d3dca272696af4fbe5830" title="Selecciona um passageiro de um aeroporto, de uma lista de passageiros (retorna apontador).">selPassageiroPtr</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a>* aeroporto);
+<a name="l00399"></a>00399 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a2ff3c7376b8cd8a7c0ccbb4b9f46cb66" title="Método que mostra ao utilizador os atributos dum Passageiro.">infoPassageiro</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <a class="code" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a> *passageiro = NULL);
+<a name="l00401"></a>00401 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a509ff88bbcc55f52f76185441b08c6b1" title="Método que permite ao utilizador editar os atributos de um Passageiro.">editPassageiro</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> * aeroporto);
+<a name="l00403"></a>00403 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#aeeae59dc951e893e81d9c7e42bf54bbe" title="Elimina um passageiro de um aeroporto perguntando ao utilizador o índice.">delPassageiro</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00405"></a>00405 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#aeeae59dc951e893e81d9c7e42bf54bbe" title="Elimina um passageiro de um aeroporto perguntando ao utilizador o índice.">delPassageiro</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <span class="keywordtype">size_t</span> indice);
+<a name="l00407"></a>00407 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a848fd1dd4b43af9e751e45307519dbca" title="Eliminda o apontador de um passageiro no vector de passageiros no aeroporto fornecido.">delPassageiroPtr</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a>* aeroporto, <a class="code" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a>* passageiro);
+<a name="l00408"></a>00408 
+<a name="l00409"></a>00409 
+<a name="l00410"></a>00410 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; CheckIn &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00411"></a>00411 
+<a name="l00412"></a>00412 <span class="comment">//************  Usadas no menu dentro das companhias</span>
+<a name="l00414"></a>00414 <span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a8061d08e022b84d8d161f885046ba746" title="Função que cria a fila do check-in.">initCheckIn</a>(<a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo);
+<a name="l00416"></a>00416 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a5bdacec886fdd63f3849775efd48c74d" title="Função que simula o check-in dos passageiros.">checkIn</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo);
+<a name="l00418"></a>00418 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a9d2bda16dea0eef7863bd20b7efcbed5" title="Função que permite o check-in do próximo passageiro que está na fila_check_in para o voo dado...">checkInNextPassageiro</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo);
+<a name="l00419"></a>00419 
+<a name="l00421"></a>00421 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a82606bfae6b810a64c0441a9d7156319" title="Função que imprime a lista dos passageiros que estão na fila de embarque do voo (usada no meno dos vo...">printPriorityQueue</a>(<a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo);
+<a name="l00423"></a>00423 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#ad22fb75b9a60883bee1d0f289e2d4b03" title="Função que simula a chamada dos passageiros para o embarque.">chamadaEmbarqueVoo</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo);
+<a name="l00424"></a>00424 
+<a name="l00425"></a>00425 <span class="comment">//*********** Usadas no menu dentro das portas de embarque</span>
+<a name="l00427"></a>00427 <span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#ac747fedac554dabb132c3f03c64cec27" title="Função que imprime a lista dos passageiros que estão na fila de embarque do voo (usada no menu das po...">printPassageirosPortaEmbarque</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00430"></a>00430 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a5b1aaf654db05246026daf56ea3c3603">chamadaEmbarqueVooPortaEmbarque</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00431"></a>00431 
+<a name="l00432"></a>00432 
+<a name="l00434"></a>00434 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#ac1dfae19eb23fa7971e72473d85e9fb4" title="Função que termina o check-in de um voo e coloca-o na tabela de dispersão.">fecharVoo</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo);
+<a name="l00435"></a>00435 
+<a name="l00436"></a>00436 
+<a name="l00437"></a>00437 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Tabela de dispersão &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00438"></a>00438 
+<a name="l00440"></a>00440 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a41a0c23dfeb13c57e01fab5635a124aa" title="Função que lista todos os voos que estão na hash_set_voos.">listHashSetVoos</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00445"></a>00445 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a76ebb4bcb8c9bdda45415e331c9b5986">listHashSetVoosEntreDatasCriterio</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00447"></a>00447 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#af9598ea1004ce1a6cf772699d334f372" title="Função que dado o id de um avião mostra as informações a ele asssociadas.">searchHashSetVoos</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00449"></a>00449 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#ad86fd7b7937c6d6f7d27d55b591676d7" title="Função que adiciona um voo à tabela dos voos fechados (fechando o voo escolhido).">addVooHashSetVoos</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00451"></a>00451 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a0bd86df1d5b4b409232e37d9d297bdb8" title="Função que elimina um voo da tabela de voos fechados.">delVooHashSetVoos</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00452"></a>00452 
+<a name="l00453"></a>00453 
+<a name="l00454"></a>00454 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Taxas &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00455"></a>00455 
+<a name="l00457"></a>00457 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a34b67797aa96cd621cc89da52df70162" title="Função que mostra a soma das taxas de utilização dos balcões de check-in das companhia num determinad...">listTaxasBalcoesEntreDatas</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00459"></a>00459 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#ae844821229bb3cc2081680890aa88c03" title="Função que mostra a soma das taxas de utilização dos balcões de check-in das companhias para um dado ...">listTaxasBalcoesVooEntreDatas</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00464"></a>00464 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a6146fb1cd7b5c0e1402e9b688a84d4d7" title="Função que mostra a soma das taxas de utilização dos balcões de check-in das companhias para os voos ...">listTaxasBalcoesVoosEntreDatas</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00465"></a>00465 
+<a name="l00466"></a>00466 
+<a name="l00468"></a>00468 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a5781a2ad93bca9915b21977f475c8a39" title="Função que mostra a soma das taxas de utilização das portas de embarque entre as datas limite forneci...">listTaxasPortasEmbarqueEntreDatas</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00470"></a>00470 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#af150f9aabe5940271bd6b5d5fc402ec7" title="Função que mostra a soma das taxas de utilização da porta de embarque selecionada pelo utilizador...">listTaxasPortasEmbarqueVooEntreDatas</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00473"></a>00473 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a7d9397c06cdd67c8991e8ff540ee08cd">listTaxasPortasEmbarqueVoosEntreDatas</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00474"></a>00474 
+<a name="l00475"></a>00475 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Porta de embarque &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00476"></a>00476 
+<a name="l00478"></a>00478 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#aba6c929892bf533d91bf4c1c77009c6d" title="Adiciona uma porta de embarque a um aeroporto com os dados introduzidos pelo utilizador.">addPortaEmbarque</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a>* aeroporto);
+<a name="l00480"></a>00480 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#aba6c929892bf533d91bf4c1c77009c6d" title="Adiciona uma porta de embarque a um aeroporto com os dados introduzidos pelo utilizador.">addPortaEmbarque</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a>* aeroporto, <a class="code" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a>* porta);
+<a name="l00481"></a>00481 
+<a name="l00483"></a>00483 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#a22254bca34f6ef53ffd6e39d6a4c6669" title="Função usada para a ordenação do vector de portas de embarque segundo o numero.">cmpPortaEmbarqueNumero</a>(<span class="keyword">const</span> <a class="code" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a> *obj1, <span class="keyword">const</span> <a class="code" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a> *obj2);
+<a name="l00485"></a>00485 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#a5325d9bb1594e4bae0608570ffd01aa6" title="Função usada para a ordenação do vector de portas de embarque segundo a localizacao.">cmpPortaEmbarqueLocalizacao</a>(<span class="keyword">const</span> <a class="code" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a> *obj1, <span class="keyword">const</span> <a class="code" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a> *obj2);
+<a name="l00487"></a>00487 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#a218376c5cc10107a18372d9059b80735" title="Função usada para a ordenação do vector de portas de embarque segundo a capacidade.">cmpPortaEmbarqueCapacidadePass</a>(<span class="keyword">const</span> <a class="code" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a> *obj1, <span class="keyword">const</span> <a class="code" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a> *obj2);
+<a name="l00489"></a>00489 <span class="keywordtype">bool</span> <a class="code" href="namespace_c_r_u_d.html#a19ef4b558f9d55577a55be74139808f4" title="Função usada para a ordenação do vector de portas de embarque segundo a categoria.">cmpPortaEmbarqueCategoriaAvioes</a>(<span class="keyword">const</span> <a class="code" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a> *obj1, <span class="keyword">const</span> <a class="code" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a> *obj2);
+<a name="l00490"></a>00490 
+<a name="l00491"></a>00491 
+<a name="l00493"></a>00493 <span class="keywordtype">size_t</span> <a class="code" href="namespace_c_r_u_d.html#a7647f859789dc3140035ef0a28435996" title="Lista todas as portas de embarque de um aeroporto.">listPortaEmbarque</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <span class="keywordtype">bool</span> final_pause = <span class="keyword">true</span>, <span class="keywordtype">bool</span> no_order = <span class="keyword">false</span>);
+<a name="l00495"></a>00495 <span class="keywordtype">size_t</span> <a class="code" href="namespace_c_r_u_d.html#aba832c4e286ade904ff1bc3830cc7397" title="Selecciona uma porta de embarque de um aeroporto, de uma lista de portas de embarque.">selPortaEmbarque</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a>* aeroporto);
+<a name="l00497"></a>00497 <a class="code" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a>* <a class="code" href="namespace_c_r_u_d.html#ad27bcb3580d2e842a2c34f4527053e2d" title="Selecciona uma porta de embarque de um aeroporto, de uma lista de portas de embarque (retorna apontad...">selPortaEmbarquePtr</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a>* aeroporto);
+<a name="l00498"></a>00498 
+<a name="l00500"></a>00500 <a class="code" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a>* <a class="code" href="namespace_c_r_u_d.html#aba832c4e286ade904ff1bc3830cc7397" title="Selecciona uma porta de embarque de um aeroporto, de uma lista de portas de embarque.">selPortaEmbarque</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <span class="keywordtype">size_t</span> index);
+<a name="l00501"></a>00501 
+<a name="l00503"></a>00503 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#ac546f57a0c322a7ae72c3b5219ae11bc" title="Método que mostra ao utilizador os atributos duma porta de embarque.">infoPortaEmbarque</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00505"></a>00505 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a8cf308cc2af50fdb5d8120179729def1" title="Método que permite ao utilizador editar os atributos de uma porta de embarque.">editPortaEmbarque</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00506"></a>00506 
+<a name="l00508"></a>00508 <a class="code" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a>* <a class="code" href="namespace_c_r_u_d.html#a410e14ea9d7117aefe5b58ab159d5edc" title="Método que actualiza a disponibilidade de uma porta de embarque e retorna-a.">updatePortaEmbarqueDisp</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <span class="keywordtype">unsigned</span> capacidade_pass, <span class="keywordtype">unsigned</span> categoria);
+<a name="l00509"></a>00509 
+<a name="l00511"></a>00511 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a3053b3c48f6bc2a8a9f0a38ed3f17d26" title="Elimina uma porta de embarque de um aeroporto perguntando ao utilizador o índice.">delPortaEmbarque</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto);
+<a name="l00513"></a>00513 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a3053b3c48f6bc2a8a9f0a38ed3f17d26" title="Elimina uma porta de embarque de um aeroporto perguntando ao utilizador o índice.">delPortaEmbarque</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <span class="keywordtype">size_t</span> indice);
+<a name="l00515"></a>00515 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a85591adc0b2dc075cb3ec63419f5faae" title="Elimina a porta de embarque passada como apontador do vector em aeroporto.">delPortaEmbarquePtr</a>(<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> *aeroporto, <a class="code" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a> *porta_ptr);
+<a name="l00517"></a>00517 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#af6f91f1490005fe533ebce456e540e7e" title="Função que elimina do vector de voos associados à porta de embarque o voo dado (só apontador para o v...">delVooPtrPortaEmbarque</a>(<a class="code" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a> *porta_embarque, <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo_a_remover);
+<a name="l00518"></a>00518 
+<a name="l00519"></a>00519 
+<a name="l00520"></a>00520 
+<a name="l00521"></a>00521 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Interface para Tripulante de um voo &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00522"></a>00522 
+<a name="l00524"></a>00524 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#ad230926f5df64abda00a302d8046960a" title="Adiciona um tripulante a uma companhia com os dados introduzidos pelo utilizador.">addTripulanteVoo</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a>* companhia);
+<a name="l00526"></a>00526 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#ad230926f5df64abda00a302d8046960a" title="Adiciona um tripulante a uma companhia com os dados introduzidos pelo utilizador.">addTripulanteVoo</a>(<a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a>* voo, <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> *tripulante);
+<a name="l00528"></a>00528 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a7416dbb1154f3215ada026415ebdc532" title="Lista todas os tripulantes de uma companhia.">listTripulanteVoo</a>(<a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a>* voo, <span class="keywordtype">bool</span> final_pause = <span class="keyword">true</span>);
+<a name="l00530"></a>00530 <span class="keywordtype">size_t</span> <a class="code" href="namespace_c_r_u_d.html#aeebe43348bba41d3c0adcf97ff07a586" title="Selecciona um tripulante de uma companhia, de uma lista de passageiros.">selTripulanteVoo</a>(<a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo);
+<a name="l00532"></a>00532 <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a>* <a class="code" href="namespace_c_r_u_d.html#a8589a4c33a3092a0bed545e7cac84087" title="Selecciona um tripulante de uma companhia, de uma lista de passageiros (retorna apontador).">selTripulanteVooPtr</a>(<a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo);
+<a name="l00534"></a>00534 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a1e76da7fcc4bb976fe78aa8dd389191f" title="Elimina um tripulante de uma companhia perguntando ao utilizador o índice.">delTripulanteVoo</a>(<a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a>* voo);
+<a name="l00536"></a>00536 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a1e76da7fcc4bb976fe78aa8dd389191f" title="Elimina um tripulante de uma companhia perguntando ao utilizador o índice.">delTripulanteVoo</a>(<a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a>* voo, <span class="keywordtype">size_t</span> indice);
+<a name="l00537"></a>00537 
+<a name="l00538"></a>00538 
+<a name="l00539"></a>00539 
+<a name="l00540"></a>00540 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Gestão das bases de dados &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00541"></a>00541 
+<a name="l00542"></a>00542 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#ab0ae01cc65e2568fece194522e86a227" title="Carrega os dados do ficheiro por defeito.">loaddb</a>();
+<a name="l00543"></a>00543 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#ab0ae01cc65e2568fece194522e86a227" title="Carrega os dados do ficheiro por defeito.">loaddb</a>(<span class="keywordtype">string</span> filename);
+<a name="l00544"></a>00544 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a5aea6e00626d711dca95af97e7816072" title="Grava os dados no ficheiro por defeito.">savedb</a>();
+<a name="l00545"></a>00545 <span class="keywordtype">void</span> <a class="code" href="namespace_c_r_u_d.html#a5aea6e00626d711dca95af97e7816072" title="Grava os dados no ficheiro por defeito.">savedb</a>(<span class="keywordtype">string</span> filename);
+<a name="l00546"></a>00546 
+<a name="l00547"></a>00547 <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
+<a name="l00548"></a><a class="code" href="namespace_c_r_u_d.html#a5e1d7b80ab6291c93614d099e2301941">00548</a> <span class="keywordtype">int</span> <a class="code" href="namespace_c_r_u_d.html#a5e1d7b80ab6291c93614d099e2301941">calcVectorIndex</a>(<span class="keyword">const</span> vector&lt;T&gt; &amp;vec, T elem)
+<a name="l00549"></a>00549 {
+<a name="l00550"></a>00550         <span class="keyword">typename</span> vector&lt;T&gt;::const_iterator it = find(vec.begin(), vec.end(), elem);
+<a name="l00551"></a>00551 
+<a name="l00552"></a>00552         <span class="keywordflow">if</span>(it==vec.end())
+<a name="l00553"></a>00553                 <span class="keywordflow">return</span> -1;
+<a name="l00554"></a>00554         <span class="keywordflow">else</span>
+<a name="l00555"></a>00555                 <span class="keywordflow">return</span> (it-vec.begin());
+<a name="l00556"></a>00556 }
+<a name="l00557"></a>00557 
+<a name="l00558"></a>00558 <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
+<a name="l00559"></a><a class="code" href="namespace_c_r_u_d.html#ae365371a25065179324e48d629ce319d">00559</a> T <a class="code" href="namespace_c_r_u_d.html#ae365371a25065179324e48d629ce319d">getVectorElem</a>(vector&lt;T&gt; &amp;vec, <span class="keywordtype">int</span> index)
+<a name="l00560"></a>00560 {
+<a name="l00561"></a>00561         <span class="keywordflow">if</span>( (index==-1) || ((<span class="keywordtype">size_t</span>)index&gt;=vec.size()) )
+<a name="l00562"></a>00562                 <span class="keywordflow">return</span> NULL;
+<a name="l00563"></a>00563         <span class="keywordflow">else</span>
+<a name="l00564"></a>00564                 <span class="keywordflow">return</span> vec[index];
+<a name="l00565"></a>00565 }
+<a name="l00566"></a>00566 
+<a name="l00567"></a>00567 <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
+<a name="l00568"></a><a class="code" href="namespace_c_r_u_d.html#a1f7be543a2cacdd1e0866f15c4351c2c">00568</a> <span class="keywordtype">int</span> <a class="code" href="namespace_c_r_u_d.html#a1f7be543a2cacdd1e0866f15c4351c2c">calcBSTIndex</a>(<a class="code" href="class_b_s_t.html">BST&lt;T&gt;</a> &amp;bst, T elem)
+<a name="l00569"></a>00569 {
+<a name="l00570"></a>00570         <span class="keywordtype">size_t</span> i = 0;
+<a name="l00571"></a>00571         <a class="code" href="class_b_s_t_itr_in.html">BSTItrIn&lt;T&gt;</a> it(bst);
+<a name="l00572"></a>00572         <span class="keywordflow">while</span> (!it.<a class="code" href="class_b_s_t_itr_in.html#a6f9a43217862c263a9bf15b9a08b889a">isAtEnd</a>())
+<a name="l00573"></a>00573         {
+<a name="l00574"></a>00574                 <span class="keywordflow">if</span>(it.<a class="code" href="class_b_s_t_itr_in.html#ac7ac215c1247bd25fc1fdb8053826a32">retrieve</a>() == elem)
+<a name="l00575"></a>00575                         <span class="keywordflow">return</span> i;
+<a name="l00576"></a>00576 
+<a name="l00577"></a>00577                 it.<a class="code" href="class_b_s_t_itr_in.html#ac772d3ebbac748c5f8cf9bc659f2e32c">advance</a>();
+<a name="l00578"></a>00578                 ++i;
+<a name="l00579"></a>00579         }
+<a name="l00580"></a>00580 
+<a name="l00581"></a>00581         <span class="keywordflow">return</span> -1;
+<a name="l00582"></a>00582 }
+<a name="l00583"></a>00583 
+<a name="l00584"></a>00584 <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
+<a name="l00585"></a><a class="code" href="namespace_c_r_u_d.html#a70b14a31096bfaea36bf16a415e61031">00585</a> T <a class="code" href="namespace_c_r_u_d.html#a70b14a31096bfaea36bf16a415e61031">getBSTElem</a>(<a class="code" href="class_b_s_t.html">BST&lt;T&gt;</a> &amp;bst, <span class="keywordtype">size_t</span> index)
+<a name="l00586"></a>00586 {
+<a name="l00587"></a>00587         <a class="code" href="class_b_s_t_itr_in.html">BSTItrIn&lt;T&gt;</a> it( bst );
+<a name="l00588"></a>00588         <span class="keywordtype">size_t</span> i = 0;
+<a name="l00589"></a>00589         <span class="keywordflow">while</span> (!it.<a class="code" href="class_b_s_t_itr_in.html#a6f9a43217862c263a9bf15b9a08b889a">isAtEnd</a>() &amp;&amp; i&lt;index)
+<a name="l00590"></a>00590         {
+<a name="l00591"></a>00591                 it.<a class="code" href="class_b_s_t_itr_in.html#ac772d3ebbac748c5f8cf9bc659f2e32c">advance</a>();
+<a name="l00592"></a>00592                 ++i;
+<a name="l00593"></a>00593         }
+<a name="l00594"></a>00594 
+<a name="l00595"></a>00595         <span class="keywordflow">if</span>( it.<a class="code" href="class_b_s_t_itr_in.html#a6f9a43217862c263a9bf15b9a08b889a">isAtEnd</a>())
+<a name="l00596"></a>00596                 <span class="keywordflow">return</span> <a class="code" href="_aeroporto_8h.html#a2bc5aca9e18ac86fc85a25407d081e21">porta_embarque_null</a>;
+<a name="l00597"></a>00597         <span class="keywordflow">else</span>
+<a name="l00598"></a>00598                 <span class="keywordflow">return</span> it.<a class="code" href="class_b_s_t_itr_in.html#ac7ac215c1247bd25fc1fdb8053826a32">retrieve</a>();
+<a name="l00599"></a>00599 }
+<a name="l00600"></a>00600 
+<a name="l00601"></a>00601 <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
+<a name="l00602"></a><a class="code" href="namespace_c_r_u_d.html#ab5be2cb7a5cc9b1ce11dc55b28da65fe">00602</a> <span class="keywordtype">unsigned</span> <a class="code" href="namespace_c_r_u_d.html#ab5be2cb7a5cc9b1ce11dc55b28da65fe">calcBSTSize</a>(<span class="keyword">const</span> <a class="code" href="class_b_s_t.html">BST&lt;T&gt;</a> &amp;bst)
+<a name="l00603"></a>00603 {
+<a name="l00604"></a>00604         <span class="keywordtype">size_t</span> i = 0;
+<a name="l00605"></a>00605         <a class="code" href="class_b_s_t_itr_in.html">BSTItrIn&lt;T&gt;</a> it(bst);
+<a name="l00606"></a>00606         <span class="keywordflow">while</span> (!it.<a class="code" href="class_b_s_t_itr_in.html#a6f9a43217862c263a9bf15b9a08b889a">isAtEnd</a>())
+<a name="l00607"></a>00607         {
+<a name="l00608"></a>00608                 it.<a class="code" href="class_b_s_t_itr_in.html#ac772d3ebbac748c5f8cf9bc659f2e32c">advance</a>();
+<a name="l00609"></a>00609                 ++i;
+<a name="l00610"></a>00610         }
+<a name="l00611"></a>00611 
+<a name="l00612"></a>00612         <span class="keywordflow">return</span> i;
+<a name="l00613"></a>00613 }
+<a name="l00614"></a>00614 
+<a name="l00615"></a>00615 } <span class="comment">//Fim do namespace</span>
+<a name="l00616"></a>00616 
+<a name="l00617"></a>00617 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:36 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

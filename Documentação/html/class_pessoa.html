@@ -1,0 +1,650 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência à classe Pessoa</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&nbsp;dos&nbsp;componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a>  </div>
+  <div class="headertitle">
+<h1>Referência à classe Pessoa</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Pessoa" -->
+<p>Classe que contém informação acerca de uma <a class="el" href="class_pessoa.html" title="Classe que contém informação acerca de uma Pessoa.">Pessoa</a>.  
+<a href="#_details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png"/> Diagrama de heranças da classe Pessoa</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+ <div class="center">
+  <img src="class_pessoa.png" usemap="#Pessoa_map" alt=""/>
+  <map id="Pessoa_map" name="Pessoa_map">
+<area href="class_passageiro.html" alt="Passageiro" shape="rect" coords="0,56,77,80"/>
+<area href="class_tripulante.html" alt="Tripulante" shape="rect" coords="87,56,164,80"/>
+<area href="class_hospedeiro.html" alt="Hospedeiro" shape="rect" coords="43,112,120,136"/>
+<area href="class_piloto.html" alt="Piloto" shape="rect" coords="130,112,207,136"/>
+</map>
+</div>
+
+<p><a href="class_pessoa-members.html">Mostrar lista completa dos membros</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a22563fe1f53faa9b1d8d10d28ae0c650">Pessoa</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construtor vazio que inicializa uma <a class="el" href="class_pessoa.html" title="Classe que contém informação acerca de uma Pessoa.">Pessoa</a> com valores inválidos para sinalizar que é necessário modifica-los mais tarde.  <a href="#a22563fe1f53faa9b1d8d10d28ae0c650"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a563482e9a3445e19b9a40c8203f51972">Pessoa</a> (string nome, string morada, string nacionalidade, unsigned contacto, unsigned BI, unsigned idade)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a8d4d2f40ba5634f49b0ce181fee7f0a7">getNome</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#ac8fe94831a8f7fb219ccf3b970be9339">getMorada</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a9e738fdea54649d2a265db3b3fd023a7">getNacionalidade</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a30c7fb4ef95a8602cae34bedc0c0b140">getContacto</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a0f98792e85f39c8ec73b16f18733ab2e">getBI</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a1f19e7ce09adedfbe6ca5d21a00a6107">getIdade</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#ab059a835c4aa05bd77dcc58297fca331">setNome</a> (string nome)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a94fdc288b0018fe5812d8d4ae3a36db7">setMorada</a> (string morada)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a13da43188de88ebe053b542579c7f519">setNacionalidade</a> (string nacionalidade)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a05a6dd3cfb6a881f2c8adafa4982c1c8">setContacto</a> (unsigned contacto)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a5dfc5465d3e183ec54de90917280089a">setBI</a> (unsigned BI)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#aa536fb81b68885edf1b489322ce3f62f">setIdade</a> (unsigned idade)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a76cb893f8e46233efaf91c6b03ebad3a">operator==</a> (const <a class="el" href="class_pessoa.html">Pessoa</a> &amp;pessoa)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador que verifica se duas pessoas são equivalentes, comparando o seu BI.  <a href="#a76cb893f8e46233efaf91c6b03ebad3a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#afd566cd91d65f5a708f25b5e2abbd6b3">operator&lt;</a> (const <a class="el" href="class_pessoa.html">Pessoa</a> &amp;pessoa)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador que verifica se o nome de uma <a class="el" href="class_pessoa.html" title="Classe que contém informação acerca de uma Pessoa.">Pessoa</a> é "menor" do que outra.  <a href="#afd566cd91d65f5a708f25b5e2abbd6b3"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a2e48ddfc442a6b1d30477ad23cf851d4">_nome</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#aa758d3a0f185afe21649bc2f43fc23a4">_morada</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#aa18e9e4546060bc7c2fbea9d5d3d2429">_nacionalidade</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#afa5056fbd2a3a393fa193149ebce3dd2">_contacto</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a605be21277f253c2397e1d997bf7fb29">_BI</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pessoa.html#a2dd3da573870c2865d4d1487aad9eed4">_idade</a></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<p>Classe que contém informação acerca de uma <a class="el" href="class_pessoa.html" title="Classe que contém informação acerca de uma Pessoa.">Pessoa</a>. </p>
+<p>Supeclasse de <a class="el" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a> e <a class="el" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a>. </p>
+
+<p>Definido na linha <a class="el" href="_pessoa_8h_source.html#l00026">26</a> do ficheiro <a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>.</p>
+<hr/><h2>Documentação dos Construtores &amp; Destrutor</h2>
+<a class="anchor" id="a22563fe1f53faa9b1d8d10d28ae0c650"></a><!-- doxytag: member="Pessoa::Pessoa" ref="a22563fe1f53faa9b1d8d10d28ae0c650" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Pessoa::Pessoa </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Construtor vazio que inicializa uma <a class="el" href="class_pessoa.html" title="Classe que contém informação acerca de uma Pessoa.">Pessoa</a> com valores inválidos para sinalizar que é necessário modifica-los mais tarde. </p>
+
+<p>Definido na linha <a class="el" href="_pessoa_8h_source.html#l00037">37</a> do ficheiro <a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a563482e9a3445e19b9a40c8203f51972"></a><!-- doxytag: member="Pessoa::Pessoa" ref="a563482e9a3445e19b9a40c8203f51972" args="(string nome, string morada, string nacionalidade, unsigned contacto, unsigned BI, unsigned idade)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Pessoa::Pessoa </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>morada</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>nacionalidade</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>contacto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>BI</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>idade</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_pessoa_8h_source.html#l00038">38</a> do ficheiro <a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos métodos</h2>
+<a class="anchor" id="a0f98792e85f39c8ec73b16f18733ab2e"></a><!-- doxytag: member="Pessoa::getBI" ref="a0f98792e85f39c8ec73b16f18733ab2e" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned Pessoa::getBI </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_pessoa_8h_source.html#l00045">45</a> do ficheiro <a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>.</p>
+
+<p>Referências <a class="el" href="_pessoa_8h_source.html#l00032">_BI</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02021">CRUD::cmpPassageiroBI()</a>, <a class="el" href="_piloto_8cpp_source.html#l00017">Piloto::imprimeInfo()</a>, <a class="el" href="_hospedeiro_8cpp_source.html#l00017">Hospedeiro::imprimeInfo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02145">CRUD::infoPassageiro()</a>, <a class="el" href="_passageiro_8cpp_source.html#l00026">Passageiro::operator&lt;()</a> e <a class="el" href="_passageiro_8cpp_source.html#l00018">Passageiro::operator==()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a30c7fb4ef95a8602cae34bedc0c0b140"></a><!-- doxytag: member="Pessoa::getContacto" ref="a30c7fb4ef95a8602cae34bedc0c0b140" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned Pessoa::getContacto </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_pessoa_8h_source.html#l00044">44</a> do ficheiro <a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>.</p>
+
+<p>Referências <a class="el" href="_pessoa_8h_source.html#l00031">_contacto</a>.</p>
+
+<p>Referenciado por <a class="el" href="_piloto_8cpp_source.html#l00017">Piloto::imprimeInfo()</a>, <a class="el" href="_hospedeiro_8cpp_source.html#l00017">Hospedeiro::imprimeInfo()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02145">CRUD::infoPassageiro()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1f19e7ce09adedfbe6ca5d21a00a6107"></a><!-- doxytag: member="Pessoa::getIdade" ref="a1f19e7ce09adedfbe6ca5d21a00a6107" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned Pessoa::getIdade </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_pessoa_8h_source.html#l00046">46</a> do ficheiro <a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>.</p>
+
+<p>Referências <a class="el" href="_pessoa_8h_source.html#l00033">_idade</a>.</p>
+
+<p>Referenciado por <a class="el" href="_piloto_8cpp_source.html#l00017">Piloto::imprimeInfo()</a>, <a class="el" href="_hospedeiro_8cpp_source.html#l00017">Hospedeiro::imprimeInfo()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02145">CRUD::infoPassageiro()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac8fe94831a8f7fb219ccf3b970be9339"></a><!-- doxytag: member="Pessoa::getMorada" ref="ac8fe94831a8f7fb219ccf3b970be9339" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Pessoa::getMorada </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_pessoa_8h_source.html#l00042">42</a> do ficheiro <a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>.</p>
+
+<p>Referências <a class="el" href="_pessoa_8h_source.html#l00029">_morada</a>.</p>
+
+<p>Referenciado por <a class="el" href="_piloto_8cpp_source.html#l00017">Piloto::imprimeInfo()</a>, <a class="el" href="_hospedeiro_8cpp_source.html#l00017">Hospedeiro::imprimeInfo()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02145">CRUD::infoPassageiro()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9e738fdea54649d2a265db3b3fd023a7"></a><!-- doxytag: member="Pessoa::getNacionalidade" ref="a9e738fdea54649d2a265db3b3fd023a7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Pessoa::getNacionalidade </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_pessoa_8h_source.html#l00043">43</a> do ficheiro <a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>.</p>
+
+<p>Referências <a class="el" href="_pessoa_8h_source.html#l00030">_nacionalidade</a>.</p>
+
+<p>Referenciado por <a class="el" href="_piloto_8cpp_source.html#l00017">Piloto::imprimeInfo()</a>, <a class="el" href="_hospedeiro_8cpp_source.html#l00017">Hospedeiro::imprimeInfo()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02145">CRUD::infoPassageiro()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d4d2f40ba5634f49b0ce181fee7f0a7"></a><!-- doxytag: member="Pessoa::getNome" ref="a8d4d2f40ba5634f49b0ce181fee7f0a7" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Pessoa::getNome </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_pessoa_8h_source.html#l00041">41</a> do ficheiro <a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>.</p>
+
+<p>Referências <a class="el" href="_pessoa_8h_source.html#l00028">_nome</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02428">CRUD::chamadaEmbarqueVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02017">CRUD::cmpPassageiroNome()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00542">CRUD::cmpTripulanteNome()</a>, <a class="el" href="_piloto_8cpp_source.html#l00017">Piloto::imprimeInfo()</a>, <a class="el" href="_hospedeiro_8cpp_source.html#l00017">Hospedeiro::imprimeInfo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02145">CRUD::infoPassageiro()</a> e <a class="el" href="_tripulante_8cpp_source.html#l00026">Tripulante::operator&lt;()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afd566cd91d65f5a708f25b5e2abbd6b3"></a><!-- doxytag: member="Pessoa::operator&lt;" ref="afd566cd91d65f5a708f25b5e2abbd6b3" args="(const Pessoa &amp;pessoa)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Pessoa::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_pessoa.html">Pessoa</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>pessoa</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operador que verifica se o nome de uma <a class="el" href="class_pessoa.html" title="Classe que contém informação acerca de uma Pessoa.">Pessoa</a> é "menor" do que outra. </p>
+<p>Caso tenham o mesmo nome, compara os BIs. </p>
+
+<p>Definido na linha <a class="el" href="_pessoa_8cpp_source.html#l00026">26</a> do ficheiro <a class="el" href="_pessoa_8cpp_source.html">Pessoa.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_pessoa_8h_source.html#l00032">_BI</a> e <a class="el" href="_pessoa_8h_source.html#l00028">_nome</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a76cb893f8e46233efaf91c6b03ebad3a"></a><!-- doxytag: member="Pessoa::operator==" ref="a76cb893f8e46233efaf91c6b03ebad3a" args="(const Pessoa &amp;pessoa)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Pessoa::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_pessoa.html">Pessoa</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>pessoa</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operador que verifica se duas pessoas são equivalentes, comparando o seu BI. </p>
+
+<p>Definido na linha <a class="el" href="_pessoa_8cpp_source.html#l00018">18</a> do ficheiro <a class="el" href="_pessoa_8cpp_source.html">Pessoa.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_pessoa_8h_source.html#l00032">_BI</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5dfc5465d3e183ec54de90917280089a"></a><!-- doxytag: member="Pessoa::setBI" ref="a5dfc5465d3e183ec54de90917280089a" args="(unsigned BI)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pessoa::setBI </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>BI</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_pessoa_8h_source.html#l00052">52</a> do ficheiro <a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>.</p>
+
+<p>Referências <a class="el" href="_pessoa_8h_source.html#l00032">_BI</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02189">CRUD::editPassageiro()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00744">CRUD::editTripulante()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a05a6dd3cfb6a881f2c8adafa4982c1c8"></a><!-- doxytag: member="Pessoa::setContacto" ref="a05a6dd3cfb6a881f2c8adafa4982c1c8" args="(unsigned contacto)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pessoa::setContacto </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>contacto</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_pessoa_8h_source.html#l00051">51</a> do ficheiro <a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>.</p>
+
+<p>Referências <a class="el" href="_pessoa_8h_source.html#l00031">_contacto</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02189">CRUD::editPassageiro()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00744">CRUD::editTripulante()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa536fb81b68885edf1b489322ce3f62f"></a><!-- doxytag: member="Pessoa::setIdade" ref="aa536fb81b68885edf1b489322ce3f62f" args="(unsigned idade)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pessoa::setIdade </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>idade</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_pessoa_8h_source.html#l00053">53</a> do ficheiro <a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>.</p>
+
+<p>Referências <a class="el" href="_pessoa_8h_source.html#l00033">_idade</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02189">CRUD::editPassageiro()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00744">CRUD::editTripulante()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a94fdc288b0018fe5812d8d4ae3a36db7"></a><!-- doxytag: member="Pessoa::setMorada" ref="a94fdc288b0018fe5812d8d4ae3a36db7" args="(string morada)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pessoa::setMorada </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>morada</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_pessoa_8h_source.html#l00049">49</a> do ficheiro <a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>.</p>
+
+<p>Referências <a class="el" href="_pessoa_8h_source.html#l00029">_morada</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02189">CRUD::editPassageiro()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00744">CRUD::editTripulante()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a13da43188de88ebe053b542579c7f519"></a><!-- doxytag: member="Pessoa::setNacionalidade" ref="a13da43188de88ebe053b542579c7f519" args="(string nacionalidade)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pessoa::setNacionalidade </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>nacionalidade</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_pessoa_8h_source.html#l00050">50</a> do ficheiro <a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>.</p>
+
+<p>Referências <a class="el" href="_pessoa_8h_source.html#l00030">_nacionalidade</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02189">CRUD::editPassageiro()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00744">CRUD::editTripulante()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab059a835c4aa05bd77dcc58297fca331"></a><!-- doxytag: member="Pessoa::setNome" ref="ab059a835c4aa05bd77dcc58297fca331" args="(string nome)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pessoa::setNome </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>nome</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_pessoa_8h_source.html#l00048">48</a> do ficheiro <a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>.</p>
+
+<p>Referências <a class="el" href="_pessoa_8h_source.html#l00028">_nome</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02189">CRUD::editPassageiro()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00744">CRUD::editTripulante()</a> e <a class="el" href="_tripulante_8h_source.html#l00050">Tripulante::Tripulante()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos dados membro</h2>
+<a class="anchor" id="a605be21277f253c2397e1d997bf7fb29"></a><!-- doxytag: member="Pessoa::_BI" ref="a605be21277f253c2397e1d997bf7fb29" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned <a class="el" href="class_pessoa.html#a605be21277f253c2397e1d997bf7fb29">Pessoa::_BI</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_pessoa_8h_source.html#l00032">32</a> do ficheiro <a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_pessoa_8h_source.html#l00045">getBI()</a>, <a class="el" href="_pessoa_8cpp_source.html#l00026">operator&lt;()</a>, <a class="el" href="_pessoa_8cpp_source.html#l00018">operator==()</a> e <a class="el" href="_pessoa_8h_source.html#l00052">setBI()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afa5056fbd2a3a393fa193149ebce3dd2"></a><!-- doxytag: member="Pessoa::_contacto" ref="afa5056fbd2a3a393fa193149ebce3dd2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned <a class="el" href="class_pessoa.html#afa5056fbd2a3a393fa193149ebce3dd2">Pessoa::_contacto</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_pessoa_8h_source.html#l00031">31</a> do ficheiro <a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_pessoa_8h_source.html#l00044">getContacto()</a> e <a class="el" href="_pessoa_8h_source.html#l00051">setContacto()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2dd3da573870c2865d4d1487aad9eed4"></a><!-- doxytag: member="Pessoa::_idade" ref="a2dd3da573870c2865d4d1487aad9eed4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned <a class="el" href="class_pessoa.html#a2dd3da573870c2865d4d1487aad9eed4">Pessoa::_idade</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_pessoa_8h_source.html#l00033">33</a> do ficheiro <a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_pessoa_8h_source.html#l00046">getIdade()</a> e <a class="el" href="_pessoa_8h_source.html#l00053">setIdade()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa758d3a0f185afe21649bc2f43fc23a4"></a><!-- doxytag: member="Pessoa::_morada" ref="aa758d3a0f185afe21649bc2f43fc23a4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string <a class="el" href="class_pessoa.html#aa758d3a0f185afe21649bc2f43fc23a4">Pessoa::_morada</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_pessoa_8h_source.html#l00029">29</a> do ficheiro <a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_pessoa_8h_source.html#l00042">getMorada()</a> e <a class="el" href="_pessoa_8h_source.html#l00049">setMorada()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa18e9e4546060bc7c2fbea9d5d3d2429"></a><!-- doxytag: member="Pessoa::_nacionalidade" ref="aa18e9e4546060bc7c2fbea9d5d3d2429" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string <a class="el" href="class_pessoa.html#aa18e9e4546060bc7c2fbea9d5d3d2429">Pessoa::_nacionalidade</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_pessoa_8h_source.html#l00030">30</a> do ficheiro <a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_pessoa_8h_source.html#l00043">getNacionalidade()</a> e <a class="el" href="_pessoa_8h_source.html#l00050">setNacionalidade()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2e48ddfc442a6b1d30477ad23cf851d4"></a><!-- doxytag: member="Pessoa::_nome" ref="a2e48ddfc442a6b1d30477ad23cf851d4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string <a class="el" href="class_pessoa.html#a2e48ddfc442a6b1d30477ad23cf851d4">Pessoa::_nome</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_pessoa_8h_source.html#l00028">28</a> do ficheiro <a class="el" href="_pessoa_8h_source.html">Pessoa.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_pessoa_8h_source.html#l00041">getNome()</a>, <a class="el" href="_pessoa_8cpp_source.html#l00026">operator&lt;()</a> e <a class="el" href="_pessoa_8h_source.html#l00048">setNome()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
+<li><a class="el" href="_pessoa_8h_source.html">Pessoa.h</a></li>
+<li><a class="el" href="_pessoa_8cpp_source.html">Pessoa.cpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:39 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

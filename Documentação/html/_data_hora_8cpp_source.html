@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: DataHora.cpp Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>DataHora.cpp</h1>  </div>
+</div>
+<div class="contents">
+<a href="_data_hora_8cpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_data_hora_8h.html" title="Classe que contém informação associada a uma data e hora.">DataHora.h</a>&quot;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 
+<a name="l00018"></a><a class="code" href="class_data_hora.html#a988f7107f6333b0f6327027b524b7626">00018</a> <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> <a class="code" href="class_data_hora.html#a988f7107f6333b0f6327027b524b7626" title="Parser que a partir de uma string no formato AAAA/MM/DD HH:mm, retira os dados necessários para inici...">DataHora::Parser_DataHora</a>(<span class="keywordtype">string</span> data_hora) {
+<a name="l00019"></a>00019         <span class="comment">//Devisão da string em duas subtrings (data e hora)</span>
+<a name="l00020"></a>00020         vector&lt;string&gt; datahora = <a class="code" href="utils_8cpp.html#a7db7a33a90c53907236c65b823712ffb" title="Função que separa uma string em substrings sempre que encontrar o caracter delimitador (&amp;quot;delim&amp;q...">split</a>(data_hora, <span class="charliteral">&#39; &#39;</span>);
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022         <span class="comment">//Verifica se a string está no formato AAAA/MM/DD HH:mm</span>
+<a name="l00023"></a>00023         <span class="keywordflow">if</span> (datahora.size() == 2) {
+<a name="l00024"></a>00024                 <span class="comment">//Divisão da string data nos seus componetes ano, mês e dia</span>
+<a name="l00025"></a>00025                 vector&lt;string&gt; data = <a class="code" href="utils_8cpp.html#a7db7a33a90c53907236c65b823712ffb" title="Função que separa uma string em substrings sempre que encontrar o caracter delimitador (&amp;quot;delim&amp;q...">split</a>(datahora[0], <span class="charliteral">&#39;/&#39;</span>);
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027                 <span class="comment">//Devisão da string hora nas componentes hora e minutos</span>
+<a name="l00028"></a>00028                 vector&lt;string&gt; hora = <a class="code" href="utils_8cpp.html#a7db7a33a90c53907236c65b823712ffb" title="Função que separa uma string em substrings sempre que encontrar o caracter delimitador (&amp;quot;delim&amp;q...">split</a>(datahora[1], <span class="charliteral">&#39;:&#39;</span>);
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030                 <span class="keywordflow">if</span> ((data.size() == 3) &amp;&amp; (hora.size() == 2)) {
+<a name="l00031"></a>00031                         <span class="keywordtype">int</span> a = atoi(data[0].c_str());
+<a name="l00032"></a>00032                         <span class="keywordtype">int</span> m = atoi(data[1].c_str());
+<a name="l00033"></a>00033                         <span class="keywordtype">int</span> d = atoi(data[2].c_str());
+<a name="l00034"></a>00034                         <span class="keywordtype">int</span> h = atoi(hora[0].c_str());
+<a name="l00035"></a>00035                         <span class="keywordtype">int</span> min = atoi(hora[1].c_str());
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037                         <span class="comment">//Verificação da validade dos dados obtidos</span>
+<a name="l00038"></a>00038                         <span class="keywordflow">if</span> ((d &gt; 0 &amp;&amp; d &lt;= 31) &amp;&amp; (m &gt; 0 &amp;&amp; m &lt;= 12) &amp;&amp; (a &gt; 0) &amp;&amp; (h &gt;= 0 &amp;&amp; h &lt;= 23) &amp;&amp; (min &gt;= 0 &amp;&amp; min &lt;= 59)) {
+<a name="l00039"></a>00039                                 <span class="comment">//Criação da DataHora</span>
+<a name="l00040"></a>00040                                 <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> ret(a, m, d, h, min);
+<a name="l00041"></a>00041                                 <span class="keywordflow">return</span> ret;
+<a name="l00042"></a>00042                         }
+<a name="l00043"></a>00043                 }
+<a name="l00044"></a>00044         }
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046         <span class="comment">//Caso não seja fornecido uma data válida é lançada uma excepção</span>
+<a name="l00047"></a>00047         <span class="keywordflow">throw</span> <a class="code" href="class_ex_invalid_date_time.html" title="Classe usada no tratamento de excepções que sinaliza que o utilizador introduziu uma DataHora num for...">ExInvalidDateTime</a>(data_hora);
+<a name="l00048"></a>00048 }
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 
+<a name="l00051"></a><a class="code" href="class_data_hora.html#a10c7ae9216d4bbca2b661a72fb1363c7">00051</a> <span class="keywordtype">void</span> <a class="code" href="class_data_hora.html#a10c7ae9216d4bbca2b661a72fb1363c7" title="Método que pede ao utilizador para introduzir uma data no formato &amp;lt;AAAA/MM/DD HH:mm&amp;gt;.">DataHora::getDataHoraCin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* mensagem) {
+<a name="l00052"></a>00052         <span class="keywordtype">string</span> data_temp;       <span class="comment">//String temporária para guardar o input</span>
+<a name="l00053"></a>00053         <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> data;          <span class="comment">//Data a ser retornada depois de correctamente inicializada</span>
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055         <span class="keywordtype">bool</span> data_invalida = <span class="keyword">true</span>; <span class="comment">//Flag a ser usada para sair do ciclo de input</span>
+<a name="l00056"></a>00056         <span class="comment">//Enquanto o utilizador não introduzir uma DataHora no formato correcto, continua a pedir a DataHora</span>
+<a name="l00057"></a>00057         <span class="keywordflow">do</span> {
+<a name="l00058"></a>00058                 <span class="keywordflow">try</span> {
+<a name="l00059"></a>00059                         cout &lt;&lt; mensagem &lt;&lt; flush;
+<a name="l00060"></a>00060                         <a class="code" href="utils_8cpp.html#aec9a81a0766b1243f091fa5e47abde63" title="getline que faz o sync para não ler lixo do buffer.">getlineCin</a>(data_temp);
+<a name="l00061"></a>00061                         data = <a class="code" href="class_data_hora.html#ac1852e3d4e0969fe3f3c7826ee0f1d2c" title="Construtor vazio, que inicializa os dados da classe com valores de erro, denotando que necessitam de ...">DataHora</a>(data_temp);
+<a name="l00062"></a>00062                         data_invalida = <span class="keyword">false</span>;
+<a name="l00063"></a>00063                 } <span class="keywordflow">catch</span> (<a class="code" href="class_ex_invalid_date_time.html" title="Classe usada no tratamento de excepções que sinaliza que o utilizador introduziu uma DataHora num for...">ExInvalidDateTime</a> &amp;e) {
+<a name="l00064"></a>00064                         cout &lt;&lt; e &lt;&lt; endl &lt;&lt; endl;
+<a name="l00065"></a>00065                 }
+<a name="l00066"></a>00066         } <span class="keywordflow">while</span> (data_invalida);
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068         *<span class="keyword">this</span> = data;
+<a name="l00069"></a>00069 }
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 
+<a name="l00072"></a><a class="code" href="class_data_hora.html#af4c8ad3b2e98fc5b55bdebc5993e6a3e">00072</a> <span class="keywordtype">bool</span> <a class="code" href="class_data_hora.html#af4c8ad3b2e98fc5b55bdebc5993e6a3e" title="Operador que permite comparar se duas datas são equivalentes.">DataHora::operator==</a>(<span class="keyword">const</span> <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> &amp;data_hora)<span class="keyword"> const</span>
+<a name="l00073"></a>00073 <span class="keyword"></span>{
+<a name="l00074"></a>00074         <span class="keywordflow">if</span>( (<a class="code" href="class_data_hora.html#a3145b12374fcc663633334ee363c2b36">_ano</a> == data_hora.<a class="code" href="class_data_hora.html#a3145b12374fcc663633334ee363c2b36">_ano</a>) &amp;&amp;
+<a name="l00075"></a>00075                 (<a class="code" href="class_data_hora.html#a61c6f7a9251ace6dc717a55549571b13">_mes</a> == data_hora.<a class="code" href="class_data_hora.html#a61c6f7a9251ace6dc717a55549571b13">_mes</a>) &amp;&amp;
+<a name="l00076"></a>00076                 (<a class="code" href="class_data_hora.html#a6327f9f6af78a8b5561795cb385d9f39">_dia</a> == data_hora.<a class="code" href="class_data_hora.html#a6327f9f6af78a8b5561795cb385d9f39">_dia</a>) &amp;&amp;
+<a name="l00077"></a>00077                 (<a class="code" href="class_data_hora.html#a8bb71ce7f12ccd1a6fe3d9317a53e978">_hora</a> == data_hora.<a class="code" href="class_data_hora.html#a8bb71ce7f12ccd1a6fe3d9317a53e978">_hora</a>) &amp;&amp;
+<a name="l00078"></a>00078                 (<a class="code" href="class_data_hora.html#a44692ccc92ead379cbd41ec5ed8244dc">_min</a> == data_hora.<a class="code" href="class_data_hora.html#a44692ccc92ead379cbd41ec5ed8244dc">_min</a>) )
+<a name="l00079"></a>00079                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00080"></a>00080         <span class="keywordflow">else</span>
+<a name="l00081"></a>00081                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00082"></a>00082 }
+<a name="l00083"></a>00083 
+<a name="l00084"></a><a class="code" href="class_data_hora.html#a8e3650d234174e8af9c68b650b83c47c">00084</a> <span class="keywordtype">bool</span> <a class="code" href="class_data_hora.html#a8e3650d234174e8af9c68b650b83c47c" title="Operador que compara se uma hora é menor do que outra.">DataHora::operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> &amp;data_hora)<span class="keyword"> const</span>
+<a name="l00085"></a>00085 <span class="keyword"></span>{
+<a name="l00086"></a>00086         <span class="keywordflow">if</span> (<a class="code" href="class_data_hora.html#a3145b12374fcc663633334ee363c2b36">_ano</a> &lt; data_hora.<a class="code" href="class_data_hora.html#a3145b12374fcc663633334ee363c2b36">_ano</a>)
+<a name="l00087"></a>00087                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00088"></a>00088         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_data_hora.html#a3145b12374fcc663633334ee363c2b36">_ano</a> &gt; data_hora.<a class="code" href="class_data_hora.html#a3145b12374fcc663633334ee363c2b36">_ano</a>)
+<a name="l00089"></a>00089                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00090"></a>00090         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_data_hora.html#a61c6f7a9251ace6dc717a55549571b13">_mes</a> &lt; data_hora.<a class="code" href="class_data_hora.html#a61c6f7a9251ace6dc717a55549571b13">_mes</a>)
+<a name="l00091"></a>00091                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00092"></a>00092         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_data_hora.html#a61c6f7a9251ace6dc717a55549571b13">_mes</a> &gt; data_hora.<a class="code" href="class_data_hora.html#a61c6f7a9251ace6dc717a55549571b13">_mes</a>)
+<a name="l00093"></a>00093                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00094"></a>00094         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_data_hora.html#a6327f9f6af78a8b5561795cb385d9f39">_dia</a> &lt; data_hora.<a class="code" href="class_data_hora.html#a6327f9f6af78a8b5561795cb385d9f39">_dia</a>)
+<a name="l00095"></a>00095                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00096"></a>00096         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_data_hora.html#a6327f9f6af78a8b5561795cb385d9f39">_dia</a> &gt; data_hora.<a class="code" href="class_data_hora.html#a6327f9f6af78a8b5561795cb385d9f39">_dia</a>)
+<a name="l00097"></a>00097                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00098"></a>00098         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_data_hora.html#a8bb71ce7f12ccd1a6fe3d9317a53e978">_hora</a> &lt; data_hora.<a class="code" href="class_data_hora.html#a8bb71ce7f12ccd1a6fe3d9317a53e978">_hora</a>)
+<a name="l00099"></a>00099                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00100"></a>00100         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_data_hora.html#a8bb71ce7f12ccd1a6fe3d9317a53e978">_hora</a> &gt; data_hora.<a class="code" href="class_data_hora.html#a8bb71ce7f12ccd1a6fe3d9317a53e978">_hora</a>)
+<a name="l00101"></a>00101                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00102"></a>00102         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_data_hora.html#a44692ccc92ead379cbd41ec5ed8244dc">_min</a> &lt; data_hora.<a class="code" href="class_data_hora.html#a44692ccc92ead379cbd41ec5ed8244dc">_min</a>)
+<a name="l00103"></a>00103                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00104"></a>00104         <span class="keywordflow">else</span>
+<a name="l00105"></a>00105                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00106"></a>00106 }
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108 
+<a name="l00109"></a><a class="code" href="_data_hora_8h.html#a9ac36fe9585c2c4b65392e6123a5c5e9">00109</a> ostream&amp; <a class="code" href="_atraso_8cpp.html#a9d47ab9c63b2477f152e306ea353fe03" title="Operador que imprime um objecto do tipo Atraso no formato AAAA/MM/DD HH:mm.">operator&lt;&lt;</a>(ostream &amp;os, <span class="keyword">const</span> <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> &amp;obj) {
+<a name="l00110"></a>00110         <span class="comment">//Impressão da DataHora no formato AAAA/MM/DD HH:mm</span>
+<a name="l00111"></a>00111         os &lt;&lt; obj.<a class="code" href="class_data_hora.html#a46fabd024e06558aeca721692e93cf5d">getAno</a>() &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; obj.<a class="code" href="class_data_hora.html#aca0305a615d4f1bf4e45f7872f226532">getMes</a>() &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; obj.<a class="code" href="class_data_hora.html#a16d8c496f0acdb14b36548ab21cc2173">getDia</a>() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; obj.<a class="code" href="class_data_hora.html#af950e1a5afa1931cebb481e51acff9c3">getHora</a>() &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; obj.<a class="code" href="class_data_hora.html#a55d8380fff71bd2d9e038e2c7463c9ac">getMin</a>();
+<a name="l00112"></a>00112         <span class="keywordflow">return</span> os;
+<a name="l00113"></a>00113 }
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115 
+<a name="l00116"></a><a class="code" href="_data_hora_8h.html#a26c58a013a0b12d91728af741724ee1e">00116</a> istream&amp; <a class="code" href="_atraso_8cpp.html#a3f043f64f5c7d3425789717f37f2f42c" title="Operador que permite a leitura de dados para um objecto do tipo Atraso.">operator&gt;&gt;</a>(istream &amp;is, <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> &amp;obj) {
+<a name="l00117"></a>00117         <span class="keywordtype">string</span> str;
+<a name="l00118"></a>00118 
+<a name="l00119"></a>00119         cin.clear();
+<a name="l00120"></a>00120         cin.ignore(std::numeric_limits&lt;std::streamsize&gt;::max(), <span class="charliteral">&#39;\n&#39;</span>);
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122         <span class="comment">//Obtenção da string com informação da data e hora</span>
+<a name="l00123"></a>00123         getline(is, str);
+<a name="l00124"></a>00124 
+<a name="l00125"></a>00125         obj = obj.<a class="code" href="class_data_hora.html#a988f7107f6333b0f6327027b524b7626" title="Parser que a partir de uma string no formato AAAA/MM/DD HH:mm, retira os dados necessários para inici...">Parser_DataHora</a>(str);
+<a name="l00126"></a>00126         <span class="keywordflow">return</span> is;
+<a name="l00127"></a>00127 }
+<a name="l00128"></a>00128 
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:36 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

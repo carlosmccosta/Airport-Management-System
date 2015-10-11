@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência à classe Piloto</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&nbsp;dos&nbsp;componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a>  </div>
+  <div class="headertitle">
+<h1>Referência à classe Piloto</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Piloto" --><!-- doxytag: inherits="Tripulante" -->
+<p>Classe que contém a informação associada a cada plano de voo de uma companhia aérea. <br/>
+.  
+<a href="#_details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_piloto_8h_source.html">Piloto.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png"/> Diagrama de heranças da classe Piloto</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+ <div class="center">
+  <img src="class_piloto.png" usemap="#Piloto_map" alt=""/>
+  <map id="Piloto_map" name="Piloto_map">
+<area href="class_tripulante.html" alt="Tripulante" shape="rect" coords="0,56,68,80"/>
+<area href="class_pessoa.html" alt="Pessoa" shape="rect" coords="0,0,68,24"/>
+</map>
+</div>
+
+<p><a href="class_piloto-members.html">Mostrar lista completa dos membros</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_piloto.html#a5636a867e1519a93dea49532095c0e9a">Piloto</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_piloto.html#aec3e40d2e98dc3f10cb419202c44f09f">Piloto</a> (unsigned numero, string categoria, string nome, unsigned salario_hora)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_piloto.html#ab2c5c42030f11a33808c1fc46d79ce89">Piloto</a> (string nome, string morada, string nacionalidade, unsigned contacto, unsigned BI, unsigned idade, unsigned numero, string categoria, unsigned salario_hora, unsigned numero_horas_trabalho, string tipoContrato, <a class="el" href="class_data_hora.html">DataHora</a> expiracaoContrato, <a class="el" href="class_companhia.html">Companhia</a> *companhia, <a class="el" href="class_voo.html">Voo</a> *voo_actual)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_piloto.html#a8eeb69f342514c56e94d6b3e5fcc2fcf">~Piloto</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_piloto.html#acc689e873b81d96f19903502effa9564">imprimeInfo</a> ()</td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<p>Classe que contém a informação associada a cada plano de voo de uma companhia aérea. <br/>
+. </p>
+
+<p>Definido na linha <a class="el" href="_piloto_8h_source.html#l00026">26</a> do ficheiro <a class="el" href="_piloto_8h_source.html">Piloto.h</a>.</p>
+<hr/><h2>Documentação dos Construtores &amp; Destrutor</h2>
+<a class="anchor" id="a5636a867e1519a93dea49532095c0e9a"></a><!-- doxytag: member="Piloto::Piloto" ref="a5636a867e1519a93dea49532095c0e9a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Piloto::Piloto </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_piloto_8h_source.html#l00028">28</a> do ficheiro <a class="el" href="_piloto_8h_source.html">Piloto.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aec3e40d2e98dc3f10cb419202c44f09f"></a><!-- doxytag: member="Piloto::Piloto" ref="aec3e40d2e98dc3f10cb419202c44f09f" args="(unsigned numero, string categoria, string nome, unsigned salario_hora)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Piloto::Piloto </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>numero</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>categoria</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>salario_hora</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_piloto_8h_source.html#l00031">31</a> do ficheiro <a class="el" href="_piloto_8h_source.html">Piloto.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab2c5c42030f11a33808c1fc46d79ce89"></a><!-- doxytag: member="Piloto::Piloto" ref="ab2c5c42030f11a33808c1fc46d79ce89" args="(string nome, string morada, string nacionalidade, unsigned contacto, unsigned BI, unsigned idade, unsigned numero, string categoria, unsigned salario_hora, unsigned numero_horas_trabalho, string tipoContrato, DataHora expiracaoContrato, Companhia *companhia, Voo *voo_actual)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Piloto::Piloto </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>morada</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>nacionalidade</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>contacto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>BI</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>idade</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>numero</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>categoria</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>salario_hora</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>numero_horas_trabalho</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>tipoContrato</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_data_hora.html">DataHora</a>&nbsp;</td>
+          <td class="paramname"> <em>expiracaoContrato</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_companhia.html">Companhia</a> *&nbsp;</td>
+          <td class="paramname"> <em>companhia</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_voo.html">Voo</a> *&nbsp;</td>
+          <td class="paramname"> <em>voo_actual</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_piloto_8h_source.html#l00033">33</a> do ficheiro <a class="el" href="_piloto_8h_source.html">Piloto.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8eeb69f342514c56e94d6b3e5fcc2fcf"></a><!-- doxytag: member="Piloto::~Piloto" ref="a8eeb69f342514c56e94d6b3e5fcc2fcf" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Piloto::~Piloto </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_piloto_8h_source.html#l00039">39</a> do ficheiro <a class="el" href="_piloto_8h_source.html">Piloto.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos métodos</h2>
+<a class="anchor" id="acc689e873b81d96f19903502effa9564"></a><!-- doxytag: member="Piloto::imprimeInfo" ref="acc689e873b81d96f19903502effa9564" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Piloto::imprimeInfo </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_piloto_8cpp_source.html#l00017">17</a> do ficheiro <a class="el" href="_piloto_8cpp_source.html">Piloto.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_comandos_8h_source.html#l00030">Comandos::_tripulante_op_list</a>, <a class="el" href="_pessoa_8h_source.html#l00045">Pessoa::getBI()</a>, <a class="el" href="_tripulante_8h_source.html#l00062">Tripulante::getCategoria()</a>, <a class="el" href="_tripulante_8h_source.html#l00067">Tripulante::getCompanhia()</a>, <a class="el" href="_pessoa_8h_source.html#l00044">Pessoa::getContacto()</a>, <a class="el" href="_tripulante_8h_source.html#l00066">Tripulante::getExpiracaoContrato()</a>, <a class="el" href="_pessoa_8h_source.html#l00046">Pessoa::getIdade()</a>, <a class="el" href="_pessoa_8h_source.html#l00042">Pessoa::getMorada()</a>, <a class="el" href="_pessoa_8h_source.html#l00043">Pessoa::getNacionalidade()</a>, <a class="el" href="_pessoa_8h_source.html#l00041">Pessoa::getNome()</a>, <a class="el" href="_tripulante_8h_source.html#l00061">Tripulante::getNumero()</a>, <a class="el" href="_tripulante_8h_source.html#l00064">Tripulante::getNumeroHorasTrabalho()</a>, <a class="el" href="_tripulante_8h_source.html#l00063">Tripulante::getSalarioHora()</a>, <a class="el" href="_tripulante_8h_source.html#l00065">Tripulante::getTipoContrato()</a>, <a class="el" href="_tripulante_8h_source.html#l00068">Tripulante::getVooActual()</a> e <a class="el" href="utils_8cpp_source.html#l00133">printMenu()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
+<li><a class="el" href="_piloto_8h_source.html">Piloto.h</a></li>
+<li><a class="el" href="_piloto_8cpp_source.html">Piloto.cpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:39 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

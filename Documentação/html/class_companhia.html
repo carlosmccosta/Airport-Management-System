@@ -1,0 +1,1047 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência à classe Companhia</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&nbsp;dos&nbsp;componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a>  </div>
+  <div class="headertitle">
+<h1>Referência à classe Companhia</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Companhia" -->
+<p>Classe que armazena informação acerca de uma <a class="el" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> de um dado <a class="el" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a>.  
+<a href="#_details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_companhia_8h_source.html">Companhia.h</a>&gt;</code></p>
+
+<p><a href="class_companhia-members.html">Mostrar lista completa dos membros</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#ace9ce74b0d41f681945a10453e1c37ee">Companhia</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a2afa7d19344523c399c0e5405e19934d">Companhia</a> (string sigla, string nome, unsigned taxa_balcoes)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#ac8d787355ae09623101260f59e7255cc">~Companhia</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#ade16b281e7bc7ca34d58c293eacfe238">getSigla</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#ad3f4f203360153529468735db6067d35">getNome</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#ae90dabe51b656bb65420b91824230eb3">getTaxaBalcoes</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_aviao.html">Aviao</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a52eea07b14f7425105fc581d81db67d5">getAvioes</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const vector&lt; <a class="el" href="class_aviao.html">Aviao</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a499f08d829ad45c685ea93cac8fb3e2e">getConstRefAvioes</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_aviao.html">Aviao</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#ac2f4bc5e4762859ed2769b92ccb563bb">getRefAvioes</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_tripulante.html">Tripulante</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a801356880461b65144606750f6868c4f">getTripulacao</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const vector&lt; <a class="el" href="class_tripulante.html">Tripulante</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a4898e81df144529092a62bc8a7dce335">getConstRefTripulacao</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_tripulante.html">Tripulante</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a57864bd9079c5e85bea493d7e24db190">getRefTripulacao</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_voo.html">Voo</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a129e72f946b1284e92a279853bacfded">getVoos</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const vector&lt; <a class="el" href="class_voo.html">Voo</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#ae1c44df0e3c67d5ff9bf2bbb6eb26eff">getConstRefVoos</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_voo.html">Voo</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a6604c4b71805095409c9a8a0f72e913b">getRefVoos</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_tipo_aviao.html">TipoAviao</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#af36571c64c1c4e0abf6f4ff179b865b3">getFrota</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const vector&lt; <a class="el" href="class_tipo_aviao.html">TipoAviao</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a5169ee0728e4c74b085bf428a10d9c37">getConstRefFrota</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_tipo_aviao.html">TipoAviao</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a29942c8a1df1d759aab8e454c841890d">getRefFrota</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a73dadc7d1f151563a8f722e4c3f1f921">setSigla</a> (string sigla)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#ac8f8814e510f9fa7c693a354034d902b">setNome</a> (string nome)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a2abb084058150231fb8f89467d4f5c86">setTaxaBalcoes</a> (unsigned taxa_balcoes)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a7d917d206a71d478ef2804615fd387c1">setAvioes</a> (vector&lt; <a class="el" href="class_aviao.html">Aviao</a> * &gt; avioes)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#ab8b0ddb7ec9276ff07cc67d7d10dda11">setTripulacao</a> (vector&lt; <a class="el" href="class_tripulante.html">Tripulante</a> * &gt; tripulacao)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a6c5c59e21ed80cc82faa39f612e4cae7">setVoos</a> (vector&lt; <a class="el" href="class_voo.html">Voo</a> * &gt; voos)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#acedcc0358d1a65ed398bb9ba8f076c9c">setFrota</a> (vector&lt; <a class="el" href="class_tipo_aviao.html">TipoAviao</a> * &gt; frota)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a8e9732d80cb9546bd4a33db91b36734a">operator==</a> (const <a class="el" href="class_companhia.html">Companhia</a> &amp;companhia) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador que permite comparar se duas Companhias têm a mesma sigla e nome.  <a href="#a8e9732d80cb9546bd4a33db91b36734a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a91b21cfd5845187ed2b0ada39418ee31">operator&lt;</a> (const <a class="el" href="class_companhia.html">Companhia</a> &amp;companhia) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador que permite verificar se o nome de uma companhia é "menor" que o de outra. Se forem iguais compara a sigla.  <a href="#a91b21cfd5845187ed2b0ada39418ee31"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a925007b855c5cba8a69a94851e544473">getMatriculaAviaoCin</a> (const char *mensagem)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que pede ao utilizador uma nova matrícula para um avião, verificando se ela já está atribuída.  <a href="#a925007b855c5cba8a69a94851e544473"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a91852f433f2bec4aeccd7d95a6a1a3ad">getBICin</a> (const char *mensagem)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que pede ao utilizador um BI.  <a href="#a91852f433f2bec4aeccd7d95a6a1a3ad"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#aa527b174cf46e639f7ef4c6cba6d36ef">getNumeroTripulanteCin</a> (const char *mensagem)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que pede ao utilizador um número (ID) para um tripulante.  <a href="#aa527b174cf46e639f7ef4c6cba6d36ef"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a95924f02e1c83e3cf3d754d488796cbf">getNumeroVooCin</a> (const char *mensagem)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que pede ao utilizador um número de voo e verifica se esse número (ID), é único na companhia em questão.  <a href="#a95924f02e1c83e3cf3d754d488796cbf"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#ab0914466ca0964c01a04bac076df2f83">_sigla</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ex: TAP.  <a href="#ab0914466ca0964c01a04bac076df2f83"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#aacb5b2d49bee30d498a5c568129b587e">_nome</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ex: TAP Portugal.  <a href="#aacb5b2d49bee30d498a5c568129b587e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a25148c1af0bf86a5b0af96633c91ec96">_taxa_balcoes</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_aviao.html">Aviao</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#ad412d36105006506ac18f43dfc9219dd">_avioes</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_tripulante.html">Tripulante</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a851796d24ec3e14eef9ab3bf42d6295a">_tripulacao</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_voo.html">Voo</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#ac2b0a9010f9d74a38397c0bfba55ceb8">_voos</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_tipo_aviao.html">TipoAviao</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a8cd80b15c301b2bd6b8f3ff4829a52d2">_frota</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_companhia.html#a8a7df2e750173e26d162bc55af5978ac">_can_delete_values</a></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<p>Classe que armazena informação acerca de uma <a class="el" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> de um dado <a class="el" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a>. </p>
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00051">51</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+<hr/><h2>Documentação dos Construtores &amp; Destrutor</h2>
+<a class="anchor" id="ace9ce74b0d41f681945a10453e1c37ee"></a><!-- doxytag: member="Companhia::Companhia" ref="ace9ce74b0d41f681945a10453e1c37ee" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Companhia::Companhia </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00066">66</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2afa7d19344523c399c0e5405e19934d"></a><!-- doxytag: member="Companhia::Companhia" ref="a2afa7d19344523c399c0e5405e19934d" args="(string sigla, string nome, unsigned taxa_balcoes)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Companhia::Companhia </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>sigla</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>taxa_balcoes</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00067">67</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac8d787355ae09623101260f59e7255cc"></a><!-- doxytag: member="Companhia::~Companhia" ref="ac8d787355ae09623101260f59e7255cc" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Companhia::~Companhia </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8cpp_source.html#l00019">19</a> do ficheiro <a class="el" href="_companhia_8cpp_source.html">Companhia.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00057">_avioes</a>, <a class="el" href="_companhia_8h_source.html#l00063">_can_delete_values</a>, <a class="el" href="_companhia_8h_source.html#l00058">_tripulacao</a> e <a class="el" href="_companhia_8h_source.html#l00059">_voos</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos métodos</h2>
+<a class="anchor" id="a52eea07b14f7425105fc581d81db67d5"></a><!-- doxytag: member="Companhia::getAvioes" ref="a52eea07b14f7425105fc581d81db67d5" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_aviao.html">Aviao</a>*&gt; Companhia::getAvioes </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00075">75</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00057">_avioes</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03648">CRUD::loaddb()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a91852f433f2bec4aeccd7d95a6a1a3ad"></a><!-- doxytag: member="Companhia::getBICin" ref="a91852f433f2bec4aeccd7d95a6a1a3ad" args="(const char *mensagem)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned Companhia::getBICin </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>mensagem</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Função que pede ao utilizador um BI. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mensagem</em>&nbsp;</td><td>Mesagem a ser mostrada ao utilizador antes de pedir o BI. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Retorna:</b></dt><dd>Um BI que é único naquela companhia. </dd></dl>
+
+<p>Definido na linha <a class="el" href="_companhia_8cpp_source.html#l00073">73</a> do ficheiro <a class="el" href="_companhia_8cpp_source.html">Companhia.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00058">_tripulacao</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00465">CRUD::addTripulante()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a499f08d829ad45c685ea93cac8fb3e2e"></a><!-- doxytag: member="Companhia::getConstRefAvioes" ref="a499f08d829ad45c685ea93cac8fb3e2e" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vector&lt;<a class="el" href="class_aviao.html">Aviao</a>*&gt;&amp; Companhia::getConstRefAvioes </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00077">77</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00057">_avioes</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00211">CRUD::infoAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00197">CRUD::selAviao()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00206">CRUD::selAviaoPtr()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5169ee0728e4c74b085bf428a10d9c37"></a><!-- doxytag: member="Companhia::getConstRefFrota" ref="a5169ee0728e4c74b085bf428a10d9c37" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vector&lt;<a class="el" href="class_tipo_aviao.html">TipoAviao</a>*&gt;&amp; Companhia::getConstRefFrota </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00090">90</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00061">_frota</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4898e81df144529092a62bc8a7dce335"></a><!-- doxytag: member="Companhia::getConstRefTripulacao" ref="a4898e81df144529092a62bc8a7dce335" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vector&lt;<a class="el" href="class_tripulante.html">Tripulante</a>*&gt;&amp; Companhia::getConstRefTripulacao </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00082">82</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00058">_tripulacao</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00732">CRUD::infoTripulante()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00718">CRUD::selTripulante()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00727">CRUD::selTripulantePtr()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae1c44df0e3c67d5ff9bf2bbb6eb26eff"></a><!-- doxytag: member="Companhia::getConstRefVoos" ref="ae1c44df0e3c67d5ff9bf2bbb6eb26eff" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vector&lt;<a class="el" href="class_voo.html">Voo</a>*&gt;&amp; Companhia::getConstRefVoos </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00086">86</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00059">_voos</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01186">CRUD::selPlanoVoo()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01194">CRUD::selPlanoVooPtr()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af36571c64c1c4e0abf6f4ff179b865b3"></a><!-- doxytag: member="Companhia::getFrota" ref="af36571c64c1c4e0abf6f4ff179b865b3" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_tipo_aviao.html">TipoAviao</a>*&gt; Companhia::getFrota </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00089">89</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00061">_frota</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a925007b855c5cba8a69a94851e544473"></a><!-- doxytag: member="Companhia::getMatriculaAviaoCin" ref="a925007b855c5cba8a69a94851e544473" args="(const char *mensagem)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Companhia::getMatriculaAviaoCin </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>mensagem</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Função que pede ao utilizador uma nova matrícula para um avião, verificando se ela já está atribuída. </p>
+<p>Caso esteja, continua a pedir para introduzir uma nova matrícula. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mensagem</em>&nbsp;</td><td>Mesagem a ser mostrada ao utilizador antes de pedir a matrícula. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Retorna:</b></dt><dd>Uma matricula, que é unica naquela companhia. </dd></dl>
+
+<p>Definido na linha <a class="el" href="_companhia_8cpp_source.html#l00052">52</a> do ficheiro <a class="el" href="_companhia_8cpp_source.html">Companhia.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00057">_avioes</a> e <a class="el" href="utils_8cpp_source.html#l00028">getlineCin()</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00023">CRUD::addAviao()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00254">CRUD::editAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad3f4f203360153529468735db6067d35"></a><!-- doxytag: member="Companhia::getNome" ref="ad3f4f203360153529468735db6067d35" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Companhia::getNome </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00072">72</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00054">_nome</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01649">CRUD::cmpCompanhiaNome()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00211">CRUD::infoAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01777">CRUD::infoCompanhia()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01199">CRUD::infoPlanoVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa527b174cf46e639f7ef4c6cba6d36ef"></a><!-- doxytag: member="Companhia::getNumeroTripulanteCin" ref="aa527b174cf46e639f7ef4c6cba6d36ef" args="(const char *mensagem)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned Companhia::getNumeroTripulanteCin </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>mensagem</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Função que pede ao utilizador um número (ID) para um tripulante. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mensagem</em>&nbsp;</td><td>Mensagem a ser mostrada ao utilizador antes de pedir o número. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Retorna:</b></dt><dd>Um ID para um tripulante que é único na companhia. </dd></dl>
+
+<p>Definido na linha <a class="el" href="_companhia_8cpp_source.html#l00093">93</a> do ficheiro <a class="el" href="_companhia_8cpp_source.html">Companhia.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00058">_tripulacao</a> e <a class="el" href="utils_8cpp_source.html#l00035">get_int_cin()</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00465">CRUD::addTripulante()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00744">CRUD::editTripulante()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a95924f02e1c83e3cf3d754d488796cbf"></a><!-- doxytag: member="Companhia::getNumeroVooCin" ref="a95924f02e1c83e3cf3d754d488796cbf" args="(const char *mensagem)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned Companhia::getNumeroVooCin </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>mensagem</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Função que pede ao utilizador um número de voo e verifica se esse número (ID), é único na companhia em questão. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mensagem</em>&nbsp;</td><td>Mensagem a ser mostrada ao utilizador antes de se pedir o número. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Retorna:</b></dt><dd>O número de um voo único na companhia. </dd></dl>
+
+<p>Definido na linha <a class="el" href="_companhia_8cpp_source.html#l00113">113</a> do ficheiro <a class="el" href="_companhia_8cpp_source.html">Companhia.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00059">_voos</a> e <a class="el" href="utils_8cpp_source.html#l00035">get_int_cin()</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00938">CRUD::addPlanoVoo()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac2f4bc5e4762859ed2769b92ccb563bb"></a><!-- doxytag: member="Companhia::getRefAvioes" ref="ac2f4bc5e4762859ed2769b92ccb563bb" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_aviao.html">Aviao</a>*&gt;&amp; Companhia::getRefAvioes </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00079">79</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00057">_avioes</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00070">CRUD::addAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00397">CRUD::delAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00421">CRUD::delAviaoPtr()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00102">CRUD::listAviao()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03648">CRUD::loaddb()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a29942c8a1df1d759aab8e454c841890d"></a><!-- doxytag: member="Companhia::getRefFrota" ref="a29942c8a1df1d759aab8e454c841890d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_tipo_aviao.html">TipoAviao</a>*&gt;&amp; Companhia::getRefFrota </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00091">91</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00061">_frota</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00070">CRUD::addAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00437">CRUD::delTipoAviaoAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00254">CRUD::editAviao()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03648">CRUD::loaddb()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a57864bd9079c5e85bea493d7e24db190"></a><!-- doxytag: member="Companhia::getRefTripulacao" ref="a57864bd9079c5e85bea493d7e24db190" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_tripulante.html">Tripulante</a>*&gt;&amp; Companhia::getRefTripulacao </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00083">83</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00058">_tripulacao</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00465">CRUD::addTripulante()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00901">CRUD::delTripulante()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00919">CRUD::delTripulantePtr()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00571">CRUD::listTripulante()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03648">CRUD::loaddb()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6604c4b71805095409c9a8a0f72e913b"></a><!-- doxytag: member="Companhia::getRefVoos" ref="a6604c4b71805095409c9a8a0f72e913b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_voo.html">Voo</a>*&gt;&amp; Companhia::getRefVoos </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00087">87</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00059">_voos</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00938">CRUD::addPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01879">CRUD::delCompanhia()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01415">CRUD::delPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01460">CRUD::delPlanoVooPtr()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01024">CRUD::listPlanoVoo()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03648">CRUD::loaddb()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ade16b281e7bc7ca34d58c293eacfe238"></a><!-- doxytag: member="Companhia::getSigla" ref="ade16b281e7bc7ca34d58c293eacfe238" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Companhia::getSigla </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00071">71</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00053">_sigla</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01645">CRUD::cmpCompanhiaSigla()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01777">CRUD::infoCompanhia()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae90dabe51b656bb65420b91824230eb3"></a><!-- doxytag: member="Companhia::getTaxaBalcoes" ref="ae90dabe51b656bb65420b91824230eb3" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned Companhia::getTaxaBalcoes </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00073">73</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00055">_taxa_balcoes</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01653">CRUD::cmpCompanhiaTaxa()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01777">CRUD::infoCompanhia()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02704">CRUD::listTaxasBalcoesVooEntreDatas()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a801356880461b65144606750f6868c4f"></a><!-- doxytag: member="Companhia::getTripulacao" ref="a801356880461b65144606750f6868c4f" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_tripulante.html">Tripulante</a>*&gt; Companhia::getTripulacao </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00081">81</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00058">_tripulacao</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03648">CRUD::loaddb()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a129e72f946b1284e92a279853bacfded"></a><!-- doxytag: member="Companhia::getVoos" ref="a129e72f946b1284e92a279853bacfded" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_voo.html">Voo</a>*&gt; Companhia::getVoos </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00085">85</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00059">_voos</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a91b21cfd5845187ed2b0ada39418ee31"></a><!-- doxytag: member="Companhia::operator&lt;" ref="a91b21cfd5845187ed2b0ada39418ee31" args="(const Companhia &amp;companhia) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Companhia::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_companhia.html">Companhia</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>companhia</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operador que permite verificar se o nome de uma companhia é "menor" que o de outra. Se forem iguais compara a sigla. </p>
+
+<p>Definido na linha <a class="el" href="_companhia_8cpp_source.html#l00040">40</a> do ficheiro <a class="el" href="_companhia_8cpp_source.html">Companhia.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00054">_nome</a> e <a class="el" href="_companhia_8h_source.html#l00053">_sigla</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8e9732d80cb9546bd4a33db91b36734a"></a><!-- doxytag: member="Companhia::operator==" ref="a8e9732d80cb9546bd4a33db91b36734a" args="(const Companhia &amp;companhia) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Companhia::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_companhia.html">Companhia</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>companhia</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operador que permite comparar se duas Companhias têm a mesma sigla e nome. </p>
+
+<p>Definido na linha <a class="el" href="_companhia_8cpp_source.html#l00032">32</a> do ficheiro <a class="el" href="_companhia_8cpp_source.html">Companhia.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00054">_nome</a> e <a class="el" href="_companhia_8h_source.html#l00053">_sigla</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7d917d206a71d478ef2804615fd387c1"></a><!-- doxytag: member="Companhia::setAvioes" ref="a7d917d206a71d478ef2804615fd387c1" args="(vector&lt; Aviao * &gt; avioes)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Companhia::setAvioes </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="class_aviao.html">Aviao</a> * &gt;&nbsp;</td>
+          <td class="paramname"> <em>avioes</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00097">97</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00057">_avioes</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acedcc0358d1a65ed398bb9ba8f076c9c"></a><!-- doxytag: member="Companhia::setFrota" ref="acedcc0358d1a65ed398bb9ba8f076c9c" args="(vector&lt; TipoAviao * &gt; frota)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Companhia::setFrota </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="class_tipo_aviao.html">TipoAviao</a> * &gt;&nbsp;</td>
+          <td class="paramname"> <em>frota</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00100">100</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00061">_frota</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac8f8814e510f9fa7c693a354034d902b"></a><!-- doxytag: member="Companhia::setNome" ref="ac8f8814e510f9fa7c693a354034d902b" args="(string nome)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Companhia::setNome </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>nome</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00094">94</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00054">_nome</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01808">CRUD::editCompanhia()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a73dadc7d1f151563a8f722e4c3f1f921"></a><!-- doxytag: member="Companhia::setSigla" ref="a73dadc7d1f151563a8f722e4c3f1f921" args="(string sigla)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Companhia::setSigla </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>sigla</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00093">93</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00053">_sigla</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01808">CRUD::editCompanhia()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2abb084058150231fb8f89467d4f5c86"></a><!-- doxytag: member="Companhia::setTaxaBalcoes" ref="a2abb084058150231fb8f89467d4f5c86" args="(unsigned taxa_balcoes)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Companhia::setTaxaBalcoes </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>taxa_balcoes</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00095">95</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00055">_taxa_balcoes</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01808">CRUD::editCompanhia()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab8b0ddb7ec9276ff07cc67d7d10dda11"></a><!-- doxytag: member="Companhia::setTripulacao" ref="ab8b0ddb7ec9276ff07cc67d7d10dda11" args="(vector&lt; Tripulante * &gt; tripulacao)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Companhia::setTripulacao </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="class_tripulante.html">Tripulante</a> * &gt;&nbsp;</td>
+          <td class="paramname"> <em>tripulacao</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00098">98</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00058">_tripulacao</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6c5c59e21ed80cc82faa39f612e4cae7"></a><!-- doxytag: member="Companhia::setVoos" ref="a6c5c59e21ed80cc82faa39f612e4cae7" args="(vector&lt; Voo * &gt; voos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Companhia::setVoos </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="class_voo.html">Voo</a> * &gt;&nbsp;</td>
+          <td class="paramname"> <em>voos</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00099">99</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referências <a class="el" href="_companhia_8h_source.html#l00059">_voos</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02500">CRUD::chamadaEmbarqueVooPortaEmbarque()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02653">CRUD::delVooHashSetVoos()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03202">CRUD::infoPortaEmbarque()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02563">CRUD::listHashSetVoosEntreDatasCriterio()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02704">CRUD::listTaxasBalcoesVooEntreDatas()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02822">CRUD::listTaxasPortasEmbarqueVooEntreDatas()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02486">CRUD::printPassageirosPortaEmbarque()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos dados membro</h2>
+<a class="anchor" id="ad412d36105006506ac18f43dfc9219dd"></a><!-- doxytag: member="Companhia::_avioes" ref="ad412d36105006506ac18f43dfc9219dd" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_aviao.html">Aviao</a>*&gt; <a class="el" href="class_companhia.html#ad412d36105006506ac18f43dfc9219dd">Companhia::_avioes</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00057">57</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_companhia_8h_source.html#l00075">getAvioes()</a>, <a class="el" href="_companhia_8h_source.html#l00077">getConstRefAvioes()</a>, <a class="el" href="_companhia_8cpp_source.html#l00052">getMatriculaAviaoCin()</a>, <a class="el" href="_companhia_8h_source.html#l00079">getRefAvioes()</a>, <a class="el" href="_companhia_8h_source.html#l00097">setAvioes()</a> e <a class="el" href="_companhia_8cpp_source.html#l00019">~Companhia()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8a7df2e750173e26d162bc55af5978ac"></a><!-- doxytag: member="Companhia::_can_delete_values" ref="a8a7df2e750173e26d162bc55af5978ac" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_companhia.html#a8a7df2e750173e26d162bc55af5978ac">Companhia::_can_delete_values</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00063">63</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_companhia_8cpp_source.html#l00019">~Companhia()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8cd80b15c301b2bd6b8f3ff4829a52d2"></a><!-- doxytag: member="Companhia::_frota" ref="a8cd80b15c301b2bd6b8f3ff4829a52d2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_tipo_aviao.html">TipoAviao</a>*&gt; <a class="el" href="class_companhia.html#a8cd80b15c301b2bd6b8f3ff4829a52d2">Companhia::_frota</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00061">61</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_companhia_8h_source.html#l00090">getConstRefFrota()</a>, <a class="el" href="_companhia_8h_source.html#l00089">getFrota()</a>, <a class="el" href="_companhia_8h_source.html#l00091">getRefFrota()</a> e <a class="el" href="_companhia_8h_source.html#l00100">setFrota()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aacb5b2d49bee30d498a5c568129b587e"></a><!-- doxytag: member="Companhia::_nome" ref="aacb5b2d49bee30d498a5c568129b587e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string <a class="el" href="class_companhia.html#aacb5b2d49bee30d498a5c568129b587e">Companhia::_nome</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ex: TAP Portugal. </p>
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00054">54</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_companhia_8h_source.html#l00072">getNome()</a>, <a class="el" href="_companhia_8cpp_source.html#l00040">operator&lt;()</a>, <a class="el" href="_companhia_8cpp_source.html#l00032">operator==()</a> e <a class="el" href="_companhia_8h_source.html#l00094">setNome()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab0914466ca0964c01a04bac076df2f83"></a><!-- doxytag: member="Companhia::_sigla" ref="ab0914466ca0964c01a04bac076df2f83" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string <a class="el" href="class_companhia.html#ab0914466ca0964c01a04bac076df2f83">Companhia::_sigla</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ex: TAP. </p>
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00053">53</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_companhia_8h_source.html#l00071">getSigla()</a>, <a class="el" href="_companhia_8cpp_source.html#l00040">operator&lt;()</a>, <a class="el" href="_companhia_8cpp_source.html#l00032">operator==()</a> e <a class="el" href="_companhia_8h_source.html#l00093">setSigla()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a25148c1af0bf86a5b0af96633c91ec96"></a><!-- doxytag: member="Companhia::_taxa_balcoes" ref="a25148c1af0bf86a5b0af96633c91ec96" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned <a class="el" href="class_companhia.html#a25148c1af0bf86a5b0af96633c91ec96">Companhia::_taxa_balcoes</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00055">55</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_companhia_8h_source.html#l00073">getTaxaBalcoes()</a> e <a class="el" href="_companhia_8h_source.html#l00095">setTaxaBalcoes()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a851796d24ec3e14eef9ab3bf42d6295a"></a><!-- doxytag: member="Companhia::_tripulacao" ref="a851796d24ec3e14eef9ab3bf42d6295a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_tripulante.html">Tripulante</a>*&gt; <a class="el" href="class_companhia.html#a851796d24ec3e14eef9ab3bf42d6295a">Companhia::_tripulacao</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00058">58</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_companhia_8cpp_source.html#l00073">getBICin()</a>, <a class="el" href="_companhia_8h_source.html#l00082">getConstRefTripulacao()</a>, <a class="el" href="_companhia_8cpp_source.html#l00093">getNumeroTripulanteCin()</a>, <a class="el" href="_companhia_8h_source.html#l00083">getRefTripulacao()</a>, <a class="el" href="_companhia_8h_source.html#l00081">getTripulacao()</a>, <a class="el" href="_companhia_8h_source.html#l00098">setTripulacao()</a> e <a class="el" href="_companhia_8cpp_source.html#l00019">~Companhia()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac2b0a9010f9d74a38397c0bfba55ceb8"></a><!-- doxytag: member="Companhia::_voos" ref="ac2b0a9010f9d74a38397c0bfba55ceb8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_voo.html">Voo</a>*&gt; <a class="el" href="class_companhia.html#ac2b0a9010f9d74a38397c0bfba55ceb8">Companhia::_voos</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_companhia_8h_source.html#l00059">59</a> do ficheiro <a class="el" href="_companhia_8h_source.html">Companhia.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_companhia_8h_source.html#l00086">getConstRefVoos()</a>, <a class="el" href="_companhia_8cpp_source.html#l00113">getNumeroVooCin()</a>, <a class="el" href="_companhia_8h_source.html#l00087">getRefVoos()</a>, <a class="el" href="_companhia_8h_source.html#l00085">getVoos()</a>, <a class="el" href="_companhia_8h_source.html#l00099">setVoos()</a> e <a class="el" href="_companhia_8cpp_source.html#l00019">~Companhia()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
+<li><a class="el" href="_companhia_8h_source.html">Companhia.h</a></li>
+<li><a class="el" href="_companhia_8cpp_source.html">Companhia.cpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:38 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

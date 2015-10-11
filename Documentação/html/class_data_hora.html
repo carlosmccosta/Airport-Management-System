@@ -1,0 +1,696 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência à classe DataHora</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&nbsp;dos&nbsp;componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a>  </div>
+  <div class="headertitle">
+<h1>Referência à classe DataHora</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="DataHora" -->
+<p>Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).  
+<a href="#_details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_data_hora_8h_source.html">DataHora.h</a>&gt;</code></p>
+
+<p><a href="class_data_hora-members.html">Mostrar lista completa dos membros</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#ac1852e3d4e0969fe3f3c7826ee0f1d2c">DataHora</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construtor vazio, que inicializa os dados da classe com valores de erro, denotando que necessitam de ser actualizados.  <a href="#ac1852e3d4e0969fe3f3c7826ee0f1d2c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#af175ff853e0a1a841c200fcf0f8df45c">DataHora</a> (int ano, int mes, int dia, int hora, int min)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#a9d37c05c648b3d8a184b5b67391307fc">DataHora</a> (string data_hora)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construtor de uma <a class="el" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a>, que recebe uma string no formato AAAA/MM/DD HH:mm e extrai os dados para os membros respectivos da classe <a class="el" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a>.  <a href="#a9d37c05c648b3d8a184b5b67391307fc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#a614ab4c0d8fd25ca361b9b3f3595cd39">~DataHora</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#a46fabd024e06558aeca721692e93cf5d">getAno</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#aca0305a615d4f1bf4e45f7872f226532">getMes</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#a16d8c496f0acdb14b36548ab21cc2173">getDia</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#af950e1a5afa1931cebb481e51acff9c3">getHora</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#a55d8380fff71bd2d9e038e2c7463c9ac">getMin</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#a115ba7b9a2b73347730bb788077a6049">setAno</a> (unsigned ano)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#a789f797268d454978487dc8d16343ec6">setMes</a> (unsigned mes)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#a053a8c49524da1b123bc2bd2abaf32ad">setDia</a> (unsigned dia)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#a47dcd28c2ceff59fc310385ec67a8bda">setHora</a> (unsigned hora)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#a1ea729e5a98d49ad6c66a07e15f86325">setMin</a> (unsigned min)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data_hora.html">DataHora</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#a988f7107f6333b0f6327027b524b7626">Parser_DataHora</a> (string data_hora)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Parser que a partir de uma string no formato AAAA/MM/DD HH:mm, retira os dados necessários para inicializar um objecto do tipo <a class="el" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a>.  <a href="#a988f7107f6333b0f6327027b524b7626"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#a10c7ae9216d4bbca2b661a72fb1363c7">getDataHoraCin</a> (const char *mensagem)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que pede ao utilizador para introduzir uma data no formato &lt;AAAA/MM/DD HH:mm&gt;.  <a href="#a10c7ae9216d4bbca2b661a72fb1363c7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#a8efb0532eaa0bb2cea17a063af319845">addAtraso</a> (<a class="el" href="class_atraso.html">Atraso</a> &amp;atraso)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que adiciona um atraso a uma <a class="el" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> de um voo.  <a href="#a8efb0532eaa0bb2cea17a063af319845"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#af4c8ad3b2e98fc5b55bdebc5993e6a3e">operator==</a> (const <a class="el" href="class_data_hora.html">DataHora</a> &amp;data_hora) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador que permite comparar se duas datas são equivalentes.  <a href="#af4c8ad3b2e98fc5b55bdebc5993e6a3e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#a8e3650d234174e8af9c68b650b83c47c">operator&lt;</a> (const <a class="el" href="class_data_hora.html">DataHora</a> &amp;data_hora) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador que compara se uma hora é menor do que outra.  <a href="#a8e3650d234174e8af9c68b650b83c47c"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#a3145b12374fcc663633334ee363c2b36">_ano</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#a61c6f7a9251ace6dc717a55549571b13">_mes</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#a6327f9f6af78a8b5561795cb385d9f39">_dia</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#a8bb71ce7f12ccd1a6fe3d9317a53e978">_hora</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_hora.html#a44692ccc92ead379cbd41ec5ed8244dc">_min</a></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<p>Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00). </p>
+
+<p>Definido na linha <a class="el" href="_data_hora_8h_source.html#l00036">36</a> do ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+<hr/><h2>Documentação dos Construtores &amp; Destrutor</h2>
+<a class="anchor" id="ac1852e3d4e0969fe3f3c7826ee0f1d2c"></a><!-- doxytag: member="DataHora::DataHora" ref="ac1852e3d4e0969fe3f3c7826ee0f1d2c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DataHora::DataHora </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Construtor vazio, que inicializa os dados da classe com valores de erro, denotando que necessitam de ser actualizados. </p>
+
+<p>Definido na linha <a class="el" href="_data_hora_8h_source.html#l00046">46</a> do ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_data_hora_8cpp_source.html#l00051">getDataHoraCin()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af175ff853e0a1a841c200fcf0f8df45c"></a><!-- doxytag: member="DataHora::DataHora" ref="af175ff853e0a1a841c200fcf0f8df45c" args="(int ano, int mes, int dia, int hora, int min)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DataHora::DataHora </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ano</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>mes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>dia</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>hora</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>min</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_data_hora_8h_source.html#l00047">47</a> do ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9d37c05c648b3d8a184b5b67391307fc"></a><!-- doxytag: member="DataHora::DataHora" ref="a9d37c05c648b3d8a184b5b67391307fc" args="(string data_hora)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DataHora::DataHora </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>data_hora</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Construtor de uma <a class="el" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a>, que recebe uma string no formato AAAA/MM/DD HH:mm e extrai os dados para os membros respectivos da classe <a class="el" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a>. </p>
+
+<p>Definido na linha <a class="el" href="_data_hora_8h_source.html#l00049">49</a> do ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+
+<p>Referências <a class="el" href="_data_hora_8cpp_source.html#l00018">Parser_DataHora()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a614ab4c0d8fd25ca361b9b3f3595cd39"></a><!-- doxytag: member="DataHora::~DataHora" ref="a614ab4c0d8fd25ca361b9b3f3595cd39" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual DataHora::~DataHora </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_data_hora_8h_source.html#l00050">50</a> do ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos métodos</h2>
+<a class="anchor" id="a8efb0532eaa0bb2cea17a063af319845"></a><!-- doxytag: member="DataHora::addAtraso" ref="a8efb0532eaa0bb2cea17a063af319845" args="(Atraso &amp;atraso)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DataHora::addAtraso </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_atraso.html">Atraso</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>atraso</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Método que adiciona um atraso a uma <a class="el" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> de um voo. </p>
+
+<p>Definido na linha <a class="el" href="_data_hora_8h_source.html#l00081">81</a> do ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+
+<p>Referências <a class="el" href="_data_hora_8h_source.html#l00040">_dia</a>, <a class="el" href="_data_hora_8h_source.html#l00041">_hora</a>, <a class="el" href="_data_hora_8h_source.html#l00042">_min</a>, <a class="el" href="_atraso_8h_source.html#l00050">Atraso::getDia()</a>, <a class="el" href="_atraso_8h_source.html#l00048">Atraso::getHora()</a> e <a class="el" href="_atraso_8h_source.html#l00049">Atraso::getMin()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a46fabd024e06558aeca721692e93cf5d"></a><!-- doxytag: member="DataHora::getAno" ref="a46fabd024e06558aeca721692e93cf5d" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DataHora::getAno </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_data_hora_8h_source.html#l00052">52</a> do ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+
+<p>Referências <a class="el" href="_data_hora_8h_source.html#l00038">_ano</a>.</p>
+
+<p>Referenciado por <a class="el" href="_data_hora_8cpp_source.html#l00109">operator&lt;&lt;()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a10c7ae9216d4bbca2b661a72fb1363c7"></a><!-- doxytag: member="DataHora::getDataHoraCin" ref="a10c7ae9216d4bbca2b661a72fb1363c7" args="(const char *mensagem)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DataHora::getDataHoraCin </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>mensagem</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Método que pede ao utilizador para introduzir uma data no formato &lt;AAAA/MM/DD HH:mm&gt;. </p>
+<p>Enquanto não for introduzido uma data no formato pedido continua a pedir ao utilizador para introduzir a data. O objecto que chamou o método fica igual aos dados que o utilizador introduziu. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mensagem</em>&nbsp;</td><td>Mensagem a ser mostrado ao utilizador antes de pedir o input. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definido na linha <a class="el" href="_data_hora_8cpp_source.html#l00051">51</a> do ficheiro <a class="el" href="_data_hora_8cpp_source.html">DataHora.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_data_hora_8h_source.html#l00046">DataHora()</a> e <a class="el" href="utils_8cpp_source.html#l00028">getlineCin()</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00023">CRUD::addAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00938">CRUD::addPlanoVoo()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00044">TipoAviaoDB::addTipoAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00465">CRUD::addTripulante()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00254">CRUD::editAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">TipoAviaoDB::editTipoAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00744">CRUD::editTripulante()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02563">CRUD::listHashSetVoosEntreDatasCriterio()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02682">CRUD::listTaxasBalcoesEntreDatas()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02704">CRUD::listTaxasBalcoesVooEntreDatas()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02743">CRUD::listTaxasBalcoesVoosEntreDatas()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02800">CRUD::listTaxasPortasEmbarqueEntreDatas()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02822">CRUD::listTaxasPortasEmbarqueVooEntreDatas()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02861">CRUD::listTaxasPortasEmbarqueVoosEntreDatas()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a16d8c496f0acdb14b36548ab21cc2173"></a><!-- doxytag: member="DataHora::getDia" ref="a16d8c496f0acdb14b36548ab21cc2173" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DataHora::getDia </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_data_hora_8h_source.html#l00054">54</a> do ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+
+<p>Referências <a class="el" href="_data_hora_8h_source.html#l00040">_dia</a>.</p>
+
+<p>Referenciado por <a class="el" href="_data_hora_8cpp_source.html#l00109">operator&lt;&lt;()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af950e1a5afa1931cebb481e51acff9c3"></a><!-- doxytag: member="DataHora::getHora" ref="af950e1a5afa1931cebb481e51acff9c3" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DataHora::getHora </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_data_hora_8h_source.html#l00055">55</a> do ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+
+<p>Referências <a class="el" href="_data_hora_8h_source.html#l00041">_hora</a>.</p>
+
+<p>Referenciado por <a class="el" href="_data_hora_8cpp_source.html#l00109">operator&lt;&lt;()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aca0305a615d4f1bf4e45f7872f226532"></a><!-- doxytag: member="DataHora::getMes" ref="aca0305a615d4f1bf4e45f7872f226532" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DataHora::getMes </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_data_hora_8h_source.html#l00053">53</a> do ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+
+<p>Referências <a class="el" href="_data_hora_8h_source.html#l00039">_mes</a>.</p>
+
+<p>Referenciado por <a class="el" href="_data_hora_8cpp_source.html#l00109">operator&lt;&lt;()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a55d8380fff71bd2d9e038e2c7463c9ac"></a><!-- doxytag: member="DataHora::getMin" ref="a55d8380fff71bd2d9e038e2c7463c9ac" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DataHora::getMin </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_data_hora_8h_source.html#l00056">56</a> do ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+
+<p>Referências <a class="el" href="_data_hora_8h_source.html#l00042">_min</a>.</p>
+
+<p>Referenciado por <a class="el" href="_data_hora_8cpp_source.html#l00109">operator&lt;&lt;()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8e3650d234174e8af9c68b650b83c47c"></a><!-- doxytag: member="DataHora::operator&lt;" ref="a8e3650d234174e8af9c68b650b83c47c" args="(const DataHora &amp;data_hora) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DataHora::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_data_hora.html">DataHora</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>data_hora</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operador que compara se uma hora é menor do que outra. </p>
+<p>Faz uma verfificação a todos os membros de uma <a class="el" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> pela ordem do formato AAAA/MM/DD HH:mm. </p>
+
+<p>Definido na linha <a class="el" href="_data_hora_8cpp_source.html#l00084">84</a> do ficheiro <a class="el" href="_data_hora_8cpp_source.html">DataHora.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_data_hora_8h_source.html#l00038">_ano</a>, <a class="el" href="_data_hora_8h_source.html#l00040">_dia</a>, <a class="el" href="_data_hora_8h_source.html#l00041">_hora</a>, <a class="el" href="_data_hora_8h_source.html#l00039">_mes</a> e <a class="el" href="_data_hora_8h_source.html#l00042">_min</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af4c8ad3b2e98fc5b55bdebc5993e6a3e"></a><!-- doxytag: member="DataHora::operator==" ref="af4c8ad3b2e98fc5b55bdebc5993e6a3e" args="(const DataHora &amp;data_hora) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DataHora::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_data_hora.html">DataHora</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>data_hora</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operador que permite comparar se duas datas são equivalentes. </p>
+
+<p>Definido na linha <a class="el" href="_data_hora_8cpp_source.html#l00072">72</a> do ficheiro <a class="el" href="_data_hora_8cpp_source.html">DataHora.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_data_hora_8h_source.html#l00038">_ano</a>, <a class="el" href="_data_hora_8h_source.html#l00040">_dia</a>, <a class="el" href="_data_hora_8h_source.html#l00041">_hora</a>, <a class="el" href="_data_hora_8h_source.html#l00039">_mes</a> e <a class="el" href="_data_hora_8h_source.html#l00042">_min</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a988f7107f6333b0f6327027b524b7626"></a><!-- doxytag: member="DataHora::Parser_DataHora" ref="a988f7107f6333b0f6327027b524b7626" args="(string data_hora)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data_hora.html">DataHora</a> DataHora::Parser_DataHora </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>data_hora</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Parser que a partir de uma string no formato AAAA/MM/DD HH:mm, retira os dados necessários para inicializar um objecto do tipo <a class="el" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a>. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>data_hora</em>&nbsp;</td><td>string que deve estar no formato AAAA/MM/DD HH:mm </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Retorna:</b></dt><dd><a class="el" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> inicializada com as dados que estavam contidos na string. </dd></dl>
+
+<p>Definido na linha <a class="el" href="_data_hora_8cpp_source.html#l00018">18</a> do ficheiro <a class="el" href="_data_hora_8cpp_source.html">DataHora.cpp</a>.</p>
+
+<p>Referências <a class="el" href="utils_8cpp_source.html#l00118">split()</a>.</p>
+
+<p>Referenciado por <a class="el" href="_data_hora_8h_source.html#l00049">DataHora()</a> e <a class="el" href="_data_hora_8cpp_source.html#l00116">operator&gt;&gt;()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a115ba7b9a2b73347730bb788077a6049"></a><!-- doxytag: member="DataHora::setAno" ref="a115ba7b9a2b73347730bb788077a6049" args="(unsigned ano)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DataHora::setAno </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>ano</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_data_hora_8h_source.html#l00058">58</a> do ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+
+<p>Referências <a class="el" href="_data_hora_8h_source.html#l00038">_ano</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a053a8c49524da1b123bc2bd2abaf32ad"></a><!-- doxytag: member="DataHora::setDia" ref="a053a8c49524da1b123bc2bd2abaf32ad" args="(unsigned dia)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DataHora::setDia </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>dia</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_data_hora_8h_source.html#l00060">60</a> do ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+
+<p>Referências <a class="el" href="_data_hora_8h_source.html#l00040">_dia</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a47dcd28c2ceff59fc310385ec67a8bda"></a><!-- doxytag: member="DataHora::setHora" ref="a47dcd28c2ceff59fc310385ec67a8bda" args="(unsigned hora)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DataHora::setHora </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>hora</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_data_hora_8h_source.html#l00061">61</a> do ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+
+<p>Referências <a class="el" href="_data_hora_8h_source.html#l00041">_hora</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a789f797268d454978487dc8d16343ec6"></a><!-- doxytag: member="DataHora::setMes" ref="a789f797268d454978487dc8d16343ec6" args="(unsigned mes)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DataHora::setMes </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>mes</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_data_hora_8h_source.html#l00059">59</a> do ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+
+<p>Referências <a class="el" href="_data_hora_8h_source.html#l00039">_mes</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1ea729e5a98d49ad6c66a07e15f86325"></a><!-- doxytag: member="DataHora::setMin" ref="a1ea729e5a98d49ad6c66a07e15f86325" args="(unsigned min)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DataHora::setMin </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>min</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_data_hora_8h_source.html#l00062">62</a> do ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+
+<p>Referências <a class="el" href="_data_hora_8h_source.html#l00042">_min</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos dados membro</h2>
+<a class="anchor" id="a3145b12374fcc663633334ee363c2b36"></a><!-- doxytag: member="DataHora::_ano" ref="a3145b12374fcc663633334ee363c2b36" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_data_hora.html#a3145b12374fcc663633334ee363c2b36">DataHora::_ano</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_data_hora_8h_source.html#l00038">38</a> do ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_data_hora_8h_source.html#l00052">getAno()</a>, <a class="el" href="_data_hora_8cpp_source.html#l00084">operator&lt;()</a>, <a class="el" href="_data_hora_8cpp_source.html#l00072">operator==()</a> e <a class="el" href="_data_hora_8h_source.html#l00058">setAno()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6327f9f6af78a8b5561795cb385d9f39"></a><!-- doxytag: member="DataHora::_dia" ref="a6327f9f6af78a8b5561795cb385d9f39" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_data_hora.html#a6327f9f6af78a8b5561795cb385d9f39">DataHora::_dia</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_data_hora_8h_source.html#l00040">40</a> do ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_data_hora_8h_source.html#l00081">addAtraso()</a>, <a class="el" href="_data_hora_8h_source.html#l00054">getDia()</a>, <a class="el" href="_data_hora_8cpp_source.html#l00084">operator&lt;()</a>, <a class="el" href="_data_hora_8cpp_source.html#l00072">operator==()</a> e <a class="el" href="_data_hora_8h_source.html#l00060">setDia()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8bb71ce7f12ccd1a6fe3d9317a53e978"></a><!-- doxytag: member="DataHora::_hora" ref="a8bb71ce7f12ccd1a6fe3d9317a53e978" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_data_hora.html#a8bb71ce7f12ccd1a6fe3d9317a53e978">DataHora::_hora</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_data_hora_8h_source.html#l00041">41</a> do ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_data_hora_8h_source.html#l00081">addAtraso()</a>, <a class="el" href="_data_hora_8h_source.html#l00055">getHora()</a>, <a class="el" href="_data_hora_8cpp_source.html#l00084">operator&lt;()</a>, <a class="el" href="_data_hora_8cpp_source.html#l00072">operator==()</a> e <a class="el" href="_data_hora_8h_source.html#l00061">setHora()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a61c6f7a9251ace6dc717a55549571b13"></a><!-- doxytag: member="DataHora::_mes" ref="a61c6f7a9251ace6dc717a55549571b13" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_data_hora.html#a61c6f7a9251ace6dc717a55549571b13">DataHora::_mes</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_data_hora_8h_source.html#l00039">39</a> do ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_data_hora_8h_source.html#l00053">getMes()</a>, <a class="el" href="_data_hora_8cpp_source.html#l00084">operator&lt;()</a>, <a class="el" href="_data_hora_8cpp_source.html#l00072">operator==()</a> e <a class="el" href="_data_hora_8h_source.html#l00059">setMes()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a44692ccc92ead379cbd41ec5ed8244dc"></a><!-- doxytag: member="DataHora::_min" ref="a44692ccc92ead379cbd41ec5ed8244dc" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_data_hora.html#a44692ccc92ead379cbd41ec5ed8244dc">DataHora::_min</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_data_hora_8h_source.html#l00042">42</a> do ficheiro <a class="el" href="_data_hora_8h_source.html">DataHora.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_data_hora_8h_source.html#l00081">addAtraso()</a>, <a class="el" href="_data_hora_8h_source.html#l00056">getMin()</a>, <a class="el" href="_data_hora_8cpp_source.html#l00084">operator&lt;()</a>, <a class="el" href="_data_hora_8cpp_source.html#l00072">operator==()</a> e <a class="el" href="_data_hora_8h_source.html#l00062">setMin()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
+<li><a class="el" href="_data_hora_8h_source.html">DataHora.h</a></li>
+<li><a class="el" href="_data_hora_8cpp_source.html">DataHora.cpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:38 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Companhia.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>Companhia.h</h1>  </div>
+</div>
+<div class="contents">
+<a href="_companhia_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00015"></a>00015 <span class="preprocessor">#ifndef COMPANHIA_H_</span>
+<a name="l00016"></a>00016 <span class="preprocessor"></span><span class="preprocessor">#define COMPANHIA_H_</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;algorithm&gt;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;cmath&gt;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;utility&gt;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;functional&gt;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &lt;sstream&gt;</span>
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="_aviao_8h.html" title="Classe que contém a informação associada a um avião.">Aviao.h</a>&quot;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="_tripulante_8h.html" title="Classe que contém a informação associada a cada Tripulante Aéreo.">Tripulante.h</a>&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="_data_hora_8h.html" title="Classe que contém informação associada a uma data e hora.">DataHora.h</a>&quot;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="_voo_8h.html" title="Classe que contém a informação associada a cada plano de voos de uma companhia aérea.">Voo.h</a>&quot;</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="_tipo_aviao_8h.html" title="Classe que contém a informação associada a cada tipo de avião.">TipoAviao.h</a>&quot;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;<a class="code" href="_exceptions_8h.html" title="Classe que contém a informação associada a todas as excepcoes implementadas.">Exceptions.h</a>&quot;</span>
+<a name="l00032"></a>00032 <span class="preprocessor">#include &quot;<a class="code" href="utils_8h.html" title="Ficheiro com funções úteis para a interface com o utilizador.">utils.h</a>&quot;</span>
+<a name="l00033"></a>00033 <span class="preprocessor">#include &quot;<a class="code" href="_comandos_8h.html" title="Classe que armazena os comandos possíveis para cada classe.">Comandos.h</a>&quot;</span>
+<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;<a class="code" href="_tipo_aviao_d_b_8h.html" title="Classe que contém uma base de dados de tipos de aviões.">TipoAviaoDB.h</a>&quot;</span>
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036 <span class="keyword">using</span> std::vector;
+<a name="l00037"></a>00037 <span class="keyword">using</span> std::string;
+<a name="l00038"></a>00038 <span class="keyword">using</span> std::endl;
+<a name="l00039"></a>00039 <span class="keyword">using</span> std::find_if;
+<a name="l00040"></a>00040 <span class="keyword">using</span> std::bind2nd;
+<a name="l00041"></a>00041 <span class="keyword">using</span> std::equal_to;
+<a name="l00042"></a>00042 <span class="keyword">using</span> std::find;
+<a name="l00043"></a>00043 <span class="keyword">using</span> std::stringstream;
+<a name="l00044"></a>00044 <span class="keyword">using</span> std::flush;
+<a name="l00045"></a>00045 <span class="keyword">using</span> std::pow;
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 <span class="keyword">extern</span> <a class="code" href="class_tipo_aviao_d_b.html" title="Classe que contém uma base de dados de tipos de aviões.  .">TipoAviaoDB</a> <a class="code" href="_companhia_8cpp.html#a7fa0d061f8652bd18afc5be4198e4fbb">tipoaviaoDB</a>;
+<a name="l00049"></a>00049 
+<a name="l00051"></a><a class="code" href="class_companhia.html">00051</a> <span class="keyword">class </span><a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> {
+<a name="l00052"></a>00052 <span class="keyword">private</span>:
+<a name="l00053"></a><a class="code" href="class_companhia.html#ab0914466ca0964c01a04bac076df2f83">00053</a>         <span class="keywordtype">string</span> <a class="code" href="class_companhia.html#ab0914466ca0964c01a04bac076df2f83" title="Ex: TAP.">_sigla</a>;                                          
+<a name="l00054"></a><a class="code" href="class_companhia.html#aacb5b2d49bee30d498a5c568129b587e">00054</a>         <span class="keywordtype">string</span> <a class="code" href="class_companhia.html#aacb5b2d49bee30d498a5c568129b587e" title="Ex: TAP Portugal.">_nome</a>;                                           
+<a name="l00055"></a><a class="code" href="class_companhia.html#a25148c1af0bf86a5b0af96633c91ec96">00055</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_companhia.html#a25148c1af0bf86a5b0af96633c91ec96">_taxa_balcoes</a>;
+<a name="l00056"></a>00056 
+<a name="l00057"></a><a class="code" href="class_companhia.html#ad412d36105006506ac18f43dfc9219dd">00057</a>         vector &lt;Aviao*&gt; <a class="code" href="class_companhia.html#ad412d36105006506ac18f43dfc9219dd">_avioes</a>;
+<a name="l00058"></a><a class="code" href="class_companhia.html#a851796d24ec3e14eef9ab3bf42d6295a">00058</a>         vector &lt;Tripulante*&gt; <a class="code" href="class_companhia.html#a851796d24ec3e14eef9ab3bf42d6295a">_tripulacao</a>;
+<a name="l00059"></a><a class="code" href="class_companhia.html#ac2b0a9010f9d74a38397c0bfba55ceb8">00059</a>         vector &lt;Voo*&gt; <a class="code" href="class_companhia.html#ac2b0a9010f9d74a38397c0bfba55ceb8">_voos</a>;
+<a name="l00060"></a>00060         <span class="comment">//É um vector de apontadores porque o mesmo tipo de avião pode estar associado a aviões de companhias diferentes (evita duplicação de dados)</span>
+<a name="l00061"></a><a class="code" href="class_companhia.html#a8cd80b15c301b2bd6b8f3ff4829a52d2">00061</a>         vector &lt;TipoAviao*&gt; <a class="code" href="class_companhia.html#a8cd80b15c301b2bd6b8f3ff4829a52d2">_frota</a>;
+<a name="l00062"></a>00062 
+<a name="l00063"></a><a class="code" href="class_companhia.html#a8a7df2e750173e26d162bc55af5978ac">00063</a>         <span class="keywordtype">bool</span> <a class="code" href="class_companhia.html#a8a7df2e750173e26d162bc55af5978ac">_can_delete_values</a>;
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065 <span class="keyword">public</span>:
+<a name="l00066"></a><a class="code" href="class_companhia.html#ace9ce74b0d41f681945a10453e1c37ee">00066</a>         <a class="code" href="class_companhia.html#ace9ce74b0d41f681945a10453e1c37ee">Companhia</a>(): <a class="code" href="class_companhia.html#a25148c1af0bf86a5b0af96633c91ec96">_taxa_balcoes</a>(0), <a class="code" href="class_companhia.html#ad412d36105006506ac18f43dfc9219dd">_avioes</a>(), <a class="code" href="class_companhia.html#a851796d24ec3e14eef9ab3bf42d6295a">_tripulacao</a>(), <a class="code" href="class_companhia.html#ac2b0a9010f9d74a38397c0bfba55ceb8">_voos</a>(), <a class="code" href="class_companhia.html#a8cd80b15c301b2bd6b8f3ff4829a52d2">_frota</a>(), <a class="code" href="class_companhia.html#a8a7df2e750173e26d162bc55af5978ac">_can_delete_values</a>(false) {}
+<a name="l00067"></a><a class="code" href="class_companhia.html#a2afa7d19344523c399c0e5405e19934d">00067</a>         <a class="code" href="class_companhia.html#ace9ce74b0d41f681945a10453e1c37ee">Companhia</a>(<span class="keywordtype">string</span> sigla, <span class="keywordtype">string</span> nome, <span class="keywordtype">unsigned</span> taxa_balcoes): <a class="code" href="class_companhia.html#ab0914466ca0964c01a04bac076df2f83" title="Ex: TAP.">_sigla</a>(sigla), <a class="code" href="class_companhia.html#aacb5b2d49bee30d498a5c568129b587e" title="Ex: TAP Portugal.">_nome</a>(nome), <a class="code" href="class_companhia.html#a25148c1af0bf86a5b0af96633c91ec96">_taxa_balcoes</a>(taxa_balcoes),
+<a name="l00068"></a>00068                         <a class="code" href="class_companhia.html#ad412d36105006506ac18f43dfc9219dd">_avioes</a>(), <a class="code" href="class_companhia.html#a851796d24ec3e14eef9ab3bf42d6295a">_tripulacao</a>(), <a class="code" href="class_companhia.html#ac2b0a9010f9d74a38397c0bfba55ceb8">_voos</a>(), <a class="code" href="class_companhia.html#a8cd80b15c301b2bd6b8f3ff4829a52d2">_frota</a>(), <a class="code" href="class_companhia.html#a8a7df2e750173e26d162bc55af5978ac">_can_delete_values</a>(true) {}
+<a name="l00069"></a>00069         <span class="keyword">virtual</span> <a class="code" href="class_companhia.html#ac8d787355ae09623101260f59e7255cc">~Companhia</a>();
+<a name="l00070"></a>00070 
+<a name="l00071"></a><a class="code" href="class_companhia.html#ade16b281e7bc7ca34d58c293eacfe238">00071</a>         <span class="keywordtype">string</span> <a class="code" href="class_companhia.html#ade16b281e7bc7ca34d58c293eacfe238">getSigla</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_companhia.html#ab0914466ca0964c01a04bac076df2f83" title="Ex: TAP.">_sigla</a>; }
+<a name="l00072"></a><a class="code" href="class_companhia.html#ad3f4f203360153529468735db6067d35">00072</a>         <span class="keywordtype">string</span> <a class="code" href="class_companhia.html#ad3f4f203360153529468735db6067d35">getNome</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_companhia.html#aacb5b2d49bee30d498a5c568129b587e" title="Ex: TAP Portugal.">_nome</a>; }
+<a name="l00073"></a><a class="code" href="class_companhia.html#ae90dabe51b656bb65420b91824230eb3">00073</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_companhia.html#ae90dabe51b656bb65420b91824230eb3">getTaxaBalcoes</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_companhia.html#a25148c1af0bf86a5b0af96633c91ec96">_taxa_balcoes</a>; }
+<a name="l00074"></a>00074 
+<a name="l00075"></a><a class="code" href="class_companhia.html#a52eea07b14f7425105fc581d81db67d5">00075</a>         vector &lt;Aviao*&gt; <a class="code" href="class_companhia.html#a52eea07b14f7425105fc581d81db67d5">getAvioes</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_companhia.html#ad412d36105006506ac18f43dfc9219dd">_avioes</a>; }
+<a name="l00076"></a>00076         <span class="comment">//Variante dos gets para os vectores, usadas em iteradores constantes</span>
+<a name="l00077"></a><a class="code" href="class_companhia.html#a499f08d829ad45c685ea93cac8fb3e2e">00077</a>         <span class="keyword">const</span> vector &lt;Aviao*&gt;&amp; <a class="code" href="class_companhia.html#a499f08d829ad45c685ea93cac8fb3e2e">getConstRefAvioes</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_companhia.html#ad412d36105006506ac18f43dfc9219dd">_avioes</a>; }
+<a name="l00078"></a>00078         <span class="comment">//Variante do get do vector que permite alterá-lo através da referência que é dada</span>
+<a name="l00079"></a><a class="code" href="class_companhia.html#ac2f4bc5e4762859ed2769b92ccb563bb">00079</a>         vector &lt;Aviao*&gt;&amp; <a class="code" href="class_companhia.html#ac2f4bc5e4762859ed2769b92ccb563bb">getRefAvioes</a>() { <span class="keywordflow">return</span> <a class="code" href="class_companhia.html#ad412d36105006506ac18f43dfc9219dd">_avioes</a>; }
+<a name="l00080"></a>00080 
+<a name="l00081"></a><a class="code" href="class_companhia.html#a801356880461b65144606750f6868c4f">00081</a>         vector &lt;Tripulante*&gt; <a class="code" href="class_companhia.html#a801356880461b65144606750f6868c4f">getTripulacao</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_companhia.html#a851796d24ec3e14eef9ab3bf42d6295a">_tripulacao</a>; }
+<a name="l00082"></a><a class="code" href="class_companhia.html#a4898e81df144529092a62bc8a7dce335">00082</a>         <span class="keyword">const</span> vector &lt;Tripulante*&gt;&amp; <a class="code" href="class_companhia.html#a4898e81df144529092a62bc8a7dce335">getConstRefTripulacao</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_companhia.html#a851796d24ec3e14eef9ab3bf42d6295a">_tripulacao</a>; }
+<a name="l00083"></a><a class="code" href="class_companhia.html#a57864bd9079c5e85bea493d7e24db190">00083</a>         vector &lt;Tripulante*&gt;&amp; <a class="code" href="class_companhia.html#a57864bd9079c5e85bea493d7e24db190">getRefTripulacao</a>() { <span class="keywordflow">return</span> <a class="code" href="class_companhia.html#a851796d24ec3e14eef9ab3bf42d6295a">_tripulacao</a>; }
+<a name="l00084"></a>00084 
+<a name="l00085"></a><a class="code" href="class_companhia.html#a129e72f946b1284e92a279853bacfded">00085</a>         vector &lt;Voo*&gt; <a class="code" href="class_companhia.html#a129e72f946b1284e92a279853bacfded">getVoos</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_companhia.html#ac2b0a9010f9d74a38397c0bfba55ceb8">_voos</a>; }
+<a name="l00086"></a><a class="code" href="class_companhia.html#ae1c44df0e3c67d5ff9bf2bbb6eb26eff">00086</a>         <span class="keyword">const</span> vector &lt;Voo*&gt;&amp; <a class="code" href="class_companhia.html#ae1c44df0e3c67d5ff9bf2bbb6eb26eff">getConstRefVoos</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_companhia.html#ac2b0a9010f9d74a38397c0bfba55ceb8">_voos</a>; }
+<a name="l00087"></a><a class="code" href="class_companhia.html#a6604c4b71805095409c9a8a0f72e913b">00087</a>         vector &lt;Voo*&gt;&amp; <a class="code" href="class_companhia.html#a6604c4b71805095409c9a8a0f72e913b">getRefVoos</a>() { <span class="keywordflow">return</span> <a class="code" href="class_companhia.html#ac2b0a9010f9d74a38397c0bfba55ceb8">_voos</a>; }
+<a name="l00088"></a>00088 
+<a name="l00089"></a><a class="code" href="class_companhia.html#af36571c64c1c4e0abf6f4ff179b865b3">00089</a>         vector &lt;TipoAviao*&gt; <a class="code" href="class_companhia.html#af36571c64c1c4e0abf6f4ff179b865b3">getFrota</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_companhia.html#a8cd80b15c301b2bd6b8f3ff4829a52d2">_frota</a>; }
+<a name="l00090"></a><a class="code" href="class_companhia.html#a5169ee0728e4c74b085bf428a10d9c37">00090</a>         <span class="keyword">const</span> vector &lt;TipoAviao*&gt;&amp; <a class="code" href="class_companhia.html#a5169ee0728e4c74b085bf428a10d9c37">getConstRefFrota</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_companhia.html#a8cd80b15c301b2bd6b8f3ff4829a52d2">_frota</a>; }
+<a name="l00091"></a><a class="code" href="class_companhia.html#a29942c8a1df1d759aab8e454c841890d">00091</a>         vector &lt;TipoAviao*&gt;&amp; <a class="code" href="class_companhia.html#a29942c8a1df1d759aab8e454c841890d">getRefFrota</a>() { <span class="keywordflow">return</span> <a class="code" href="class_companhia.html#a8cd80b15c301b2bd6b8f3ff4829a52d2">_frota</a>; }
+<a name="l00092"></a>00092 
+<a name="l00093"></a><a class="code" href="class_companhia.html#a73dadc7d1f151563a8f722e4c3f1f921">00093</a>         <span class="keywordtype">void</span> <a class="code" href="class_companhia.html#a73dadc7d1f151563a8f722e4c3f1f921">setSigla</a>(<span class="keywordtype">string</span> sigla) { <a class="code" href="class_companhia.html#ab0914466ca0964c01a04bac076df2f83" title="Ex: TAP.">_sigla</a> = sigla; }
+<a name="l00094"></a><a class="code" href="class_companhia.html#ac8f8814e510f9fa7c693a354034d902b">00094</a>         <span class="keywordtype">void</span> <a class="code" href="class_companhia.html#ac8f8814e510f9fa7c693a354034d902b">setNome</a>(<span class="keywordtype">string</span> nome) { <a class="code" href="class_companhia.html#aacb5b2d49bee30d498a5c568129b587e" title="Ex: TAP Portugal.">_nome</a> = nome; }
+<a name="l00095"></a><a class="code" href="class_companhia.html#a2abb084058150231fb8f89467d4f5c86">00095</a>         <span class="keywordtype">void</span> <a class="code" href="class_companhia.html#a2abb084058150231fb8f89467d4f5c86">setTaxaBalcoes</a>(<span class="keywordtype">unsigned</span> taxa_balcoes) { <a class="code" href="class_companhia.html#a25148c1af0bf86a5b0af96633c91ec96">_taxa_balcoes</a> = taxa_balcoes; }
+<a name="l00096"></a>00096 
+<a name="l00097"></a><a class="code" href="class_companhia.html#a7d917d206a71d478ef2804615fd387c1">00097</a>         <span class="keywordtype">void</span> <a class="code" href="class_companhia.html#a7d917d206a71d478ef2804615fd387c1">setAvioes</a>(vector &lt;Aviao*&gt; avioes) { <a class="code" href="class_companhia.html#ad412d36105006506ac18f43dfc9219dd">_avioes</a> = avioes; }
+<a name="l00098"></a><a class="code" href="class_companhia.html#ab8b0ddb7ec9276ff07cc67d7d10dda11">00098</a>         <span class="keywordtype">void</span> <a class="code" href="class_companhia.html#ab8b0ddb7ec9276ff07cc67d7d10dda11">setTripulacao</a>(vector &lt;Tripulante*&gt; tripulacao) { <a class="code" href="class_companhia.html#a851796d24ec3e14eef9ab3bf42d6295a">_tripulacao</a> = tripulacao; }
+<a name="l00099"></a><a class="code" href="class_companhia.html#a6c5c59e21ed80cc82faa39f612e4cae7">00099</a>         <span class="keywordtype">void</span> <a class="code" href="class_companhia.html#a6c5c59e21ed80cc82faa39f612e4cae7">setVoos</a>(vector &lt;Voo*&gt; voos) { <a class="code" href="class_companhia.html#ac2b0a9010f9d74a38397c0bfba55ceb8">_voos</a> = voos; }
+<a name="l00100"></a><a class="code" href="class_companhia.html#acedcc0358d1a65ed398bb9ba8f076c9c">00100</a>         <span class="keywordtype">void</span> <a class="code" href="class_companhia.html#acedcc0358d1a65ed398bb9ba8f076c9c">setFrota</a>(vector &lt;TipoAviao*&gt; frota) { <a class="code" href="class_companhia.html#a8cd80b15c301b2bd6b8f3ff4829a52d2">_frota</a> = frota; }
+<a name="l00101"></a>00101 
+<a name="l00103"></a>00103         <span class="keywordtype">bool</span> <a class="code" href="class_companhia.html#a8e9732d80cb9546bd4a33db91b36734a" title="Operador que permite comparar se duas Companhias têm a mesma sigla e nome.">operator==</a>(<span class="keyword">const</span> <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> &amp;companhia) <span class="keyword">const</span>;
+<a name="l00104"></a>00104 
+<a name="l00106"></a>00106         <span class="keywordtype">bool</span> <a class="code" href="class_companhia.html#a91b21cfd5845187ed2b0ada39418ee31" title="Operador que permite verificar se o nome de uma companhia é &amp;quot;menor&amp;quot; que o de outra...">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> &amp;companhia) <span class="keyword">const</span>;
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109 
+<a name="l00116"></a>00116         <span class="keywordtype">string</span> <a class="code" href="class_companhia.html#a925007b855c5cba8a69a94851e544473" title="Função que pede ao utilizador uma nova matrícula para um avião, verificando se ela já está atribuída...">getMatriculaAviaoCin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* mensagem);
+<a name="l00117"></a>00117 
+<a name="l00123"></a>00123         <span class="keywordtype">unsigned</span> <a class="code" href="class_companhia.html#a91852f433f2bec4aeccd7d95a6a1a3ad" title="Função que pede ao utilizador um BI.">getBICin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* mensagem);
+<a name="l00124"></a>00124 
+<a name="l00130"></a>00130         <span class="keywordtype">unsigned</span> <a class="code" href="class_companhia.html#aa527b174cf46e639f7ef4c6cba6d36ef" title="Função que pede ao utilizador um número (ID) para um tripulante.">getNumeroTripulanteCin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* mensagem);
+<a name="l00131"></a>00131 
+<a name="l00137"></a>00137         <span class="keywordtype">unsigned</span> <a class="code" href="class_companhia.html#a95924f02e1c83e3cf3d754d488796cbf" title="Função que pede ao utilizador um número de voo e verifica se esse número (ID), é único na companhia e...">getNumeroVooCin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *mensagem);
+<a name="l00138"></a>00138 
+<a name="l00139"></a>00139 };
+<a name="l00140"></a>00140 
+<a name="l00141"></a>00141 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:36 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência à classe Template BSTItrPre&lt; Comparable &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&nbsp;dos&nbsp;componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a>  </div>
+  <div class="headertitle">
+<h1>Referência à classe Template BSTItrPre&lt; Comparable &gt;</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="BSTItrPre" -->
+<p><code>#include &lt;<a class="el" href="_b_s_t_8h_source.html">BST.h</a>&gt;</code></p>
+
+<p><a href="class_b_s_t_itr_pre-members.html">Mostrar lista completa dos membros</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t_itr_pre.html#a11b1cd4e783f153b9c1b64ce2ec8077e">BSTItrPre</a> (const <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt; &amp;bt)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t_itr_pre.html#a7a743d66a842018fd833fb2b0737254d">advance</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Comparable &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t_itr_pre.html#af40033e97f63bf025c2e33a9fdce4c43">retrieve</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t_itr_pre.html#ae282a7b9ffa9d250bb0f6a6d79f6e8d0">isAtEnd</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">stack&lt; <a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t_itr_pre.html#a73e938d809acba06490472e7fc1bd6d3">itrStack</a></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<h3>template&lt;class Comparable&gt;<br/>
+ class BSTItrPre&lt; Comparable &gt;</h3>
+
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00373">373</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+<hr/><h2>Documentação dos Construtores &amp; Destrutor</h2>
+<a class="anchor" id="a11b1cd4e783f153b9c1b64ce2ec8077e"></a><!-- doxytag: member="BSTItrPre::BSTItrPre" ref="a11b1cd4e783f153b9c1b64ce2ec8077e" args="(const BST&lt; Comparable &gt; &amp;bt)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_b_s_t_itr_pre.html">BSTItrPre</a>&lt; Comparable &gt;::<a class="el" href="class_b_s_t_itr_pre.html">BSTItrPre</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt; &amp;&nbsp;</td>
+          <td class="paramname"> <em>bt</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00387">387</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00142">BST&lt; Comparable &gt;::isEmpty()</a>, <a class="el" href="_b_s_t_8h_source.html#l00382">BSTItrPre&lt; Comparable &gt;::itrStack</a> e <a class="el" href="_b_s_t_8h_source.html#l00064">BST&lt; Comparable &gt;::root</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos métodos</h2>
+<a class="anchor" id="a7a743d66a842018fd833fb2b0737254d"></a><!-- doxytag: member="BSTItrPre::advance" ref="a7a743d66a842018fd833fb2b0737254d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_s_t_itr_pre.html">BSTItrPre</a>&lt; Comparable &gt;::advance </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00394">394</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00382">BSTItrPre&lt; Comparable &gt;::itrStack</a> e <a class="el" href="_b_s_t_8h_source.html#l00030">BinaryNode&lt; Comparable &gt;::left</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae282a7b9ffa9d250bb0f6a6d79f6e8d0"></a><!-- doxytag: member="BSTItrPre::isAtEnd" ref="ae282a7b9ffa9d250bb0f6a6d79f6e8d0" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_b_s_t_itr_pre.html">BSTItrPre</a>&lt; Comparable &gt;::isAtEnd </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00379">379</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00382">BSTItrPre&lt; Comparable &gt;::itrStack</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af40033e97f63bf025c2e33a9fdce4c43"></a><!-- doxytag: member="BSTItrPre::retrieve" ref="af40033e97f63bf025c2e33a9fdce4c43" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Comparable&amp; <a class="el" href="class_b_s_t_itr_pre.html">BSTItrPre</a>&lt; Comparable &gt;::retrieve </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00378">378</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00382">BSTItrPre&lt; Comparable &gt;::itrStack</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos dados membro</h2>
+<a class="anchor" id="a73e938d809acba06490472e7fc1bd6d3"></a><!-- doxytag: member="BSTItrPre::itrStack" ref="a73e938d809acba06490472e7fc1bd6d3" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">stack&lt;<a class="el" href="class_binary_node.html">BinaryNode</a>&lt;Comparable&gt; *&gt; <a class="el" href="class_b_s_t_itr_pre.html">BSTItrPre</a>&lt; Comparable &gt;::<a class="el" href="class_b_s_t_itr_pre.html#a73e938d809acba06490472e7fc1bd6d3">itrStack</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00382">382</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_b_s_t_8h_source.html#l00394">BSTItrPre&lt; Comparable &gt;::advance()</a>, <a class="el" href="_b_s_t_8h_source.html#l00387">BSTItrPre&lt; Comparable &gt;::BSTItrPre()</a>, <a class="el" href="_b_s_t_8h_source.html#l00379">BSTItrPre&lt; Comparable &gt;::isAtEnd()</a> e <a class="el" href="_b_s_t_8h_source.html#l00378">BSTItrPre&lt; Comparable &gt;::retrieve()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir do seguinte ficheiro:<ul>
+<li><a class="el" href="_b_s_t_8h_source.html">BST.h</a></li>
+</ul>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:38 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

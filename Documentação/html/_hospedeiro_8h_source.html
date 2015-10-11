@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Hospedeiro.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>Hospedeiro.h</h1>  </div>
+</div>
+<div class="contents">
+<a href="_hospedeiro_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00015"></a>00015 <span class="preprocessor">#ifndef HOSPEDEIRO_H</span>
+<a name="l00016"></a>00016 <span class="preprocessor"></span><span class="preprocessor">#define HOSPEDEIRO_H</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;<a class="code" href="_tripulante_8h.html" title="Classe que contém a informação associada a cada Tripulante Aéreo.">Tripulante.h</a>&quot;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="_companhia_8h.html" title="Classe que contém informação associada a uma Companhia.">Companhia.h</a>&quot;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="code" href="_voo_8h.html" title="Classe que contém a informação associada a cada plano de voos de uma companhia aérea.">Voo.h</a>&quot;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;<a class="code" href="_comandos_8h.html" title="Classe que armazena os comandos possíveis para cada classe.">Comandos.h</a>&quot;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &quot;<a class="code" href="_data_hora_8h.html" title="Classe que contém informação associada a uma data e hora.">DataHora.h</a>&quot;</span>
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 
+<a name="l00026"></a><a class="code" href="class_hospedeiro.html">00026</a> <span class="keyword">class </span><a class="code" href="class_hospedeiro.html" title="Classe que contém a informação associada a cada plano de voo de uma companhia aérea.  .">Hospedeiro</a> : <span class="keyword">public</span> <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> {
+<a name="l00027"></a>00027 <span class="keyword">public</span>:
+<a name="l00028"></a><a class="code" href="class_hospedeiro.html#a913c3f4745626de4601c1c98a5da9a9d">00028</a>         <a class="code" href="class_hospedeiro.html#a913c3f4745626de4601c1c98a5da9a9d">Hospedeiro</a>(): <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a>() {}
+<a name="l00029"></a>00029         <span class="comment">//(numero, categoria, nome, salario hora)</span>
+<a name="l00030"></a>00030         <span class="comment">//&lt;230, Cte, Pinto da Costa, 120&gt;</span>
+<a name="l00031"></a><a class="code" href="class_hospedeiro.html#acba3d2c3fdbb6c0ced9a9b740719822d">00031</a>         <a class="code" href="class_hospedeiro.html#a913c3f4745626de4601c1c98a5da9a9d">Hospedeiro</a>(<span class="keywordtype">unsigned</span> numero, <span class="keywordtype">string</span> categoria, <span class="keywordtype">string</span> nome, <span class="keywordtype">unsigned</span> salario_hora):
+<a name="l00032"></a>00032                 <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a>(numero, categoria, nome, salario_hora) {}
+<a name="l00033"></a><a class="code" href="class_hospedeiro.html#a47ddb3d1c5e211416e8a6aa94434dd55">00033</a>         <a class="code" href="class_hospedeiro.html#a913c3f4745626de4601c1c98a5da9a9d">Hospedeiro</a>(<span class="keywordtype">string</span> nome, <span class="keywordtype">string</span> morada, <span class="keywordtype">string</span> nacionalidade, <span class="keywordtype">unsigned</span> contacto, <span class="keywordtype">unsigned</span> BI, <span class="keywordtype">unsigned</span> idade,
+<a name="l00034"></a>00034                         <span class="keywordtype">unsigned</span> numero, <span class="keywordtype">string</span> categoria, <span class="keywordtype">unsigned</span> salario_hora, <span class="keywordtype">unsigned</span> numero_horas_trabalho, <span class="keywordtype">string</span> tipoContrato, <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> expiracaoContrato,
+<a name="l00035"></a>00035                         <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia, <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo_actual) :
+<a name="l00036"></a>00036                                 <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a>(nome, morada, nacionalidade, contacto, BI, idade,
+<a name="l00037"></a>00037                                                 numero, categoria, salario_hora, numero_horas_trabalho, tipoContrato, expiracaoContrato,
+<a name="l00038"></a>00038                                                 companhia, voo_actual) {}
+<a name="l00039"></a><a class="code" href="class_hospedeiro.html#ac158d7e074e75150cf31bb4c74b82358">00039</a>         <span class="keyword">virtual</span> <a class="code" href="class_hospedeiro.html#ac158d7e074e75150cf31bb4c74b82358">~Hospedeiro</a>() {}
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_hospedeiro.html#a9074089f735d2e19633f31fc0cd8c3c6">imprimeInfo</a>();
+<a name="l00042"></a>00042 };
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:37 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

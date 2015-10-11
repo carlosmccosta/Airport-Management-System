@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Aeroporto.cpp Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>Aeroporto.cpp</h1>  </div>
+</div>
+<div class="contents">
+<a href="_aeroporto_8cpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_aeroporto_8h.html" title="Classe que contém a informação associada ao Aeroporto.">Aeroporto.h</a>&quot;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a><a class="code" href="class_aeroporto.html#a4e16f4db22a418d2e034d868515494ea">00017</a> <a class="code" href="class_aeroporto.html#a4e16f4db22a418d2e034d868515494ea">Aeroporto::~Aeroporto</a>()
+<a name="l00018"></a>00018 {
+<a name="l00019"></a>00019         <span class="keywordflow">for</span>(vector&lt;Companhia* &gt;::iterator it = <a class="code" href="class_aeroporto.html#a078238dacd0b56803ca3e21d942716ab">_companhias</a>.begin() ; it!=<a class="code" href="class_aeroporto.html#a078238dacd0b56803ca3e21d942716ab">_companhias</a>.end() ; ++it)
+<a name="l00020"></a>00020                 <span class="keyword">delete</span> (*it);
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022         <a class="code" href="class_b_s_t_itr_in.html">BSTItrIn&lt;PortaEmbarquePtr&gt;</a> it2(<a class="code" href="class_aeroporto.html#a812740d9c01fe073f63333584ffeef41">_portas_embarque_bst</a>);
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024         <span class="keywordflow">while</span> (!it2.<a class="code" href="class_b_s_t_itr_in.html#a6f9a43217862c263a9bf15b9a08b889a">isAtEnd</a>())
+<a name="l00025"></a>00025         {
+<a name="l00026"></a>00026                 <span class="keyword">delete</span> it2.<a class="code" href="class_b_s_t_itr_in.html#ac7ac215c1247bd25fc1fdb8053826a32">retrieve</a>()();
+<a name="l00027"></a>00027                 it2.<a class="code" href="class_b_s_t_itr_in.html#ac772d3ebbac748c5f8cf9bc659f2e32c">advance</a>();
+<a name="l00028"></a>00028         }
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030         <span class="keywordflow">for</span>(vector&lt;Passageiro* &gt;::iterator it = <a class="code" href="class_aeroporto.html#a1c00da2d4f75a765fbae6a6c6708dd55">_passageiros_aeroporto</a>.begin() ; it!=<a class="code" href="class_aeroporto.html#a1c00da2d4f75a765fbae6a6c6708dd55">_passageiros_aeroporto</a>.end() ; ++it)
+<a name="l00031"></a>00031                 <span class="keyword">delete</span> (*it);
+<a name="l00032"></a>00032 }
+<a name="l00033"></a>00033 
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:36 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

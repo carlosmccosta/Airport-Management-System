@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Companhia.cpp Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>Companhia.cpp</h1>  </div>
+</div>
+<div class="contents">
+<a href="_companhia_8cpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_companhia_8h.html" title="Classe que contém informação associada a uma Companhia.">Companhia.h</a>&quot;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 <span class="keyword">extern</span> <a class="code" href="class_tipo_aviao_d_b.html" title="Classe que contém uma base de dados de tipos de aviões.  .">TipoAviaoDB</a> <a class="code" href="_companhia_8cpp.html#a7fa0d061f8652bd18afc5be4198e4fbb">tipoaviaoDB</a>;
+<a name="l00018"></a>00018 
+<a name="l00019"></a><a class="code" href="class_companhia.html#ac8d787355ae09623101260f59e7255cc">00019</a> <a class="code" href="class_companhia.html#ac8d787355ae09623101260f59e7255cc">Companhia::~Companhia</a>()
+<a name="l00020"></a>00020 {
+<a name="l00021"></a>00021         <span class="keywordflow">if</span>(<a class="code" href="class_companhia.html#a8a7df2e750173e26d162bc55af5978ac">_can_delete_values</a>)
+<a name="l00022"></a>00022         {
+<a name="l00023"></a>00023                 <span class="keywordflow">for</span>(vector&lt;Aviao*&gt;::iterator it = <a class="code" href="class_companhia.html#ad412d36105006506ac18f43dfc9219dd">_avioes</a>.begin() ; it!=<a class="code" href="class_companhia.html#ad412d36105006506ac18f43dfc9219dd">_avioes</a>.end() ; ++it)
+<a name="l00024"></a>00024                         <span class="keyword">delete</span> (*it);
+<a name="l00025"></a>00025                 <span class="keywordflow">for</span>(vector&lt;Tripulante*&gt;::iterator it = <a class="code" href="class_companhia.html#a851796d24ec3e14eef9ab3bf42d6295a">_tripulacao</a>.begin() ; it!=<a class="code" href="class_companhia.html#a851796d24ec3e14eef9ab3bf42d6295a">_tripulacao</a>.end() ; ++it)
+<a name="l00026"></a>00026                         <span class="keyword">delete</span> (*it);
+<a name="l00027"></a>00027                 <span class="keywordflow">for</span>(vector&lt;Voo*&gt;::iterator it = <a class="code" href="class_companhia.html#ac2b0a9010f9d74a38397c0bfba55ceb8">_voos</a>.begin() ; it!=<a class="code" href="class_companhia.html#ac2b0a9010f9d74a38397c0bfba55ceb8">_voos</a>.end() ; ++it)
+<a name="l00028"></a>00028                         <span class="keyword">delete</span> (*it);
+<a name="l00029"></a>00029         }
+<a name="l00030"></a>00030 }
+<a name="l00031"></a>00031 
+<a name="l00032"></a><a class="code" href="class_companhia.html#a8e9732d80cb9546bd4a33db91b36734a">00032</a> <span class="keywordtype">bool</span> <a class="code" href="class_companhia.html#a8e9732d80cb9546bd4a33db91b36734a" title="Operador que permite comparar se duas Companhias têm a mesma sigla e nome.">Companhia::operator==</a>(<span class="keyword">const</span> <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> &amp;companhia)<span class="keyword"> const </span>{
+<a name="l00033"></a>00033         <span class="keywordflow">if</span> ((<a class="code" href="class_companhia.html#ab0914466ca0964c01a04bac076df2f83" title="Ex: TAP.">_sigla</a> == companhia.<a class="code" href="class_companhia.html#ab0914466ca0964c01a04bac076df2f83" title="Ex: TAP.">_sigla</a>) &amp;&amp; (<a class="code" href="class_companhia.html#aacb5b2d49bee30d498a5c568129b587e" title="Ex: TAP Portugal.">_nome</a> == companhia.<a class="code" href="class_companhia.html#aacb5b2d49bee30d498a5c568129b587e" title="Ex: TAP Portugal.">_nome</a>))
+<a name="l00034"></a>00034                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00035"></a>00035         <span class="keywordflow">else</span>
+<a name="l00036"></a>00036                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00037"></a>00037 }
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 
+<a name="l00040"></a><a class="code" href="class_companhia.html#a91b21cfd5845187ed2b0ada39418ee31">00040</a> <span class="keywordtype">bool</span> <a class="code" href="class_companhia.html#a91b21cfd5845187ed2b0ada39418ee31" title="Operador que permite verificar se o nome de uma companhia é &amp;quot;menor&amp;quot; que o de outra...">Companhia::operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> &amp;companhia)<span class="keyword"> const </span>{
+<a name="l00041"></a>00041         <span class="keywordflow">if</span> (<a class="code" href="class_companhia.html#aacb5b2d49bee30d498a5c568129b587e" title="Ex: TAP Portugal.">_nome</a> &lt; companhia.<a class="code" href="class_companhia.html#aacb5b2d49bee30d498a5c568129b587e" title="Ex: TAP Portugal.">_nome</a>)
+<a name="l00042"></a>00042                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00043"></a>00043         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_companhia.html#aacb5b2d49bee30d498a5c568129b587e" title="Ex: TAP Portugal.">_nome</a> &gt; companhia.<a class="code" href="class_companhia.html#aacb5b2d49bee30d498a5c568129b587e" title="Ex: TAP Portugal.">_nome</a>)
+<a name="l00044"></a>00044                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00045"></a>00045         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_companhia.html#ab0914466ca0964c01a04bac076df2f83" title="Ex: TAP.">_sigla</a> &lt; companhia.<a class="code" href="class_companhia.html#ab0914466ca0964c01a04bac076df2f83" title="Ex: TAP.">_sigla</a>)
+<a name="l00046"></a>00046                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00047"></a>00047         <span class="keywordflow">else</span>
+<a name="l00048"></a>00048                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00049"></a>00049 }
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 
+<a name="l00052"></a><a class="code" href="class_companhia.html#a925007b855c5cba8a69a94851e544473">00052</a> <span class="keywordtype">string</span> <a class="code" href="class_companhia.html#a925007b855c5cba8a69a94851e544473" title="Função que pede ao utilizador uma nova matrícula para um avião, verificando se ela já está atribuída...">Companhia::getMatriculaAviaoCin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* mensagem) {
+<a name="l00053"></a>00053         <span class="comment">//Verifica-se se a matrícula do avião já existe.</span>
+<a name="l00054"></a>00054         <span class="keywordtype">string</span> matricula;
+<a name="l00055"></a>00055         <span class="keywordtype">bool</span> matricula_repetida;
+<a name="l00056"></a>00056         <span class="keywordflow">do</span> {
+<a name="l00057"></a>00057                 matricula_repetida = <span class="keyword">false</span>;
+<a name="l00058"></a>00058                 cout &lt;&lt; mensagem &lt;&lt; flush;
+<a name="l00059"></a>00059                 <a class="code" href="utils_8cpp.html#aec9a81a0766b1243f091fa5e47abde63" title="getline que faz o sync para não ler lixo do buffer.">getlineCin</a>(matricula);
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061                 <span class="keywordflow">for</span> (vector&lt;Aviao*&gt;::const_iterator it = <a class="code" href="class_companhia.html#ad412d36105006506ac18f43dfc9219dd">_avioes</a>.begin(); it != <a class="code" href="class_companhia.html#ad412d36105006506ac18f43dfc9219dd">_avioes</a>.end(); ++it)
+<a name="l00062"></a>00062                         <span class="keywordflow">if</span> (matricula == (*it)-&gt;getMatricula()) {
+<a name="l00063"></a>00063                                 matricula_repetida = <span class="keyword">true</span>;
+<a name="l00064"></a>00064                                 cout &lt;&lt; <span class="stringliteral">&quot;A matrícula já existe!&quot;</span> &lt;&lt; endl &lt;&lt; endl;
+<a name="l00065"></a>00065                                 <span class="keywordflow">break</span>;
+<a name="l00066"></a>00066                         }
+<a name="l00067"></a>00067         } <span class="keywordflow">while</span>(matricula_repetida);
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069         <span class="keywordflow">return</span> matricula;
+<a name="l00070"></a>00070 }
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072 
+<a name="l00073"></a><a class="code" href="class_companhia.html#a91852f433f2bec4aeccd7d95a6a1a3ad">00073</a> <span class="keywordtype">unsigned</span> <a class="code" href="class_companhia.html#a91852f433f2bec4aeccd7d95a6a1a3ad" title="Função que pede ao utilizador um BI.">Companhia::getBICin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* mensagem) {
+<a name="l00074"></a>00074         <span class="comment">//Verifica-se se BI já existe</span>
+<a name="l00075"></a>00075         <span class="keywordtype">unsigned</span> BI;
+<a name="l00076"></a>00076         <span class="keywordtype">bool</span> BI_repetido;
+<a name="l00077"></a>00077         <span class="keywordflow">do</span> {
+<a name="l00078"></a>00078                 BI_repetido = <span class="keyword">false</span>;
+<a name="l00079"></a>00079                 BI = get_uint_cin&lt;unsigned&gt;(mensagem);
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081                 <span class="keywordflow">for</span> (vector&lt;Tripulante*&gt;::const_iterator it = <a class="code" href="class_companhia.html#a851796d24ec3e14eef9ab3bf42d6295a">_tripulacao</a>.begin(); it != <a class="code" href="class_companhia.html#a851796d24ec3e14eef9ab3bf42d6295a">_tripulacao</a>.end(); ++it)
+<a name="l00082"></a>00082                         <span class="keywordflow">if</span> (BI == (*it)-&gt;getBI()) {
+<a name="l00083"></a>00083                                 BI_repetido = <span class="keyword">true</span>;
+<a name="l00084"></a>00084                                 cout &lt;&lt; <span class="stringliteral">&quot;O BI introduzido já existe!&quot;</span> &lt;&lt; endl &lt;&lt; endl;
+<a name="l00085"></a>00085                                 <span class="keywordflow">break</span>;
+<a name="l00086"></a>00086                         }
+<a name="l00087"></a>00087         } <span class="keywordflow">while</span>(BI_repetido);
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089         <span class="keywordflow">return</span> BI;
+<a name="l00090"></a>00090 }
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092 
+<a name="l00093"></a><a class="code" href="class_companhia.html#aa527b174cf46e639f7ef4c6cba6d36ef">00093</a> <span class="keywordtype">unsigned</span> <a class="code" href="class_companhia.html#aa527b174cf46e639f7ef4c6cba6d36ef" title="Função que pede ao utilizador um número (ID) para um tripulante.">Companhia::getNumeroTripulanteCin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* mensagem) {
+<a name="l00094"></a>00094 <span class="comment">//Verifica-se se número para o tripulante que se recebeu já existe</span>
+<a name="l00095"></a>00095 <span class="keywordtype">unsigned</span> numero_tripulante;
+<a name="l00096"></a>00096 <span class="keywordtype">bool</span> numero_tripulante_repetido;
+<a name="l00097"></a>00097 <span class="keywordflow">do</span> {
+<a name="l00098"></a>00098         numero_tripulante_repetido = <span class="keyword">false</span>;
+<a name="l00099"></a>00099         numero_tripulante = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(mensagem);
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101         <span class="keywordflow">for</span> (vector&lt;Tripulante*&gt;::const_iterator it = <a class="code" href="class_companhia.html#a851796d24ec3e14eef9ab3bf42d6295a">_tripulacao</a>.begin(); it != <a class="code" href="class_companhia.html#a851796d24ec3e14eef9ab3bf42d6295a">_tripulacao</a>.end(); ++it)
+<a name="l00102"></a>00102                 <span class="keywordflow">if</span> (numero_tripulante == (*it)-&gt;getNumero()) {
+<a name="l00103"></a>00103                         numero_tripulante_repetido = <span class="keyword">true</span>;
+<a name="l00104"></a>00104                         cout &lt;&lt; <span class="stringliteral">&quot;O número para o Tripulante que introduziu já existe!&quot;</span> &lt;&lt; endl &lt;&lt; endl;
+<a name="l00105"></a>00105                         <span class="keywordflow">break</span>;
+<a name="l00106"></a>00106                 }
+<a name="l00107"></a>00107 } <span class="keywordflow">while</span>(numero_tripulante_repetido);
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109 <span class="keywordflow">return</span> numero_tripulante;
+<a name="l00110"></a>00110 }
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112 
+<a name="l00113"></a><a class="code" href="class_companhia.html#a95924f02e1c83e3cf3d754d488796cbf">00113</a> <span class="keywordtype">unsigned</span> <a class="code" href="class_companhia.html#a95924f02e1c83e3cf3d754d488796cbf" title="Função que pede ao utilizador um número de voo e verifica se esse número (ID), é único na companhia e...">Companhia::getNumeroVooCin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *mensagem) {
+<a name="l00114"></a>00114         <span class="comment">//Verifica-se se número para o tripulante que se recebeu já existe</span>
+<a name="l00115"></a>00115         <span class="keywordtype">unsigned</span> numero_voo;
+<a name="l00116"></a>00116         <span class="keywordtype">bool</span> numero_voo_repetido;
+<a name="l00117"></a>00117         <span class="keywordflow">do</span> {
+<a name="l00118"></a>00118                 numero_voo_repetido = <span class="keyword">false</span>;
+<a name="l00119"></a>00119                 numero_voo = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(mensagem);
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121                 <span class="keywordflow">for</span> (vector&lt;Voo*&gt;::const_iterator it = <a class="code" href="class_companhia.html#ac2b0a9010f9d74a38397c0bfba55ceb8">_voos</a>.begin(); it != <a class="code" href="class_companhia.html#ac2b0a9010f9d74a38397c0bfba55ceb8">_voos</a>.end(); ++it)
+<a name="l00122"></a>00122                         <span class="keywordflow">if</span> (numero_voo == (*it)-&gt;getNumeroVoo()) {
+<a name="l00123"></a>00123                                 numero_voo_repetido = <span class="keyword">true</span>;
+<a name="l00124"></a>00124                                 cout &lt;&lt; <span class="stringliteral">&quot;O número de Voo que introduziu já existe!&quot;</span> &lt;&lt; endl &lt;&lt; endl;
+<a name="l00125"></a>00125                                 <span class="keywordflow">break</span>;
+<a name="l00126"></a>00126                         }
+<a name="l00127"></a>00127         } <span class="keywordflow">while</span>(numero_voo_repetido);
+<a name="l00128"></a>00128 
+<a name="l00129"></a>00129         <span class="keywordflow">return</span> numero_voo;
+<a name="l00130"></a>00130 }
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132 
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:36 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

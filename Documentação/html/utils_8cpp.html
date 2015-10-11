@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência ao ficheiro utils.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<h1>Referência ao ficheiro utils.cpp</h1>  </div>
+</div>
+<div class="contents">
+
+<p>Ficheiro com funções úteis para a interface com o utilizador.  
+<a href="#_details">Mais...</a></p>
+<code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br/>
+
+<p><a href="utils_8cpp_source.html">Ir para o código fonte deste ficheiro.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8cpp.html#a385f5a2e2bc6628450b6280692396851">getch</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Limpa as flags do cin e fica à espera de um input para prosseguir.  <a href="#a385f5a2e2bc6628450b6280692396851"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8cpp.html#aec9a81a0766b1243f091fa5e47abde63">getlineCin</a> (string &amp;output)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">getline que faz o sync para não ler lixo do buffer.  <a href="#aec9a81a0766b1243f091fa5e47abde63"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4">get_int_cin</a> (const char *message, int size, int min)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mostra a "message" ao utilizador e espera por um input de um número entre min (default é 0) e size-1 (default é INT_MAX).  <a href="#aed561a6879d1d46975f653d51e9237c4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8cpp.html#a555c71c65819b8bca6c4a733d2d601b9">get_yes_no</a> (const char *message, const char *message_erro)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Pergunta message ao utilizador e retorna Sim/Não.  <a href="#a555c71c65819b8bca6c4a733d2d601b9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8cpp.html#a3a298aea409b5d7355c3c0e53ba0e628">to_upper</a> (string str)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Converte uma string para maiúsculas.  <a href="#a3a298aea409b5d7355c3c0e53ba0e628"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8cpp.html#a175c09f4dd01c8ae3f1ef6392a8f865a">to_lower</a> (string str)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Converte uma string para minúsculas.  <a href="#a175c09f4dd01c8ae3f1ef6392a8f865a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; string &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8cpp.html#a7db7a33a90c53907236c65b823712ffb">split</a> (string str, char delim)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que separa uma string em substrings sempre que encontrar o caracter delimitador ("delim").  <a href="#a7db7a33a90c53907236c65b823712ffb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8cpp.html#a0daf13ac8da9785b3895a6d1e48d4a2f">printMenu</a> (string &amp;title, const vector&lt; vector&lt; string &gt; &gt; &amp;columns, const vector&lt; string &gt; &amp;colNames, bool menu, bool reverse, bool hide_index, bool hide_colnames)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que imprime uma tabela com os dados de um vector de colunas (vector de strings).  <a href="#a0daf13ac8da9785b3895a6d1e48d4a2f"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<p>Ficheiro com funções úteis para a interface com o utilizador. </p>
+<p>PROJECTO: Projecto 2 - Gestão do embarque dos passageiros num aeroporto (check-in/embarque) <br/>
+ FICHEIRO: <a class="el" href="utils_8cpp.html" title="Ficheiro com funções úteis para a interface com o utilizador.">utils.cpp</a> <br/>
+ DESCRIÇÃO: Ficheiro com funções úteis para a interface com o utilizador. <br/>
+</p>
+<p>TURMA / GRUPO: 2MIEIC1 / 4 <br/>
+ AUTORES:</p>
+<ul>
+<li>Carlos Miguel Correia da Costa</li>
+<li>Daniela Filipa Neves Cardeano</li>
+<li>Vítor Amálio Maia Martins Moreira </li>
+</ul>
+
+<p>Definido no ficheiro <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
+<hr/><h2>Documentação das funções</h2>
+<a class="anchor" id="aed561a6879d1d46975f653d51e9237c4"></a><!-- doxytag: member="utils.cpp::get_int_cin" ref="aed561a6879d1d46975f653d51e9237c4" args="(const char *message, int size, int min)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int get_int_cin </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>size</em> = <code>INT_MAX</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>min</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Mostra a "message" ao utilizador e espera por um input de um número entre min (default é 0) e size-1 (default é INT_MAX). </p>
+<p>Enquanto não for introduzido um input válido vai pedindo ao utilizador para introduzir novamente os dados. </p>
+
+<p>Definido na linha <a class="el" href="utils_8cpp_source.html#l00035">35</a> do ficheiro <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00044">TipoAviaoDB::addTipoAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01808">CRUD::editCompanhia()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">TipoAviaoDB::editTipoAviao()</a>, <a class="el" href="_companhia_8cpp_source.html#l00093">Companhia::getNumeroTripulanteCin()</a>, <a class="el" href="_companhia_8cpp_source.html#l00113">Companhia::getNumeroVooCin()</a> e <a class="el" href="_menu_8cpp_source.html#l00042">Menu::go()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a555c71c65819b8bca6c4a733d2d601b9"></a><!-- doxytag: member="utils.cpp::get_yes_no" ref="a555c71c65819b8bca6c4a733d2d601b9" args="(const char *message, const char *message_erro)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool get_yes_no </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>message_erro</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Pergunta message ao utilizador e retorna Sim/Não. </p>
+
+<p>Definido na linha <a class="el" href="utils_8cpp_source.html#l00073">73</a> do ficheiro <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
+
+<p>Referências <a class="el" href="utils_8cpp_source.html#l00028">getlineCin()</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00023">CRUD::addAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01597">CRUD::addCompanhia()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02918">CRUD::addPortaEmbarque()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00465">CRUD::addTripulante()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03416">CRUD::addTripulanteVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02428">CRUD::chamadaEmbarqueVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02333">CRUD::checkIn()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01508">CRUD::editAeroporto()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00254">CRUD::editAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01808">CRUD::editCompanhia()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02189">CRUD::editPassageiro()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03239">CRUD::editPortaEmbarque()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">TipoAviaoDB::editTipoAviao()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00744">CRUD::editTripulante()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a385f5a2e2bc6628450b6280692396851"></a><!-- doxytag: member="utils.cpp::getch" ref="a385f5a2e2bc6628450b6280692396851" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getch </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Limpa as flags do cin e fica à espera de um input para prosseguir. </p>
+<p>Serve para parar o programa e esperar que o utilizador faça algum input para prosseguir. </p>
+
+<p>Definido na linha <a class="el" href="utils_8cpp_source.html#l00018">18</a> do ficheiro <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00023">CRUD::addAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01597">CRUD::addCompanhia()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01920">CRUD::addPassageiro()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00938">CRUD::addPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02918">CRUD::addPortaEmbarque()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00044">TipoAviaoDB::addTipoAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00465">CRUD::addTripulante()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02428">CRUD::chamadaEmbarqueVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02333">CRUD::checkIn()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02358">CRUD::checkInNextPassageiro()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00384">CRUD::delAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01865">CRUD::delCompanhia()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02284">CRUD::delPassageiro()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01402">CRUD::delPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03349">CRUD::delPortaEmbarque()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00449">TipoAviaoDB::delTipoAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00886">CRUD::delTripulante()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03609">CRUD::delTripulanteVoo()</a>, <a class="el" href="_menu_8cpp_source.html#l00042">Menu::go()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01567">CRUD::infoAeroporto()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00211">CRUD::infoAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01777">CRUD::infoCompanhia()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02145">CRUD::infoPassageiro()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01199">CRUD::infoPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03202">CRUD::infoPortaEmbarque()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00255">TipoAviaoDB::infoTipoAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00732">CRUD::infoTripulante()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00102">CRUD::listAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01658">CRUD::listCompanhia()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02524">CRUD::listHashSetVoos()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02563">CRUD::listHashSetVoosEntreDatasCriterio()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02029">CRUD::listPassageiro()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01024">CRUD::listPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02996">CRUD::listPortaEmbarque()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02682">CRUD::listTaxasBalcoesEntreDatas()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02704">CRUD::listTaxasBalcoesVooEntreDatas()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02743">CRUD::listTaxasBalcoesVoosEntreDatas()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02800">CRUD::listTaxasPortasEmbarqueEntreDatas()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02822">CRUD::listTaxasPortasEmbarqueVooEntreDatas()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02861">CRUD::listTaxasPortasEmbarqueVoosEntreDatas()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00147">TipoAviaoDB::listTipoAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00571">CRUD::listTripulante()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03450">CRUD::listTripulanteVoo()</a>, <a class="el" href="main_8cpp_source.html#l00104">main()</a>, <a class="el" href="utils_8cpp_source.html#l00133">printMenu()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02393">CRUD::printPriorityQueue()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02596">CRUD::searchHashSetVoos()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aec9a81a0766b1243f091fa5e47abde63"></a><!-- doxytag: member="utils.cpp::getlineCin" ref="aec9a81a0766b1243f091fa5e47abde63" args="(string &amp;output)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getlineCin </td>
+          <td>(</td>
+          <td class="paramtype">string &amp;&nbsp;</td>
+          <td class="paramname"> <em>output</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>getline que faz o sync para não ler lixo do buffer. </p>
+
+<p>Definido na linha <a class="el" href="utils_8cpp_source.html#l00028">28</a> do ficheiro <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01483">CRUD::addAeroporto()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00023">CRUD::addAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01597">CRUD::addCompanhia()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01920">CRUD::addPassageiro()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00938">CRUD::addPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02918">CRUD::addPortaEmbarque()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00044">TipoAviaoDB::addTipoAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00465">CRUD::addTripulante()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01508">CRUD::editAeroporto()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00254">CRUD::editAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01808">CRUD::editCompanhia()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02189">CRUD::editPassageiro()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03239">CRUD::editPortaEmbarque()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">TipoAviaoDB::editTipoAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00744">CRUD::editTripulante()</a>, <a class="el" href="utils_8cpp_source.html#l00073">get_yes_no()</a>, <a class="el" href="_atraso_8cpp_source.html#l00051">Atraso::getAtrasoCin()</a>, <a class="el" href="_data_hora_8cpp_source.html#l00051">DataHora::getDataHoraCin()</a>, <a class="el" href="_companhia_8cpp_source.html#l00052">Companhia::getMatriculaAviaoCin()</a> e <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00024">TipoAviaoDB::getNomeTipoAviaoCin()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0daf13ac8da9785b3895a6d1e48d4a2f"></a><!-- doxytag: member="utils.cpp::printMenu" ref="a0daf13ac8da9785b3895a6d1e48d4a2f" args="(string &amp;title, const vector&lt; vector&lt; string &gt; &gt; &amp;columns, const vector&lt; string &gt; &amp;colNames, bool menu, bool reverse, bool hide_index, bool hide_colnames)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool printMenu </td>
+          <td>(</td>
+          <td class="paramtype">string &amp;&nbsp;</td>
+          <td class="paramname"> <em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vector&lt; vector&lt; string &gt; &gt; &amp;&nbsp;</td>
+          <td class="paramname"> <em>columns</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vector&lt; string &gt; &amp;&nbsp;</td>
+          <td class="paramname"> <em>colNames</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>menu</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>reverse</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>hide_index</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>hide_colnames</em> = <code>false</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Método que imprime uma tabela com os dados de um vector de colunas (vector de strings). </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>title</em>&nbsp;</td><td>Titulo da tabela. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>columns</em>&nbsp;</td><td>Vector de colunas. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>colNames</em>&nbsp;</td><td>Vector com o nome das colunas. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>reverse</em>&nbsp;</td><td>Caso seja true, inverte-se a ordem dos dados na coluna (mostra a tabela invetida - linhas 0 1 2 3 passam a 3 2 1 0). </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>hide_index</em>&nbsp;</td><td>Caso seja true, não imprime a numeração das linhas. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Retorna:</b></dt><dd>Um booleano caso tenha sido feito algum output de dados. </dd></dl>
+
+<p>Definido na linha <a class="el" href="utils_8cpp_source.html#l00133">133</a> do ficheiro <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
+
+<p>Referências <a class="el" href="utils_8cpp_source.html#l00018">getch()</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01508">CRUD::editAeroporto()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00254">CRUD::editAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01808">CRUD::editCompanhia()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02189">CRUD::editPassageiro()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03239">CRUD::editPortaEmbarque()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">TipoAviaoDB::editTipoAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00744">CRUD::editTripulante()</a>, <a class="el" href="_piloto_8cpp_source.html#l00017">Piloto::imprimeInfo()</a>, <a class="el" href="_hospedeiro_8cpp_source.html#l00017">Hospedeiro::imprimeInfo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01567">CRUD::infoAeroporto()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00211">CRUD::infoAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01777">CRUD::infoCompanhia()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02145">CRUD::infoPassageiro()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01199">CRUD::infoPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03202">CRUD::infoPortaEmbarque()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00255">TipoAviaoDB::infoTipoAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00102">CRUD::listAviao()</a>, <a class="el" href="_porta_embarque_8cpp_source.html#l00101">PortaEmbarque::listCategoriasAvioesInfo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01658">CRUD::listCompanhia()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02524">CRUD::listHashSetVoos()</a>, <a class="el" href="_passageiro_8cpp_source.html#l00042">Passageiro::listNecessidadesEspeciaisInfo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02029">CRUD::listPassageiro()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01024">CRUD::listPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02996">CRUD::listPortaEmbarque()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02743">CRUD::listTaxasBalcoesVoosEntreDatas()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02861">CRUD::listTaxasPortasEmbarqueVoosEntreDatas()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00147">TipoAviaoDB::listTipoAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00571">CRUD::listTripulante()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03450">CRUD::listTripulanteVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02393">CRUD::printPriorityQueue()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02596">CRUD::searchHashSetVoos()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7db7a33a90c53907236c65b823712ffb"></a><!-- doxytag: member="utils.cpp::split" ref="a7db7a33a90c53907236c65b823712ffb" args="(string str, char delim)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;string&gt; split </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&nbsp;</td>
+          <td class="paramname"> <em>delim</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Função que separa uma string em substrings sempre que encontrar o caracter delimitador ("delim"). </p>
+
+<p>Definido na linha <a class="el" href="utils_8cpp_source.html#l00118">118</a> do ficheiro <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03648">CRUD::loaddb()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00482">TipoAviaoDB::loaddb_tipos_aviao()</a>, <a class="el" href="_atraso_8cpp_source.html#l00018">Atraso::Parser_Atraso()</a> e <a class="el" href="_data_hora_8cpp_source.html#l00018">DataHora::Parser_DataHora()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a175c09f4dd01c8ae3f1ef6392a8f865a"></a><!-- doxytag: member="utils.cpp::to_lower" ref="a175c09f4dd01c8ae3f1ef6392a8f865a" args="(string str)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string to_lower </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>str</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Converte uma string para minúsculas. </p>
+
+<p>Definido na linha <a class="el" href="utils_8cpp_source.html#l00109">109</a> do ficheiro <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3a298aea409b5d7355c3c0e53ba0e628"></a><!-- doxytag: member="utils.cpp::to_upper" ref="a3a298aea409b5d7355c3c0e53ba0e628" args="(string str)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string to_upper </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>str</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Converte uma string para maiúsculas. </p>
+
+<p>Definido na linha <a class="el" href="utils_8cpp_source.html#l00100">100</a> do ficheiro <a class="el" href="utils_8cpp_source.html">utils.cpp</a>.</p>
+
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:37 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

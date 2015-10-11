@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Menu.cpp Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>Menu.cpp</h1>  </div>
+</div>
+<div class="contents">
+<a href="_menu_8cpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="code" href="_menu_8h.html" title="Classe de gestão de menus.">Menu.h</a>&quot;</span>
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 
+<a name="l00020"></a><a class="code" href="class_menu.html#a831387f51358cfb88cd018e1777bc980">00020</a> <a class="code" href="class_menu.html#a831387f51358cfb88cd018e1777bc980">Menu::~Menu</a>() {
+<a name="l00021"></a>00021         <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i(0); i &lt; <a class="code" href="class_menu.html#a24c8b7f99c7463d40b5ddc873577bf44" title="Vector com os submenus.">_vec_sub_menus</a>.size(); ++i)
+<a name="l00022"></a>00022                 <span class="keyword">delete</span> <a class="code" href="class_menu.html#a24c8b7f99c7463d40b5ddc873577bf44" title="Vector com os submenus.">_vec_sub_menus</a>[i];
+<a name="l00023"></a>00023 }
+<a name="l00024"></a>00024 
+<a name="l00025"></a><a class="code" href="class_menu.html#aaf4c1b8b498469fc76883891b07d802f">00025</a> <span class="keywordtype">void</span> <a class="code" href="class_menu.html#aaf4c1b8b498469fc76883891b07d802f" title="Adiciona um submenu a este Menu.">Menu::addSubMenu</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;nome, <a class="code" href="class_menu.html" title="Classe que gera e processa menus.">Menu</a> &amp;menu, <span class="keywordtype">void</span> (*menu_function)()) {
+<a name="l00026"></a>00026         <a class="code" href="class_menu_1_1_sub_menu_entry.html">SubMenuEntry</a> *submenu = <span class="keyword">new</span> <a class="code" href="class_menu_1_1_sub_menu_entry.html">SubMenuEntry</a>(nome, &amp;menu, menu_function);
+<a name="l00027"></a>00027         <a class="code" href="class_menu.html#a24c8b7f99c7463d40b5ddc873577bf44" title="Vector com os submenus.">_vec_sub_menus</a>.push_back(submenu);
+<a name="l00028"></a>00028 }
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030 
+<a name="l00031"></a><a class="code" href="class_menu.html#a37f0d0b9b51e43eb011202634bd7dc97">00031</a> <span class="keywordtype">void</span> <a class="code" href="class_menu.html#a37f0d0b9b51e43eb011202634bd7dc97" title="Adiciona uma entrada a este menu que executa uma determinada função.">Menu::addFunction</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;nome, <span class="keywordtype">void</span> (*ptr2function)()) {
+<a name="l00032"></a>00032         <a class="code" href="class_menu_1_1_function_entry.html" title="Subclasse de MenuEntry, que representa um submenu que executa uma função quando é escolhido...">FunctionEntry</a> *newfunction = <span class="keyword">new</span> <a class="code" href="class_menu_1_1_function_entry.html" title="Subclasse de MenuEntry, que representa um submenu que executa uma função quando é escolhido...">FunctionEntry</a>(nome, ptr2function);
+<a name="l00033"></a>00033         <a class="code" href="class_menu.html#a24c8b7f99c7463d40b5ddc873577bf44" title="Vector com os submenus.">_vec_sub_menus</a>.push_back(newfunction);
+<a name="l00034"></a>00034 }
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036 
+<a name="l00037"></a><a class="code" href="class_menu.html#a3630ce145aab68961ec535762d928558">00037</a> <span class="keywordtype">void</span> <a class="code" href="class_menu.html#a3630ce145aab68961ec535762d928558" title="Limpa o ecrã da consola, metendo 100 linhas vazias após o último output.">Menu::clear</a>() {
+<a name="l00038"></a>00038         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 100; ++i)
+<a name="l00039"></a>00039                 cout &lt;&lt; endl;
+<a name="l00040"></a>00040 }
+<a name="l00041"></a>00041 
+<a name="l00042"></a><a class="code" href="class_menu.html#a4ffdd38f7393883198e06c1048cc1bc6">00042</a> <span class="keywordtype">void</span> <a class="code" href="class_menu.html#a4ffdd38f7393883198e06c1048cc1bc6" title="Motra os submenus deste menu e pede ao utilizador para introduzir o número do comando que quer execut...">Menu::go</a>() {
+<a name="l00043"></a>00043         <span class="keywordflow">while</span> (<span class="keyword">true</span>) {
+<a name="l00044"></a>00044                 <a class="code" href="class_menu.html#a3630ce145aab68961ec535762d928558" title="Limpa o ecrã da consola, metendo 100 linhas vazias após o último output.">clear</a>();
+<a name="l00045"></a>00045                 cout &lt;&lt; <span class="stringliteral">&quot;\n\t***** &quot;</span> &lt;&lt; <a class="code" href="class_menu.html#a843a7a38eb1f3948abf953ffaf22f941" title="Nome do Menu.">_nome</a> &lt;&lt; <span class="stringliteral">&quot; *****\n&quot;</span> &lt;&lt; endl; <span class="comment">//Nome do Menu</span>
+<a name="l00046"></a>00046                 cout &lt;&lt; <span class="stringliteral">&quot;\t0 - &quot;</span> &lt;&lt; <a class="code" href="class_menu.html#a1ebfcdcfcec8510326fdc262a84f77e7" title="Texto mostrado para a opção de saída do Menu.">_mensagem_saida</a> &lt;&lt; endl;             <span class="comment">//Opção para retornar para o menu anterior</span>
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048                 <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="class_menu.html#a24c8b7f99c7463d40b5ddc873577bf44" title="Vector com os submenus.">_vec_sub_menus</a>.size(); ++i) {
+<a name="l00049"></a>00049                         <span class="comment">//Mostra as opções que se pode selecionar neste Menu.</span>
+<a name="l00050"></a>00050                         cout &lt;&lt; <span class="charliteral">&#39;\t&#39;</span> &lt;&lt; i + 1 &lt;&lt; <span class="stringliteral">&quot; - &quot;</span> &lt;&lt; <a class="code" href="class_menu.html#a24c8b7f99c7463d40b5ddc873577bf44" title="Vector com os submenus.">_vec_sub_menus</a>[i]-&gt;_nome &lt;&lt; endl;
+<a name="l00051"></a>00051                 }
+<a name="l00052"></a>00052                 cout &lt;&lt; endl;
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054                 <span class="comment">//Pede-se ao utilizador para escolher uma das opções listadas em cima.</span>
+<a name="l00055"></a>00055                 <span class="keywordtype">int</span> opcao = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Opção: &quot;</span>, (<a class="code" href="class_menu.html#a24c8b7f99c7463d40b5ddc873577bf44" title="Vector com os submenus.">_vec_sub_menus</a>.size() + 1), 0);
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057                 <span class="keywordflow">if</span> (opcao == 0)
+<a name="l00058"></a>00058                         <span class="keywordflow">return</span>; <span class="comment">//Returna para o Menu anterior.</span>
+<a name="l00059"></a>00059                 <span class="keywordflow">else</span> {
+<a name="l00060"></a>00060                         <span class="keywordflow">try</span> {
+<a name="l00061"></a>00061                                 <span class="comment">/*</span>
+<a name="l00062"></a>00062 <span class="comment">                                 * Tenta abrir um submenu ou executar uma função</span>
+<a name="l00063"></a>00063 <span class="comment">                                 * [opcao - 1] porque a primeria das opções é para retroceder, e essa não está no vector de _sub_menus</span>
+<a name="l00064"></a>00064 <span class="comment">                                 */</span>
+<a name="l00065"></a>00065                                 <a class="code" href="class_menu.html#a24c8b7f99c7463d40b5ddc873577bf44" title="Vector com os submenus.">_vec_sub_menus</a>[opcao - 1]-&gt;execute();
+<a name="l00066"></a>00066                         } <span class="keywordflow">catch</span> (exception &amp; e) {
+<a name="l00067"></a>00067                                 <span class="comment">//Mostra o erro que encontrou.</span>
+<a name="l00068"></a>00068                                 cout &lt;&lt; e.what() &lt;&lt; endl;
+<a name="l00069"></a>00069                                 <a class="code" href="utils_8cpp.html#a385f5a2e2bc6628450b6280692396851" title="Limpa as flags do cin e fica à espera de um input para prosseguir.">getch</a>();
+<a name="l00070"></a>00070                         } <span class="keywordflow">catch</span> (...) {
+<a name="l00071"></a>00071                                 <span class="comment">//Faz o catch de todos os outros erros.</span>
+<a name="l00072"></a>00072                                 cout &lt;&lt; endl &lt;&lt; endl &lt;&lt; <span class="stringliteral">&quot;Ocorreu um erro desconhecido...\nRegressando ao menu anterior...&quot;</span> &lt;&lt; endl &lt;&lt; endl;
+<a name="l00073"></a>00073                                 <a class="code" href="utils_8cpp.html#a385f5a2e2bc6628450b6280692396851" title="Limpa as flags do cin e fica à espera de um input para prosseguir.">getch</a>();
+<a name="l00074"></a>00074                         }
+<a name="l00075"></a>00075                 }
+<a name="l00076"></a>00076         }
+<a name="l00077"></a>00077 }
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079 
+<a name="l00080"></a><a class="code" href="class_menu_1_1_sub_menu_entry.html#a64200d1b5b476d56d347892e27fe6941">00080</a> <span class="keywordtype">void</span> <a class="code" href="class_menu_1_1_sub_menu_entry.html#a64200d1b5b476d56d347892e27fe6941" title="Entra no submenu e executa a função associada a essa entrada caso exista.">Menu::SubMenuEntry::execute</a>() {
+<a name="l00081"></a>00081         <span class="comment">//Se houver uma função a executar, executa-a (visto que a função é opcional nesta classe)</span>
+<a name="l00082"></a>00082         <span class="keywordflow">if</span> (<a class="code" href="class_menu_1_1_menu_entry.html#a73167266c5e7acda72c60631b53c750f" title="Apontador para um função.">_function</a> != NULL)
+<a name="l00083"></a>00083                 (*_function)();
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085         <span class="comment">//Mostra o submenu</span>
+<a name="l00086"></a>00086          <a class="code" href="class_menu_1_1_sub_menu_entry.html#adf2cd9d0935727e00acd7bb7fbc85540" title="Apontador para outro Menu.">_submenu</a>-&gt;<a class="code" href="class_menu.html#a4ffdd38f7393883198e06c1048cc1bc6" title="Motra os submenus deste menu e pede ao utilizador para introduzir o número do comando que quer execut...">go</a>();
+<a name="l00087"></a>00087 }
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:37 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

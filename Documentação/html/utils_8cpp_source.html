@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: utils.cpp Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>utils.cpp</h1>  </div>
+</div>
+<div class="contents">
+<a href="utils_8cpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="utils_8h.html" title="Ficheiro com funções úteis para a interface com o utilizador.">utils.h</a>&quot;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 <span class="comment">//Limpa as flags do cin e fica à espera de um input para prosseguir.</span>
+<a name="l00018"></a><a class="code" href="utils_8h.html#a385f5a2e2bc6628450b6280692396851">00018</a> <span class="keywordtype">void</span> <a class="code" href="utils_8cpp.html#a385f5a2e2bc6628450b6280692396851" title="Limpa as flags do cin e fica à espera de um input para prosseguir.">getch</a>() {
+<a name="l00019"></a>00019         <span class="comment">//Limpa as flags do cin</span>
+<a name="l00020"></a>00020         cin.clear();
+<a name="l00021"></a>00021         cin.sync(); <span class="comment">// http://www.cplusplus.com/forum/beginner/1988/page5.html</span>
+<a name="l00022"></a>00022         <span class="comment">//String temporária para guardar os dados lidos</span>
+<a name="l00023"></a>00023         <span class="keywordtype">string</span> temp;
+<a name="l00024"></a>00024         getline(cin, temp);
+<a name="l00025"></a>00025         <span class="comment">//Obtenção de uma linha de input para continuar</span>
+<a name="l00026"></a>00026 }
+<a name="l00027"></a>00027 
+<a name="l00028"></a><a class="code" href="utils_8h.html#aec9a81a0766b1243f091fa5e47abde63">00028</a> <span class="keywordtype">void</span> <a class="code" href="utils_8cpp.html#aec9a81a0766b1243f091fa5e47abde63" title="getline que faz o sync para não ler lixo do buffer.">getlineCin</a>(<span class="keywordtype">string</span> &amp;output)
+<a name="l00029"></a>00029 {
+<a name="l00030"></a>00030         cin.sync();
+<a name="l00031"></a>00031         getline(cin, output);
+<a name="l00032"></a>00032 }
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 
+<a name="l00035"></a><a class="code" href="utils_8h.html#a51f969bc673a6c2bc8e782dc30d45614">00035</a> <span class="keywordtype">int</span> <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message, <span class="keywordtype">int</span> size, <span class="keywordtype">int</span> min) {
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037         <span class="keywordflow">if</span>( (size == min) &amp;&amp; min == 0)
+<a name="l00038"></a>00038                 <span class="keywordflow">throw</span> <a class="code" href="class_ex_no_interval.html" title="Classe usada no tratamento de excepções que sinaliza que um vector se encontra vazio.">ExNoInterval</a>();
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040         <span class="keywordtype">int</span> numero;
+<a name="l00041"></a>00041         <span class="keywordflow">do</span> {
+<a name="l00042"></a>00042                 cout &lt;&lt; message;
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044                 <span class="comment">/*</span>
+<a name="l00045"></a>00045 <span class="comment">                 * Enquanto cin devolver um apontador NULL (e como tal no teste do if dar true (por estar negado)),</span>
+<a name="l00046"></a>00046 <span class="comment">                 * devido ao facto de estar a ler dados que não são números, (ex: caracteres...)</span>
+<a name="l00047"></a>00047 <span class="comment">                 * informa ao utilizador que tem que introduzir um nº e pede para introduzir os dados novamente.</span>
+<a name="l00048"></a>00048 <span class="comment">                 */</span>
+<a name="l00049"></a>00049                 <span class="keywordflow">if</span> (!(cin &gt;&gt; numero)) {
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051                         <span class="comment">//Limpa as flags do cin</span>
+<a name="l00052"></a>00052                         cin.clear();
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054                         <span class="comment">//Extrai e ignora todos os caracteres que estavam no buffer de cin, visto que ao tentar-se introduzir</span>
+<a name="l00055"></a>00055                         <span class="comment">//caracteres num int (por ex), o cin entra em estado de erro e não remove os caracteres que leu do buffer</span>
+<a name="l00056"></a>00056                         cin.ignore(std::numeric_limits&lt;std::streamsize&gt;::max(), <span class="charliteral">&#39;\n&#39;</span>);
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058                         cout &lt;&lt; <span class="stringliteral">&quot;Introduza um número!&quot;</span> &lt;&lt; endl &lt;&lt; endl;
+<a name="l00059"></a>00059                 } <span class="keywordflow">else</span>
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061                         <span class="comment">//Testa se os números introduzidos estão dentro do intervalo pedido</span>
+<a name="l00062"></a>00062                         <span class="keywordflow">if</span> (numero &gt;= min &amp;&amp; numero &lt; size)
+<a name="l00063"></a>00063                                 <span class="keywordflow">break</span>; <span class="comment">//Se estiverem sai-se do loop</span>
+<a name="l00064"></a>00064                         <span class="keywordflow">else</span>
+<a name="l00065"></a>00065                                 cout &lt;&lt; <span class="stringliteral">&quot;Número fora do intervalo!&quot;</span> &lt;&lt; endl &lt;&lt; endl; <span class="comment">//Senão informasse o utilizador e pede-se novamente o nº</span>
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067         } <span class="keywordflow">while</span> (<span class="keyword">true</span>);
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069         <span class="keywordflow">return</span> numero;
+<a name="l00070"></a>00070 }
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072 
+<a name="l00073"></a><a class="code" href="utils_8h.html#a51989c30c79f4b4151c6a52c3a2af89e">00073</a> <span class="keywordtype">bool</span> <a class="code" href="utils_8cpp.html#a555c71c65819b8bca6c4a733d2d601b9" title="Pergunta message ao utilizador e retorna Sim/Não.">get_yes_no</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message, <span class="keyword">const</span> <span class="keywordtype">char</span>* message_erro)
+<a name="l00074"></a>00074 {
+<a name="l00075"></a>00075         <span class="keywordtype">bool</span> continuar = <span class="keyword">false</span>;
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077         <span class="comment">//Pergunta ao utilizador se quer continuar (S/N)</span>
+<a name="l00078"></a>00078         <span class="keywordtype">bool</span> opcao_incorrecta;
+<a name="l00079"></a>00079         <span class="keywordtype">string</span> opcao;
+<a name="l00080"></a>00080         cout &lt;&lt; message;
+<a name="l00081"></a>00081         <span class="keywordflow">do</span> {
+<a name="l00082"></a>00082                 <a class="code" href="utils_8cpp.html#aec9a81a0766b1243f091fa5e47abde63" title="getline que faz o sync para não ler lixo do buffer.">getlineCin</a>(opcao);
+<a name="l00083"></a>00083                 <span class="keywordflow">if</span> ((opcao == <span class="stringliteral">&quot;S&quot;</span>) || (opcao == <span class="stringliteral">&quot;s&quot;</span>)) {
+<a name="l00084"></a>00084                         continuar = <span class="keyword">true</span>;
+<a name="l00085"></a>00085                         opcao_incorrecta = <span class="keyword">false</span>;
+<a name="l00086"></a>00086                 }
+<a name="l00087"></a>00087                 <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((opcao == <span class="stringliteral">&quot;N&quot;</span>) || (opcao == <span class="stringliteral">&quot;n&quot;</span>)) {
+<a name="l00088"></a>00088                         continuar = <span class="keyword">false</span>;
+<a name="l00089"></a>00089                         opcao_incorrecta = <span class="keyword">false</span>;
+<a name="l00090"></a>00090                 }
+<a name="l00091"></a>00091                 <span class="keywordflow">else</span> {
+<a name="l00092"></a>00092                         cout &lt;&lt; message_erro;
+<a name="l00093"></a>00093                         opcao_incorrecta = <span class="keyword">true</span>;
+<a name="l00094"></a>00094                 }
+<a name="l00095"></a>00095         } <span class="keywordflow">while</span> (opcao_incorrecta);
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097         <span class="keywordflow">return</span> continuar;
+<a name="l00098"></a>00098 }
+<a name="l00099"></a>00099 
+<a name="l00100"></a><a class="code" href="utils_8h.html#a3a298aea409b5d7355c3c0e53ba0e628">00100</a> <span class="keywordtype">string</span> <a class="code" href="utils_8cpp.html#a3a298aea409b5d7355c3c0e53ba0e628" title="Converte uma string para maiúsculas.">to_upper</a>(<span class="keywordtype">string</span> str) {
+<a name="l00101"></a>00101         <span class="keywordflow">for</span> (string::size_type i = 0; i &lt; str.size(); i++) {
+<a name="l00102"></a>00102                 str[i] = toupper(str[i]);
+<a name="l00103"></a>00103         }
+<a name="l00104"></a>00104 
+<a name="l00105"></a>00105         <span class="keywordflow">return</span> str;
+<a name="l00106"></a>00106 }
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108 
+<a name="l00109"></a><a class="code" href="utils_8h.html#a175c09f4dd01c8ae3f1ef6392a8f865a">00109</a> <span class="keywordtype">string</span> <a class="code" href="utils_8cpp.html#a175c09f4dd01c8ae3f1ef6392a8f865a" title="Converte uma string para minúsculas.">to_lower</a>(<span class="keywordtype">string</span> str) {
+<a name="l00110"></a>00110         <span class="keywordflow">for</span> (string::size_type i = 0; i &lt; str.size(); i++) {
+<a name="l00111"></a>00111                 str[i] = tolower(str[i]);
+<a name="l00112"></a>00112         }
+<a name="l00113"></a>00113 
+<a name="l00114"></a>00114         <span class="keywordflow">return</span> str;
+<a name="l00115"></a>00115 }
+<a name="l00116"></a>00116 
+<a name="l00117"></a>00117 
+<a name="l00118"></a><a class="code" href="utils_8h.html#a5c5d402158f525ba8be70e0b1ae5ab19">00118</a> vector&lt;string&gt; <a class="code" href="utils_8cpp.html#a7db7a33a90c53907236c65b823712ffb" title="Função que separa uma string em substrings sempre que encontrar o caracter delimitador (&amp;quot;delim&amp;q...">split</a>(<span class="keywordtype">string</span> str, <span class="keywordtype">char</span> delim) {
+<a name="l00119"></a>00119         vector&lt;string&gt; result;
+<a name="l00120"></a>00120         <span class="keywordtype">size_t</span> i = 0, f;
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122         <span class="comment">//Enquanto houver delimitadores em str, vai-se partindo str em substrings</span>
+<a name="l00123"></a>00123         <span class="keywordflow">while</span> (i &lt; str.size() &amp;&amp; ((f = str.find(delim, i)) != string::npos)) {
+<a name="l00124"></a>00124                 result.push_back(str.substr(i, f - i));
+<a name="l00125"></a>00125                 i = f + 1;
+<a name="l00126"></a>00126         }
+<a name="l00127"></a>00127 
+<a name="l00128"></a>00128         <span class="comment">//Quando não houver mais delimitadores, adiciona-se o resto da str</span>
+<a name="l00129"></a>00129         result.push_back(str.substr(i));
+<a name="l00130"></a>00130         <span class="keywordflow">return</span> result;
+<a name="l00131"></a>00131 }
+<a name="l00132"></a>00132 
+<a name="l00133"></a><a class="code" href="utils_8h.html#aa86cac0ea338f967e7b6737e0b4ea76a">00133</a> <span class="keywordtype">bool</span> <a class="code" href="utils_8cpp.html#a0daf13ac8da9785b3895a6d1e48d4a2f" title="Método que imprime uma tabela com os dados de um vector de colunas (vector de strings).">printMenu</a>(<span class="keywordtype">string</span> &amp; title, <span class="keyword">const</span> vector&lt;vector&lt;string&gt; &gt; &amp; columns, <span class="keyword">const</span> vector&lt;string&gt; &amp; colNames, <span class="keywordtype">bool</span> menu, <span class="keywordtype">bool</span> reverse, <span class="keywordtype">bool</span> hide_index, <span class="keywordtype">bool</span> hide_colnames) {
+<a name="l00134"></a>00134         <span class="comment">//Cálculo do maior indice que existe em todas as colunas</span>
+<a name="l00135"></a>00135         <span class="keywordtype">size_t</span> indice_max(0);
+<a name="l00136"></a>00136         <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> indice = 0; indice &lt; columns.size(); ++indice)
+<a name="l00137"></a>00137                 indice_max = max(indice_max, columns[indice].size());
+<a name="l00138"></a>00138 
+<a name="l00139"></a>00139         <span class="comment">//Cálculo do tamanho do indice máximo (em nº de caracteres)</span>
+<a name="l00140"></a>00140         <span class="keywordtype">char</span> buffer[33];
+<a name="l00141"></a>00141         <span class="keywordtype">string</span> temp = (string)itoa(indice_max, buffer, 10);
+<a name="l00142"></a>00142         <span class="keywordtype">size_t</span> tamanho_indice_max = temp.size();
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144         <span class="comment">//Cálculo do tamanho da string de maior comprimento em cada coluna</span>
+<a name="l00145"></a>00145         vector&lt;size_t&gt; tamanho_max_strings;
+<a name="l00146"></a>00146         <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> indice_coluna = 0; indice_coluna &lt; columns.size(); ++indice_coluna) {
+<a name="l00147"></a>00147                 <span class="keywordtype">size_t</span> string_max(0);
+<a name="l00148"></a>00148                 <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> indice_string = 0; indice_string &lt; columns[indice_coluna].size(); ++indice_string)
+<a name="l00149"></a>00149                         string_max = (<span class="keywordtype">size_t</span>)max(string_max, columns[indice_coluna][indice_string].size());
+<a name="l00150"></a>00150                 tamanho_max_strings.push_back(string_max);
+<a name="l00151"></a>00151         }
+<a name="l00152"></a>00152 
+<a name="l00153"></a>00153         <span class="keywordflow">if</span>(!hide_colnames)
+<a name="l00154"></a>00154         {
+<a name="l00155"></a>00155                 <span class="comment">//Cálculo do tamanho da string de maior comprimento em cada coluna para os nomes das colunas</span>
+<a name="l00156"></a>00156                 <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> indice_coluna = 0; indice_coluna &lt; colNames.size(); ++indice_coluna) {
+<a name="l00157"></a>00157                         <span class="keywordflow">if</span>(tamanho_max_strings[indice_coluna] &lt; colNames[indice_coluna].size() )
+<a name="l00158"></a>00158                                 tamanho_max_strings[indice_coluna] = colNames[indice_coluna].size();
+<a name="l00159"></a>00159                 }
+<a name="l00160"></a>00160         }
+<a name="l00161"></a>00161 
+<a name="l00162"></a>00162         <span class="keywordtype">int</span> n_linhas(0);        <span class="comment">//Indica o numero de linhas já mostradas no ecrã</span>
+<a name="l00163"></a>00163         stringstream separador;
+<a name="l00164"></a>00164         stringstream nome_colunas;
+<a name="l00165"></a>00165 
+<a name="l00166"></a>00166         <span class="comment">//Se o número de colunas for não nulo e igual ao nº de nomes de colunas imprime-se a tabela</span>
+<a name="l00167"></a>00167         <span class="keywordflow">if</span> (columns.size() == colNames.size() &amp;&amp; columns.size() &gt; 0) {
+<a name="l00168"></a>00168                 <span class="comment">//&gt;&gt; Impressão do título da tabela &lt;&lt;</span>
+<a name="l00169"></a>00169                 cout &lt;&lt; title &lt;&lt; <span class="stringliteral">&quot;:&quot;</span>;
+<a name="l00170"></a>00170                 ++n_linhas;
+<a name="l00171"></a>00171 
+<a name="l00172"></a>00172                 <span class="keywordflow">if</span>(!hide_colnames)
+<a name="l00173"></a>00173                 {
+<a name="l00174"></a>00174                         cout &lt;&lt; endl;
+<a name="l00175"></a>00175                 }
+<a name="l00176"></a>00176 
+<a name="l00177"></a>00177                 <span class="keywordflow">if</span>(!hide_index)
+<a name="l00178"></a>00178                 {
+<a name="l00179"></a>00179                         <span class="comment">//&gt;&gt; Cria o separador tendo um traço a mais do que o necessário no inicio e fim de cada coluna &lt;&lt;</span>
+<a name="l00180"></a>00180                         <span class="comment">//Coluna dos números dos índices</span>
+<a name="l00181"></a>00181                         separador &lt;&lt; <span class="stringliteral">&quot;+-&quot;</span>;
+<a name="l00182"></a>00182                         <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> coluna_num = 0; coluna_num &lt; tamanho_indice_max; ++coluna_num)
+<a name="l00183"></a>00183                                 separador &lt;&lt; <span class="stringliteral">&quot;-&quot;</span>;
+<a name="l00184"></a>00184                         separador &lt;&lt; <span class="stringliteral">&quot;-&quot;</span>; <span class="comment">//Traço extra no fim da coluna</span>
+<a name="l00185"></a>00185                 }
+<a name="l00186"></a>00186 
+<a name="l00187"></a>00187                 <span class="comment">//Restantes colunas</span>
+<a name="l00188"></a>00188                 <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> coluna = 0; coluna &lt; tamanho_max_strings.size(); ++coluna) {
+<a name="l00189"></a>00189                         separador &lt;&lt; <span class="stringliteral">&quot;+-&quot;</span>; <span class="comment">//Inicio do separdor, com mais um traço no inicio</span>
+<a name="l00190"></a>00190                         <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> tracos = 0; tracos &lt; tamanho_max_strings[coluna]; ++tracos) {
+<a name="l00191"></a>00191                                 separador &lt;&lt; <span class="stringliteral">&quot;-&quot;</span>;
+<a name="l00192"></a>00192                         }
+<a name="l00193"></a>00193                         separador &lt;&lt; <span class="stringliteral">&quot;-&quot;</span>; <span class="comment">//Traço extra no fim da coluna</span>
+<a name="l00194"></a>00194                 }
+<a name="l00195"></a>00195                 separador &lt;&lt; <span class="stringliteral">&quot;+&quot;</span>; <span class="comment">//Finalização da última coluna</span>
+<a name="l00196"></a>00196 
+<a name="l00197"></a>00197 
+<a name="l00198"></a>00198                 <span class="keywordflow">if</span>(!hide_colnames)              <span class="comment">// se imprimir indices</span>
+<a name="l00199"></a>00199                 {
+<a name="l00200"></a>00200                         <span class="comment">//&gt;&gt; 1º separador &lt;&lt;</span>
+<a name="l00201"></a>00201                         cout &lt;&lt; separador.str() &lt;&lt; endl;
+<a name="l00202"></a>00202                         ++n_linhas;
+<a name="l00203"></a>00203                 }
+<a name="l00204"></a>00204 
+<a name="l00205"></a>00205                 <span class="keywordflow">if</span>(!hide_index &amp;&amp; !hide_colnames)
+<a name="l00206"></a>00206                 {
+<a name="l00207"></a>00207                         <span class="comment">//&gt;&gt; Criação da segunda linha com o nome das colunas &lt;&lt;</span>
+<a name="l00208"></a>00208                         nome_colunas &lt;&lt; <span class="stringliteral">&quot;| &quot;</span> &lt;&lt; setw(tamanho_indice_max) &lt;&lt; <span class="stringliteral">&quot;#&quot;</span> &lt;&lt; <span class="stringliteral">&quot; |&quot;</span>;
+<a name="l00209"></a>00209                 }
+<a name="l00210"></a>00210 
+<a name="l00211"></a>00211                 <span class="keywordflow">if</span>(!hide_colnames)
+<a name="l00212"></a>00212                 {
+<a name="l00213"></a>00213                         <span class="keywordflow">if</span>(hide_index)
+<a name="l00214"></a>00214                                 cout &lt;&lt; <span class="stringliteral">&quot;|&quot;</span>;
+<a name="l00215"></a>00215 
+<a name="l00216"></a>00216                         <span class="comment">//Mostra os nomes das colunas</span>
+<a name="l00217"></a>00217                         <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; colNames.size(); ++i) {
+<a name="l00218"></a>00218                                 nome_colunas &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; setw(tamanho_max_strings[i]) &lt;&lt; colNames[i] &lt;&lt; <span class="stringliteral">&quot; |&quot;</span>;
+<a name="l00219"></a>00219                         }
+<a name="l00220"></a>00220                 }
+<a name="l00221"></a>00221 
+<a name="l00222"></a>00222                 <span class="comment">//&gt;&gt; 2ª linha &lt;&lt;</span>
+<a name="l00223"></a>00223                 cout &lt;&lt; nome_colunas.str() &lt;&lt; endl;
+<a name="l00224"></a>00224                 ++n_linhas;
+<a name="l00225"></a>00225 
+<a name="l00226"></a>00226                 <span class="comment">//&gt;&gt; 2º separador &lt;&lt;</span>
+<a name="l00227"></a>00227                 cout &lt;&lt; separador.str() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;
+<a name="l00228"></a>00228                 ++n_linhas;
+<a name="l00229"></a>00229 
+<a name="l00230"></a>00230 
+<a name="l00231"></a>00231                 <span class="comment">//Se as colunas tiverem elementos, mostrasse os conteúdos</span>
+<a name="l00232"></a>00232                 <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; indice_max; ++j) {
+<a name="l00233"></a>00233                         <span class="comment">//Se reverse for true, trocasse a ordem, invertendo a ordem dos dados na coluna</span>
+<a name="l00234"></a>00234                         <span class="comment">//Em vez de ler do indice 0 a size-1, lê-se de size-1 a 0 do vector de colunas</span>
+<a name="l00235"></a>00235                         <span class="keywordtype">size_t</span> indice = reverse ? indice_max - 1 - j : j;
+<a name="l00236"></a>00236 
+<a name="l00237"></a>00237                         <span class="comment">//Coluna do nº da linha</span>
+<a name="l00238"></a>00238                         <span class="keywordflow">if</span>(!hide_index) {
+<a name="l00239"></a>00239                                 cout &lt;&lt; <span class="stringliteral">&quot;| &quot;</span> &lt;&lt; setw(tamanho_indice_max);
+<a name="l00240"></a>00240                                 <span class="keywordflow">if</span> (menu)
+<a name="l00241"></a>00241                                         cout &lt;&lt; (indice + 1) &lt;&lt; <span class="stringliteral">&quot; |&quot;</span>;
+<a name="l00242"></a>00242                                 <span class="keywordflow">else</span>
+<a name="l00243"></a>00243                                         cout &lt;&lt; indice &lt;&lt; <span class="stringliteral">&quot; |&quot;</span>;
+<a name="l00244"></a>00244                         }
+<a name="l00245"></a>00245                         <span class="keywordflow">else</span>
+<a name="l00246"></a>00246                                 cout &lt;&lt; <span class="stringliteral">&quot;|&quot;</span>;
+<a name="l00247"></a>00247 
+<a name="l00248"></a>00248                         <span class="comment">//Restantes colunas</span>
+<a name="l00249"></a>00249                         <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; columns.size(); ++i) {
+<a name="l00250"></a>00250                                 cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; setw(tamanho_max_strings[i]);
+<a name="l00251"></a>00251 
+<a name="l00252"></a>00252                                 <span class="comment">//Se o índice for válido, mostra-se o conteúdo do vector nessa posição, senão fica em branco</span>
+<a name="l00253"></a>00253                                 <span class="keywordflow">if</span> (indice &lt; columns[i].size())
+<a name="l00254"></a>00254                                         cout &lt;&lt; columns[i][indice];
+<a name="l00255"></a>00255                                 <span class="keywordflow">else</span>
+<a name="l00256"></a>00256                                         cout &lt;&lt; <span class="stringliteral">&quot;&quot;</span>;
+<a name="l00257"></a>00257 
+<a name="l00258"></a>00258                                 cout &lt;&lt; <span class="stringliteral">&quot; |&quot;</span>;
+<a name="l00259"></a>00259                         }
+<a name="l00260"></a>00260 
+<a name="l00261"></a>00261                         <span class="keywordflow">if</span>(n_linhas &gt;= 24) {            <span class="comment">//Imprime por páginas de 24 linhas</span>
+<a name="l00262"></a>00262                                 n_linhas = 0;                   <span class="comment">//Reinializa o contador</span>
+<a name="l00263"></a>00263                                 <a class="code" href="utils_8cpp.html#a385f5a2e2bc6628450b6280692396851" title="Limpa as flags do cin e fica à espera de um input para prosseguir.">getch</a>();
+<a name="l00264"></a>00264                         }
+<a name="l00265"></a>00265 
+<a name="l00266"></a>00266                         <span class="comment">//Para evitar descontinuidades na tabela, porque o getch() pede um &quot;\n&quot; ao utilizador.</span>
+<a name="l00267"></a>00267                         <span class="comment">//Sem este teste haveria duas mudanças de linha na tabela quando só deveria haver uma</span>
+<a name="l00268"></a>00268                         <span class="comment">//(evitando assim uma linha em branco na tabela)</span>
+<a name="l00269"></a>00269                         <span class="keywordflow">if</span> (n_linhas != 0)
+<a name="l00270"></a>00270                                 cout &lt;&lt; endl;
+<a name="l00271"></a>00271 
+<a name="l00272"></a>00272                         ++n_linhas;
+<a name="l00273"></a>00273                 }
+<a name="l00274"></a>00274 
+<a name="l00275"></a>00275                 <span class="keywordflow">if</span>(n_linhas!=1) {                               <span class="comment">//Caso já tenha imprimido o último separador, não volta a imprimir</span>
+<a name="l00276"></a>00276                         <span class="comment">//Separador inferior</span>
+<a name="l00277"></a>00277                         cout &lt;&lt; separador.str();
+<a name="l00278"></a>00278                 }
+<a name="l00279"></a>00279 
+<a name="l00280"></a>00280                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00281"></a>00281         } <span class="keywordflow">else</span>
+<a name="l00282"></a>00282                 <span class="comment">//Caso contrário não se mostra a tabela e returna-se falso, para evidenciar que não houve output de dados</span>
+<a name="l00283"></a>00283                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00284"></a>00284 }
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:37 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

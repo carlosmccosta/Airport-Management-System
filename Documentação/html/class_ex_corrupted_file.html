@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência à classe ExCorruptedFile</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&nbsp;dos&nbsp;componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a>  </div>
+  <div class="headertitle">
+<h1>Referência à classe ExCorruptedFile</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="ExCorruptedFile" --><!-- doxytag: inherits="Exceptions" -->
+<p>Classe usado no tratamento de excepções que sinaliza que um dado ficheiro que de dados está corrupto ou num formato desconhecido.  
+<a href="#_details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png"/> Diagrama de heranças da classe ExCorruptedFile</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+ <div class="center">
+  <img src="class_ex_corrupted_file.png" usemap="#ExCorruptedFile_map" alt=""/>
+  <map id="ExCorruptedFile_map" name="ExCorruptedFile_map">
+<area href="class_exceptions.html" alt="Exceptions" shape="rect" coords="0,0,104,24"/>
+</map>
+</div>
+
+<p><a href="class_ex_corrupted_file-members.html">Mostrar lista completa dos membros</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ex_corrupted_file.html#a1fc4aa3d31f9ef903ed627c497fac2ff">ExCorruptedFile</a> (const char *pStr=&quot;Ficheiro com os dados corrompido!&quot;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ex_corrupted_file.html#af9d7070df19333d81adf21699c40b91d">getFilename</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ex_corrupted_file.html#a6aac265ece0e513adc58bfeb0575c7ab">~ExCorruptedFile</a> ()  throw ()</td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ex_corrupted_file.html#aaf862bb51158cccaaaed5415a0fe3c3f">_filename</a></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<p>Classe usado no tratamento de excepções que sinaliza que um dado ficheiro que de dados está corrupto ou num formato desconhecido. </p>
+
+<p>Definido na linha <a class="el" href="_exceptions_8h_source.html#l00170">170</a> do ficheiro <a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>.</p>
+<hr/><h2>Documentação dos Construtores &amp; Destrutor</h2>
+<a class="anchor" id="a1fc4aa3d31f9ef903ed627c497fac2ff"></a><!-- doxytag: member="ExCorruptedFile::ExCorruptedFile" ref="a1fc4aa3d31f9ef903ed627c497fac2ff" args="(const char *pStr=&quot;Ficheiro com os dados corrompido!&quot;)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ExCorruptedFile::ExCorruptedFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>pStr</em> = <code>&quot;Ficheiro&nbsp;com&nbsp;os&nbsp;dados&nbsp;corrompido!&quot;</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, explicit]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_exceptions_8h_source.html#l00175">175</a> do ficheiro <a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6aac265ece0e513adc58bfeb0575c7ab"></a><!-- doxytag: member="ExCorruptedFile::~ExCorruptedFile" ref="a6aac265ece0e513adc58bfeb0575c7ab" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ExCorruptedFile::~ExCorruptedFile </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td>  throw ()<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_exceptions_8h_source.html#l00177">177</a> do ficheiro <a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos métodos</h2>
+<a class="anchor" id="af9d7070df19333d81adf21699c40b91d"></a><!-- doxytag: member="ExCorruptedFile::getFilename" ref="af9d7070df19333d81adf21699c40b91d" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ExCorruptedFile::getFilename </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_exceptions_8h_source.html#l00176">176</a> do ficheiro <a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>.</p>
+
+<p>Referências <a class="el" href="_exceptions_8h_source.html#l00172">_filename</a>.</p>
+
+<p>Referenciado por <a class="el" href="_exceptions_8cpp_source.html#l00033">operator&lt;&lt;()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos dados membro</h2>
+<a class="anchor" id="aaf862bb51158cccaaaed5415a0fe3c3f"></a><!-- doxytag: member="ExCorruptedFile::_filename" ref="aaf862bb51158cccaaaed5415a0fe3c3f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string <a class="el" href="class_ex_corrupted_file.html#aaf862bb51158cccaaaed5415a0fe3c3f">ExCorruptedFile::_filename</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_exceptions_8h_source.html#l00172">172</a> do ficheiro <a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_exceptions_8h_source.html#l00176">getFilename()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir do seguinte ficheiro:<ul>
+<li><a class="el" href="_exceptions_8h_source.html">Exceptions.h</a></li>
+</ul>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:39 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

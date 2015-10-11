@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência à classe Exceptions</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&nbsp;dos&nbsp;componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pro-attribs">Atributos Protegidos</a>  </div>
+  <div class="headertitle">
+<h1>Referência à classe Exceptions</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Exceptions" --><!-- doxytag: inherits="std::exception" -->
+<p>Superclasse de tratamento de excepções.  
+<a href="#_details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png"/> Diagrama de heranças da classe Exceptions</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+ <div class="center">
+  <img src="class_exceptions.png" usemap="#Exceptions_map" alt=""/>
+  <map id="Exceptions_map" name="Exceptions_map">
+<area href="class_ex_corrupted_file.html" alt="ExCorruptedFile" shape="rect" coords="188,56,366,80"/>
+<area href="class_ex_element_already_exists.html" alt="ExElementAlreadyExists&lt; T &gt;" shape="rect" coords="188,112,366,136"/>
+<area href="class_ex_element_doesnt_exists.html" alt="ExElementDoesntExists&lt; T &gt;" shape="rect" coords="188,168,366,192"/>
+<area href="class_ex_element_in_use.html" alt="ExElementInUse&lt; T &gt;" shape="rect" coords="188,224,366,248"/>
+<area href="class_ex_empty_vector.html" alt="ExEmptyVector" shape="rect" coords="188,280,366,304"/>
+<area href="class_ex_invalid_atraso.html" alt="ExInvalidAtraso" shape="rect" coords="188,336,366,360"/>
+<area href="class_ex_invalid_date_time.html" alt="ExInvalidDateTime" shape="rect" coords="188,392,366,416"/>
+<area href="class_ex_no_interval.html" alt="ExNoInterval" shape="rect" coords="188,448,366,472"/>
+<area href="class_ex_no_open_file.html" alt="ExNoOpenFile" shape="rect" coords="188,504,366,528"/>
+<area href="class_ex_out_of_range.html" alt="ExOutOfRange" shape="rect" coords="188,560,366,584"/>
+<area href="class_ex_portas_full.html" alt="ExPortasFull" shape="rect" coords="188,616,366,640"/>
+</map>
+</div>
+
+<p><a href="class_exceptions-members.html">Mostrar lista completa dos membros</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exceptions.html#acff435721d0079a587d55591871b7694">Exceptions</a> (const char *pStr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exceptions.html#a685326f5a494147683fa900e85169b16">~Exceptions</a> ()  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exceptions.html#ae4fda78dda243044b12187b77bf95b34">what</a> () const   throw ()</td></tr>
+<tr><td colspan="2"><h2><a name="pro-attribs"></a>
+Atributos Protegidos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exceptions.html#aafac44528c7bbbcd2b3a256e372e27d5">_errorMessage</a></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<p>Superclasse de tratamento de excepções. </p>
+<p>Subclasse de std::exception para no programa ser possível fazer catch das excepções da std e das excepções criadas para o programa. </p>
+
+<p>Definido na linha <a class="el" href="_exceptions_8h_source.html#l00033">33</a> do ficheiro <a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>.</p>
+<hr/><h2>Documentação dos Construtores &amp; Destrutor</h2>
+<a class="anchor" id="acff435721d0079a587d55591871b7694"></a><!-- doxytag: member="Exceptions::Exceptions" ref="acff435721d0079a587d55591871b7694" args="(const char *pStr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Exceptions::Exceptions </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>pStr</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, explicit]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_exceptions_8h_source.html#l00038">38</a> do ficheiro <a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a685326f5a494147683fa900e85169b16"></a><!-- doxytag: member="Exceptions::~Exceptions" ref="a685326f5a494147683fa900e85169b16" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Exceptions::~Exceptions </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td>  throw ()<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Destrutor que garante que não irá lançar uma excepção, porque a classe std::exception, obriga a que as subclasses que fazem override às suas funções, não podem lançar excepções. Isso inclui os destrutores e a função <a class="el" href="class_exceptions.html#ae4fda78dda243044b12187b77bf95b34">what()</a>. Caso não fosse feito o compilador iria dar o erro "looser throw specifier...". </p>
+
+<p>Definido na linha <a class="el" href="_exceptions_8h_source.html#l00046">46</a> do ficheiro <a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos métodos</h2>
+<a class="anchor" id="ae4fda78dda243044b12187b77bf95b34"></a><!-- doxytag: member="Exceptions::what" ref="ae4fda78dda243044b12187b77bf95b34" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* Exceptions::what </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const  throw ()<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_exceptions_8h_source.html#l00047">47</a> do ficheiro <a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>.</p>
+
+<p>Referências <a class="el" href="_exceptions_8h_source.html#l00035">_errorMessage</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01920">CRUD::addPassageiro()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02918">CRUD::addPortaEmbarque()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00044">TipoAviaoDB::addTipoAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03416">CRUD::addTripulanteVoo()</a> e <a class="el" href="main_8cpp_source.html#l00104">main()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos dados membro</h2>
+<a class="anchor" id="aafac44528c7bbbcd2b3a256e372e27d5"></a><!-- doxytag: member="Exceptions::_errorMessage" ref="aafac44528c7bbbcd2b3a256e372e27d5" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* <a class="el" href="class_exceptions.html#aafac44528c7bbbcd2b3a256e372e27d5">Exceptions::_errorMessage</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_exceptions_8h_source.html#l00035">35</a> do ficheiro <a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_exceptions_8h_source.html#l00047">what()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir do seguinte ficheiro:<ul>
+<li><a class="el" href="_exceptions_8h_source.html">Exceptions.h</a></li>
+</ul>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:39 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

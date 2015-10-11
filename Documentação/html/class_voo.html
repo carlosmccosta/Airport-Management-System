@@ -1,0 +1,1616 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência à classe Voo</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&nbsp;dos&nbsp;componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a>  </div>
+  <div class="headertitle">
+<h1>Referência à classe Voo</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Voo" -->
+<p>Classe que armazena informação acerca de um voo de uma dada companhia.  
+<a href="#_details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_voo_8h_source.html">Voo.h</a>&gt;</code></p>
+
+<p><a href="class_voo-members.html">Mostrar lista completa dos membros</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a609426279fa49ee0dd2758a20e1346cb">Voo</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construtor que inicializa os elementos com valores inválidos.  <a href="#a609426279fa49ee0dd2758a20e1346cb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#aa089d31acb46e8d1f7d96cd2becad509">Voo</a> (unsigned numero_voo, string origem, string destino, <a class="el" href="class_data_hora.html">DataHora</a> datahora_saida, <a class="el" href="class_data_hora.html">DataHora</a> datahora_chegada, unsigned numero_passageiros, <a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *porta_embarque=NULL, <a class="el" href="class_aviao.html">Aviao</a> *aviao_ptr=NULL, <a class="el" href="class_companhia.html">Companhia</a> *companhia=NULL, unsigned atraso=0, bool cancelado=false, bool fechado=false, const vector&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt; &amp;passageiros_voo=vector&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt;(0), const queue&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt; &amp;fila_check_in=queue&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt;(), const priority_queue&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt; &amp;passageiros_voo_pq=priority_queue&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt;(), const vector&lt; <a class="el" href="class_tripulante.html">Tripulante</a> * &gt; &amp;tripulantes_voo=vector&lt; <a class="el" href="class_tripulante.html">Tripulante</a> * &gt;(0))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a53ead38e32f1df6004c303b57f8a2d34">~Voo</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#ae253d766c67019c99f302fcfb5ee4bbb">getNumeroVoo</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_companhia.html">Companhia</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#aca97a89695c7858fc3f396711874a684">getCompanhia</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a8d4223a934696a69a1192796fdc0d1e7">getOrigem</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#aceb49be2ccb5b47a944c14d725e4094a">getDestino</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data_hora.html">DataHora</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a15e5526268e219ccb1887886d39b510a">getDatahoraSaida</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data_hora.html">DataHora</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a09e218a0b6e84275275eb8c657460855">getDatahoraChegada</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a74fb82bc8ea29880637538cc573c2367">getNumeroPassageiros</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a95d2a115330f697e418034caf7be6e3e">getPortaEmbarque</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_aviao.html">Aviao</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a43118fe514ecee00df85a29e86cf7579">getAviao</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a04512b561142c64d0f6566ecd2548315">getAtraso</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#ac8700643e70b2fc5f7eba67b24564151">getCancelado</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a9969ce21539cf8de391f4c969a77075c">getFechado</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a829589c9dc9f4dd7fdc854ee1a8f2666">getPassageirosVoo</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const vector&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a74f7d3b192830545b2086f8b3e672c66">getConstRefPassageirosVoo</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#ae2d2b2370516cc033c6504b66f78e9bb">getRefPassageirosVoo</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">queue&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a09324dd0a605eb2cd6355a0354d586d1">getFilaCheckIn</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const queue&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a5532519f2fe8ba4063720c909e60108a">getConstRefFilaCheckIn</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">queue&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a98275cbac8a4d6c9fad71a31a17d2ad3">getRefFilaCheckIn</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">priority_queue&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a14ea38cbd6673a97ab9364e61c218fcf">getPassageirosVooPQ</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const priority_queue<br class="typebreak"/>
+&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a15dd590b0ac5ed38384146097eb6048c">getConstRefPassageirosVooPQ</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">priority_queue&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a3b0f777a0e4773ded17b5fb412936ba3">getRefPassageirosVooPQ</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_tripulante.html">Tripulante</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#aeaef4dcb1b29af8d0d0301f091a3964a">getTripulantesVoo</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const vector&lt; <a class="el" href="class_tripulante.html">Tripulante</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#ad8f7d13eb60f801d43707108d61ae479">getConstRefTripulantesVoo</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_tripulante.html">Tripulante</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a43cbc9b5ae7863a20619a018f0896a7a">getRefTripulantesVoo</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a41cf796f07c773d61eb48e370a184003">setNumero_voo</a> (unsigned numero_voo)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#ad13734910bbabe8cbba026c77000e593">setCompanhia</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a660b2b36e14f71d24827bcf81464fa72">setOrigem</a> (string origem)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#afc7ea4190a299e242297d94bb37d94e8">setDestino</a> (string destino)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a91d1356c82aba95771417d9068eda371">setDatahoraSaida</a> (<a class="el" href="class_data_hora.html">DataHora</a> datahora_saida)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a1e04b1316c5d906c3e117e9f6e52e7c2">setDatahoraChegada</a> (<a class="el" href="class_data_hora.html">DataHora</a> datahora_chegada)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a054ce2c770a726e2d4c22774e0b23b3f">setNumeroPassageiros</a> (unsigned numero_passageiros)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a581f9ec7876cf9da3a1a3ce9190df9a2">setPortaEmbarque</a> (<a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *porta_embarque)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a9456f20c9f5a57348bfb087989f15603">setAviao</a> (<a class="el" href="class_aviao.html">Aviao</a> *aviao_ptr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#ac1c722807af2ea2aee3d1449efe21816">setAtraso</a> (unsigned atraso)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a7e33b73047205dcdf715a5d13a7ce31b">setCanselado</a> (bool canselado)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#afb8dc943ee92830a285220cd8dc23a52">setFechado</a> (bool fechado)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a351f316c9c8065292c713d0fe513bb99">setPassageirosVoo</a> (priority_queue&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt; passageiros_voo)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#ac4f76da7d960ea5e77ca36d3c76c3c0f">setTripulantesVoo</a> (vector&lt; <a class="el" href="class_tripulante.html">Tripulante</a> * &gt; tripulantes_voo)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#af1c3437fee5750c40546788e17e2fd8b">addPassageiro</a> (<a class="el" href="class_passageiro.html">Passageiro</a> *passageiro)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona um passageiro ao vector de passageiros do voo.  <a href="#af1c3437fee5750c40546788e17e2fd8b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a50028b7f023a36a4f553964d638aad8a">addPassageiroPQ</a> (<a class="el" href="class_passageiro.html">Passageiro</a> *passageiro)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona um passageiro à fila de prioridade do voo, que vai ser usada a quando do embarque.  <a href="#a50028b7f023a36a4f553964d638aad8a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a614816f3b3ca21e480e9ddbd9fb45b15">criaFilaCheckIn</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Simula a chegada dos passageiros a uma fila de check-in, criando a queue fila_check_in.  <a href="#a614816f3b3ca21e480e9ddbd9fb45b15"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a6b12e408598d9a7ff08b1384f60e0d92">operator==</a> (const <a class="el" href="class_voo.html">Voo</a> &amp;voo) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador que permite comparar se dois voos são equivalentes, comparando o número do voo.  <a href="#a6b12e408598d9a7ff08b1384f60e0d92"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#aecdf161b8dade1e001be80c62b80e47b">operator&lt;</a> (const <a class="el" href="class_voo.html">Voo</a> &amp;voo) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador que permite comparar se a hora de partida do voo é menor do que a hora de partida de outro voo.  <a href="#aecdf161b8dade1e001be80c62b80e47b"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#abe6d1db5b923fc97a43acde24d968c0a">_numero_voo</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ex: 301.  <a href="#abe6d1db5b923fc97a43acde24d968c0a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a7578fbf17104acf5be1433ac8ec981e6">_origem</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ex: OPO.  <a href="#a7578fbf17104acf5be1433ac8ec981e6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a905ebd04058538991107a15829466b19">_destino</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ex: ORY.  <a href="#a905ebd04058538991107a15829466b19"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data_hora.html">DataHora</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#aee77bde5d59018007f269865fc8da2d9">_datahora_saida</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ex: 2010/09/03 10:00.  <a href="#aee77bde5d59018007f269865fc8da2d9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data_hora.html">DataHora</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a7268871c3a19ace507a272e34c2c4c1d">_datahora_chegada</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ex: 2010/09/03 12:00.  <a href="#a7268871c3a19ace507a272e34c2c4c1d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a0e86220885c9359c7accff13e8f58859">_numero_passageiros</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ex: 125.  <a href="#a0e86220885c9359c7accff13e8f58859"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a6ff8dbd23c68f181778f46101257fe15">_porta_embarque</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_aviao.html">Aviao</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a4b1e0f8dbf346f155df378cb78ac0c60">_aviao_ptr</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_companhia.html">Companhia</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#af18b2041dcc3dd84cf9b4b5aec357df9">_companhia</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a7236241ffcf182f3e1a4c14be4b085e8">_atraso</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#aaa4c8f8f2dec61aee4c6330c5e9142b6">_cancelado</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a12ab141205caab5f0180d02d4bc55bf6">_fechado</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a0d2bffac01261651a38fc1567e30f5bd">_passageiros_voo</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">queue&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a5f81ba196c3dc38e0ddfb52fcb7cf7c6">_fila_check_in</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">priority_queue&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#a16a41c5dc7a1d02a4e800a6cca8faed0">_passageiros_voo_pq</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_tripulante.html">Tripulante</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_voo.html#ab1576ee642cfcc2cd2fb77ef74e6d7fe">_tripulantes_voo</a></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<p>Classe que armazena informação acerca de um voo de uma dada companhia. </p>
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00039">39</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+<hr/><h2>Documentação dos Construtores &amp; Destrutor</h2>
+<a class="anchor" id="a609426279fa49ee0dd2758a20e1346cb"></a><!-- doxytag: member="Voo::Voo" ref="a609426279fa49ee0dd2758a20e1346cb" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Voo::Voo </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Construtor que inicializa os elementos com valores inválidos. </p>
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00064">64</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa089d31acb46e8d1f7d96cd2becad509"></a><!-- doxytag: member="Voo::Voo" ref="aa089d31acb46e8d1f7d96cd2becad509" args="(unsigned numero_voo, string origem, string destino, DataHora datahora_saida, DataHora datahora_chegada, unsigned numero_passageiros, PortaEmbarque *porta_embarque=NULL, Aviao *aviao_ptr=NULL, Companhia *companhia=NULL, unsigned atraso=0, bool cancelado=false, bool fechado=false, const vector&lt; Passageiro * &gt; &amp;passageiros_voo=vector&lt; Passageiro * &gt;(0), const queue&lt; Passageiro * &gt; &amp;fila_check_in=queue&lt; Passageiro * &gt;(), const priority_queue&lt; Passageiro * &gt; &amp;passageiros_voo_pq=priority_queue&lt; Passageiro * &gt;(), const vector&lt; Tripulante * &gt; &amp;tripulantes_voo=vector&lt; Tripulante * &gt;(0))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Voo::Voo </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>numero_voo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>origem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>destino</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_data_hora.html">DataHora</a>&nbsp;</td>
+          <td class="paramname"> <em>datahora_saida</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_data_hora.html">DataHora</a>&nbsp;</td>
+          <td class="paramname"> <em>datahora_chegada</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>numero_passageiros</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *&nbsp;</td>
+          <td class="paramname"> <em>porta_embarque</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_aviao.html">Aviao</a> *&nbsp;</td>
+          <td class="paramname"> <em>aviao_ptr</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_companhia.html">Companhia</a> *&nbsp;</td>
+          <td class="paramname"> <em>companhia</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>atraso</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>cancelado</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>fechado</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vector&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt; &amp;&nbsp;</td>
+          <td class="paramname"> <em>passageiros_voo</em> = <code>vector&nbsp;&lt;<a class="el" href="class_passageiro.html">Passageiro</a>*&gt;(0)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const queue&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt; &amp;&nbsp;</td>
+          <td class="paramname"> <em>fila_check_in</em> = <code>queue&nbsp;&lt;<a class="el" href="class_passageiro.html">Passageiro</a>*&gt;()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const priority_queue&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt; &amp;&nbsp;</td>
+          <td class="paramname"> <em>passageiros_voo_pq</em> = <code>priority_queue&nbsp;&lt;<a class="el" href="class_passageiro.html">Passageiro</a>*&gt;()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vector&lt; <a class="el" href="class_tripulante.html">Tripulante</a> * &gt; &amp;&nbsp;</td>
+          <td class="paramname"> <em>tripulantes_voo</em> = <code>vector&nbsp;&lt;<a class="el" href="class_tripulante.html">Tripulante</a>*&gt;(0)</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00068">68</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a53ead38e32f1df6004c303b57f8a2d34"></a><!-- doxytag: member="Voo::~Voo" ref="a53ead38e32f1df6004c303b57f8a2d34" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Voo::~Voo </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00081">81</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos métodos</h2>
+<a class="anchor" id="af1c3437fee5750c40546788e17e2fd8b"></a><!-- doxytag: member="Voo::addPassageiro" ref="af1c3437fee5750c40546788e17e2fd8b" args="(Passageiro *passageiro)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Voo::addPassageiro </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_passageiro.html">Passageiro</a> *&nbsp;</td>
+          <td class="paramname"> <em>passageiro</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Adiciona um passageiro ao vector de passageiros do voo. </p>
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00138">138</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00056">_passageiros_voo</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01920">CRUD::addPassageiro()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a50028b7f023a36a4f553964d638aad8a"></a><!-- doxytag: member="Voo::addPassageiroPQ" ref="a50028b7f023a36a4f553964d638aad8a" args="(Passageiro *passageiro)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Voo::addPassageiroPQ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_passageiro.html">Passageiro</a> *&nbsp;</td>
+          <td class="paramname"> <em>passageiro</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Adiciona um passageiro à fila de prioridade do voo, que vai ser usada a quando do embarque. </p>
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00140">140</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00058">_passageiros_voo_pq</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a614816f3b3ca21e480e9ddbd9fb45b15"></a><!-- doxytag: member="Voo::criaFilaCheckIn" ref="a614816f3b3ca21e480e9ddbd9fb45b15" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Voo::criaFilaCheckIn </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Simula a chegada dos passageiros a uma fila de check-in, criando a queue fila_check_in. </p>
+
+<p>Definido na linha <a class="el" href="_voo_8cpp_source.html#l00018">18</a> do ficheiro <a class="el" href="_voo_8cpp_source.html">Voo.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00057">_fila_check_in</a> e <a class="el" href="_voo_8h_source.html#l00056">_passageiros_voo</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02327">CRUD::initCheckIn()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a04512b561142c64d0f6566ecd2548315"></a><!-- doxytag: member="Voo::getAtraso" ref="a04512b561142c64d0f6566ecd2548315" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned Voo::getAtraso </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00092">92</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00052">_atraso</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01015">CRUD::cmpVooAtraso()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01199">CRUD::infoPlanoVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a43118fe514ecee00df85a29e86cf7579"></a><!-- doxytag: member="Voo::getAviao" ref="a43118fe514ecee00df85a29e86cf7579" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_aviao.html">Aviao</a>* Voo::getAviao </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00091">91</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00050">_aviao_ptr</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02358">CRUD::checkInNextPassageiro()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01415">CRUD::delPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00254">CRUD::editAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01199">CRUD::infoPlanoVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac8700643e70b2fc5f7eba67b24564151"></a><!-- doxytag: member="Voo::getCancelado" ref="ac8700643e70b2fc5f7eba67b24564151" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Voo::getCancelado </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00093">93</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00053">_cancelado</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01019">CRUD::cmpVooCancelado()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01199">CRUD::infoPlanoVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aca97a89695c7858fc3f396711874a684"></a><!-- doxytag: member="Voo::getCompanhia" ref="aca97a89695c7858fc3f396711874a684" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_companhia.html">Companhia</a>* Voo::getCompanhia </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00084">84</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00051">_companhia</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02653">CRUD::delVooHashSetVoos()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01199">CRUD::infoPlanoVoo()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02704">CRUD::listTaxasBalcoesVooEntreDatas()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5532519f2fe8ba4063720c909e60108a"></a><!-- doxytag: member="Voo::getConstRefFilaCheckIn" ref="a5532519f2fe8ba4063720c909e60108a" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const queue&lt;<a class="el" href="class_passageiro.html">Passageiro</a>*&gt;&amp; Voo::getConstRefFilaCheckIn </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00105">105</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00057">_fila_check_in</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02333">CRUD::checkIn()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a74f7d3b192830545b2086f8b3e672c66"></a><!-- doxytag: member="Voo::getConstRefPassageirosVoo" ref="a74f7d3b192830545b2086f8b3e672c66" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vector&lt;<a class="el" href="class_passageiro.html">Passageiro</a>*&gt;&amp; Voo::getConstRefPassageirosVoo </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00099">99</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00056">_passageiros_voo</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01920">CRUD::addPassageiro()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a15dd590b0ac5ed38384146097eb6048c"></a><!-- doxytag: member="Voo::getConstRefPassageirosVooPQ" ref="a15dd590b0ac5ed38384146097eb6048c" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const priority_queue&lt;<a class="el" href="class_passageiro.html">Passageiro</a>*&gt;&amp; Voo::getConstRefPassageirosVooPQ </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00111">111</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00058">_passageiros_voo_pq</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02333">CRUD::checkIn()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad8f7d13eb60f801d43707108d61ae479"></a><!-- doxytag: member="Voo::getConstRefTripulantesVoo" ref="ad8f7d13eb60f801d43707108d61ae479" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vector&lt;<a class="el" href="class_tripulante.html">Tripulante</a>*&gt;&amp; Voo::getConstRefTripulantesVoo </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00117">117</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00059">_tripulantes_voo</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a09e218a0b6e84275275eb8c657460855"></a><!-- doxytag: member="Voo::getDatahoraChegada" ref="a09e218a0b6e84275275eb8c657460855" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data_hora.html">DataHora</a> Voo::getDatahoraChegada </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00088">88</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00046">_datahora_chegada</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01011">CRUD::cmpVooDataChegada()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01199">CRUD::infoPlanoVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a15e5526268e219ccb1887886d39b510a"></a><!-- doxytag: member="Voo::getDatahoraSaida" ref="a15e5526268e219ccb1887886d39b510a" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data_hora.html">DataHora</a> Voo::getDatahoraSaida </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00087">87</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00045">_datahora_saida</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01007">CRUD::cmpVooDataSaida()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01199">CRUD::infoPlanoVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aceb49be2ccb5b47a944c14d725e4094a"></a><!-- doxytag: member="Voo::getDestino" ref="aceb49be2ccb5b47a944c14d725e4094a" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Voo::getDestino </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00086">86</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00044">_destino</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01003">CRUD::cmpVooDestino()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01199">CRUD::infoPlanoVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9969ce21539cf8de391f4c969a77075c"></a><!-- doxytag: member="Voo::getFechado" ref="a9969ce21539cf8de391f4c969a77075c" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Voo::getFechado </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00094">94</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00054">_fechado</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01920">CRUD::addPassageiro()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02428">CRUD::chamadaEmbarqueVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02333">CRUD::checkIn()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02358">CRUD::checkInNextPassageiro()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01415">CRUD::delPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02327">CRUD::initCheckIn()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02393">CRUD::printPriorityQueue()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a09324dd0a605eb2cd6355a0354d586d1"></a><!-- doxytag: member="Voo::getFilaCheckIn" ref="a09324dd0a605eb2cd6355a0354d586d1" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">queue&lt;<a class="el" href="class_passageiro.html">Passageiro</a>*&gt; Voo::getFilaCheckIn </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00103">103</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00057">_fila_check_in</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02333">CRUD::checkIn()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a74fb82bc8ea29880637538cc573c2367"></a><!-- doxytag: member="Voo::getNumeroPassageiros" ref="a74fb82bc8ea29880637538cc573c2367" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned Voo::getNumeroPassageiros </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00089">89</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00047">_numero_passageiros</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01920">CRUD::addPassageiro()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02514">CRUD::fecharVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01199">CRUD::infoPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02704">CRUD::listTaxasBalcoesVooEntreDatas()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02822">CRUD::listTaxasPortasEmbarqueVooEntreDatas()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae253d766c67019c99f302fcfb5ee4bbb"></a><!-- doxytag: member="Voo::getNumeroVoo" ref="ae253d766c67019c99f302fcfb5ee4bbb" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned Voo::getNumeroVoo </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00083">83</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00042">_numero_voo</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00995">CRUD::cmpVooNumeroVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00211">CRUD::infoAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02145">CRUD::infoPassageiro()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01199">CRUD::infoPlanoVoo()</a> e <a class="el" href="_aeroporto_8h_source.html#l00091">hash_voo_operators::operator()()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d4223a934696a69a1192796fdc0d1e7"></a><!-- doxytag: member="Voo::getOrigem" ref="a8d4223a934696a69a1192796fdc0d1e7" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Voo::getOrigem </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00085">85</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00043">_origem</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00999">CRUD::cmpVooOrigem()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01199">CRUD::infoPlanoVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a829589c9dc9f4dd7fdc854ee1a8f2666"></a><!-- doxytag: member="Voo::getPassageirosVoo" ref="a829589c9dc9f4dd7fdc854ee1a8f2666" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_passageiro.html">Passageiro</a>*&gt; Voo::getPassageirosVoo </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00097">97</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00056">_passageiros_voo</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a14ea38cbd6673a97ab9364e61c218fcf"></a><!-- doxytag: member="Voo::getPassageirosVooPQ" ref="a14ea38cbd6673a97ab9364e61c218fcf" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">priority_queue&lt;<a class="el" href="class_passageiro.html">Passageiro</a>*&gt; Voo::getPassageirosVooPQ </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00109">109</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00058">_passageiros_voo_pq</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02428">CRUD::chamadaEmbarqueVoo()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02393">CRUD::printPriorityQueue()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a95d2a115330f697e418034caf7be6e3e"></a><!-- doxytag: member="Voo::getPortaEmbarque" ref="a95d2a115330f697e418034caf7be6e3e" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_porta_embarque.html">PortaEmbarque</a>* Voo::getPortaEmbarque </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00090">90</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00049">_porta_embarque</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01415">CRUD::delPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02514">CRUD::fecharVoo()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01199">CRUD::infoPlanoVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a98275cbac8a4d6c9fad71a31a17d2ad3"></a><!-- doxytag: member="Voo::getRefFilaCheckIn" ref="a98275cbac8a4d6c9fad71a31a17d2ad3" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">queue&lt;<a class="el" href="class_passageiro.html">Passageiro</a>*&gt;&amp; Voo::getRefFilaCheckIn </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00107">107</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00057">_fila_check_in</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02358">CRUD::checkInNextPassageiro()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03648">CRUD::loaddb()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae2d2b2370516cc033c6504b66f78e9bb"></a><!-- doxytag: member="Voo::getRefPassageirosVoo" ref="ae2d2b2370516cc033c6504b66f78e9bb" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_passageiro.html">Passageiro</a>*&gt;&amp; Voo::getRefPassageirosVoo </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00101">101</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00056">_passageiros_voo</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01415">CRUD::delPlanoVoo()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03648">CRUD::loaddb()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3b0f777a0e4773ded17b5fb412936ba3"></a><!-- doxytag: member="Voo::getRefPassageirosVooPQ" ref="a3b0f777a0e4773ded17b5fb412936ba3" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">priority_queue&lt;<a class="el" href="class_passageiro.html">Passageiro</a>*&gt;&amp; Voo::getRefPassageirosVooPQ </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00113">113</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00058">_passageiros_voo_pq</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02428">CRUD::chamadaEmbarqueVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02358">CRUD::checkInNextPassageiro()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03648">CRUD::loaddb()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a43cbc9b5ae7863a20619a018f0896a7a"></a><!-- doxytag: member="Voo::getRefTripulantesVoo" ref="a43cbc9b5ae7863a20619a018f0896a7a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_tripulante.html">Tripulante</a>*&gt;&amp; Voo::getRefTripulantesVoo </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00119">119</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00059">_tripulantes_voo</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03439">CRUD::addTripulanteVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01415">CRUD::delPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03625">CRUD::delTripulanteVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00744">CRUD::editTripulante()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03450">CRUD::listTripulanteVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03648">CRUD::loaddb()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03596">CRUD::selTripulanteVoo()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03604">CRUD::selTripulanteVooPtr()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeaef4dcb1b29af8d0d0301f091a3964a"></a><!-- doxytag: member="Voo::getTripulantesVoo" ref="aeaef4dcb1b29af8d0d0301f091a3964a" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_tripulante.html">Tripulante</a>*&gt; Voo::getTripulantesVoo </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00115">115</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00059">_tripulantes_voo</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aecdf161b8dade1e001be80c62b80e47b"></a><!-- doxytag: member="Voo::operator&lt;" ref="aecdf161b8dade1e001be80c62b80e47b" args="(const Voo &amp;voo) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Voo::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_voo.html">Voo</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>voo</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operador que permite comparar se a hora de partida do voo é menor do que a hora de partida de outro voo. </p>
+
+<p>Definido na linha <a class="el" href="_voo_8cpp_source.html#l00038">38</a> do ficheiro <a class="el" href="_voo_8cpp_source.html">Voo.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00045">_datahora_saida</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6b12e408598d9a7ff08b1384f60e0d92"></a><!-- doxytag: member="Voo::operator==" ref="a6b12e408598d9a7ff08b1384f60e0d92" args="(const Voo &amp;voo) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Voo::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_voo.html">Voo</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>voo</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operador que permite comparar se dois voos são equivalentes, comparando o número do voo. </p>
+
+<p>Definido na linha <a class="el" href="_voo_8cpp_source.html#l00031">31</a> do ficheiro <a class="el" href="_voo_8cpp_source.html">Voo.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00042">_numero_voo</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac1c722807af2ea2aee3d1449efe21816"></a><!-- doxytag: member="Voo::setAtraso" ref="ac1c722807af2ea2aee3d1449efe21816" args="(unsigned atraso)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Voo::setAtraso </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>atraso</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00131">131</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00052">_atraso</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9456f20c9f5a57348bfb087989f15603"></a><!-- doxytag: member="Voo::setAviao" ref="a9456f20c9f5a57348bfb087989f15603" args="(Aviao *aviao_ptr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Voo::setAviao </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_aviao.html">Aviao</a> *&nbsp;</td>
+          <td class="paramname"> <em>aviao_ptr</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00130">130</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00050">_aviao_ptr</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00254">CRUD::editAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03648">CRUD::loaddb()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7e33b73047205dcdf715a5d13a7ce31b"></a><!-- doxytag: member="Voo::setCanselado" ref="a7e33b73047205dcdf715a5d13a7ce31b" args="(bool canselado)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Voo::setCanselado </td>
+          <td>(</td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>canselado</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00132">132</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00053">_cancelado</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad13734910bbabe8cbba026c77000e593"></a><!-- doxytag: member="Voo::setCompanhia" ref="ad13734910bbabe8cbba026c77000e593" args="(Companhia *companhia)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Voo::setCompanhia </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_companhia.html">Companhia</a> *&nbsp;</td>
+          <td class="paramname"> <em>companhia</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00123">123</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00051">_companhia</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03648">CRUD::loaddb()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1e04b1316c5d906c3e117e9f6e52e7c2"></a><!-- doxytag: member="Voo::setDatahoraChegada" ref="a1e04b1316c5d906c3e117e9f6e52e7c2" args="(DataHora datahora_chegada)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Voo::setDatahoraChegada </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_data_hora.html">DataHora</a>&nbsp;</td>
+          <td class="paramname"> <em>datahora_chegada</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00127">127</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00046">_datahora_chegada</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a91d1356c82aba95771417d9068eda371"></a><!-- doxytag: member="Voo::setDatahoraSaida" ref="a91d1356c82aba95771417d9068eda371" args="(DataHora datahora_saida)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Voo::setDatahoraSaida </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_data_hora.html">DataHora</a>&nbsp;</td>
+          <td class="paramname"> <em>datahora_saida</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00126">126</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00045">_datahora_saida</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afc7ea4190a299e242297d94bb37d94e8"></a><!-- doxytag: member="Voo::setDestino" ref="afc7ea4190a299e242297d94bb37d94e8" args="(string destino)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Voo::setDestino </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>destino</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00125">125</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00044">_destino</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afb8dc943ee92830a285220cd8dc23a52"></a><!-- doxytag: member="Voo::setFechado" ref="afb8dc943ee92830a285220cd8dc23a52" args="(bool fechado)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Voo::setFechado </td>
+          <td>(</td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>fechado</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00133">133</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00054">_fechado</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02514">CRUD::fecharVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a41cf796f07c773d61eb48e370a184003"></a><!-- doxytag: member="Voo::setNumero_voo" ref="a41cf796f07c773d61eb48e370a184003" args="(unsigned numero_voo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Voo::setNumero_voo </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>numero_voo</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00122">122</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00042">_numero_voo</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a054ce2c770a726e2d4c22774e0b23b3f"></a><!-- doxytag: member="Voo::setNumeroPassageiros" ref="a054ce2c770a726e2d4c22774e0b23b3f" args="(unsigned numero_passageiros)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Voo::setNumeroPassageiros </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>numero_passageiros</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00128">128</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00047">_numero_passageiros</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a660b2b36e14f71d24827bcf81464fa72"></a><!-- doxytag: member="Voo::setOrigem" ref="a660b2b36e14f71d24827bcf81464fa72" args="(string origem)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Voo::setOrigem </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>origem</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00124">124</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00043">_origem</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a351f316c9c8065292c713d0fe513bb99"></a><!-- doxytag: member="Voo::setPassageirosVoo" ref="a351f316c9c8065292c713d0fe513bb99" args="(priority_queue&lt; Passageiro * &gt; passageiros_voo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Voo::setPassageirosVoo </td>
+          <td>(</td>
+          <td class="paramtype">priority_queue&lt; <a class="el" href="class_passageiro.html">Passageiro</a> * &gt;&nbsp;</td>
+          <td class="paramname"> <em>passageiros_voo</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00134">134</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00058">_passageiros_voo_pq</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a581f9ec7876cf9da3a1a3ce9190df9a2"></a><!-- doxytag: member="Voo::setPortaEmbarque" ref="a581f9ec7876cf9da3a1a3ce9190df9a2" args="(PortaEmbarque *porta_embarque)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Voo::setPortaEmbarque </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *&nbsp;</td>
+          <td class="paramname"> <em>porta_embarque</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00129">129</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00049">_porta_embarque</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03648">CRUD::loaddb()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac4f76da7d960ea5e77ca36d3c76c3c0f"></a><!-- doxytag: member="Voo::setTripulantesVoo" ref="ac4f76da7d960ea5e77ca36d3c76c3c0f" args="(vector&lt; Tripulante * &gt; tripulantes_voo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Voo::setTripulantesVoo </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="class_tripulante.html">Tripulante</a> * &gt;&nbsp;</td>
+          <td class="paramname"> <em>tripulantes_voo</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00135">135</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00059">_tripulantes_voo</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos dados membro</h2>
+<a class="anchor" id="a7236241ffcf182f3e1a4c14be4b085e8"></a><!-- doxytag: member="Voo::_atraso" ref="a7236241ffcf182f3e1a4c14be4b085e8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned <a class="el" href="class_voo.html#a7236241ffcf182f3e1a4c14be4b085e8">Voo::_atraso</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00052">52</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_voo_8h_source.html#l00092">getAtraso()</a> e <a class="el" href="_voo_8h_source.html#l00131">setAtraso()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4b1e0f8dbf346f155df378cb78ac0c60"></a><!-- doxytag: member="Voo::_aviao_ptr" ref="a4b1e0f8dbf346f155df378cb78ac0c60" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_aviao.html">Aviao</a>* <a class="el" href="class_voo.html#a4b1e0f8dbf346f155df378cb78ac0c60">Voo::_aviao_ptr</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00050">50</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_voo_8h_source.html#l00091">getAviao()</a> e <a class="el" href="_voo_8h_source.html#l00130">setAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaa4c8f8f2dec61aee4c6330c5e9142b6"></a><!-- doxytag: member="Voo::_cancelado" ref="aaa4c8f8f2dec61aee4c6330c5e9142b6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_voo.html#aaa4c8f8f2dec61aee4c6330c5e9142b6">Voo::_cancelado</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00053">53</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_voo_8h_source.html#l00093">getCancelado()</a> e <a class="el" href="_voo_8h_source.html#l00132">setCanselado()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af18b2041dcc3dd84cf9b4b5aec357df9"></a><!-- doxytag: member="Voo::_companhia" ref="af18b2041dcc3dd84cf9b4b5aec357df9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_companhia.html">Companhia</a>* <a class="el" href="class_voo.html#af18b2041dcc3dd84cf9b4b5aec357df9">Voo::_companhia</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00051">51</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_voo_8h_source.html#l00084">getCompanhia()</a> e <a class="el" href="_voo_8h_source.html#l00123">setCompanhia()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7268871c3a19ace507a272e34c2c4c1d"></a><!-- doxytag: member="Voo::_datahora_chegada" ref="a7268871c3a19ace507a272e34c2c4c1d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data_hora.html">DataHora</a> <a class="el" href="class_voo.html#a7268871c3a19ace507a272e34c2c4c1d">Voo::_datahora_chegada</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ex: 2010/09/03 12:00. </p>
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00046">46</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_voo_8h_source.html#l00088">getDatahoraChegada()</a> e <a class="el" href="_voo_8h_source.html#l00127">setDatahoraChegada()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aee77bde5d59018007f269865fc8da2d9"></a><!-- doxytag: member="Voo::_datahora_saida" ref="aee77bde5d59018007f269865fc8da2d9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data_hora.html">DataHora</a> <a class="el" href="class_voo.html#aee77bde5d59018007f269865fc8da2d9">Voo::_datahora_saida</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ex: 2010/09/03 10:00. </p>
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00045">45</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_voo_8h_source.html#l00087">getDatahoraSaida()</a>, <a class="el" href="_voo_8cpp_source.html#l00038">operator&lt;()</a> e <a class="el" href="_voo_8h_source.html#l00126">setDatahoraSaida()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a905ebd04058538991107a15829466b19"></a><!-- doxytag: member="Voo::_destino" ref="a905ebd04058538991107a15829466b19" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string <a class="el" href="class_voo.html#a905ebd04058538991107a15829466b19">Voo::_destino</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ex: ORY. </p>
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00044">44</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_voo_8h_source.html#l00086">getDestino()</a> e <a class="el" href="_voo_8h_source.html#l00125">setDestino()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a12ab141205caab5f0180d02d4bc55bf6"></a><!-- doxytag: member="Voo::_fechado" ref="a12ab141205caab5f0180d02d4bc55bf6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_voo.html#a12ab141205caab5f0180d02d4bc55bf6">Voo::_fechado</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00054">54</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_voo_8h_source.html#l00094">getFechado()</a> e <a class="el" href="_voo_8h_source.html#l00133">setFechado()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5f81ba196c3dc38e0ddfb52fcb7cf7c6"></a><!-- doxytag: member="Voo::_fila_check_in" ref="a5f81ba196c3dc38e0ddfb52fcb7cf7c6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">queue&lt;<a class="el" href="class_passageiro.html">Passageiro</a>*&gt; <a class="el" href="class_voo.html#a5f81ba196c3dc38e0ddfb52fcb7cf7c6">Voo::_fila_check_in</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00057">57</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_voo_8cpp_source.html#l00018">criaFilaCheckIn()</a>, <a class="el" href="_voo_8h_source.html#l00105">getConstRefFilaCheckIn()</a>, <a class="el" href="_voo_8h_source.html#l00103">getFilaCheckIn()</a> e <a class="el" href="_voo_8h_source.html#l00107">getRefFilaCheckIn()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0e86220885c9359c7accff13e8f58859"></a><!-- doxytag: member="Voo::_numero_passageiros" ref="a0e86220885c9359c7accff13e8f58859" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned <a class="el" href="class_voo.html#a0e86220885c9359c7accff13e8f58859">Voo::_numero_passageiros</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ex: 125. </p>
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00047">47</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_voo_8h_source.html#l00089">getNumeroPassageiros()</a> e <a class="el" href="_voo_8h_source.html#l00128">setNumeroPassageiros()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abe6d1db5b923fc97a43acde24d968c0a"></a><!-- doxytag: member="Voo::_numero_voo" ref="abe6d1db5b923fc97a43acde24d968c0a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned <a class="el" href="class_voo.html#abe6d1db5b923fc97a43acde24d968c0a">Voo::_numero_voo</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ex: 301. </p>
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00042">42</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_voo_8h_source.html#l00083">getNumeroVoo()</a>, <a class="el" href="_voo_8cpp_source.html#l00031">operator==()</a> e <a class="el" href="_voo_8h_source.html#l00122">setNumero_voo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7578fbf17104acf5be1433ac8ec981e6"></a><!-- doxytag: member="Voo::_origem" ref="a7578fbf17104acf5be1433ac8ec981e6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string <a class="el" href="class_voo.html#a7578fbf17104acf5be1433ac8ec981e6">Voo::_origem</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ex: OPO. </p>
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00043">43</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_voo_8h_source.html#l00085">getOrigem()</a> e <a class="el" href="_voo_8h_source.html#l00124">setOrigem()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0d2bffac01261651a38fc1567e30f5bd"></a><!-- doxytag: member="Voo::_passageiros_voo" ref="a0d2bffac01261651a38fc1567e30f5bd" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_passageiro.html">Passageiro</a>*&gt; <a class="el" href="class_voo.html#a0d2bffac01261651a38fc1567e30f5bd">Voo::_passageiros_voo</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00056">56</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_voo_8h_source.html#l00138">addPassageiro()</a>, <a class="el" href="_voo_8cpp_source.html#l00018">criaFilaCheckIn()</a>, <a class="el" href="_voo_8h_source.html#l00099">getConstRefPassageirosVoo()</a>, <a class="el" href="_voo_8h_source.html#l00097">getPassageirosVoo()</a> e <a class="el" href="_voo_8h_source.html#l00101">getRefPassageirosVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a16a41c5dc7a1d02a4e800a6cca8faed0"></a><!-- doxytag: member="Voo::_passageiros_voo_pq" ref="a16a41c5dc7a1d02a4e800a6cca8faed0" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">priority_queue&lt;<a class="el" href="class_passageiro.html">Passageiro</a>*&gt; <a class="el" href="class_voo.html#a16a41c5dc7a1d02a4e800a6cca8faed0">Voo::_passageiros_voo_pq</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00058">58</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_voo_8h_source.html#l00140">addPassageiroPQ()</a>, <a class="el" href="_voo_8h_source.html#l00111">getConstRefPassageirosVooPQ()</a>, <a class="el" href="_voo_8h_source.html#l00109">getPassageirosVooPQ()</a>, <a class="el" href="_voo_8h_source.html#l00113">getRefPassageirosVooPQ()</a> e <a class="el" href="_voo_8h_source.html#l00134">setPassageirosVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6ff8dbd23c68f181778f46101257fe15"></a><!-- doxytag: member="Voo::_porta_embarque" ref="a6ff8dbd23c68f181778f46101257fe15" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_porta_embarque.html">PortaEmbarque</a>* <a class="el" href="class_voo.html#a6ff8dbd23c68f181778f46101257fe15">Voo::_porta_embarque</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00049">49</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_voo_8h_source.html#l00090">getPortaEmbarque()</a> e <a class="el" href="_voo_8h_source.html#l00129">setPortaEmbarque()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab1576ee642cfcc2cd2fb77ef74e6d7fe"></a><!-- doxytag: member="Voo::_tripulantes_voo" ref="ab1576ee642cfcc2cd2fb77ef74e6d7fe" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_tripulante.html">Tripulante</a>*&gt; <a class="el" href="class_voo.html#ab1576ee642cfcc2cd2fb77ef74e6d7fe">Voo::_tripulantes_voo</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_voo_8h_source.html#l00059">59</a> do ficheiro <a class="el" href="_voo_8h_source.html">Voo.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_voo_8h_source.html#l00117">getConstRefTripulantesVoo()</a>, <a class="el" href="_voo_8h_source.html#l00119">getRefTripulantesVoo()</a>, <a class="el" href="_voo_8h_source.html#l00115">getTripulantesVoo()</a> e <a class="el" href="_voo_8h_source.html#l00135">setTripulantesVoo()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
+<li><a class="el" href="_voo_8h_source.html">Voo.h</a></li>
+<li><a class="el" href="_voo_8cpp_source.html">Voo.cpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:39 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

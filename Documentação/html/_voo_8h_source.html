@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Voo.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>Voo.h</h1>  </div>
+</div>
+<div class="contents">
+<a href="_voo_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00015"></a>00015 <span class="preprocessor">#ifndef VOO_H_</span>
+<a name="l00016"></a>00016 <span class="preprocessor"></span><span class="preprocessor">#define VOO_H_</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;queue&gt;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;algorithm&gt;</span>
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="_passageiro_8h.html" title="Classe que contém informação associada a um passageiro de um voo.">Passageiro.h</a>&quot;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="_tripulante_8h.html" title="Classe que contém a informação associada a cada Tripulante Aéreo.">Tripulante.h</a>&quot;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="_data_hora_8h.html" title="Classe que contém informação associada a uma data e hora.">DataHora.h</a>&quot;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="_porta_embarque_8h.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque.h</a>&quot;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="_aviao_8h.html" title="Classe que contém a informação associada a um avião.">Aviao.h</a>&quot;</span>
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 <span class="comment">//Foward declaration da classe avião para evitar mutual includes</span>
+<a name="l00030"></a>00030 <span class="keyword">class </span><a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a>;
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 <span class="keyword">using</span> std::string;
+<a name="l00033"></a>00033 <span class="keyword">using</span> std::queue;
+<a name="l00034"></a>00034 <span class="keyword">using</span> std::priority_queue;
+<a name="l00035"></a>00035 <span class="keyword">using</span> std::random_shuffle;
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037 
+<a name="l00039"></a><a class="code" href="class_voo.html">00039</a> <span class="keyword">class </span><a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a>
+<a name="l00040"></a>00040 {
+<a name="l00041"></a>00041 <span class="keyword">private</span>:
+<a name="l00042"></a><a class="code" href="class_voo.html#abe6d1db5b923fc97a43acde24d968c0a">00042</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_voo.html#abe6d1db5b923fc97a43acde24d968c0a" title="Ex: 301.">_numero_voo</a>;                           
+<a name="l00043"></a><a class="code" href="class_voo.html#a7578fbf17104acf5be1433ac8ec981e6">00043</a>         <span class="keywordtype">string</span> <a class="code" href="class_voo.html#a7578fbf17104acf5be1433ac8ec981e6" title="Ex: OPO.">_origem</a>;                                         
+<a name="l00044"></a><a class="code" href="class_voo.html#a905ebd04058538991107a15829466b19">00044</a>         <span class="keywordtype">string</span> <a class="code" href="class_voo.html#a905ebd04058538991107a15829466b19" title="Ex: ORY.">_destino</a>;                                        
+<a name="l00045"></a><a class="code" href="class_voo.html#aee77bde5d59018007f269865fc8da2d9">00045</a>         <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> <a class="code" href="class_voo.html#aee77bde5d59018007f269865fc8da2d9" title="Ex: 2010/09/03 10:00.">_datahora_saida</a>;                       
+<a name="l00046"></a><a class="code" href="class_voo.html#a7268871c3a19ace507a272e34c2c4c1d">00046</a>         <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> <a class="code" href="class_voo.html#a7268871c3a19ace507a272e34c2c4c1d" title="Ex: 2010/09/03 12:00.">_datahora_chegada</a>;                     
+<a name="l00047"></a><a class="code" href="class_voo.html#a0e86220885c9359c7accff13e8f58859">00047</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_voo.html#a0e86220885c9359c7accff13e8f58859" title="Ex: 125.">_numero_passageiros</a>;           
+<a name="l00048"></a>00048 
+<a name="l00049"></a><a class="code" href="class_voo.html#a6ff8dbd23c68f181778f46101257fe15">00049</a>         <a class="code" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a> *<a class="code" href="class_voo.html#a6ff8dbd23c68f181778f46101257fe15">_porta_embarque</a>;
+<a name="l00050"></a><a class="code" href="class_voo.html#a4b1e0f8dbf346f155df378cb78ac0c60">00050</a>         <a class="code" href="class_aviao.html" title="Classe que armazena informação acerca de um avião de uma dada companhia.">Aviao</a> *<a class="code" href="class_voo.html#a4b1e0f8dbf346f155df378cb78ac0c60">_aviao_ptr</a>;
+<a name="l00051"></a><a class="code" href="class_voo.html#af18b2041dcc3dd84cf9b4b5aec357df9">00051</a>         <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *<a class="code" href="class_voo.html#af18b2041dcc3dd84cf9b4b5aec357df9">_companhia</a>;
+<a name="l00052"></a><a class="code" href="class_voo.html#a7236241ffcf182f3e1a4c14be4b085e8">00052</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_voo.html#a7236241ffcf182f3e1a4c14be4b085e8">_atraso</a>;
+<a name="l00053"></a><a class="code" href="class_voo.html#aaa4c8f8f2dec61aee4c6330c5e9142b6">00053</a>         <span class="keywordtype">bool</span> <a class="code" href="class_voo.html#aaa4c8f8f2dec61aee4c6330c5e9142b6">_cancelado</a>;
+<a name="l00054"></a><a class="code" href="class_voo.html#a12ab141205caab5f0180d02d4bc55bf6">00054</a>         <span class="keywordtype">bool</span> <a class="code" href="class_voo.html#a12ab141205caab5f0180d02d4bc55bf6">_fechado</a>;
+<a name="l00055"></a>00055 
+<a name="l00056"></a><a class="code" href="class_voo.html#a0d2bffac01261651a38fc1567e30f5bd">00056</a>         vector &lt;Passageiro*&gt; <a class="code" href="class_voo.html#a0d2bffac01261651a38fc1567e30f5bd">_passageiros_voo</a>;
+<a name="l00057"></a><a class="code" href="class_voo.html#a5f81ba196c3dc38e0ddfb52fcb7cf7c6">00057</a>         queue &lt;Passageiro*&gt; <a class="code" href="class_voo.html#a5f81ba196c3dc38e0ddfb52fcb7cf7c6">_fila_check_in</a>;
+<a name="l00058"></a><a class="code" href="class_voo.html#a16a41c5dc7a1d02a4e800a6cca8faed0">00058</a>         priority_queue &lt;Passageiro*&gt; <a class="code" href="class_voo.html#a16a41c5dc7a1d02a4e800a6cca8faed0">_passageiros_voo_pq</a>;
+<a name="l00059"></a><a class="code" href="class_voo.html#ab1576ee642cfcc2cd2fb77ef74e6d7fe">00059</a>         vector &lt;Tripulante*&gt; <a class="code" href="class_voo.html#ab1576ee642cfcc2cd2fb77ef74e6d7fe">_tripulantes_voo</a>;
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062 <span class="keyword">public</span>:
+<a name="l00064"></a><a class="code" href="class_voo.html#a609426279fa49ee0dd2758a20e1346cb">00064</a>         <a class="code" href="class_voo.html#a609426279fa49ee0dd2758a20e1346cb" title="Construtor que inicializa os elementos com valores inválidos.">Voo</a>(): <a class="code" href="class_voo.html#abe6d1db5b923fc97a43acde24d968c0a" title="Ex: 301.">_numero_voo</a>(0), <a class="code" href="class_voo.html#a0e86220885c9359c7accff13e8f58859" title="Ex: 125.">_numero_passageiros</a>(0),
+<a name="l00065"></a>00065                 <a class="code" href="class_voo.html#a6ff8dbd23c68f181778f46101257fe15">_porta_embarque</a>(NULL), <a class="code" href="class_voo.html#a4b1e0f8dbf346f155df378cb78ac0c60">_aviao_ptr</a>(NULL), <a class="code" href="class_voo.html#af18b2041dcc3dd84cf9b4b5aec357df9">_companhia</a>(NULL), <a class="code" href="class_voo.html#a7236241ffcf182f3e1a4c14be4b085e8">_atraso</a>(0), <a class="code" href="class_voo.html#aaa4c8f8f2dec61aee4c6330c5e9142b6">_cancelado</a>(false), <a class="code" href="class_voo.html#a12ab141205caab5f0180d02d4bc55bf6">_fechado</a>(false), <a class="code" href="class_voo.html#a0d2bffac01261651a38fc1567e30f5bd">_passageiros_voo</a>(), <a class="code" href="class_voo.html#a16a41c5dc7a1d02a4e800a6cca8faed0">_passageiros_voo_pq</a>(), <a class="code" href="class_voo.html#ab1576ee642cfcc2cd2fb77ef74e6d7fe">_tripulantes_voo</a>() {}
+<a name="l00066"></a>00066         <span class="comment">//(número voo, companhia, origem, destino, avião, data/hora saida, data/hora chegada, numero passageiros).</span>
+<a name="l00067"></a>00067         <span class="comment">//Ex: &lt;301, TAP, OPO, ORY, CSTNA, 2010/09/03 10:00, 2010/09/03 12:00, 125&gt;</span>
+<a name="l00068"></a><a class="code" href="class_voo.html#aa089d31acb46e8d1f7d96cd2becad509">00068</a>         <a class="code" href="class_voo.html#a609426279fa49ee0dd2758a20e1346cb" title="Construtor que inicializa os elementos com valores inválidos.">Voo</a>(<span class="keywordtype">unsigned</span> numero_voo, <span class="keywordtype">string</span> origem, <span class="keywordtype">string</span> destino,
+<a name="l00069"></a>00069                         <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> datahora_saida, <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> datahora_chegada, <span class="keywordtype">unsigned</span> numero_passageiros,
+<a name="l00070"></a>00070                         <a class="code" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a> *porta_embarque = NULL, <a class="code" href="class_aviao.html" title="Classe que armazena informação acerca de um avião de uma dada companhia.">Aviao</a> *aviao_ptr = NULL, <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia = NULL,
+<a name="l00071"></a>00071                         <span class="keywordtype">unsigned</span> atraso = 0, <span class="keywordtype">bool</span> cancelado = <span class="keyword">false</span>, <span class="keywordtype">bool</span> fechado = <span class="keyword">false</span>,
+<a name="l00072"></a>00072                         <span class="keyword">const</span> vector &lt;Passageiro*&gt; &amp;passageiros_voo = vector &lt;Passageiro*&gt;(0),
+<a name="l00073"></a>00073                         <span class="keyword">const</span> queue &lt;Passageiro*&gt; &amp;fila_check_in = queue &lt;Passageiro*&gt;(),
+<a name="l00074"></a>00074                         <span class="keyword">const</span> priority_queue &lt;Passageiro*&gt; &amp;passageiros_voo_pq = priority_queue &lt;Passageiro*&gt;(),
+<a name="l00075"></a>00075                         <span class="keyword">const</span> vector &lt;Tripulante*&gt; &amp;tripulantes_voo = vector &lt;Tripulante*&gt;(0)):
+<a name="l00076"></a>00076                                 <a class="code" href="class_voo.html#abe6d1db5b923fc97a43acde24d968c0a" title="Ex: 301.">_numero_voo</a>(numero_voo), <a class="code" href="class_voo.html#a7578fbf17104acf5be1433ac8ec981e6" title="Ex: OPO.">_origem</a>(origem), <a class="code" href="class_voo.html#a905ebd04058538991107a15829466b19" title="Ex: ORY.">_destino</a>(destino),
+<a name="l00077"></a>00077                                 <a class="code" href="class_voo.html#aee77bde5d59018007f269865fc8da2d9" title="Ex: 2010/09/03 10:00.">_datahora_saida</a>(datahora_saida), <a class="code" href="class_voo.html#a7268871c3a19ace507a272e34c2c4c1d" title="Ex: 2010/09/03 12:00.">_datahora_chegada</a>(datahora_chegada), <a class="code" href="class_voo.html#a0e86220885c9359c7accff13e8f58859" title="Ex: 125.">_numero_passageiros</a>(numero_passageiros),
+<a name="l00078"></a>00078                                 <a class="code" href="class_voo.html#a6ff8dbd23c68f181778f46101257fe15">_porta_embarque</a>(porta_embarque), <a class="code" href="class_voo.html#a4b1e0f8dbf346f155df378cb78ac0c60">_aviao_ptr</a>(aviao_ptr), <a class="code" href="class_voo.html#af18b2041dcc3dd84cf9b4b5aec357df9">_companhia</a>(companhia),
+<a name="l00079"></a>00079                                 <a class="code" href="class_voo.html#a7236241ffcf182f3e1a4c14be4b085e8">_atraso</a>(atraso), <a class="code" href="class_voo.html#aaa4c8f8f2dec61aee4c6330c5e9142b6">_cancelado</a>(cancelado), <a class="code" href="class_voo.html#a12ab141205caab5f0180d02d4bc55bf6">_fechado</a>(fechado), <a class="code" href="class_voo.html#a0d2bffac01261651a38fc1567e30f5bd">_passageiros_voo</a>(passageiros_voo), <a class="code" href="class_voo.html#a5f81ba196c3dc38e0ddfb52fcb7cf7c6">_fila_check_in</a>(fila_check_in),
+<a name="l00080"></a>00080                                 <a class="code" href="class_voo.html#a16a41c5dc7a1d02a4e800a6cca8faed0">_passageiros_voo_pq</a>(passageiros_voo_pq), <a class="code" href="class_voo.html#ab1576ee642cfcc2cd2fb77ef74e6d7fe">_tripulantes_voo</a>(tripulantes_voo) {}
+<a name="l00081"></a><a class="code" href="class_voo.html#a53ead38e32f1df6004c303b57f8a2d34">00081</a>         <span class="keyword">virtual</span> <a class="code" href="class_voo.html#a53ead38e32f1df6004c303b57f8a2d34">~Voo</a>() {}
+<a name="l00082"></a>00082 
+<a name="l00083"></a><a class="code" href="class_voo.html#ae253d766c67019c99f302fcfb5ee4bbb">00083</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_voo.html#ae253d766c67019c99f302fcfb5ee4bbb">getNumeroVoo</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_voo.html#abe6d1db5b923fc97a43acde24d968c0a" title="Ex: 301.">_numero_voo</a>; }
+<a name="l00084"></a><a class="code" href="class_voo.html#aca97a89695c7858fc3f396711874a684">00084</a>         <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a>* <a class="code" href="class_voo.html#aca97a89695c7858fc3f396711874a684">getCompanhia</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_voo.html#af18b2041dcc3dd84cf9b4b5aec357df9">_companhia</a>; }
+<a name="l00085"></a><a class="code" href="class_voo.html#a8d4223a934696a69a1192796fdc0d1e7">00085</a>         <span class="keywordtype">string</span> <a class="code" href="class_voo.html#a8d4223a934696a69a1192796fdc0d1e7">getOrigem</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_voo.html#a7578fbf17104acf5be1433ac8ec981e6" title="Ex: OPO.">_origem</a>; }
+<a name="l00086"></a><a class="code" href="class_voo.html#aceb49be2ccb5b47a944c14d725e4094a">00086</a>         <span class="keywordtype">string</span> <a class="code" href="class_voo.html#aceb49be2ccb5b47a944c14d725e4094a">getDestino</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_voo.html#a905ebd04058538991107a15829466b19" title="Ex: ORY.">_destino</a>; }
+<a name="l00087"></a><a class="code" href="class_voo.html#a15e5526268e219ccb1887886d39b510a">00087</a>     <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> <a class="code" href="class_voo.html#a15e5526268e219ccb1887886d39b510a">getDatahoraSaida</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_voo.html#aee77bde5d59018007f269865fc8da2d9" title="Ex: 2010/09/03 10:00.">_datahora_saida</a>; }
+<a name="l00088"></a><a class="code" href="class_voo.html#a09e218a0b6e84275275eb8c657460855">00088</a>         <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> <a class="code" href="class_voo.html#a09e218a0b6e84275275eb8c657460855">getDatahoraChegada</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_voo.html#a7268871c3a19ace507a272e34c2c4c1d" title="Ex: 2010/09/03 12:00.">_datahora_chegada</a>; }
+<a name="l00089"></a><a class="code" href="class_voo.html#a74fb82bc8ea29880637538cc573c2367">00089</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_voo.html#a74fb82bc8ea29880637538cc573c2367">getNumeroPassageiros</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_voo.html#a0e86220885c9359c7accff13e8f58859" title="Ex: 125.">_numero_passageiros</a>; }
+<a name="l00090"></a><a class="code" href="class_voo.html#a95d2a115330f697e418034caf7be6e3e">00090</a>         <a class="code" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a>* <a class="code" href="class_voo.html#a95d2a115330f697e418034caf7be6e3e">getPortaEmbarque</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_voo.html#a6ff8dbd23c68f181778f46101257fe15">_porta_embarque</a>; }
+<a name="l00091"></a><a class="code" href="class_voo.html#a43118fe514ecee00df85a29e86cf7579">00091</a>         <a class="code" href="class_aviao.html" title="Classe que armazena informação acerca de um avião de uma dada companhia.">Aviao</a>* <a class="code" href="class_voo.html#a43118fe514ecee00df85a29e86cf7579">getAviao</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_voo.html#a4b1e0f8dbf346f155df378cb78ac0c60">_aviao_ptr</a>; }
+<a name="l00092"></a><a class="code" href="class_voo.html#a04512b561142c64d0f6566ecd2548315">00092</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_voo.html#a04512b561142c64d0f6566ecd2548315">getAtraso</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_voo.html#a7236241ffcf182f3e1a4c14be4b085e8">_atraso</a>; }
+<a name="l00093"></a><a class="code" href="class_voo.html#ac8700643e70b2fc5f7eba67b24564151">00093</a>         <span class="keywordtype">bool</span> <a class="code" href="class_voo.html#ac8700643e70b2fc5f7eba67b24564151">getCancelado</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_voo.html#aaa4c8f8f2dec61aee4c6330c5e9142b6">_cancelado</a>; }
+<a name="l00094"></a><a class="code" href="class_voo.html#a9969ce21539cf8de391f4c969a77075c">00094</a>         <span class="keywordtype">bool</span> <a class="code" href="class_voo.html#a9969ce21539cf8de391f4c969a77075c">getFechado</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_voo.html#a12ab141205caab5f0180d02d4bc55bf6">_fechado</a>; }
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096 
+<a name="l00097"></a><a class="code" href="class_voo.html#a829589c9dc9f4dd7fdc854ee1a8f2666">00097</a>         vector &lt;Passageiro*&gt; <a class="code" href="class_voo.html#a829589c9dc9f4dd7fdc854ee1a8f2666">getPassageirosVoo</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_voo.html#a0d2bffac01261651a38fc1567e30f5bd">_passageiros_voo</a>; }
+<a name="l00098"></a>00098         <span class="comment">//Variante do get do vector usada em iteradores constantes</span>
+<a name="l00099"></a><a class="code" href="class_voo.html#a74f7d3b192830545b2086f8b3e672c66">00099</a>         <span class="keyword">const</span> vector &lt;Passageiro*&gt;&amp; <a class="code" href="class_voo.html#a74f7d3b192830545b2086f8b3e672c66">getConstRefPassageirosVoo</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_voo.html#a0d2bffac01261651a38fc1567e30f5bd">_passageiros_voo</a>; }
+<a name="l00100"></a>00100         <span class="comment">//Variante do get do vector que permite alterá-lo através da referência que é dada</span>
+<a name="l00101"></a><a class="code" href="class_voo.html#ae2d2b2370516cc033c6504b66f78e9bb">00101</a>         vector &lt;Passageiro*&gt;&amp; <a class="code" href="class_voo.html#ae2d2b2370516cc033c6504b66f78e9bb">getRefPassageirosVoo</a>() { <span class="keywordflow">return</span> <a class="code" href="class_voo.html#a0d2bffac01261651a38fc1567e30f5bd">_passageiros_voo</a>; }
+<a name="l00102"></a>00102 
+<a name="l00103"></a><a class="code" href="class_voo.html#a09324dd0a605eb2cd6355a0354d586d1">00103</a>         queue &lt;Passageiro*&gt; <a class="code" href="class_voo.html#a09324dd0a605eb2cd6355a0354d586d1">getFilaCheckIn</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_voo.html#a5f81ba196c3dc38e0ddfb52fcb7cf7c6">_fila_check_in</a>; }
+<a name="l00104"></a>00104         <span class="comment">//Variante do get da queue usada em iteradores constantes</span>
+<a name="l00105"></a><a class="code" href="class_voo.html#a5532519f2fe8ba4063720c909e60108a">00105</a>         <span class="keyword">const</span> queue &lt;Passageiro*&gt;&amp; <a class="code" href="class_voo.html#a5532519f2fe8ba4063720c909e60108a">getConstRefFilaCheckIn</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_voo.html#a5f81ba196c3dc38e0ddfb52fcb7cf7c6">_fila_check_in</a>; }
+<a name="l00106"></a>00106         <span class="comment">//Variante do get da queue que permite alterá-lo através da referência que é dada</span>
+<a name="l00107"></a><a class="code" href="class_voo.html#a98275cbac8a4d6c9fad71a31a17d2ad3">00107</a>         queue &lt;Passageiro*&gt;&amp; <a class="code" href="class_voo.html#a98275cbac8a4d6c9fad71a31a17d2ad3">getRefFilaCheckIn</a>() { <span class="keywordflow">return</span> <a class="code" href="class_voo.html#a5f81ba196c3dc38e0ddfb52fcb7cf7c6">_fila_check_in</a>; }
+<a name="l00108"></a>00108 
+<a name="l00109"></a><a class="code" href="class_voo.html#a14ea38cbd6673a97ab9364e61c218fcf">00109</a>         priority_queue &lt;Passageiro*&gt; <a class="code" href="class_voo.html#a14ea38cbd6673a97ab9364e61c218fcf">getPassageirosVooPQ</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_voo.html#a16a41c5dc7a1d02a4e800a6cca8faed0">_passageiros_voo_pq</a>; }
+<a name="l00110"></a>00110         <span class="comment">//Variante do get da priority_queue usada em iteradores constantes</span>
+<a name="l00111"></a><a class="code" href="class_voo.html#a15dd590b0ac5ed38384146097eb6048c">00111</a>         <span class="keyword">const</span> priority_queue &lt;Passageiro*&gt;&amp; <a class="code" href="class_voo.html#a15dd590b0ac5ed38384146097eb6048c">getConstRefPassageirosVooPQ</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_voo.html#a16a41c5dc7a1d02a4e800a6cca8faed0">_passageiros_voo_pq</a>; }
+<a name="l00112"></a>00112         <span class="comment">//Variante do get da priority_queue que permite alterá-lo através da referência que é dada</span>
+<a name="l00113"></a><a class="code" href="class_voo.html#a3b0f777a0e4773ded17b5fb412936ba3">00113</a>         priority_queue &lt;Passageiro*&gt;&amp; <a class="code" href="class_voo.html#a3b0f777a0e4773ded17b5fb412936ba3">getRefPassageirosVooPQ</a>() { <span class="keywordflow">return</span> <a class="code" href="class_voo.html#a16a41c5dc7a1d02a4e800a6cca8faed0">_passageiros_voo_pq</a>; }
+<a name="l00114"></a>00114 
+<a name="l00115"></a><a class="code" href="class_voo.html#aeaef4dcb1b29af8d0d0301f091a3964a">00115</a>         vector &lt;Tripulante*&gt; <a class="code" href="class_voo.html#aeaef4dcb1b29af8d0d0301f091a3964a">getTripulantesVoo</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_voo.html#ab1576ee642cfcc2cd2fb77ef74e6d7fe">_tripulantes_voo</a>; }
+<a name="l00116"></a>00116         <span class="comment">//Variante do get do vector usada em iteradores constantes</span>
+<a name="l00117"></a><a class="code" href="class_voo.html#ad8f7d13eb60f801d43707108d61ae479">00117</a>         <span class="keyword">const</span> vector &lt;Tripulante*&gt;&amp; <a class="code" href="class_voo.html#ad8f7d13eb60f801d43707108d61ae479">getConstRefTripulantesVoo</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_voo.html#ab1576ee642cfcc2cd2fb77ef74e6d7fe">_tripulantes_voo</a>; }
+<a name="l00118"></a>00118         <span class="comment">//Variante do get do vector que permite alterá-lo através da referência que é dada</span>
+<a name="l00119"></a><a class="code" href="class_voo.html#a43cbc9b5ae7863a20619a018f0896a7a">00119</a>         vector &lt;Tripulante*&gt;&amp; <a class="code" href="class_voo.html#a43cbc9b5ae7863a20619a018f0896a7a">getRefTripulantesVoo</a>() { <span class="keywordflow">return</span> <a class="code" href="class_voo.html#ab1576ee642cfcc2cd2fb77ef74e6d7fe">_tripulantes_voo</a>; }
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121 
+<a name="l00122"></a><a class="code" href="class_voo.html#a41cf796f07c773d61eb48e370a184003">00122</a>         <span class="keywordtype">void</span> <a class="code" href="class_voo.html#a41cf796f07c773d61eb48e370a184003">setNumero_voo</a>(<span class="keywordtype">unsigned</span> numero_voo) { <a class="code" href="class_voo.html#abe6d1db5b923fc97a43acde24d968c0a" title="Ex: 301.">_numero_voo</a> = numero_voo; }
+<a name="l00123"></a><a class="code" href="class_voo.html#ad13734910bbabe8cbba026c77000e593">00123</a>         <span class="keywordtype">void</span> <a class="code" href="class_voo.html#ad13734910bbabe8cbba026c77000e593">setCompanhia</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia) { <a class="code" href="class_voo.html#af18b2041dcc3dd84cf9b4b5aec357df9">_companhia</a> = companhia; }
+<a name="l00124"></a><a class="code" href="class_voo.html#a660b2b36e14f71d24827bcf81464fa72">00124</a>         <span class="keywordtype">void</span> <a class="code" href="class_voo.html#a660b2b36e14f71d24827bcf81464fa72">setOrigem</a>(<span class="keywordtype">string</span> origem) { <a class="code" href="class_voo.html#a7578fbf17104acf5be1433ac8ec981e6" title="Ex: OPO.">_origem</a> = origem; }
+<a name="l00125"></a><a class="code" href="class_voo.html#afc7ea4190a299e242297d94bb37d94e8">00125</a>         <span class="keywordtype">void</span> <a class="code" href="class_voo.html#afc7ea4190a299e242297d94bb37d94e8">setDestino</a>(<span class="keywordtype">string</span> destino) { <a class="code" href="class_voo.html#a905ebd04058538991107a15829466b19" title="Ex: ORY.">_destino</a> = destino; }
+<a name="l00126"></a><a class="code" href="class_voo.html#a91d1356c82aba95771417d9068eda371">00126</a>         <span class="keywordtype">void</span> <a class="code" href="class_voo.html#a91d1356c82aba95771417d9068eda371">setDatahoraSaida</a>(<a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> datahora_saida) { <a class="code" href="class_voo.html#aee77bde5d59018007f269865fc8da2d9" title="Ex: 2010/09/03 10:00.">_datahora_saida</a> = datahora_saida; }
+<a name="l00127"></a><a class="code" href="class_voo.html#a1e04b1316c5d906c3e117e9f6e52e7c2">00127</a>         <span class="keywordtype">void</span> <a class="code" href="class_voo.html#a1e04b1316c5d906c3e117e9f6e52e7c2">setDatahoraChegada</a>(<a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> datahora_chegada) { <a class="code" href="class_voo.html#a7268871c3a19ace507a272e34c2c4c1d" title="Ex: 2010/09/03 12:00.">_datahora_chegada</a> = datahora_chegada; }
+<a name="l00128"></a><a class="code" href="class_voo.html#a054ce2c770a726e2d4c22774e0b23b3f">00128</a>         <span class="keywordtype">void</span> <a class="code" href="class_voo.html#a054ce2c770a726e2d4c22774e0b23b3f">setNumeroPassageiros</a>(<span class="keywordtype">unsigned</span> numero_passageiros) { <a class="code" href="class_voo.html#a0e86220885c9359c7accff13e8f58859" title="Ex: 125.">_numero_passageiros</a> = numero_passageiros; }
+<a name="l00129"></a><a class="code" href="class_voo.html#a581f9ec7876cf9da3a1a3ce9190df9a2">00129</a>         <span class="keywordtype">void</span> <a class="code" href="class_voo.html#a581f9ec7876cf9da3a1a3ce9190df9a2">setPortaEmbarque</a>(<a class="code" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a> *porta_embarque) { <a class="code" href="class_voo.html#a6ff8dbd23c68f181778f46101257fe15">_porta_embarque</a> = porta_embarque; }
+<a name="l00130"></a><a class="code" href="class_voo.html#a9456f20c9f5a57348bfb087989f15603">00130</a>         <span class="keywordtype">void</span> <a class="code" href="class_voo.html#a9456f20c9f5a57348bfb087989f15603">setAviao</a>(<a class="code" href="class_aviao.html" title="Classe que armazena informação acerca de um avião de uma dada companhia.">Aviao</a> *aviao_ptr) { <a class="code" href="class_voo.html#a4b1e0f8dbf346f155df378cb78ac0c60">_aviao_ptr</a> = aviao_ptr; }
+<a name="l00131"></a><a class="code" href="class_voo.html#ac1c722807af2ea2aee3d1449efe21816">00131</a>         <span class="keywordtype">void</span> <a class="code" href="class_voo.html#ac1c722807af2ea2aee3d1449efe21816">setAtraso</a>(<span class="keywordtype">unsigned</span> atraso) { <a class="code" href="class_voo.html#a7236241ffcf182f3e1a4c14be4b085e8">_atraso</a> = atraso; }
+<a name="l00132"></a><a class="code" href="class_voo.html#a7e33b73047205dcdf715a5d13a7ce31b">00132</a>         <span class="keywordtype">void</span> <a class="code" href="class_voo.html#a7e33b73047205dcdf715a5d13a7ce31b">setCanselado</a>(<span class="keywordtype">bool</span> canselado) { <a class="code" href="class_voo.html#aaa4c8f8f2dec61aee4c6330c5e9142b6">_cancelado</a> = canselado; }
+<a name="l00133"></a><a class="code" href="class_voo.html#afb8dc943ee92830a285220cd8dc23a52">00133</a>         <span class="keywordtype">void</span> <a class="code" href="class_voo.html#afb8dc943ee92830a285220cd8dc23a52">setFechado</a>(<span class="keywordtype">bool</span> fechado) { <a class="code" href="class_voo.html#a12ab141205caab5f0180d02d4bc55bf6">_fechado</a> = fechado; }
+<a name="l00134"></a><a class="code" href="class_voo.html#a351f316c9c8065292c713d0fe513bb99">00134</a>         <span class="keywordtype">void</span> <a class="code" href="class_voo.html#a351f316c9c8065292c713d0fe513bb99">setPassageirosVoo</a>(priority_queue &lt;Passageiro*&gt; passageiros_voo) { <a class="code" href="class_voo.html#a16a41c5dc7a1d02a4e800a6cca8faed0">_passageiros_voo_pq</a> = passageiros_voo; }
+<a name="l00135"></a><a class="code" href="class_voo.html#ac4f76da7d960ea5e77ca36d3c76c3c0f">00135</a>         <span class="keywordtype">void</span> <a class="code" href="class_voo.html#ac4f76da7d960ea5e77ca36d3c76c3c0f">setTripulantesVoo</a>(vector &lt;Tripulante*&gt; tripulantes_voo) { <a class="code" href="class_voo.html#ab1576ee642cfcc2cd2fb77ef74e6d7fe">_tripulantes_voo</a> = tripulantes_voo; }
+<a name="l00136"></a>00136 
+<a name="l00138"></a><a class="code" href="class_voo.html#af1c3437fee5750c40546788e17e2fd8b">00138</a>         <span class="keywordtype">void</span> <a class="code" href="class_voo.html#af1c3437fee5750c40546788e17e2fd8b" title="Adiciona um passageiro ao vector de passageiros do voo.">addPassageiro</a>(<a class="code" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a>* passageiro) { <a class="code" href="class_voo.html#a0d2bffac01261651a38fc1567e30f5bd">_passageiros_voo</a>.push_back(passageiro); }
+<a name="l00140"></a><a class="code" href="class_voo.html#a50028b7f023a36a4f553964d638aad8a">00140</a>         <span class="keywordtype">void</span> <a class="code" href="class_voo.html#a50028b7f023a36a4f553964d638aad8a" title="Adiciona um passageiro à fila de prioridade do voo, que vai ser usada a quando do embarque...">addPassageiroPQ</a>(<a class="code" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a> *passageiro) { <a class="code" href="class_voo.html#a16a41c5dc7a1d02a4e800a6cca8faed0">_passageiros_voo_pq</a>.push(passageiro); }
+<a name="l00142"></a>00142         <span class="keywordtype">void</span> <a class="code" href="class_voo.html#a614816f3b3ca21e480e9ddbd9fb45b15" title="Simula a chegada dos passageiros a uma fila de check-in, criando a queue fila_check_in.">criaFilaCheckIn</a>();
+<a name="l00143"></a>00143 
+<a name="l00145"></a>00145         <span class="keywordtype">bool</span> <a class="code" href="class_voo.html#a6b12e408598d9a7ff08b1384f60e0d92" title="Operador que permite comparar se dois voos são equivalentes, comparando o número do voo...">operator==</a>(<span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> &amp;voo) <span class="keyword">const</span>;
+<a name="l00147"></a>00147         <span class="keywordtype">bool</span> <a class="code" href="class_voo.html#aecdf161b8dade1e001be80c62b80e47b" title="Operador que permite comparar se a hora de partida do voo é menor do que a hora de partida de outro v...">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> &amp;voo) <span class="keyword">const</span>;
+<a name="l00148"></a>00148 };
+<a name="l00149"></a>00149 
+<a name="l00150"></a>00150 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:37 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

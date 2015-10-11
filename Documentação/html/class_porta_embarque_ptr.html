@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência à classe PortaEmbarquePtr</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&nbsp;dos&nbsp;componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a>  </div>
+  <div class="headertitle">
+<h1>Referência à classe PortaEmbarquePtr</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="PortaEmbarquePtr" -->
+<p>Classe que contém apontador para a classe <a class="el" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a> (usada na <a class="el" href="class_b_s_t.html">BST</a>).  
+<a href="#_details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_porta_embarque_8h_source.html">PortaEmbarque.h</a>&gt;</code></p>
+
+<p><a href="class_porta_embarque_ptr-members.html">Mostrar lista completa dos membros</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_porta_embarque_ptr.html#a7607a4192a2ebcab2977683a13ca42bd">PortaEmbarquePtr</a> (<a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *p)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_porta_embarque_ptr.html#af3367f251e044b1dfbe52fd029923191">~PortaEmbarquePtr</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_porta_embarque_ptr.html#ae546544b213ae6c0b0ad2ae52e90a00a">getNumero</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_porta_embarque_ptr.html#a03a43b7310dd97c436d697c607f9178a">getLocalizacao</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_porta_embarque_ptr.html#af6da79734abd9ad7bda5e190386bf619">getCapacidadePass</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_porta_embarque_ptr.html#ac3c7ee5de6c4da95b1764de8c00cc2c6">getVagasPass</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_porta_embarque_ptr.html#a638b4ddb60a140a748813867ff188a2b">getCategoriaAvioes</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_porta_embarque_ptr.html#af934b9e3b7b289f476c44e5761ec711f">operator()</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador que retorna o apontador para a <a class="el" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a>.  <a href="#af934b9e3b7b289f476c44e5761ec711f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_porta_embarque_ptr.html#a42cadf866c2e507d50b50bb3275ec61e">operator==</a> (const <a class="el" href="class_porta_embarque_ptr.html">PortaEmbarquePtr</a> &amp;porta_embarque) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador que permite verificar se duas portas de embarque são equivalentes, comparando o seu número e a sua localização.  <a href="#a42cadf866c2e507d50b50bb3275ec61e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_porta_embarque_ptr.html#a9007f161756a18d197248ca0216aeab0">operator&lt;</a> (const <a class="el" href="class_porta_embarque_ptr.html">PortaEmbarquePtr</a> &amp;porta_embarque) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador que verifica se o número de uma porta de embarque é menor do que outra.  <a href="#a9007f161756a18d197248ca0216aeab0"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_porta_embarque_ptr.html#a03a1252f9b882a4a94921c946f8eed27">porta</a></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<p>Classe que contém apontador para a classe <a class="el" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a> (usada na <a class="el" href="class_b_s_t.html">BST</a>). </p>
+
+<p>Definido na linha <a class="el" href="_porta_embarque_8h_source.html#l00094">94</a> do ficheiro <a class="el" href="_porta_embarque_8h_source.html">PortaEmbarque.h</a>.</p>
+<hr/><h2>Documentação dos Construtores &amp; Destrutor</h2>
+<a class="anchor" id="a7607a4192a2ebcab2977683a13ca42bd"></a><!-- doxytag: member="PortaEmbarquePtr::PortaEmbarquePtr" ref="a7607a4192a2ebcab2977683a13ca42bd" args="(PortaEmbarque *p)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PortaEmbarquePtr::PortaEmbarquePtr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *&nbsp;</td>
+          <td class="paramname"> <em>p</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_porta_embarque_8h_source.html#l00098">98</a> do ficheiro <a class="el" href="_porta_embarque_8h_source.html">PortaEmbarque.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af3367f251e044b1dfbe52fd029923191"></a><!-- doxytag: member="PortaEmbarquePtr::~PortaEmbarquePtr" ref="af3367f251e044b1dfbe52fd029923191" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual PortaEmbarquePtr::~PortaEmbarquePtr </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_porta_embarque_8h_source.html#l00099">99</a> do ficheiro <a class="el" href="_porta_embarque_8h_source.html">PortaEmbarque.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos métodos</h2>
+<a class="anchor" id="af6da79734abd9ad7bda5e190386bf619"></a><!-- doxytag: member="PortaEmbarquePtr::getCapacidadePass" ref="af6da79734abd9ad7bda5e190386bf619" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned PortaEmbarquePtr::getCapacidadePass </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_porta_embarque_8h_source.html#l00103">103</a> do ficheiro <a class="el" href="_porta_embarque_8h_source.html">PortaEmbarque.h</a>.</p>
+
+<p>Referências <a class="el" href="_porta_embarque_8h_source.html#l00057">PortaEmbarque::getCapacidadePass()</a> e <a class="el" href="_porta_embarque_8h_source.html#l00096">porta</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a638b4ddb60a140a748813867ff188a2b"></a><!-- doxytag: member="PortaEmbarquePtr::getCategoriaAvioes" ref="a638b4ddb60a140a748813867ff188a2b" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned PortaEmbarquePtr::getCategoriaAvioes </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_porta_embarque_8h_source.html#l00105">105</a> do ficheiro <a class="el" href="_porta_embarque_8h_source.html">PortaEmbarque.h</a>.</p>
+
+<p>Referências <a class="el" href="_porta_embarque_8h_source.html#l00059">PortaEmbarque::getCategoriaAvioes()</a> e <a class="el" href="_porta_embarque_8h_source.html#l00096">porta</a>.</p>
+
+<p>Referenciado por <a class="el" href="_porta_embarque_8cpp_source.html#l00039">operator&lt;()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a03a43b7310dd97c436d697c607f9178a"></a><!-- doxytag: member="PortaEmbarquePtr::getLocalizacao" ref="a03a43b7310dd97c436d697c607f9178a" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string PortaEmbarquePtr::getLocalizacao </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_porta_embarque_8h_source.html#l00102">102</a> do ficheiro <a class="el" href="_porta_embarque_8h_source.html">PortaEmbarque.h</a>.</p>
+
+<p>Referências <a class="el" href="_porta_embarque_8h_source.html#l00056">PortaEmbarque::getLocalizacao()</a> e <a class="el" href="_porta_embarque_8h_source.html#l00096">porta</a>.</p>
+
+<p>Referenciado por <a class="el" href="_porta_embarque_8cpp_source.html#l00032">operator==()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae546544b213ae6c0b0ad2ae52e90a00a"></a><!-- doxytag: member="PortaEmbarquePtr::getNumero" ref="ae546544b213ae6c0b0ad2ae52e90a00a" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string PortaEmbarquePtr::getNumero </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_porta_embarque_8h_source.html#l00101">101</a> do ficheiro <a class="el" href="_porta_embarque_8h_source.html">PortaEmbarque.h</a>.</p>
+
+<p>Referências <a class="el" href="_porta_embarque_8h_source.html#l00055">PortaEmbarque::getNumero()</a> e <a class="el" href="_porta_embarque_8h_source.html#l00096">porta</a>.</p>
+
+<p>Referenciado por <a class="el" href="_porta_embarque_8cpp_source.html#l00039">operator&lt;()</a> e <a class="el" href="_porta_embarque_8cpp_source.html#l00032">operator==()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac3c7ee5de6c4da95b1764de8c00cc2c6"></a><!-- doxytag: member="PortaEmbarquePtr::getVagasPass" ref="ac3c7ee5de6c4da95b1764de8c00cc2c6" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned PortaEmbarquePtr::getVagasPass </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_porta_embarque_8h_source.html#l00104">104</a> do ficheiro <a class="el" href="_porta_embarque_8h_source.html">PortaEmbarque.h</a>.</p>
+
+<p>Referências <a class="el" href="_porta_embarque_8h_source.html#l00058">PortaEmbarque::getVagasPass()</a> e <a class="el" href="_porta_embarque_8h_source.html#l00096">porta</a>.</p>
+
+<p>Referenciado por <a class="el" href="_porta_embarque_8cpp_source.html#l00039">operator&lt;()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03311">CRUD::updatePortaEmbarqueDisp()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af934b9e3b7b289f476c44e5761ec711f"></a><!-- doxytag: member="PortaEmbarquePtr::operator()" ref="af934b9e3b7b289f476c44e5761ec711f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_porta_embarque.html">PortaEmbarque</a>* PortaEmbarquePtr::operator() </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operador que retorna o apontador para a <a class="el" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a>. </p>
+
+<p>Definido na linha <a class="el" href="_porta_embarque_8h_source.html#l00108">108</a> do ficheiro <a class="el" href="_porta_embarque_8h_source.html">PortaEmbarque.h</a>.</p>
+
+<p>Referências <a class="el" href="_porta_embarque_8h_source.html#l00096">porta</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9007f161756a18d197248ca0216aeab0"></a><!-- doxytag: member="PortaEmbarquePtr::operator&lt;" ref="a9007f161756a18d197248ca0216aeab0" args="(const PortaEmbarquePtr &amp;porta_embarque) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PortaEmbarquePtr::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_porta_embarque_ptr.html">PortaEmbarquePtr</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>porta_embarque</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operador que verifica se o número de uma porta de embarque é menor do que outra. </p>
+
+<p>Definido na linha <a class="el" href="_porta_embarque_8cpp_source.html#l00039">39</a> do ficheiro <a class="el" href="_porta_embarque_8cpp_source.html">PortaEmbarque.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_porta_embarque_8h_source.html#l00105">getCategoriaAvioes()</a>, <a class="el" href="_porta_embarque_8h_source.html#l00059">PortaEmbarque::getCategoriaAvioes()</a>, <a class="el" href="_porta_embarque_8h_source.html#l00101">getNumero()</a>, <a class="el" href="_porta_embarque_8h_source.html#l00055">PortaEmbarque::getNumero()</a>, <a class="el" href="_porta_embarque_8h_source.html#l00104">getVagasPass()</a>, <a class="el" href="_porta_embarque_8h_source.html#l00058">PortaEmbarque::getVagasPass()</a> e <a class="el" href="_porta_embarque_8h_source.html#l00096">porta</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a42cadf866c2e507d50b50bb3275ec61e"></a><!-- doxytag: member="PortaEmbarquePtr::operator==" ref="a42cadf866c2e507d50b50bb3275ec61e" args="(const PortaEmbarquePtr &amp;porta_embarque) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PortaEmbarquePtr::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_porta_embarque_ptr.html">PortaEmbarquePtr</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>porta_embarque</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operador que permite verificar se duas portas de embarque são equivalentes, comparando o seu número e a sua localização. </p>
+
+<p>Definido na linha <a class="el" href="_porta_embarque_8cpp_source.html#l00032">32</a> do ficheiro <a class="el" href="_porta_embarque_8cpp_source.html">PortaEmbarque.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_porta_embarque_8h_source.html#l00102">getLocalizacao()</a>, <a class="el" href="_porta_embarque_8h_source.html#l00056">PortaEmbarque::getLocalizacao()</a>, <a class="el" href="_porta_embarque_8h_source.html#l00101">getNumero()</a>, <a class="el" href="_porta_embarque_8h_source.html#l00055">PortaEmbarque::getNumero()</a> e <a class="el" href="_porta_embarque_8h_source.html#l00096">porta</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos dados membro</h2>
+<a class="anchor" id="a03a1252f9b882a4a94921c946f8eed27"></a><!-- doxytag: member="PortaEmbarquePtr::porta" ref="a03a1252f9b882a4a94921c946f8eed27" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_porta_embarque.html">PortaEmbarque</a>* <a class="el" href="class_porta_embarque_ptr.html#a03a1252f9b882a4a94921c946f8eed27">PortaEmbarquePtr::porta</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_porta_embarque_8h_source.html#l00096">96</a> do ficheiro <a class="el" href="_porta_embarque_8h_source.html">PortaEmbarque.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_porta_embarque_8h_source.html#l00103">getCapacidadePass()</a>, <a class="el" href="_porta_embarque_8h_source.html#l00105">getCategoriaAvioes()</a>, <a class="el" href="_porta_embarque_8h_source.html#l00102">getLocalizacao()</a>, <a class="el" href="_porta_embarque_8h_source.html#l00101">getNumero()</a>, <a class="el" href="_porta_embarque_8h_source.html#l00104">getVagasPass()</a>, <a class="el" href="_porta_embarque_8h_source.html#l00108">operator()()</a>, <a class="el" href="_porta_embarque_8cpp_source.html#l00039">operator&lt;()</a> e <a class="el" href="_porta_embarque_8cpp_source.html#l00032">operator==()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
+<li><a class="el" href="_porta_embarque_8h_source.html">PortaEmbarque.h</a></li>
+<li><a class="el" href="_porta_embarque_8cpp_source.html">PortaEmbarque.cpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:39 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

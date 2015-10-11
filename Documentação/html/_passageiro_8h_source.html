@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Passageiro.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>Passageiro.h</h1>  </div>
+</div>
+<div class="contents">
+<a href="_passageiro_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00015"></a>00015 <span class="preprocessor">#ifndef PASSAGEIRO_H_</span>
+<a name="l00016"></a>00016 <span class="preprocessor"></span><span class="preprocessor">#define PASSAGEIRO_H_</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;<a class="code" href="_pessoa_8h.html" title="Classe que contém informação acerca de uma Pessoa.">Pessoa.h</a>&quot;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &quot;<a class="code" href="utils_8h.html" title="Ficheiro com funções úteis para a interface com o utilizador.">utils.h</a>&quot;</span>
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 <span class="comment">//Foward declaration da classe Voo para evitar mutual includes</span>
+<a name="l00025"></a>00025 <span class="keyword">class </span><a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a>;
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 <span class="keyword">using</span> std::string;
+<a name="l00028"></a>00028 <span class="keyword">using</span> std::vector;
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030 
+<a name="l00035"></a><a class="code" href="class_passageiro.html">00035</a> <span class="keyword">class </span><a class="code" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a> : <span class="keyword">public</span> <a class="code" href="class_pessoa.html" title="Classe que contém informação acerca de uma Pessoa.">Pessoa</a> {
+<a name="l00036"></a>00036 <span class="keyword">public</span>:
+<a name="l00037"></a><a class="code" href="class_passageiro.html#afb52ed49671b6cfa0d55577b68d93dfaa0219e7da93c9643bebb0df36f705db06">00037</a>         <span class="keyword">enum</span> <a class="code" href="class_passageiro.html#afb52ed49671b6cfa0d55577b68d93dfa">necessidades_especiais_t</a> { CADEIRA_RODAS, IDOSO, CRIANCA_DESACOMPANHADA, <a class="code" href="class_passageiro.html#afb52ed49671b6cfa0d55577b68d93dfaa0219e7da93c9643bebb0df36f705db06">SEM_NECESSIDADES_ESPECIAIS</a> };
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 <span class="keyword">private</span>:
+<a name="l00040"></a><a class="code" href="class_passageiro.html#aa45f61ea012de81566e6bc89e3573b66">00040</a>         <span class="keyword">static</span> vector &lt;string&gt; <a class="code" href="class_passageiro.html#aa45f61ea012de81566e6bc89e3573b66">_necessidades_especiais_info</a>;
+<a name="l00041"></a>00041 
+<a name="l00042"></a><a class="code" href="class_passageiro.html#a1d2bb3a6ef259e9c0d3a8fc419ef28ee">00042</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_passageiro.html#a1d2bb3a6ef259e9c0d3a8fc419ef28ee">_necessidades_especiais</a>;
+<a name="l00043"></a><a class="code" href="class_passageiro.html#a96ec39e60a2219ee9ff5c5e21baa6571">00043</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_passageiro.html#a96ec39e60a2219ee9ff5c5e21baa6571">_peso_bagagem</a>;
+<a name="l00044"></a><a class="code" href="class_passageiro.html#a9eb69e91ab23ab5e0ec061be52ab9584">00044</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_passageiro.html#a9eb69e91ab23ab5e0ec061be52ab9584">_numero_lugar_aviao</a>;
+<a name="l00045"></a>00045 
+<a name="l00047"></a><a class="code" href="class_passageiro.html#a9e33a129e0f224a76fb4a1455cbe4f4f">00047</a>         <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *<a class="code" href="class_passageiro.html#a9e33a129e0f224a76fb4a1455cbe4f4f" title="Voo associado ao passageiro.">_voo</a>;
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 <span class="keyword">public</span>:
+<a name="l00051"></a><a class="code" href="class_passageiro.html#af094ae0224f9b9907e81ad6eef45dd1d">00051</a>         <a class="code" href="class_passageiro.html#af094ae0224f9b9907e81ad6eef45dd1d" title="Construtor vazio que inicaliza um Passageiro, com valores inválidos de forma a sinalizar que têm que ...">Passageiro</a>() : <a class="code" href="class_pessoa.html" title="Classe que contém informação acerca de uma Pessoa.">Pessoa</a>(), <a class="code" href="class_passageiro.html#a1d2bb3a6ef259e9c0d3a8fc419ef28ee">_necessidades_especiais</a>(), <a class="code" href="class_passageiro.html#a96ec39e60a2219ee9ff5c5e21baa6571">_peso_bagagem</a>(0), <a class="code" href="class_passageiro.html#a9eb69e91ab23ab5e0ec061be52ab9584">_numero_lugar_aviao</a>(0), <a class="code" href="class_passageiro.html#a9e33a129e0f224a76fb4a1455cbe4f4f" title="Voo associado ao passageiro.">_voo</a>(NULL) {}
+<a name="l00052"></a><a class="code" href="class_passageiro.html#afdd9fd4eaafc3859a58ae6f705b49618">00052</a>         <a class="code" href="class_passageiro.html#af094ae0224f9b9907e81ad6eef45dd1d" title="Construtor vazio que inicaliza um Passageiro, com valores inválidos de forma a sinalizar que têm que ...">Passageiro</a>(<span class="keywordtype">string</span> nome, <span class="keywordtype">string</span> morada, <span class="keywordtype">string</span> nacionalidade, <span class="keywordtype">unsigned</span> contacto, <span class="keywordtype">unsigned</span> BI, <span class="keywordtype">unsigned</span> idade,
+<a name="l00053"></a>00053                         <span class="keywordtype">unsigned</span> necessidades_especiais, <span class="keywordtype">unsigned</span> peso_bagagem, <span class="keywordtype">unsigned</span> numero_lugar_aviao, <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo = NULL) :
+<a name="l00054"></a>00054                 <a class="code" href="class_pessoa.html" title="Classe que contém informação acerca de uma Pessoa.">Pessoa</a>(nome, morada, nacionalidade, contacto, BI, idade),
+<a name="l00055"></a>00055                 <a class="code" href="class_passageiro.html#a1d2bb3a6ef259e9c0d3a8fc419ef28ee">_necessidades_especiais</a>(necessidades_especiais), <a class="code" href="class_passageiro.html#a96ec39e60a2219ee9ff5c5e21baa6571">_peso_bagagem</a>(peso_bagagem), <a class="code" href="class_passageiro.html#a9eb69e91ab23ab5e0ec061be52ab9584">_numero_lugar_aviao</a>(numero_lugar_aviao), <a class="code" href="class_passageiro.html#a9e33a129e0f224a76fb4a1455cbe4f4f" title="Voo associado ao passageiro.">_voo</a>(voo) {}
+<a name="l00056"></a>00056 
+<a name="l00057"></a><a class="code" href="class_passageiro.html#a5fdfa8906ad98650c4af8184dd443604">00057</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_passageiro.html#a5fdfa8906ad98650c4af8184dd443604">getNecessidades_especiais</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_passageiro.html#a1d2bb3a6ef259e9c0d3a8fc419ef28ee">_necessidades_especiais</a>; }
+<a name="l00058"></a><a class="code" href="class_passageiro.html#ad15d557d4993798f2a0a53ce6b1f369b">00058</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_passageiro.html#ad15d557d4993798f2a0a53ce6b1f369b">getPesoBagagem</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_passageiro.html#a96ec39e60a2219ee9ff5c5e21baa6571">_peso_bagagem</a>; }
+<a name="l00059"></a><a class="code" href="class_passageiro.html#adbc8e53b535a129f511384c1f245cf18">00059</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_passageiro.html#adbc8e53b535a129f511384c1f245cf18">getNumeroLugarAviao</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_passageiro.html#a9eb69e91ab23ab5e0ec061be52ab9584">_numero_lugar_aviao</a>; }
+<a name="l00060"></a><a class="code" href="class_passageiro.html#aaebcbee7f9a47100ecfb854e2145a4c8">00060</a>         <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a>* <a class="code" href="class_passageiro.html#aaebcbee7f9a47100ecfb854e2145a4c8">getVoo</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_passageiro.html#a9e33a129e0f224a76fb4a1455cbe4f4f" title="Voo associado ao passageiro.">_voo</a>; }
+<a name="l00061"></a>00061 
+<a name="l00062"></a><a class="code" href="class_passageiro.html#ac6c44762e31c2083f86063bc2932381b">00062</a>         <span class="keywordtype">void</span> <a class="code" href="class_passageiro.html#ac6c44762e31c2083f86063bc2932381b">setNecessidades_especiais</a>(<span class="keywordtype">unsigned</span> necessidades_especiais) { <a class="code" href="class_passageiro.html#a1d2bb3a6ef259e9c0d3a8fc419ef28ee">_necessidades_especiais</a> = necessidades_especiais; }
+<a name="l00063"></a><a class="code" href="class_passageiro.html#af65dc30afe68f55507f7f14d208634b7">00063</a>         <span class="keywordtype">void</span> <a class="code" href="class_passageiro.html#af65dc30afe68f55507f7f14d208634b7">setPesoBagagem</a>(<span class="keywordtype">unsigned</span> peso_bagagem) { <a class="code" href="class_passageiro.html#a96ec39e60a2219ee9ff5c5e21baa6571">_peso_bagagem</a> = peso_bagagem; }
+<a name="l00064"></a><a class="code" href="class_passageiro.html#a81544c399ed2c88805706cdfd517a980">00064</a>         <span class="keywordtype">void</span> <a class="code" href="class_passageiro.html#a81544c399ed2c88805706cdfd517a980">setNumeroLugarAviao</a>(<span class="keywordtype">unsigned</span> numero_lugar_aviao) { <a class="code" href="class_passageiro.html#a9eb69e91ab23ab5e0ec061be52ab9584">_numero_lugar_aviao</a> = numero_lugar_aviao; }
+<a name="l00065"></a><a class="code" href="class_passageiro.html#afdb66371f41c5af271191e5ebba067ba">00065</a>         <span class="keywordtype">void</span> <a class="code" href="class_passageiro.html#afdb66371f41c5af271191e5ebba067ba">setVoo</a>(<a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo) { <a class="code" href="class_passageiro.html#a9e33a129e0f224a76fb4a1455cbe4f4f" title="Voo associado ao passageiro.">_voo</a> = voo; }
+<a name="l00066"></a>00066 
+<a name="l00068"></a>00068         <span class="keywordtype">bool</span> <a class="code" href="class_passageiro.html#ae9bbaedcd746b8602a9d77fabd035ea8" title="Operador que verifica se dois passageiros são equivalentes, verificando se têm o mesmo voo e mesmo nú...">operator==</a>(<span class="keyword">const</span> <a class="code" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a> &amp;passageiro);
+<a name="l00069"></a>00069 
+<a name="l00074"></a>00074         <span class="keywordtype">bool</span> <a class="code" href="class_passageiro.html#a9186b400490815bea8bafa9cfaf354e1" title="Operador que verifica se o número do lugar do avião de um Passageiro é menor do que outro Passageiro...">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a> &amp;passageiro) <span class="keyword">const</span>;
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_passageiro.html#a2553ea40c89d848a28e4440b8ca43179">init_necessidades_especiais_info</a>();
+<a name="l00077"></a><a class="code" href="class_passageiro.html#aa838b0d371ae6a02ad6b0c1dce312bbb">00077</a>         <span class="keyword">static</span> vector &lt;string&gt; &amp;<a class="code" href="class_passageiro.html#aa838b0d371ae6a02ad6b0c1dce312bbb">getRefNecessidadesEspeciaisInfo</a>() { <span class="keywordflow">return</span> <a class="code" href="class_passageiro.html#aa45f61ea012de81566e6bc89e3573b66">_necessidades_especiais_info</a>; }
+<a name="l00078"></a><a class="code" href="class_passageiro.html#a57a107794c535626ab99cd3b1b23fe32">00078</a>         <span class="keyword">static</span> <span class="keywordtype">string</span> <a class="code" href="class_passageiro.html#a57a107794c535626ab99cd3b1b23fe32">getInfoEnumNecessidadesEspeciais</a>(<span class="keywordtype">unsigned</span> nc_t){
+<a name="l00079"></a>00079                 <span class="keywordflow">if</span>(nc_t &gt;= <a class="code" href="class_passageiro.html#aa45f61ea012de81566e6bc89e3573b66">_necessidades_especiais_info</a>.size())
+<a name="l00080"></a>00080                         <span class="keywordflow">throw</span> <a class="code" href="class_ex_out_of_range.html" title="Classe usada no tratamento de excepções que sinaliza que um elemento que se está a tentar aceder está...">ExOutOfRange</a>();
+<a name="l00081"></a>00081                 <span class="keywordflow">else</span>
+<a name="l00082"></a>00082                         <span class="keywordflow">return</span> <a class="code" href="class_passageiro.html#aa45f61ea012de81566e6bc89e3573b66">_necessidades_especiais_info</a>[(size_t)nc_t];
+<a name="l00083"></a>00083         }
+<a name="l00084"></a>00084         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_passageiro.html#a480bf0bff877ec31f339b9194b38052a">listNecessidadesEspeciaisInfo</a>();
+<a name="l00085"></a>00085 };
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:37 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

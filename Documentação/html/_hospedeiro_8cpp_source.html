@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Hospedeiro.cpp Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>Hospedeiro.cpp</h1>  </div>
+</div>
+<div class="contents">
+<a href="_hospedeiro_8cpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_hospedeiro_8h.html" title="Classe que contém a informação associada a cada plano de voos de uma companhia aérea.">Hospedeiro.h</a>&quot;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a><a class="code" href="class_hospedeiro.html#a9074089f735d2e19633f31fc0cd8c3c6">00017</a> <span class="keywordtype">void</span> <a class="code" href="class_hospedeiro.html#a9074089f735d2e19633f31fc0cd8c3c6">Hospedeiro::imprimeInfo</a>()
+<a name="l00018"></a>00018 {
+<a name="l00019"></a>00019         <span class="keywordtype">string</span> str_title = <span class="stringliteral">&quot;Informações sobre o tripulante&quot;</span>;
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021         vector &lt;string&gt; colNames;                                       <span class="comment">// nomes de colunas não são usados, logo vão strings vazias</span>
+<a name="l00022"></a>00022         colNames.push_back(<span class="keywordtype">string</span>(<span class="stringliteral">&quot;&quot;</span>));
+<a name="l00023"></a>00023         colNames.push_back(<span class="keywordtype">string</span>(<span class="stringliteral">&quot;&quot;</span>));
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025         vector &lt; vector&lt;string&gt; &gt; col;
+<a name="l00026"></a>00026         vector &lt;string&gt; dados;
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028         <span class="comment">//Nomes dos atributos</span>
+<a name="l00029"></a>00029         col.push_back(<a class="code" href="class_comandos.html#af649f76bdde499082c751c191780dddc">Comandos::_tripulante_op_list</a>);
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031         <span class="comment">//dados referentes à superclasse Pessoa</span>
+<a name="l00032"></a>00032         dados.push_back( <a class="code" href="class_pessoa.html#a8d4d2f40ba5634f49b0ce181fee7f0a7">getNome</a>() );
+<a name="l00033"></a>00033         dados.push_back( <a class="code" href="class_pessoa.html#ac8fe94831a8f7fb219ccf3b970be9339">getMorada</a>() );
+<a name="l00034"></a>00034         dados.push_back( <a class="code" href="class_pessoa.html#a9e738fdea54649d2a265db3b3fd023a7">getNacionalidade</a>() );
+<a name="l00035"></a>00035         dados.push_back( to_string&lt;unsigned&gt;(<a class="code" href="class_pessoa.html#a30c7fb4ef95a8602cae34bedc0c0b140">getContacto</a>()) );
+<a name="l00036"></a>00036         dados.push_back( to_string&lt;unsigned&gt;(<a class="code" href="class_pessoa.html#a0f98792e85f39c8ec73b16f18733ab2e">getBI</a>()) );
+<a name="l00037"></a>00037         dados.push_back( to_string&lt;unsigned&gt;(<a class="code" href="class_pessoa.html#a1f19e7ce09adedfbe6ca5d21a00a6107">getIdade</a>()) );
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039         <span class="comment">//Dados referentes à subclasse tripulante</span>
+<a name="l00040"></a>00040         dados.push_back( to_string&lt;unsigned&gt;(<a class="code" href="class_tripulante.html#a3df2f3250f9d3ac8f70c18a2071aab16">getNumero</a>()) );
+<a name="l00041"></a>00041         dados.push_back( <a class="code" href="class_tripulante.html#a44030a837e2e1297adfcca6d1bc9edca">getCategoria</a>() );
+<a name="l00042"></a>00042         dados.push_back( to_string&lt;unsigned&gt;(<a class="code" href="class_tripulante.html#aac3a702d3255f7ae7ddca69906e73941">getSalarioHora</a>()) );
+<a name="l00043"></a>00043         dados.push_back( to_string&lt;unsigned&gt;(<a class="code" href="class_tripulante.html#a6cd43d9402fedfb8b9e1d2097d22792f">getNumeroHorasTrabalho</a>()) );
+<a name="l00044"></a>00044         dados.push_back( <a class="code" href="class_tripulante.html#ae0d99e70be5f1c6fbed796c9a1ecc143">getTipoContrato</a>() );
+<a name="l00045"></a>00045         dados.push_back( to_string&lt;DataHora&gt;(<a class="code" href="class_tripulante.html#a688488b096effc981db9326fad4c92c0">getExpiracaoContrato</a>()) );
+<a name="l00046"></a>00046         dados.push_back( <a class="code" href="class_tripulante.html#aab4faafb1d3abc41ea3b25058f8c0e1c">getCompanhia</a>()-&gt;<a class="code" href="class_pessoa.html#a8d4d2f40ba5634f49b0ce181fee7f0a7">getNome</a>() );
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048         <span class="keywordflow">if</span> (<a class="code" href="class_tripulante.html#a50d33c84ed628733becd0e37d7210cb4">getVooActual</a>() == NULL)
+<a name="l00049"></a>00049                 dados.push_back((<span class="keywordtype">string</span>)<span class="stringliteral">&quot;N/A&quot;</span>);
+<a name="l00050"></a>00050         <span class="keywordflow">else</span>
+<a name="l00051"></a>00051                 dados.push_back( to_string&lt;unsigned&gt;(<a class="code" href="class_tripulante.html#a50d33c84ed628733becd0e37d7210cb4">getVooActual</a>()-&gt;getNumeroVoo()) );
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054         <span class="comment">//Dados relativos aos atributos</span>
+<a name="l00055"></a>00055         col.push_back(dados);
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057         <a class="code" href="utils_8cpp.html#a0daf13ac8da9785b3895a6d1e48d4a2f" title="Método que imprime uma tabela com os dados de um vector de colunas (vector de strings).">printMenu</a>(str_title, col, colNames, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
+<a name="l00058"></a>00058 }
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:36 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

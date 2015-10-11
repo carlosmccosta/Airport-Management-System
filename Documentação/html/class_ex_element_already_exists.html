@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência à classe Template ExElementAlreadyExists&lt; T &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&nbsp;dos&nbsp;componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a>  </div>
+  <div class="headertitle">
+<h1>Referência à classe Template ExElementAlreadyExists&lt; T &gt;</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="ExElementAlreadyExists" --><!-- doxytag: inherits="Exceptions" -->
+<p>Classe usada no tratamento de excepções que sinaliza que um dado elemento já existe num dado contentor.  
+<a href="#_details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png"/> Diagrama de heranças da classe ExElementAlreadyExists&lt; T &gt;</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+ <div class="center">
+  <img src="class_ex_element_already_exists.png" usemap="#ExElementAlreadyExists&lt; T &gt;_map" alt=""/>
+  <map id="ExElementAlreadyExists&lt; T &gt;_map" name="ExElementAlreadyExists&lt; T &gt;_map">
+<area href="class_exceptions.html" alt="Exceptions" shape="rect" coords="0,0,178,24"/>
+</map>
+</div>
+
+<p><a href="class_ex_element_already_exists-members.html">Mostrar lista completa dos membros</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ex_element_already_exists.html#ae8fc9dee9283b307a0ada787cde95f42">ExElementAlreadyExists</a> (T elemento_repetido, const char *pStr=&quot;Elemento já existe no vector!&quot;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ex_element_already_exists.html#ab11978f2b8ba5369cf3fb63699f702c2">~ExElementAlreadyExists</a> ()  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">T&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ex_element_already_exists.html#a707561b0aed9979c9c2f136b76a1899b">getElementoRepetido</a> () const </td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">T&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ex_element_already_exists.html#a39a93912c36c19a0cccb50d90f8150ca">_elementoRepetido</a></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<h3>template&lt;class T&gt;<br/>
+ class ExElementAlreadyExists&lt; T &gt;</h3>
+
+<p>Classe usada no tratamento de excepções que sinaliza que um dado elemento já existe num dado contentor. </p>
+
+<p>Definido na linha <a class="el" href="_exceptions_8h_source.html#l00055">55</a> do ficheiro <a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>.</p>
+<hr/><h2>Documentação dos Construtores &amp; Destrutor</h2>
+<a class="anchor" id="ae8fc9dee9283b307a0ada787cde95f42"></a><!-- doxytag: member="ExElementAlreadyExists::ExElementAlreadyExists" ref="ae8fc9dee9283b307a0ada787cde95f42" args="(T elemento_repetido, const char *pStr=&quot;Elemento já existe no vector!&quot;)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_ex_element_already_exists.html">ExElementAlreadyExists</a>&lt; T &gt;::<a class="el" href="class_ex_element_already_exists.html">ExElementAlreadyExists</a> </td>
+          <td>(</td>
+          <td class="paramtype">T&nbsp;</td>
+          <td class="paramname"> <em>elemento_repetido</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>pStr</em> = <code>&quot;Elemento&nbsp;já&nbsp;existe&nbsp;no&nbsp;vector!&quot;</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, explicit]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_exceptions_8h_source.html#l00059">59</a> do ficheiro <a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab11978f2b8ba5369cf3fb63699f702c2"></a><!-- doxytag: member="ExElementAlreadyExists::~ExElementAlreadyExists" ref="ab11978f2b8ba5369cf3fb63699f702c2" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_ex_element_already_exists.html">ExElementAlreadyExists</a>&lt; T &gt;::~<a class="el" href="class_ex_element_already_exists.html">ExElementAlreadyExists</a> </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td>  throw ()<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_exceptions_8h_source.html#l00061">61</a> do ficheiro <a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos métodos</h2>
+<a class="anchor" id="a707561b0aed9979c9c2f136b76a1899b"></a><!-- doxytag: member="ExElementAlreadyExists::getElementoRepetido" ref="a707561b0aed9979c9c2f136b76a1899b" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="class_ex_element_already_exists.html">ExElementAlreadyExists</a>&lt; T &gt;::getElementoRepetido </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_exceptions_8h_source.html#l00063">63</a> do ficheiro <a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>.</p>
+
+<p>Referências <a class="el" href="_exceptions_8h_source.html#l00057">ExElementAlreadyExists&lt; T &gt;::_elementoRepetido</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos dados membro</h2>
+<a class="anchor" id="a39a93912c36c19a0cccb50d90f8150ca"></a><!-- doxytag: member="ExElementAlreadyExists::_elementoRepetido" ref="a39a93912c36c19a0cccb50d90f8150ca" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="class_ex_element_already_exists.html">ExElementAlreadyExists</a>&lt; T &gt;::<a class="el" href="class_ex_element_already_exists.html#a39a93912c36c19a0cccb50d90f8150ca">_elementoRepetido</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_exceptions_8h_source.html#l00057">57</a> do ficheiro <a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_exceptions_8h_source.html#l00063">ExElementAlreadyExists&lt; T &gt;::getElementoRepetido()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir do seguinte ficheiro:<ul>
+<li><a class="el" href="_exceptions_8h_source.html">Exceptions.h</a></li>
+</ul>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:39 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Tripulante.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>Tripulante.h</h1>  </div>
+</div>
+<div class="contents">
+<a href="_tripulante_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00015"></a>00015 <span class="preprocessor">#ifndef TRIPULANTE_H_</span>
+<a name="l00016"></a>00016 <span class="preprocessor"></span><span class="preprocessor">#define TRIPULANTE_H_</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;<a class="code" href="_pessoa_8h.html" title="Classe que contém informação acerca de uma Pessoa.">Pessoa.h</a>&quot;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="_data_hora_8h.html" title="Classe que contém informação associada a uma data e hora.">DataHora.h</a>&quot;</span>
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 <span class="comment">//Foward declarations de classes necessárias (pointers)</span>
+<a name="l00022"></a>00022 <span class="keyword">class </span><a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a>;
+<a name="l00023"></a>00023 <span class="keyword">class </span><a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a>;
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 <span class="keyword">using</span> std::string;
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 
+<a name="l00034"></a><a class="code" href="class_tripulante.html">00034</a> <span class="keyword">class </span><a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> : <span class="keyword">public</span> <a class="code" href="class_pessoa.html" title="Classe que contém informação acerca de uma Pessoa.">Pessoa</a> {
+<a name="l00035"></a>00035 <span class="keyword">private</span>:
+<a name="l00036"></a><a class="code" href="class_tripulante.html#ac5c09f678f2c39408b65503b603c9f08">00036</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tripulante.html#ac5c09f678f2c39408b65503b603c9f08" title="Ex: 230.">_numero</a>;                               
+<a name="l00037"></a><a class="code" href="class_tripulante.html#a77fc9d58a66013d14626fa716c88745e">00037</a>         <span class="keywordtype">string</span> <a class="code" href="class_tripulante.html#a77fc9d58a66013d14626fa716c88745e" title="Ex: Cte.">_categoria</a>;                              
+<a name="l00038"></a><a class="code" href="class_tripulante.html#ac2cd43f6ee8bd6205db739deb637cb1e">00038</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tripulante.html#ac2cd43f6ee8bd6205db739deb637cb1e" title="Ex: 120.">_salario_hora</a>;                 
+<a name="l00039"></a><a class="code" href="class_tripulante.html#a1a8b67fb2c10167d650a110e1591d0ce">00039</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tripulante.html#a1a8b67fb2c10167d650a110e1591d0ce">_numero_horas_trabalho</a>;
+<a name="l00040"></a>00040 
+<a name="l00041"></a><a class="code" href="class_tripulante.html#a9f43567d6ab897518c36ef5b741ce0fd">00041</a>         <span class="keywordtype">string</span> <a class="code" href="class_tripulante.html#a9f43567d6ab897518c36ef5b741ce0fd">_tipoContrato</a>;
+<a name="l00042"></a><a class="code" href="class_tripulante.html#a310248d910481969c96be4bf800768ec">00042</a>         <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> <a class="code" href="class_tripulante.html#a310248d910481969c96be4bf800768ec">_expiracaoContrato</a>;
+<a name="l00043"></a><a class="code" href="class_tripulante.html#a769fa405cc612e2b0a4c714c168a0261">00043</a>         <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *<a class="code" href="class_tripulante.html#a769fa405cc612e2b0a4c714c168a0261" title="Companhia a que pertence o tripulante.">_companhia</a>;                  
+<a name="l00044"></a><a class="code" href="class_tripulante.html#ac3cd313149603d062634ed9a92186305">00044</a>         <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *<a class="code" href="class_tripulante.html#ac3cd313149603d062634ed9a92186305" title="Voo a que o tripulante está associado num dado momento (NULL, se não tem voo atribuido).">_voo_actual</a>;                               
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 <span class="keyword">public</span>:
+<a name="l00047"></a><a class="code" href="class_tripulante.html#acf8b868a9ba69e34191f54d83af5cd88">00047</a>         <a class="code" href="class_tripulante.html#acf8b868a9ba69e34191f54d83af5cd88">Tripulante</a>(): <a class="code" href="class_tripulante.html#ac5c09f678f2c39408b65503b603c9f08" title="Ex: 230.">_numero</a>(0), <a class="code" href="class_tripulante.html#ac2cd43f6ee8bd6205db739deb637cb1e" title="Ex: 120.">_salario_hora</a>(0), <a class="code" href="class_tripulante.html#a769fa405cc612e2b0a4c714c168a0261" title="Companhia a que pertence o tripulante.">_companhia</a>(NULL), <a class="code" href="class_tripulante.html#ac3cd313149603d062634ed9a92186305" title="Voo a que o tripulante está associado num dado momento (NULL, se não tem voo atribuido).">_voo_actual</a>(NULL) {}
+<a name="l00048"></a>00048         <span class="comment">//(numero, categoria, nome, salario hora)</span>
+<a name="l00049"></a>00049         <span class="comment">//&lt;230, Cte, Pinto da Costa, 120&gt;</span>
+<a name="l00050"></a><a class="code" href="class_tripulante.html#a3a7f650482ab432caf019f1fb0d03bf2">00050</a>         <a class="code" href="class_tripulante.html#acf8b868a9ba69e34191f54d83af5cd88">Tripulante</a>(<span class="keywordtype">unsigned</span> numero, <span class="keywordtype">string</span> categoria, <span class="keywordtype">string</span> nome, <span class="keywordtype">unsigned</span> salario_hora):
+<a name="l00051"></a>00051                 <a class="code" href="class_pessoa.html" title="Classe que contém informação acerca de uma Pessoa.">Pessoa</a>(), <a class="code" href="class_tripulante.html#ac5c09f678f2c39408b65503b603c9f08" title="Ex: 230.">_numero</a>(numero), <a class="code" href="class_tripulante.html#a77fc9d58a66013d14626fa716c88745e" title="Ex: Cte.">_categoria</a>(categoria), <a class="code" href="class_tripulante.html#ac2cd43f6ee8bd6205db739deb637cb1e" title="Ex: 120.">_salario_hora</a>(salario_hora) { <a class="code" href="class_pessoa.html#ab059a835c4aa05bd77dcc58297fca331">setNome</a>(nome); }
+<a name="l00052"></a><a class="code" href="class_tripulante.html#ac761e40c792cc08abef0b11a068a222c">00052</a>         <a class="code" href="class_tripulante.html#acf8b868a9ba69e34191f54d83af5cd88">Tripulante</a>(<span class="keywordtype">string</span> nome, <span class="keywordtype">string</span> morada, <span class="keywordtype">string</span> nacionalidade, <span class="keywordtype">unsigned</span> contacto, <span class="keywordtype">unsigned</span> BI, <span class="keywordtype">unsigned</span> idade,
+<a name="l00053"></a>00053                         <span class="keywordtype">unsigned</span> numero, <span class="keywordtype">string</span> categoria, <span class="keywordtype">unsigned</span> salario_hora, <span class="keywordtype">unsigned</span> numero_horas_trabalho, <span class="keywordtype">string</span> tipoContrato, <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> expiracaoContrato,
+<a name="l00054"></a>00054                         <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia, <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo_actual) :
+<a name="l00055"></a>00055                                 <a class="code" href="class_pessoa.html" title="Classe que contém informação acerca de uma Pessoa.">Pessoa</a>(nome, morada, nacionalidade, contacto, BI, idade),
+<a name="l00056"></a>00056                                 <a class="code" href="class_tripulante.html#ac5c09f678f2c39408b65503b603c9f08" title="Ex: 230.">_numero</a>(numero), <a class="code" href="class_tripulante.html#a77fc9d58a66013d14626fa716c88745e" title="Ex: Cte.">_categoria</a>(categoria), <a class="code" href="class_tripulante.html#ac2cd43f6ee8bd6205db739deb637cb1e" title="Ex: 120.">_salario_hora</a>(salario_hora), <a class="code" href="class_tripulante.html#a1a8b67fb2c10167d650a110e1591d0ce">_numero_horas_trabalho</a>(numero_horas_trabalho),
+<a name="l00057"></a>00057                                 <a class="code" href="class_tripulante.html#a9f43567d6ab897518c36ef5b741ce0fd">_tipoContrato</a>(tipoContrato), <a class="code" href="class_tripulante.html#a310248d910481969c96be4bf800768ec">_expiracaoContrato</a>(expiracaoContrato),
+<a name="l00058"></a>00058                                 <a class="code" href="class_tripulante.html#a769fa405cc612e2b0a4c714c168a0261" title="Companhia a que pertence o tripulante.">_companhia</a>(companhia), <a class="code" href="class_tripulante.html#ac3cd313149603d062634ed9a92186305" title="Voo a que o tripulante está associado num dado momento (NULL, se não tem voo atribuido).">_voo_actual</a>(voo_actual) {}
+<a name="l00059"></a><a class="code" href="class_tripulante.html#a2f599e091366fa210f26d0157e3ce362">00059</a>         <span class="keyword">virtual</span> <a class="code" href="class_tripulante.html#a2f599e091366fa210f26d0157e3ce362">~Tripulante</a>() {}
+<a name="l00060"></a>00060 
+<a name="l00061"></a><a class="code" href="class_tripulante.html#a3df2f3250f9d3ac8f70c18a2071aab16">00061</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tripulante.html#a3df2f3250f9d3ac8f70c18a2071aab16">getNumero</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tripulante.html#ac5c09f678f2c39408b65503b603c9f08" title="Ex: 230.">_numero</a>; }
+<a name="l00062"></a><a class="code" href="class_tripulante.html#a44030a837e2e1297adfcca6d1bc9edca">00062</a>         <span class="keywordtype">string</span> <a class="code" href="class_tripulante.html#a44030a837e2e1297adfcca6d1bc9edca">getCategoria</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tripulante.html#a77fc9d58a66013d14626fa716c88745e" title="Ex: Cte.">_categoria</a>; }
+<a name="l00063"></a><a class="code" href="class_tripulante.html#aac3a702d3255f7ae7ddca69906e73941">00063</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tripulante.html#aac3a702d3255f7ae7ddca69906e73941">getSalarioHora</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tripulante.html#ac2cd43f6ee8bd6205db739deb637cb1e" title="Ex: 120.">_salario_hora</a>; }
+<a name="l00064"></a><a class="code" href="class_tripulante.html#a6cd43d9402fedfb8b9e1d2097d22792f">00064</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tripulante.html#a6cd43d9402fedfb8b9e1d2097d22792f">getNumeroHorasTrabalho</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tripulante.html#a1a8b67fb2c10167d650a110e1591d0ce">_numero_horas_trabalho</a>; }
+<a name="l00065"></a><a class="code" href="class_tripulante.html#ae0d99e70be5f1c6fbed796c9a1ecc143">00065</a>         <span class="keywordtype">string</span> <a class="code" href="class_tripulante.html#ae0d99e70be5f1c6fbed796c9a1ecc143">getTipoContrato</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tripulante.html#a9f43567d6ab897518c36ef5b741ce0fd">_tipoContrato</a>; }
+<a name="l00066"></a><a class="code" href="class_tripulante.html#a688488b096effc981db9326fad4c92c0">00066</a>         <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> <a class="code" href="class_tripulante.html#a688488b096effc981db9326fad4c92c0">getExpiracaoContrato</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tripulante.html#a310248d910481969c96be4bf800768ec">_expiracaoContrato</a>; }
+<a name="l00067"></a><a class="code" href="class_tripulante.html#aab4faafb1d3abc41ea3b25058f8c0e1c">00067</a>         <a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a>* <a class="code" href="class_tripulante.html#aab4faafb1d3abc41ea3b25058f8c0e1c">getCompanhia</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tripulante.html#a769fa405cc612e2b0a4c714c168a0261" title="Companhia a que pertence o tripulante.">_companhia</a>; }
+<a name="l00068"></a><a class="code" href="class_tripulante.html#a50d33c84ed628733becd0e37d7210cb4">00068</a>         <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a>* <a class="code" href="class_tripulante.html#a50d33c84ed628733becd0e37d7210cb4">getVooActual</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tripulante.html#ac3cd313149603d062634ed9a92186305" title="Voo a que o tripulante está associado num dado momento (NULL, se não tem voo atribuido).">_voo_actual</a>; }
+<a name="l00069"></a>00069 
+<a name="l00070"></a><a class="code" href="class_tripulante.html#ae3f8bf520740dc033fa77f41d81a98c4">00070</a>         <span class="keywordtype">void</span> <a class="code" href="class_tripulante.html#ae3f8bf520740dc033fa77f41d81a98c4">setNumero</a>(<span class="keywordtype">unsigned</span> numero) { <a class="code" href="class_tripulante.html#ac5c09f678f2c39408b65503b603c9f08" title="Ex: 230.">_numero</a> = numero; }
+<a name="l00071"></a><a class="code" href="class_tripulante.html#a369d9f8de001b8c7bd711e78165c6c22">00071</a>         <span class="keywordtype">void</span> <a class="code" href="class_tripulante.html#a369d9f8de001b8c7bd711e78165c6c22">setCategoria</a>(<span class="keywordtype">string</span> categoria) { <a class="code" href="class_tripulante.html#a77fc9d58a66013d14626fa716c88745e" title="Ex: Cte.">_categoria</a> = categoria; }
+<a name="l00072"></a><a class="code" href="class_tripulante.html#a83c2acb5ee881d6e7053ce3f2cd7cca3">00072</a>         <span class="keywordtype">void</span> <a class="code" href="class_tripulante.html#a83c2acb5ee881d6e7053ce3f2cd7cca3">setSalarioHora</a>(<span class="keywordtype">unsigned</span> salario_hora) { <a class="code" href="class_tripulante.html#ac2cd43f6ee8bd6205db739deb637cb1e" title="Ex: 120.">_salario_hora</a> = salario_hora; }
+<a name="l00073"></a><a class="code" href="class_tripulante.html#a37a068d67f3cf0d9940a1f91702b2c39">00073</a>         <span class="keywordtype">void</span> <a class="code" href="class_tripulante.html#a37a068d67f3cf0d9940a1f91702b2c39">setNumeroHorasTrabalho</a>(<span class="keywordtype">unsigned</span> numero_horas_trabalho) { <a class="code" href="class_tripulante.html#a1a8b67fb2c10167d650a110e1591d0ce">_numero_horas_trabalho</a> = numero_horas_trabalho; }
+<a name="l00074"></a><a class="code" href="class_tripulante.html#aa80112b02ed1dc5e4761416be05a66e8">00074</a>         <span class="keywordtype">void</span> <a class="code" href="class_tripulante.html#aa80112b02ed1dc5e4761416be05a66e8">setTipoContrato</a>(<span class="keywordtype">string</span> tipoContrato) { <a class="code" href="class_tripulante.html#a9f43567d6ab897518c36ef5b741ce0fd">_tipoContrato</a> = tipoContrato; }
+<a name="l00075"></a><a class="code" href="class_tripulante.html#aaaf5e80599d2d302bb2ae1cb66c5e5b4">00075</a>         <span class="keywordtype">void</span> <a class="code" href="class_tripulante.html#aaaf5e80599d2d302bb2ae1cb66c5e5b4">setExpiracaoContrato</a>(<a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> expericaoContrato) { <a class="code" href="class_tripulante.html#a310248d910481969c96be4bf800768ec">_expiracaoContrato</a> = expericaoContrato; }
+<a name="l00076"></a><a class="code" href="class_tripulante.html#a3203f5309c8e9abba588dd91333cef15">00076</a>         <span class="keywordtype">void</span> <a class="code" href="class_tripulante.html#a3203f5309c8e9abba588dd91333cef15">setCompanhia</a>(<a class="code" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> *companhia) { <a class="code" href="class_tripulante.html#a769fa405cc612e2b0a4c714c168a0261" title="Companhia a que pertence o tripulante.">_companhia</a> = companhia; }
+<a name="l00077"></a><a class="code" href="class_tripulante.html#a43d4effe59eec6b59227a38af7aaa6c5">00077</a>         <span class="keywordtype">void</span> <a class="code" href="class_tripulante.html#a43d4effe59eec6b59227a38af7aaa6c5">setVooActual</a>(<a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo_actual) { <a class="code" href="class_tripulante.html#ac3cd313149603d062634ed9a92186305" title="Voo a que o tripulante está associado num dado momento (NULL, se não tem voo atribuido).">_voo_actual</a> = voo_actual; }
+<a name="l00078"></a>00078 
+<a name="l00079"></a><a class="code" href="class_tripulante.html#aa9891cda180d186d3c0a7736496162ea">00079</a>         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_tripulante.html#aa9891cda180d186d3c0a7736496162ea">imprimeInfo</a>()<span class="keyword"> const </span>{}
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 
+<a name="l00083"></a>00083         <span class="keywordtype">bool</span> <a class="code" href="class_tripulante.html#ac617205356cd92970520a130bfc5062c" title="Operador que verifica se dois tripulantes são equivalentes, comparando o seu número.">operator==</a>(<span class="keyword">const</span> <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> &amp;tripulante) <span class="keyword">const</span>;
+<a name="l00085"></a>00085         <span class="keywordtype">bool</span> <a class="code" href="class_tripulante.html#ac617205356cd92970520a130bfc5062c" title="Operador que verifica se dois tripulantes são equivalentes, comparando o seu número.">operator==</a>(<span class="keyword">const</span> <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a>* &amp;tripulante) <span class="keyword">const</span>;
+<a name="l00086"></a>00086 
+<a name="l00091"></a>00091         <span class="keywordtype">bool</span> <a class="code" href="class_tripulante.html#a00956ee92b67a4b207e288387965a80f" title="Operador que verifica se o nome de um Tripulante é &amp;quot;menor&amp;quot; do que outro.">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> &amp;tripulante) <span class="keyword">const</span>;
+<a name="l00092"></a>00092 };
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:37 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

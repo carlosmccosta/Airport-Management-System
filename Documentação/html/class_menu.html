@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência à classe Menu</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&nbsp;dos&nbsp;componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Componentes</a> &#124;
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pub-static-methods">Membros públicos estáticos</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a>  </div>
+  <div class="headertitle">
+<h1>Referência à classe Menu</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Menu" -->
+<p>Classe que gera e processa menus.  
+<a href="#_details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_menu_8h_source.html">Menu.h</a>&gt;</code></p>
+
+<p><a href="class_menu-members.html">Mostrar lista completa dos membros</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Componentes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu_1_1_function_entry.html">FunctionEntry</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Subclasse de <a class="el" href="class_menu_1_1_menu_entry.html" title="Classe abstrata privada nested de Menu.">MenuEntry</a>, que representa um submenu que executa uma função quando é escolhido.  <a href="class_menu_1_1_function_entry.html#_details">Mais...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu_1_1_menu_entry.html">MenuEntry</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Classe abstrata privada nested de <a class="el" href="class_menu.html" title="Classe que gera e processa menus.">Menu</a>.  <a href="class_menu_1_1_menu_entry.html#_details">Mais...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu_1_1_sub_menu_entry.html">SubMenuEntry</a></td></tr>
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#ad466dd83355124a6ed958430450bfe94">Menu</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a4ec031d30e2556e763cb71eaa723d680">Menu</a> (string nome, string mensagem_saida=DEFAULT_EXIT_MESSAGE)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a831387f51358cfb88cd018e1777bc980">~Menu</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a1e245afec77341e5977ebba360884b8e">getNome</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a698f19b65f9c86721bb364c0fc6e9c05">getMensagemSaida</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const vector&lt; <a class="el" href="class_menu_1_1_menu_entry.html">MenuEntry</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a2e2d6c37e87e6e9c10375972a364707e">getVecSubMenus</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_menu_1_1_menu_entry.html">MenuEntry</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a1a14aedc74e20237c4dc0f3faf44a4bc">getRefVecSubMenus</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const vector&lt; <a class="el" href="class_menu_1_1_menu_entry.html">MenuEntry</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a87a907f00a6e90e328d955f68ef51664">getConstRefVecSubMenus</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a9e6c9723ee7d7bfb4ee2f9b397389e65">setNome</a> (string nome)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#ae75c1e00ccee2df2520026533ec54579">setMensagemSaida</a> (string mensagem_saida)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a1270e8d7230995119622eea902200949">setVecSubMenus</a> (vector&lt; <a class="el" href="class_menu_1_1_menu_entry.html">MenuEntry</a> * &gt; vec_sub_menus)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#aaf4c1b8b498469fc76883891b07d802f">addSubMenu</a> (const string &amp;nome, <a class="el" href="class_menu.html">Menu</a> &amp;menu, void(*menu_function)()=NULL)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona um submenu a este <a class="el" href="class_menu.html" title="Classe que gera e processa menus.">Menu</a>.  <a href="#aaf4c1b8b498469fc76883891b07d802f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a37f0d0b9b51e43eb011202634bd7dc97">addFunction</a> (const string &amp;nome, void(*function)())</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona uma entrada a este menu que executa uma determinada função.  <a href="#a37f0d0b9b51e43eb011202634bd7dc97"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a4ffdd38f7393883198e06c1048cc1bc6">go</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Motra os submenus deste menu e pede ao utilizador para introduzir o número do comando que quer executar.  <a href="#a4ffdd38f7393883198e06c1048cc1bc6"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
+Membros públicos estáticos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a3630ce145aab68961ec535762d928558">clear</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Limpa o ecrã da consola, metendo 100 linhas vazias após o último output.  <a href="#a3630ce145aab68961ec535762d928558"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a843a7a38eb1f3948abf953ffaf22f941">_nome</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Nome do <a class="el" href="class_menu.html" title="Classe que gera e processa menus.">Menu</a>.  <a href="#a843a7a38eb1f3948abf953ffaf22f941"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a1ebfcdcfcec8510326fdc262a84f77e7">_mensagem_saida</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Texto mostrado para a opção de saída do <a class="el" href="class_menu.html" title="Classe que gera e processa menus.">Menu</a>.  <a href="#a1ebfcdcfcec8510326fdc262a84f77e7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_menu_1_1_menu_entry.html">MenuEntry</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_menu.html#a24c8b7f99c7463d40b5ddc873577bf44">_vec_sub_menus</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vector com os submenus.  <a href="#a24c8b7f99c7463d40b5ddc873577bf44"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<p>Classe que gera e processa menus. </p>
+
+<p>Definido na linha <a class="el" href="_menu_8h_source.html#l00034">34</a> do ficheiro <a class="el" href="_menu_8h_source.html">Menu.h</a>.</p>
+<hr/><h2>Documentação dos Construtores &amp; Destrutor</h2>
+<a class="anchor" id="ad466dd83355124a6ed958430450bfe94"></a><!-- doxytag: member="Menu::Menu" ref="ad466dd83355124a6ed958430450bfe94" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Menu::Menu </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_menu_8h_source.html#l00084">84</a> do ficheiro <a class="el" href="_menu_8h_source.html">Menu.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4ec031d30e2556e763cb71eaa723d680"></a><!-- doxytag: member="Menu::Menu" ref="a4ec031d30e2556e763cb71eaa723d680" args="(string nome, string mensagem_saida=DEFAULT_EXIT_MESSAGE)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Menu::Menu </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>mensagem_saida</em> = <code>DEFAULT_EXIT_MESSAGE</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_menu_8h_source.html#l00085">85</a> do ficheiro <a class="el" href="_menu_8h_source.html">Menu.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a831387f51358cfb88cd018e1777bc980"></a><!-- doxytag: member="Menu::~Menu" ref="a831387f51358cfb88cd018e1777bc980" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Menu::~Menu </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_menu_8cpp_source.html#l00020">20</a> do ficheiro <a class="el" href="_menu_8cpp_source.html">Menu.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_menu_8h_source.html#l00080">_vec_sub_menus</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos métodos</h2>
+<a class="anchor" id="a37f0d0b9b51e43eb011202634bd7dc97"></a><!-- doxytag: member="Menu::addFunction" ref="a37f0d0b9b51e43eb011202634bd7dc97" args="(const string &amp;nome, void(*function)())" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Menu::addFunction </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&nbsp;</td>
+          <td class="paramname"> <em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)()&nbsp;</td>
+          <td class="paramname"> <em>function</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Adiciona uma entrada a este menu que executa uma determinada função. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>nome</em>&nbsp;</td><td>Nome a dar à função no menu. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>function</em>&nbsp;</td><td>Apontador para a função a executar. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definido na linha <a class="el" href="_menu_8cpp_source.html#l00031">31</a> do ficheiro <a class="el" href="_menu_8cpp_source.html">Menu.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_menu_8h_source.html#l00080">_vec_sub_menus</a>.</p>
+
+<p>Referenciado por <a class="el" href="main_8cpp_source.html#l00104">main()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaf4c1b8b498469fc76883891b07d802f"></a><!-- doxytag: member="Menu::addSubMenu" ref="aaf4c1b8b498469fc76883891b07d802f" args="(const string &amp;nome, Menu &amp;menu, void(*menu_function)()=NULL)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Menu::addSubMenu </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&nbsp;</td>
+          <td class="paramname"> <em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_menu.html">Menu</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>menu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)()&nbsp;</td>
+          <td class="paramname"> <em>menu_function</em> = <code>NULL</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Adiciona um submenu a este <a class="el" href="class_menu.html" title="Classe que gera e processa menus.">Menu</a>. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>nome</em>&nbsp;</td><td>Nome a dar ao submenu. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>menu</em>&nbsp;</td><td>Apontador para o submenu. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>menu_function</em>&nbsp;</td><td>Apontador para uma função a ser executada pela nas subclasses pela função execute(). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definido na linha <a class="el" href="_menu_8cpp_source.html#l00025">25</a> do ficheiro <a class="el" href="_menu_8cpp_source.html">Menu.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_menu_8h_source.html#l00080">_vec_sub_menus</a>.</p>
+
+<p>Referenciado por <a class="el" href="main_8cpp_source.html#l00104">main()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3630ce145aab68961ec535762d928558"></a><!-- doxytag: member="Menu::clear" ref="a3630ce145aab68961ec535762d928558" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Menu::clear </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Limpa o ecrã da consola, metendo 100 linhas vazias após o último output. </p>
+
+<p>Definido na linha <a class="el" href="_menu_8cpp_source.html#l00037">37</a> do ficheiro <a class="el" href="_menu_8cpp_source.html">Menu.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="_menu_8cpp_source.html#l00042">go()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a87a907f00a6e90e328d955f68ef51664"></a><!-- doxytag: member="Menu::getConstRefVecSubMenus" ref="a87a907f00a6e90e328d955f68ef51664" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vector&lt;<a class="el" href="class_menu_1_1_menu_entry.html">MenuEntry</a>*&gt;&amp; Menu::getConstRefVecSubMenus </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_menu_8h_source.html#l00092">92</a> do ficheiro <a class="el" href="_menu_8h_source.html">Menu.h</a>.</p>
+
+<p>Referências <a class="el" href="_menu_8h_source.html#l00080">_vec_sub_menus</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a698f19b65f9c86721bb364c0fc6e9c05"></a><!-- doxytag: member="Menu::getMensagemSaida" ref="a698f19b65f9c86721bb364c0fc6e9c05" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Menu::getMensagemSaida </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_menu_8h_source.html#l00089">89</a> do ficheiro <a class="el" href="_menu_8h_source.html">Menu.h</a>.</p>
+
+<p>Referências <a class="el" href="_menu_8h_source.html#l00079">_mensagem_saida</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1e245afec77341e5977ebba360884b8e"></a><!-- doxytag: member="Menu::getNome" ref="a1e245afec77341e5977ebba360884b8e" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Menu::getNome </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_menu_8h_source.html#l00088">88</a> do ficheiro <a class="el" href="_menu_8h_source.html">Menu.h</a>.</p>
+
+<p>Referências <a class="el" href="_menu_8h_source.html#l00078">_nome</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1a14aedc74e20237c4dc0f3faf44a4bc"></a><!-- doxytag: member="Menu::getRefVecSubMenus" ref="a1a14aedc74e20237c4dc0f3faf44a4bc" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_menu_1_1_menu_entry.html">MenuEntry</a>*&gt;&amp; Menu::getRefVecSubMenus </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_menu_8h_source.html#l00091">91</a> do ficheiro <a class="el" href="_menu_8h_source.html">Menu.h</a>.</p>
+
+<p>Referências <a class="el" href="_menu_8h_source.html#l00080">_vec_sub_menus</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2e2d6c37e87e6e9c10375972a364707e"></a><!-- doxytag: member="Menu::getVecSubMenus" ref="a2e2d6c37e87e6e9c10375972a364707e" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vector&lt;<a class="el" href="class_menu_1_1_menu_entry.html">MenuEntry</a>*&gt; Menu::getVecSubMenus </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_menu_8h_source.html#l00090">90</a> do ficheiro <a class="el" href="_menu_8h_source.html">Menu.h</a>.</p>
+
+<p>Referências <a class="el" href="_menu_8h_source.html#l00080">_vec_sub_menus</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4ffdd38f7393883198e06c1048cc1bc6"></a><!-- doxytag: member="Menu::go" ref="a4ffdd38f7393883198e06c1048cc1bc6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Menu::go </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Motra os submenus deste menu e pede ao utilizador para introduzir o número do comando que quer executar. </p>
+
+<p>Definido na linha <a class="el" href="_menu_8cpp_source.html#l00042">42</a> do ficheiro <a class="el" href="_menu_8cpp_source.html">Menu.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_menu_8h_source.html#l00079">_mensagem_saida</a>, <a class="el" href="_menu_8h_source.html#l00078">_nome</a>, <a class="el" href="_menu_8h_source.html#l00080">_vec_sub_menus</a>, <a class="el" href="_menu_8cpp_source.html#l00037">clear()</a>, <a class="el" href="utils_8cpp_source.html#l00035">get_int_cin()</a> e <a class="el" href="utils_8cpp_source.html#l00018">getch()</a>.</p>
+
+<p>Referenciado por <a class="el" href="_menu_8cpp_source.html#l00080">Menu::SubMenuEntry::execute()</a> e <a class="el" href="main_8cpp_source.html#l00104">main()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae75c1e00ccee2df2520026533ec54579"></a><!-- doxytag: member="Menu::setMensagemSaida" ref="ae75c1e00ccee2df2520026533ec54579" args="(string mensagem_saida)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Menu::setMensagemSaida </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>mensagem_saida</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_menu_8h_source.html#l00095">95</a> do ficheiro <a class="el" href="_menu_8h_source.html">Menu.h</a>.</p>
+
+<p>Referências <a class="el" href="_menu_8h_source.html#l00079">_mensagem_saida</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9e6c9723ee7d7bfb4ee2f9b397389e65"></a><!-- doxytag: member="Menu::setNome" ref="a9e6c9723ee7d7bfb4ee2f9b397389e65" args="(string nome)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Menu::setNome </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>nome</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_menu_8h_source.html#l00094">94</a> do ficheiro <a class="el" href="_menu_8h_source.html">Menu.h</a>.</p>
+
+<p>Referências <a class="el" href="_menu_8h_source.html#l00078">_nome</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1270e8d7230995119622eea902200949"></a><!-- doxytag: member="Menu::setVecSubMenus" ref="a1270e8d7230995119622eea902200949" args="(vector&lt; MenuEntry * &gt; vec_sub_menus)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Menu::setVecSubMenus </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; <a class="el" href="class_menu_1_1_menu_entry.html">MenuEntry</a> * &gt;&nbsp;</td>
+          <td class="paramname"> <em>vec_sub_menus</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_menu_8h_source.html#l00096">96</a> do ficheiro <a class="el" href="_menu_8h_source.html">Menu.h</a>.</p>
+
+<p>Referências <a class="el" href="_menu_8h_source.html#l00080">_vec_sub_menus</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos dados membro</h2>
+<a class="anchor" id="a1ebfcdcfcec8510326fdc262a84f77e7"></a><!-- doxytag: member="Menu::_mensagem_saida" ref="a1ebfcdcfcec8510326fdc262a84f77e7" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string <a class="el" href="class_menu.html#a1ebfcdcfcec8510326fdc262a84f77e7">Menu::_mensagem_saida</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Texto mostrado para a opção de saída do <a class="el" href="class_menu.html" title="Classe que gera e processa menus.">Menu</a>. </p>
+
+<p>Definido na linha <a class="el" href="_menu_8h_source.html#l00079">79</a> do ficheiro <a class="el" href="_menu_8h_source.html">Menu.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_menu_8h_source.html#l00089">getMensagemSaida()</a>, <a class="el" href="_menu_8cpp_source.html#l00042">go()</a> e <a class="el" href="_menu_8h_source.html#l00095">setMensagemSaida()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a843a7a38eb1f3948abf953ffaf22f941"></a><!-- doxytag: member="Menu::_nome" ref="a843a7a38eb1f3948abf953ffaf22f941" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string <a class="el" href="class_menu.html#a843a7a38eb1f3948abf953ffaf22f941">Menu::_nome</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Nome do <a class="el" href="class_menu.html" title="Classe que gera e processa menus.">Menu</a>. </p>
+
+<p>Definido na linha <a class="el" href="_menu_8h_source.html#l00078">78</a> do ficheiro <a class="el" href="_menu_8h_source.html">Menu.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_menu_8h_source.html#l00088">getNome()</a>, <a class="el" href="_menu_8cpp_source.html#l00042">go()</a> e <a class="el" href="_menu_8h_source.html#l00094">setNome()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a24c8b7f99c7463d40b5ddc873577bf44"></a><!-- doxytag: member="Menu::_vec_sub_menus" ref="a24c8b7f99c7463d40b5ddc873577bf44" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_menu_1_1_menu_entry.html">MenuEntry</a>*&gt; <a class="el" href="class_menu.html#a24c8b7f99c7463d40b5ddc873577bf44">Menu::_vec_sub_menus</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vector com os submenus. </p>
+
+<p>Definido na linha <a class="el" href="_menu_8h_source.html#l00080">80</a> do ficheiro <a class="el" href="_menu_8h_source.html">Menu.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_menu_8cpp_source.html#l00031">addFunction()</a>, <a class="el" href="_menu_8cpp_source.html#l00025">addSubMenu()</a>, <a class="el" href="_menu_8h_source.html#l00092">getConstRefVecSubMenus()</a>, <a class="el" href="_menu_8h_source.html#l00091">getRefVecSubMenus()</a>, <a class="el" href="_menu_8h_source.html#l00090">getVecSubMenus()</a>, <a class="el" href="_menu_8cpp_source.html#l00042">go()</a>, <a class="el" href="_menu_8h_source.html#l00096">setVecSubMenus()</a> e <a class="el" href="_menu_8cpp_source.html#l00020">~Menu()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
+<li><a class="el" href="_menu_8h_source.html">Menu.h</a></li>
+<li><a class="el" href="_menu_8cpp_source.html">Menu.cpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:39 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Aeroporto.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>Aeroporto.h</h1>  </div>
+</div>
+<div class="contents">
+<a href="_aeroporto_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00015"></a>00015 <span class="preprocessor">#ifndef AEROPORTO_H_</span>
+<a name="l00016"></a>00016 <span class="preprocessor"></span><span class="preprocessor">#define AEROPORTO_H_</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;<a class="code" href="_aviao_8h.html" title="Classe que contém a informação associada a um avião.">Aviao.h</a>&quot;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="_tipo_aviao_8h.html" title="Classe que contém a informação associada a cada tipo de avião.">TipoAviao.h</a>&quot;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="code" href="_companhia_8h.html" title="Classe que contém informação associada a uma Companhia.">Companhia.h</a>&quot;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;<a class="code" href="_tripulante_8h.html" title="Classe que contém a informação associada a cada Tripulante Aéreo.">Tripulante.h</a>&quot;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &quot;<a class="code" href="_voo_8h.html" title="Classe que contém a informação associada a cada plano de voos de uma companhia aérea.">Voo.h</a>&quot;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="_porta_embarque_8h.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque.h</a>&quot;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="_exceptions_8h.html" title="Classe que contém a informação associada a todas as excepcoes implementadas.">Exceptions.h</a>&quot;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="utils_8h.html" title="Ficheiro com funções úteis para a interface com o utilizador.">utils.h</a>&quot;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="_b_s_t_8h.html">BST.h</a>&quot;</span>
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028 <span class="comment">// remover no fim as que não são necessárias</span>
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00032"></a>00032 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00033"></a>00033 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00034"></a>00034 <span class="preprocessor">#include &lt;sstream&gt;</span>
+<a name="l00035"></a>00035 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00036"></a>00036 <span class="preprocessor">#include &lt;cstdio&gt;</span>
+<a name="l00037"></a>00037 <span class="preprocessor">#include &lt;iomanip&gt;</span>
+<a name="l00038"></a>00038 <span class="preprocessor">#include &lt;limits&gt;</span>
+<a name="l00039"></a>00039 <span class="preprocessor">#include &lt;time.h&gt;</span>
+<a name="l00040"></a>00040 <span class="preprocessor">#include &lt;algorithm&gt;</span>
+<a name="l00041"></a>00041 <span class="preprocessor">#include &lt;utility&gt;</span>
+<a name="l00042"></a>00042 <span class="preprocessor">#include &lt;functional&gt;</span>
+<a name="l00043"></a>00043 <span class="comment">//#include &lt;hash_set&gt;</span>
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 <span class="preprocessor">#ifdef __GNUC__                 // se compilar com GCC</span>
+<a name="l00046"></a>00046 <span class="preprocessor"></span><span class="preprocessor">#include &lt;hash_set&gt;</span>
+<a name="l00047"></a>00047 <span class="keyword">using namespace </span>__gnu_cxx;
+<a name="l00048"></a>00048 <span class="preprocessor">#else                                   // se for visual studio</span>
+<a name="l00049"></a>00049 <span class="preprocessor"></span><span class="preprocessor">#include &lt;hash_set&gt;</span>
+<a name="l00050"></a><a class="code" href="_aeroporto_8h.html#ab672b3505fa49628e908289a25cec9fc">00050</a> <span class="preprocessor">#define _DEFINE_DEPRECATED_HASH_CLASSES 0</span>
+<a name="l00051"></a>00051 <span class="preprocessor"></span><span class="keyword">using namespace </span>std;
+<a name="l00052"></a>00052 <span class="keyword">using namespace </span>stdext;
+<a name="l00053"></a>00053 <span class="preprocessor">#endif</span>
+<a name="l00054"></a>00054 <span class="preprocessor"></span>
+<a name="l00055"></a>00055 <span class="keyword">using</span> std::ifstream;
+<a name="l00056"></a>00056 <span class="keyword">using</span> std::ofstream;
+<a name="l00057"></a>00057 <span class="keyword">using</span> std::endl;
+<a name="l00058"></a>00058 <span class="keyword">using</span> std::cout;
+<a name="l00059"></a>00059 <span class="keyword">using</span> std::cin;
+<a name="l00060"></a>00060 <span class="keyword">using</span> std::setw;
+<a name="l00061"></a>00061 <span class="keyword">using</span> std::getline;
+<a name="l00062"></a>00062 <span class="keyword">using</span> std::string;
+<a name="l00063"></a>00063 <span class="keyword">using</span> std::vector;
+<a name="l00064"></a>00064 <span class="keyword">using</span> std::sort;
+<a name="l00065"></a>00065 <span class="keyword">using</span> std::find_if;
+<a name="l00066"></a>00066 <span class="keyword">using</span> std::bind2nd;
+<a name="l00067"></a>00067 <span class="keyword">using</span> std::stringstream;
+<a name="l00068"></a>00068 <span class="keyword">using</span> std::equal_to;
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070 <span class="keyword">extern</span> <a class="code" href="class_porta_embarque_ptr.html" title="Classe que contém apontador para a classe PortaEmbarque (usada na BST).">PortaEmbarquePtr</a> <a class="code" href="_aeroporto_8h.html#a2bc5aca9e18ac86fc85a25407d081e21">porta_embarque_null</a>;
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072 <span class="preprocessor">#ifdef __GNUC__                         // se compilar com GCC</span>
+<a name="l00073"></a>00073 <span class="preprocessor"></span>
+<a name="l00074"></a>00074 <span class="comment">//Tabela de dispersão dos voos</span>
+<a name="l00075"></a>00075 <span class="keyword">struct </span><a class="code" href="classhash__voo__operators.html">hash_voo_operators</a> {
+<a name="l00076"></a>00076         <span class="keywordtype">bool</span> operator() (<span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo1, <span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo2)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (voo1-&gt;<a class="code" href="class_voo.html#ae253d766c67019c99f302fcfb5ee4bbb">getNumeroVoo</a>() == voo2-&gt;<a class="code" href="class_voo.html#ae253d766c67019c99f302fcfb5ee4bbb">getNumeroVoo</a>()); }
+<a name="l00077"></a>00077         <span class="keywordtype">size_t</span> operator() (<span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> voo-&gt;<a class="code" href="class_voo.html#ae253d766c67019c99f302fcfb5ee4bbb">getNumeroVoo</a>(); }
+<a name="l00078"></a>00078 };
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080 <span class="keyword">typedef</span> hash_set&lt;Voo*, hash_voo_operators, hash_voo_operators&gt; HASH_SET_VOOS;
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 <span class="preprocessor">#else                                           // se for visual studio</span>
+<a name="l00083"></a>00083 <span class="preprocessor"></span>
+<a name="l00084"></a><a class="code" href="classhash__voo__operators.html">00084</a> <span class="keyword">class </span><a class="code" href="classhash__voo__operators.html">hash_voo_operators</a>
+<a name="l00085"></a>00085 {
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087 <span class="keyword">public</span>:
+<a name="l00088"></a><a class="code" href="classhash__voo__operators.html#ab9d14271a907dadc0181e4135d99eecc">00088</a>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">size_t</span> bucket_size = 4;
+<a name="l00089"></a><a class="code" href="classhash__voo__operators.html#a3af021b29f03753e7ef9299898ef2105">00089</a>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">size_t</span> min_buckets = 8;
+<a name="l00090"></a>00090 
+<a name="l00091"></a><a class="code" href="classhash__voo__operators.html#ae34ffbe66a1dea69e2533f0aba1fc462">00091</a>    <span class="keywordtype">size_t</span> operator()(<span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a>* key)<span class="keyword"> const</span>
+<a name="l00092"></a>00092 <span class="keyword">   </span>{
+<a name="l00093"></a>00093            <span class="keywordflow">return</span> (key-&gt;<a class="code" href="class_voo.html#ae253d766c67019c99f302fcfb5ee4bbb">getNumeroVoo</a>());
+<a name="l00094"></a>00094    }
+<a name="l00095"></a><a class="code" href="classhash__voo__operators.html#adc35f76616e6e7203751f413612c677d">00095</a>    <span class="keywordtype">bool</span> operator()(<span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a>* key1, <span class="keyword">const</span> <a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a>* key2)<span class="keyword"> const</span>
+<a name="l00096"></a>00096 <span class="keyword">   </span>{
+<a name="l00097"></a>00097            <span class="keywordflow">return</span> (key1-&gt;<a class="code" href="class_voo.html#ae253d766c67019c99f302fcfb5ee4bbb">getNumeroVoo</a>() == key2-&gt;<a class="code" href="class_voo.html#ae253d766c67019c99f302fcfb5ee4bbb">getNumeroVoo</a>());
+<a name="l00098"></a>00098    }
+<a name="l00099"></a>00099 };
+<a name="l00100"></a>00100 
+<a name="l00101"></a><a class="code" href="_aeroporto_8h.html#a8d8a258c3f72af10ea03561bd7aa58a4">00101</a> <span class="keyword">typedef</span> hash_set&lt;Voo*, hash_voo_operators&gt; HASH_SET_VOOS;
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103 <span class="preprocessor">#endif</span>
+<a name="l00104"></a>00104 <span class="preprocessor"></span>
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106 
+<a name="l00108"></a><a class="code" href="class_aeroporto.html">00108</a> <span class="keyword">class </span><a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a> {
+<a name="l00109"></a>00109 <span class="keyword">private</span>:
+<a name="l00110"></a><a class="code" href="class_aeroporto.html#a9bf3a7d7f24fa80de4709f833b2c5a62">00110</a>         <span class="keywordtype">string</span> _nome;
+<a name="l00111"></a><a class="code" href="class_aeroporto.html#a9277ecdb721e6684b85a659354797d62">00111</a>         <span class="keywordtype">string</span> _localizacao;
+<a name="l00112"></a><a class="code" href="class_aeroporto.html#a64a7bc96ea2256fab55c2f09cd17cef5">00112</a>         <span class="keywordtype">string</span> _pais;
+<a name="l00113"></a><a class="code" href="class_aeroporto.html#a2acc2a6058c52aae461a5536a1b0cb0a">00113</a>         <span class="keywordtype">unsigned</span> _taxa_portas_embarque;
+<a name="l00114"></a>00114 
+<a name="l00115"></a><a class="code" href="class_aeroporto.html#a078238dacd0b56803ca3e21d942716ab">00115</a>         vector &lt;Companhia*&gt; _companhias;
+<a name="l00116"></a>00116         <span class="comment">//vector &lt;PortaEmbarque*&gt; _portas_embarque;</span>
+<a name="l00117"></a><a class="code" href="class_aeroporto.html#a1c00da2d4f75a765fbae6a6c6708dd55">00117</a>         vector &lt;Passageiro*&gt; _passageiros_aeroporto;
+<a name="l00118"></a>00118 
+<a name="l00119"></a>00119         <span class="comment">//BST das portas de embarque</span>
+<a name="l00120"></a><a class="code" href="class_aeroporto.html#a812740d9c01fe073f63333584ffeef41">00120</a>         <a class="code" href="class_b_s_t.html">BST&lt;PortaEmbarquePtr&gt;</a> _portas_embarque_bst;
+<a name="l00121"></a>00121 
+<a name="l00122"></a><a class="code" href="class_aeroporto.html#aae5f2801ab98f57aaf533eb99fe62561">00122</a>         <a class="code" href="_aeroporto_8h.html#a8d8a258c3f72af10ea03561bd7aa58a4">HASH_SET_VOOS</a> _hash_set_voos;
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124 <span class="keyword">public</span>:
+<a name="l00125"></a><a class="code" href="class_aeroporto.html#ae42f7700c5a73488a1c54f636312c6c8">00125</a>         <a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a>(): _nome((string)<span class="stringliteral">&quot;Aerporto do Porto&quot;</span>), _localizacao((string)<span class="stringliteral">&quot;Porto&quot;</span>), _pais((string)<span class="stringliteral">&quot;Portugal&quot;</span>), _taxa_portas_embarque(0),
+<a name="l00126"></a>00126         _companhias(), _passageiros_aeroporto(), _portas_embarque_bst(<a class="code" href="_aeroporto_8h.html#a2bc5aca9e18ac86fc85a25407d081e21">porta_embarque_null</a>) {}
+<a name="l00127"></a><a class="code" href="class_aeroporto.html#ac35136e7ba648d952dd9a87c6adc8154">00127</a>         <a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a>(<span class="keywordtype">string</span> nome, <span class="keywordtype">string</span> localizacao, <span class="keywordtype">string</span> pais, <span class="keywordtype">unsigned</span> taxa_portas_embarque)
+<a name="l00128"></a>00128                 : _nome(nome), _localizacao(localizacao), _pais(pais), _taxa_portas_embarque(taxa_portas_embarque),
+<a name="l00129"></a>00129                   _companhias(), _portas_embarque_bst(<a class="code" href="_aeroporto_8h.html#a2bc5aca9e18ac86fc85a25407d081e21">porta_embarque_null</a>) {}
+<a name="l00130"></a>00130         <span class="keyword">virtual</span> ~<a class="code" href="class_aeroporto.html" title="Classe que armazena informação acerca de um aeroporto.">Aeroporto</a>();
+<a name="l00131"></a>00131 
+<a name="l00132"></a><a class="code" href="class_aeroporto.html#a802f17bc1861e6e6a973febdd20d19e5">00132</a>         <span class="keywordtype">string</span> <a class="code" href="class_aeroporto.html#a802f17bc1861e6e6a973febdd20d19e5">getNome</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _nome; }
+<a name="l00133"></a><a class="code" href="class_aeroporto.html#ab60922f70933e79e1566036f3c43f989">00133</a>         <span class="keywordtype">string</span> <a class="code" href="class_aeroporto.html#ab60922f70933e79e1566036f3c43f989">getLocalizacao</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _localizacao; }
+<a name="l00134"></a><a class="code" href="class_aeroporto.html#a2783ba5d10157cd9a4f26c87905140e0">00134</a>         <span class="keywordtype">string</span> <a class="code" href="class_aeroporto.html#a2783ba5d10157cd9a4f26c87905140e0">getPais</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _pais ; }
+<a name="l00135"></a><a class="code" href="class_aeroporto.html#abb93a440617f3a689934f0d6971d1c79">00135</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_aeroporto.html#abb93a440617f3a689934f0d6971d1c79">getTaxaPortasEmbarque</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _taxa_portas_embarque; }
+<a name="l00136"></a>00136 
+<a name="l00137"></a>00137 
+<a name="l00138"></a><a class="code" href="class_aeroporto.html#abeb18431340a50a16622207c490f8300">00138</a>         vector &lt;Companhia*&gt; <a class="code" href="class_aeroporto.html#abeb18431340a50a16622207c490f8300">getCompanhias</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _companhias; }
+<a name="l00139"></a>00139         <span class="comment">//Variante do get do vector usada em iteradores constantes</span>
+<a name="l00140"></a><a class="code" href="class_aeroporto.html#a48408a8fc13cb3cef7bc938e8875380c">00140</a>         <span class="keyword">const</span> vector &lt;Companhia*&gt;&amp; <a class="code" href="class_aeroporto.html#a48408a8fc13cb3cef7bc938e8875380c">getConstRefCompanhias</a>() { <span class="keywordflow">return</span> _companhias; }
+<a name="l00141"></a>00141         <span class="comment">//Variante do get do vector que permite alterá-lo através da referência que é dada</span>
+<a name="l00142"></a><a class="code" href="class_aeroporto.html#a6deeaf6c7df5ad34390c935901ce1979">00142</a>         vector &lt;Companhia*&gt;&amp; <a class="code" href="class_aeroporto.html#a6deeaf6c7df5ad34390c935901ce1979">getRefCompanhias</a>() { <span class="keywordflow">return</span> _companhias; }
+<a name="l00143"></a>00143 
+<a name="l00144"></a><a class="code" href="class_aeroporto.html#a14c7d35d71daec06b14e5370ea4b8186">00144</a>         <a class="code" href="_aeroporto_8h.html#a8d8a258c3f72af10ea03561bd7aa58a4">HASH_SET_VOOS</a> <a class="code" href="class_aeroporto.html#a14c7d35d71daec06b14e5370ea4b8186">getHashSetVoos</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _hash_set_voos; }
+<a name="l00145"></a>00145         <span class="comment">//Variante do get do vector usada em iteradores constantes</span>
+<a name="l00146"></a><a class="code" href="class_aeroporto.html#a0ce15b3d26b406f5cd972122c4113a59">00146</a>         <span class="keyword">const</span> <a class="code" href="_aeroporto_8h.html#a8d8a258c3f72af10ea03561bd7aa58a4">HASH_SET_VOOS</a>&amp; <a class="code" href="class_aeroporto.html#a0ce15b3d26b406f5cd972122c4113a59">getConstRefHashSetVoos</a>() { <span class="keywordflow">return</span> _hash_set_voos; }
+<a name="l00147"></a>00147         <span class="comment">//Variante do get do vector que permite alterá-lo através da referência que é dada</span>
+<a name="l00148"></a><a class="code" href="class_aeroporto.html#a67acb1057835e699e1877582ae70719c">00148</a>         <a class="code" href="_aeroporto_8h.html#a8d8a258c3f72af10ea03561bd7aa58a4">HASH_SET_VOOS</a>&amp; <a class="code" href="class_aeroporto.html#a67acb1057835e699e1877582ae70719c">getRefHashSetVoos</a>() { <span class="keywordflow">return</span> _hash_set_voos; }
+<a name="l00149"></a>00149 
+<a name="l00150"></a>00150 
+<a name="l00151"></a>00151 <span class="comment">/*</span>
+<a name="l00152"></a>00152 <span class="comment">        const vector &lt;PortaEmbarque*&gt; getPortasEmbarque() const { return _portas_embarque; }</span>
+<a name="l00153"></a>00153 <span class="comment">        const vector &lt;PortaEmbarque*&gt;&amp; getConstRefPortasEmbarque() const { return _portas_embarque; }</span>
+<a name="l00154"></a>00154 <span class="comment">        vector &lt;PortaEmbarque*&gt;&amp; getRefPortasEmbarque() { return _portas_embarque; }</span>
+<a name="l00155"></a>00155 <span class="comment">*/</span>
+<a name="l00156"></a><a class="code" href="class_aeroporto.html#ab27738a295f2316803f52ce64249038f">00156</a>         vector &lt;Passageiro*&gt; <a class="code" href="class_aeroporto.html#ab27738a295f2316803f52ce64249038f">getPassageirosAeroporto</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _passageiros_aeroporto; }
+<a name="l00157"></a><a class="code" href="class_aeroporto.html#a944c07e8c93aa9cf190e1638f2297e7c">00157</a>         <span class="keyword">const</span> vector &lt;Passageiro*&gt;&amp; <a class="code" href="class_aeroporto.html#a944c07e8c93aa9cf190e1638f2297e7c">getConstRefPassageirosAeroporto</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _passageiros_aeroporto; }
+<a name="l00158"></a><a class="code" href="class_aeroporto.html#a4a39fa9aae95dc8bad919cd99c19e47d">00158</a>         vector &lt;Passageiro*&gt;&amp; <a class="code" href="class_aeroporto.html#a4a39fa9aae95dc8bad919cd99c19e47d">getRefPassageirosAeroporto</a>() { <span class="keywordflow">return</span> _passageiros_aeroporto; }
+<a name="l00159"></a>00159 
+<a name="l00160"></a><a class="code" href="class_aeroporto.html#a279095ede988dfbda00d7d5a859a25b5">00160</a>         <a class="code" href="class_b_s_t.html">BST &lt;PortaEmbarquePtr&gt;</a> <a class="code" href="class_aeroporto.html#a279095ede988dfbda00d7d5a859a25b5">getPortasEmbarqueBST</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _portas_embarque_bst; }
+<a name="l00161"></a><a class="code" href="class_aeroporto.html#ad43c18ebb816b36cfc613ced5a540ffd">00161</a>         <span class="keyword">const</span> <a class="code" href="class_b_s_t.html">BST &lt;PortaEmbarquePtr&gt;</a>&amp; <a class="code" href="class_aeroporto.html#ad43c18ebb816b36cfc613ced5a540ffd">getConstRefPortasEmbarqueBST</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _portas_embarque_bst; }
+<a name="l00162"></a><a class="code" href="class_aeroporto.html#a1004d7bc650130cda60181c0e59c7801">00162</a>         <a class="code" href="class_b_s_t.html">BST &lt;PortaEmbarquePtr&gt;</a>&amp; <a class="code" href="class_aeroporto.html#a1004d7bc650130cda60181c0e59c7801">getRefPortasEmbarqueBST</a>() { <span class="keywordflow">return</span> _portas_embarque_bst; }
+<a name="l00163"></a>00163 
+<a name="l00164"></a><a class="code" href="class_aeroporto.html#add384df96b8a0e8440e77b2fb5c249fb">00164</a>         <span class="keywordtype">void</span> <a class="code" href="class_aeroporto.html#add384df96b8a0e8440e77b2fb5c249fb">setNome</a>(<span class="keywordtype">string</span> nome) { _nome = nome; }
+<a name="l00165"></a><a class="code" href="class_aeroporto.html#a33d329279a43204400cbf9d84fc548c7">00165</a>         <span class="keywordtype">void</span> <a class="code" href="class_aeroporto.html#a33d329279a43204400cbf9d84fc548c7">setLocalizacao</a>(<span class="keywordtype">string</span> localizacao) { _localizacao = localizacao; }
+<a name="l00166"></a><a class="code" href="class_aeroporto.html#a153555fdbbb2f5a07798c86f205d5b00">00166</a>         <span class="keywordtype">void</span> <a class="code" href="class_aeroporto.html#a153555fdbbb2f5a07798c86f205d5b00">setPais</a>(<span class="keywordtype">string</span> pais) { _pais = pais; }
+<a name="l00167"></a><a class="code" href="class_aeroporto.html#ae57b041945cbc95a4b730cf57da957a0">00167</a>         <span class="keywordtype">void</span> <a class="code" href="class_aeroporto.html#ae57b041945cbc95a4b730cf57da957a0">setTaxaPortasEmbarque</a>(<span class="keywordtype">unsigned</span> taxa_portas_embarque) { _taxa_portas_embarque = taxa_portas_embarque; }
+<a name="l00168"></a>00168 
+<a name="l00169"></a><a class="code" href="class_aeroporto.html#a899e18031ecb11ff80f7e68413579d50">00169</a>         <span class="keywordtype">void</span> <a class="code" href="class_aeroporto.html#a899e18031ecb11ff80f7e68413579d50">setCompanhias</a>(vector &lt;Companhia*&gt; companhias) { _companhias = companhias; }
+<a name="l00170"></a>00170         <span class="comment">//void setPortasEmbarque(vector &lt;PortaEmbarque*&gt; portas_embarque) { _portas_embarque = portas_embarque; }</span>
+<a name="l00171"></a><a class="code" href="class_aeroporto.html#a6d641870ae66e4ddd3ce93085abf90b5">00171</a>         <span class="keywordtype">void</span> <a class="code" href="class_aeroporto.html#a6d641870ae66e4ddd3ce93085abf90b5">setPassageirosAeroporto</a>(vector &lt;Passageiro*&gt; passageiros_aeroporto) { _passageiros_aeroporto = passageiros_aeroporto; }
+<a name="l00172"></a>00172 
+<a name="l00173"></a>00173 
+<a name="l00174"></a><a class="code" href="class_aeroporto.html#ab182c7d28c2a5f792884126ab91a8219">00174</a>         <span class="keywordtype">void</span> <a class="code" href="class_aeroporto.html#ab182c7d28c2a5f792884126ab91a8219">addVooHashSetVoos</a>(<a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo) { _hash_set_voos.insert(voo); }
+<a name="l00175"></a><a class="code" href="class_aeroporto.html#a871b35fb7e13ba976d9932f07d35f426">00175</a>         HASH_SET_VOOS::iterator <a class="code" href="class_aeroporto.html#a871b35fb7e13ba976d9932f07d35f426">findVooHashSetVoos</a>(<a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo) { <span class="keywordflow">return</span> _hash_set_voos.find(voo); }
+<a name="l00176"></a><a class="code" href="class_aeroporto.html#a84133f0749bfc8db4c99275532a4cbcb">00176</a>         <span class="keywordtype">void</span> <a class="code" href="class_aeroporto.html#a84133f0749bfc8db4c99275532a4cbcb">delVooHashSetVoos</a>(<a class="code" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> *voo) { _hash_set_voos.erase(voo); }
+<a name="l00177"></a>00177 };
+<a name="l00178"></a>00178 
+<a name="l00179"></a>00179 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:36 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

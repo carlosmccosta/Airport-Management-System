@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Comandos.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>Comandos.h</h1>  </div>
+</div>
+<div class="contents">
+<a href="_comandos_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00015"></a>00015 <span class="preprocessor">#ifndef COMANDOS_H_</span>
+<a name="l00016"></a>00016 <span class="preprocessor"></span><span class="preprocessor">#define COMANDOS_H_</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 <span class="keyword">using</span> std::string;
+<a name="l00022"></a>00022 <span class="keyword">using</span> std::vector;
+<a name="l00023"></a>00023 
+<a name="l00025"></a><a class="code" href="class_comandos.html">00025</a> <span class="keyword">class </span><a class="code" href="class_comandos.html" title="Classe que armazena os comandos possíveis para cada classe.">Comandos</a> {
+<a name="l00026"></a>00026 <span class="keyword">public</span>:
+<a name="l00028"></a><a class="code" href="class_comandos.html#a8fb700ff5cc51cab404b7408d3ae256b">00028</a>         <span class="keyword">static</span> vector &lt;string&gt; <a class="code" href="class_comandos.html#a8fb700ff5cc51cab404b7408d3ae256b" title="Vectores com as listas de parámetros que podem ser alterados em cada classe.">_tipo_aviao_op_list</a>;
+<a name="l00029"></a><a class="code" href="class_comandos.html#a6631e03b2f6b2752db02d62477af2fd9">00029</a>         <span class="keyword">static</span> vector &lt;string&gt; <a class="code" href="class_comandos.html#a6631e03b2f6b2752db02d62477af2fd9">_aviao_op_list</a>;
+<a name="l00030"></a><a class="code" href="class_comandos.html#af649f76bdde499082c751c191780dddc">00030</a>         <span class="keyword">static</span> vector &lt;string&gt; <a class="code" href="class_comandos.html#af649f76bdde499082c751c191780dddc">_tripulante_op_list</a>;
+<a name="l00031"></a><a class="code" href="class_comandos.html#ad878de32a75ad1d6dddd05892d0c1bc1">00031</a>         <span class="keyword">static</span> vector &lt;string&gt; <a class="code" href="class_comandos.html#ad878de32a75ad1d6dddd05892d0c1bc1">_passageiro_op_list</a>;
+<a name="l00032"></a><a class="code" href="class_comandos.html#a016d6ecab9a809c919a745151e1e8a90">00032</a>         <span class="keyword">static</span> vector &lt;string&gt; <a class="code" href="class_comandos.html#a016d6ecab9a809c919a745151e1e8a90">_voo_op_list</a>;
+<a name="l00033"></a><a class="code" href="class_comandos.html#a658ef76e3fa295c38eda5c696441c929">00033</a>         <span class="keyword">static</span> vector &lt;string&gt; <a class="code" href="class_comandos.html#a658ef76e3fa295c38eda5c696441c929">_portas_embarque_op_list</a>;
+<a name="l00034"></a><a class="code" href="class_comandos.html#ae214a285291f3f7f0cf81f9a0166bfc8">00034</a>         <span class="keyword">static</span> vector &lt;string&gt; <a class="code" href="class_comandos.html#ae214a285291f3f7f0cf81f9a0166bfc8">_companhia_op_list</a>;
+<a name="l00035"></a><a class="code" href="class_comandos.html#ae5b84e94edd0ca1331dd3fd86dbfd546">00035</a>         <span class="keyword">static</span> vector &lt;string&gt; <a class="code" href="class_comandos.html#ae5b84e94edd0ca1331dd3fd86dbfd546">_aeroporto_op_list</a>;
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037         <span class="comment">//Funções que introduzem os dados nos vectores de comandos</span>
+<a name="l00038"></a>00038         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_comandos.html#add1aa534e79a7f47c176efb757c7484f">initTipoAviaoOp</a>();
+<a name="l00039"></a>00039         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_comandos.html#a382f0d07f98d01c450361679170ef89d">initAviaoOp</a>();
+<a name="l00040"></a>00040         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_comandos.html#a48f970a8479a9252ad4bb711ff94fafa">initTripulanteOp</a>();
+<a name="l00041"></a>00041         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_comandos.html#a15d08653c18d22d3531ee6ebbaa3e90d">initPassageiroOp</a>();
+<a name="l00042"></a>00042         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_comandos.html#af3cc178799a51be1d0853855cb34d779">initVooOp</a>();
+<a name="l00043"></a>00043         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_comandos.html#aa1b7af955f1b16c7fdf75ce710fd5656">initPortaEmbarqueOp</a>();
+<a name="l00044"></a>00044         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_comandos.html#acf7065c6d3a4950a49a3d7d6be3fdb17">initCompanhiaOp</a>();
+<a name="l00045"></a>00045         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_comandos.html#a8fb5a75fcaf615790293f021cafa1373">initAeroportoOp</a>();
+<a name="l00046"></a>00046 
+<a name="l00048"></a>00048         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_comandos.html#ae48b3d30c98d7bc28f679b1e55f9d127" title="Inicialização de todos os vectores de comandos de dados.">initAllOp</a>();
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 };
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:36 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

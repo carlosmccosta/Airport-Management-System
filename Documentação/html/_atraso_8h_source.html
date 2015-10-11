@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Atraso.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>Atraso.h</h1>  </div>
+</div>
+<div class="contents">
+<a href="_atraso_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00015"></a>00015 <span class="preprocessor">#ifndef HORAMIN_H_</span>
+<a name="l00016"></a>00016 <span class="preprocessor"></span><span class="preprocessor">#define HORAMIN_H_</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="utils_8h.html" title="Ficheiro com funções úteis para a interface com o utilizador.">utils.h</a>&quot;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="_exceptions_8h.html" title="Classe que contém a informação associada a todas as excepcoes implementadas.">Exceptions.h</a>&quot;</span>
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026 <span class="keyword">using</span> std::string;
+<a name="l00027"></a>00027 <span class="keyword">using</span> std::ostream;
+<a name="l00028"></a>00028 <span class="keyword">using</span> std::istream;
+<a name="l00029"></a>00029 <span class="keyword">using</span> std::vector;
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031 
+<a name="l00033"></a><a class="code" href="class_atraso.html">00033</a> <span class="keyword">class </span><a class="code" href="class_atraso.html" title="Classe que contém informação acerca de um atraso de um voo na sua hora de partida / chegada (dia:hora...">Atraso</a> {
+<a name="l00034"></a>00034 <span class="keyword">private</span>:
+<a name="l00035"></a><a class="code" href="class_atraso.html#ac44063b4e12108feb696a33a6fcd46ab">00035</a>         <span class="keywordtype">int</span> <a class="code" href="class_atraso.html#ac44063b4e12108feb696a33a6fcd46ab">_hora</a>;
+<a name="l00036"></a><a class="code" href="class_atraso.html#a9f5372a471bc54cd23ff1403f900058c">00036</a>         <span class="keywordtype">int</span> <a class="code" href="class_atraso.html#a9f5372a471bc54cd23ff1403f900058c">_min</a>;
+<a name="l00037"></a><a class="code" href="class_atraso.html#a1915240247ac80b784350e50894b03ee">00037</a>         <span class="keywordtype">int</span> <a class="code" href="class_atraso.html#a1915240247ac80b784350e50894b03ee">_dia</a>;
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040 <span class="keyword">public</span>:
+<a name="l00042"></a><a class="code" href="class_atraso.html#a39f0397d884006dbe56c1032cb552a6d">00042</a>         <a class="code" href="class_atraso.html#a39f0397d884006dbe56c1032cb552a6d" title="Construtor vazio, que inicializa os dados da classe com valores de erro, denotando que necessitam de ...">Atraso</a>() : <a class="code" href="class_atraso.html#ac44063b4e12108feb696a33a6fcd46ab">_hora</a>(-1), <a class="code" href="class_atraso.html#a9f5372a471bc54cd23ff1403f900058c">_min</a>(-1), <a class="code" href="class_atraso.html#a1915240247ac80b784350e50894b03ee">_dia</a>(-1) {}
+<a name="l00043"></a><a class="code" href="class_atraso.html#aad3023a36744281f7bbcfc4f5638f00f">00043</a>         <a class="code" href="class_atraso.html#aad3023a36744281f7bbcfc4f5638f00f">Atraso</a>(<span class="keywordtype">int</span> hora, <span class="keywordtype">int</span> min, <span class="keywordtype">int</span> dia = 0): <a class="code" href="class_atraso.html#ac44063b4e12108feb696a33a6fcd46ab">_hora</a>(hora), <a class="code" href="class_atraso.html#a9f5372a471bc54cd23ff1403f900058c">_min</a>(min), <a class="code" href="class_atraso.html#a1915240247ac80b784350e50894b03ee">_dia</a>(dia)  {}
+<a name="l00045"></a><a class="code" href="class_atraso.html#a629f11b29146f41a76afcaba59b4d507">00045</a>         <a class="code" href="class_atraso.html#a629f11b29146f41a76afcaba59b4d507" title="Construtor de um atraso, que recebe uma string no formato DD:HH:mm ou HH:mm e extrai os dados para os...">Atraso</a>(<span class="keywordtype">string</span> atraso) { *<span class="keyword">this</span> = <a class="code" href="class_atraso.html#acfb43129455763ff16d34c140be6fbd1" title="Verificação da compatibilidade de uma string com a classe Atraso.">Parser_Atraso</a>(atraso); }
+<a name="l00046"></a><a class="code" href="class_atraso.html#aa23a554b7f3f057e37a8f7def976e517">00046</a>         <a class="code" href="class_atraso.html#aa23a554b7f3f057e37a8f7def976e517">~Atraso</a>() {}
+<a name="l00047"></a>00047 
+<a name="l00048"></a><a class="code" href="class_atraso.html#a055da85fe8e5d76a8792975d3dc67212">00048</a>         <span class="keywordtype">int</span> <a class="code" href="class_atraso.html#a055da85fe8e5d76a8792975d3dc67212">getHora</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_atraso.html#ac44063b4e12108feb696a33a6fcd46ab">_hora</a>; }
+<a name="l00049"></a><a class="code" href="class_atraso.html#a9f984c261a7d503dbd8d64b370e46e69">00049</a>         <span class="keywordtype">int</span> <a class="code" href="class_atraso.html#a9f984c261a7d503dbd8d64b370e46e69">getMin</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_atraso.html#a9f5372a471bc54cd23ff1403f900058c">_min</a>; }
+<a name="l00050"></a><a class="code" href="class_atraso.html#a070f489d3e2f156789ae499ad8b9dc71">00050</a>         <span class="keywordtype">int</span> <a class="code" href="class_atraso.html#a070f489d3e2f156789ae499ad8b9dc71">getDia</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_atraso.html#a1915240247ac80b784350e50894b03ee">_dia</a>; }
+<a name="l00051"></a>00051 
+<a name="l00052"></a><a class="code" href="class_atraso.html#a580ba94c4e44575b9926ec36e562141a">00052</a>         <span class="keywordtype">void</span> <a class="code" href="class_atraso.html#a580ba94c4e44575b9926ec36e562141a">setHora</a>(<span class="keywordtype">int</span> hora) { <a class="code" href="class_atraso.html#ac44063b4e12108feb696a33a6fcd46ab">_hora</a> = hora; }
+<a name="l00053"></a><a class="code" href="class_atraso.html#ad6d724c1bdd960d173ff2ec17a7d8242">00053</a>         <span class="keywordtype">void</span> <a class="code" href="class_atraso.html#ad6d724c1bdd960d173ff2ec17a7d8242">setMin</a>(<span class="keywordtype">int</span> min) { <a class="code" href="class_atraso.html#a9f5372a471bc54cd23ff1403f900058c">_min</a> = min; }
+<a name="l00054"></a><a class="code" href="class_atraso.html#aafc3714b68b4bcc71a1679a47eeb348e">00054</a>         <span class="keywordtype">void</span> <a class="code" href="class_atraso.html#aafc3714b68b4bcc71a1679a47eeb348e">setDia</a>(<span class="keywordtype">int</span> dia) { <a class="code" href="class_atraso.html#a1915240247ac80b784350e50894b03ee">_dia</a> = dia; }
+<a name="l00055"></a>00055 
+<a name="l00062"></a>00062         <a class="code" href="class_atraso.html" title="Classe que contém informação acerca de um atraso de um voo na sua hora de partida / chegada (dia:hora...">Atraso</a> <a class="code" href="class_atraso.html#acfb43129455763ff16d34c140be6fbd1" title="Verificação da compatibilidade de uma string com a classe Atraso.">Parser_Atraso</a>(<span class="keywordtype">string</span> atraso);
+<a name="l00063"></a>00063 
+<a name="l00070"></a>00070         <span class="keywordtype">void</span> <a class="code" href="class_atraso.html#a2b70ed328a9166e75ec66f85e11af777" title="Método que pede ao utilizador para introduzir um atraso no formato &amp;lt;DD:HH:mm&amp;gt; ou &amp;lt;HH:mm&amp;gt;...">getAtrasoCin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* mensagem);
+<a name="l00071"></a>00071 
+<a name="l00073"></a>00073         <span class="keywordtype">bool</span> <a class="code" href="class_atraso.html#a2e13c0b214c3606ad9a276ea17d14c11" title="Operador que permite comparar se dois atrasos são equivalentes.">operator==</a>(<span class="keyword">const</span> <a class="code" href="class_atraso.html" title="Classe que contém informação acerca de um atraso de um voo na sua hora de partida / chegada (dia:hora...">Atraso</a> &amp;atraso) <span class="keyword">const</span>;
+<a name="l00074"></a>00074 
+<a name="l00079"></a>00079         <span class="keywordtype">bool</span> <a class="code" href="class_atraso.html#aa6096630475e01d5c2a704b073cec1ee" title="Operador que compara se um atraso é menor do que outro.">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="class_atraso.html" title="Classe que contém informação acerca de um atraso de um voo na sua hora de partida / chegada (dia:hora...">Atraso</a> &amp;atraso) <span class="keyword">const</span>;
+<a name="l00080"></a>00080 };
+<a name="l00081"></a>00081 
+<a name="l00083"></a>00083 ostream&amp; <a class="code" href="_atraso_8cpp.html#a9d47ab9c63b2477f152e306ea353fe03" title="Operador que imprime um objecto do tipo Atraso no formato AAAA/MM/DD HH:mm.">operator&lt;&lt;</a>(ostream &amp;os,<span class="keyword">const</span> <a class="code" href="class_atraso.html" title="Classe que contém informação acerca de um atraso de um voo na sua hora de partida / chegada (dia:hora...">Atraso</a> &amp;obj);
+<a name="l00084"></a>00084 
+<a name="l00086"></a>00086 istream&amp; <a class="code" href="_atraso_8cpp.html#a3f043f64f5c7d3425789717f37f2f42c" title="Operador que permite a leitura de dados para um objecto do tipo Atraso.">operator&gt;&gt;</a>(istream &amp;is, <a class="code" href="class_atraso.html" title="Classe que contém informação acerca de um atraso de um voo na sua hora de partida / chegada (dia:hora...">Atraso</a> &amp;obj);
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:36 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

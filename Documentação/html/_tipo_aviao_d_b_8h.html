@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência ao ficheiro TipoAviaoDB.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Componentes</a> &#124;
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<h1>Referência ao ficheiro TipoAviaoDB.h</h1>  </div>
+</div>
+<div class="contents">
+
+<p>Classe que contém uma base de dados de tipos de aviões.  
+<a href="#_details">Mais...</a></p>
+<code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;string&gt;</code><br/>
+<code>#include &lt;iostream&gt;</code><br/>
+<code>#include &lt;fstream&gt;</code><br/>
+<code>#include &lt;algorithm&gt;</code><br/>
+<code>#include &quot;<a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_data_hora_8h_source.html">DataHora.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_comandos_8h_source.html">Comandos.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_porta_embarque_8h_source.html">PortaEmbarque.h</a>&quot;</code><br/>
+
+<p><a href="_tipo_aviao_d_b_8h_source.html">Ir para o código fonte deste ficheiro.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Componentes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao_d_b.html">TipoAviaoDB</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Classe que contém uma base de dados de tipos de aviões. <br/>
+.  <a href="class_tipo_aviao_d_b.html#_details">Mais...</a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tipo_aviao_d_b_8h.html#a02e35f3f9452b343b9c23e4fb0270db3">cmpTipoAviaoTipo</a> (const <a class="el" href="class_tipo_aviao.html">TipoAviao</a> *ta1, const <a class="el" href="class_tipo_aviao.html">TipoAviao</a> *ta2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compara se o Tipo de um tipo de avião é menor do que outro.  <a href="#a02e35f3f9452b343b9c23e4fb0270db3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tipo_aviao_d_b_8h.html#a473d6f2ed0c960075bf216029729050b">cmpTipoAviaoDescricao</a> (const <a class="el" href="class_tipo_aviao.html">TipoAviao</a> *ta1, const <a class="el" href="class_tipo_aviao.html">TipoAviao</a> *ta2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compara se a descrição de um tipo de avião é menor do que outro.  <a href="#a473d6f2ed0c960075bf216029729050b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tipo_aviao_d_b_8h.html#aa8f6acc2d853b5f21837e2bb38a38217">cmpTipoAviaoCategoria</a> (const <a class="el" href="class_tipo_aviao.html">TipoAviao</a> *ta1, const <a class="el" href="class_tipo_aviao.html">TipoAviao</a> *ta2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compara se a categoria de um tipo de avião é menor do que outro.  <a href="#aa8f6acc2d853b5f21837e2bb38a38217"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<p>Classe que contém uma base de dados de tipos de aviões. </p>
+<p>PROJECTO: Projecto 2 - Gestão do embarque dos passageiros num aeroporto (check-in/embarque) <br/>
+ FICHEIRO: <a class="el" href="_tipo_aviao_d_b_8h.html" title="Classe que contém uma base de dados de tipos de aviões.">TipoAviaoDB.h</a> <br/>
+ DESCRIÇÃO: Classe que contém uma base de dados de tipos de aviões. <br/>
+</p>
+<p>TURMA / GRUPO: 2MIEIC1 / 4 <br/>
+ AUTORES:</p>
+<ul>
+<li>Carlos Miguel Correia da Costa</li>
+<li>Daniela Filipa Neves Cardeano</li>
+<li>Vítor Amálio Maia Martins Moreira </li>
+</ul>
+
+<p>Definido no ficheiro <a class="el" href="_tipo_aviao_d_b_8h_source.html">TipoAviaoDB.h</a>.</p>
+<hr/><h2>Documentação das funções</h2>
+<a class="anchor" id="aa8f6acc2d853b5f21837e2bb38a38217"></a><!-- doxytag: member="TipoAviaoDB.h::cmpTipoAviaoCategoria" ref="aa8f6acc2d853b5f21837e2bb38a38217" args="(const TipoAviao *ta1, const TipoAviao *ta2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cmpTipoAviaoCategoria </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_tipo_aviao.html">TipoAviao</a> *&nbsp;</td>
+          <td class="paramname"> <em>ta1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_tipo_aviao.html">TipoAviao</a> *&nbsp;</td>
+          <td class="paramname"> <em>ta2</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Compara se a categoria de um tipo de avião é menor do que outro. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00143">143</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8cpp_source.html">TipoAviaoDB.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00074">TipoAviao::getCategoria()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a473d6f2ed0c960075bf216029729050b"></a><!-- doxytag: member="TipoAviaoDB.h::cmpTipoAviaoDescricao" ref="a473d6f2ed0c960075bf216029729050b" args="(const TipoAviao *ta1, const TipoAviao *ta2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cmpTipoAviaoDescricao </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_tipo_aviao.html">TipoAviao</a> *&nbsp;</td>
+          <td class="paramname"> <em>ta1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_tipo_aviao.html">TipoAviao</a> *&nbsp;</td>
+          <td class="paramname"> <em>ta2</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Compara se a descrição de um tipo de avião é menor do que outro. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00139">139</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8cpp_source.html">TipoAviaoDB.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00073">TipoAviao::getDescricao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a02e35f3f9452b343b9c23e4fb0270db3"></a><!-- doxytag: member="TipoAviaoDB.h::cmpTipoAviaoTipo" ref="a02e35f3f9452b343b9c23e4fb0270db3" args="(const TipoAviao *ta1, const TipoAviao *ta2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cmpTipoAviaoTipo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_tipo_aviao.html">TipoAviao</a> *&nbsp;</td>
+          <td class="paramname"> <em>ta1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_tipo_aviao.html">TipoAviao</a> *&nbsp;</td>
+          <td class="paramname"> <em>ta2</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Compara se o Tipo de um tipo de avião é menor do que outro. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00135">135</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8cpp_source.html">TipoAviaoDB.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00072">TipoAviao::getNomeTipo()</a>.</p>
+
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:37 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

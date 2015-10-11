@@ -1,0 +1,1540 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência à classe TipoAviao</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&nbsp;dos&nbsp;componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a>  </div>
+  <div class="headertitle">
+<h1>Referência à classe TipoAviao</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="TipoAviao" -->
+<p>Classe que contém informação acerca de um determinadp tipo de avião.  
+<a href="#_details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>&gt;</code></p>
+
+<p><a href="class_tipo_aviao-members.html">Mostrar lista completa dos membros</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#aab7538c6d7a967720d6dead845321510">TipoAviao</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#ab6a2fb59518ec5911d7cefa1080b016e">TipoAviao</a> (string nome_tipo, string descricao, unsigned categoria)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a22163bbb3a8e7b41481417c3ec95c6ed">TipoAviao</a> (string nome_tipo, string descricao, unsigned categoria, string fabricante, <a class="el" href="class_data_hora.html">DataHora</a> data_lancamento, unsigned preco, unsigned maximo_passageiros, unsigned autonomia, unsigned velocidade_maxima, unsigned numero_motores, unsigned peso_vazio, unsigned peso_maximo, unsigned comprimento, unsigned envergadura, unsigned altura, unsigned altitude_maxima)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#ad3bcd79cb3631a6f1fbeb0587d84cf7d">~TipoAviao</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a774ccd8ea84fe300c4776da5d1aacef9">getNomeTipo</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a3a398874fba59860ec9091ee24f0d894">getDescricao</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a6a410fc3cf96ec6d7cebf971985cd21d">getCategoria</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a02cf109cc6c860e275b25914fe494771">getFabricante</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data_hora.html">DataHora</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a9bb8d29339bfebfabb436880bc8ac4fa">getDataLancamento</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a250cecbf40f8946ed73c9a3961c1be32">getPreco</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a20334d8bf1df6d3a3c9e94c1a3be3982">getMaximoPassageiros</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a73518c45c99345bc1276901398e28ddb">getAutonomia</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a2d6fef3040a59fba278cd5f2aa56038f">getVelocidadeMaxima</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a85bffb930fdcdbbbb7555f0693805325">getNumeroMotores</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#ace09fe64b331a63f77993800e922d559">getPesoVazio</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#aed7cf8c7da70eb7e97b9ed541b1e538e">getPesoMaximo</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#ab7c4e7058a8d8cbc143b6bb558b69aa5">getComprimento</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a2af88b84afc095e299e407d296103f67">getEnvergadura</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a9d1cc57b5aa3094071fb1afca2e9a378">getAltura</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a4465be98db8e469e8ab2e310650887d1">getAltitudeMaxima</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a45474a503074a9f03f5b09620cb3c84b">setNomeTipo</a> (string nome_tipo)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a28f489161d7a16fc85dbc283e9d97094">setDescricao</a> (string descricao)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a98434f1bec8b93047455f7d98f2b22ef">setCategoria</a> (unsigned categoria)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#ac44a5bf79c8974ab126ab8851dd57d8f">setFabricante</a> (string fabricante)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a50fecf0f87860148bd55829e184ad261">setDataLancamento</a> (<a class="el" href="class_data_hora.html">DataHora</a> data_lancamento)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a66c7b9a861377ce4edaf196656b63274">setPreco</a> (unsigned preco)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a5366a37d8f6da0bf8b4d6950bc3c40c1">setMaximoPassageiros</a> (unsigned maximo_passageiros)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a51bfa9769e7d8b9114bee8e7c86b597c">setAutonomia</a> (unsigned autonomia)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a58e4fb196ee4621c6c4142208f9007cb">setVelocidadeMaxima</a> (unsigned velocidade_maxima)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a5be72bb26d14ab86024ab2c63584c4d1">setNumeroMotores</a> (unsigned numero_motores)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a12eb815a8c09c69c268cccb32b223c8e">setPesoVazio</a> (unsigned peso_vazio)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a29565a0fec98631ea212456061242dfb">setPesoMaximo</a> (unsigned peso_maximo)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#ad395441996555e26911c856f5a562787">setComprimento</a> (unsigned comprimento)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a220bfcf1fc03aa0e56ce6c54a57cb941">setEnvergadura</a> (unsigned envergadura)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a2a5f270530b6d260294aee3820216284">setAltura</a> (unsigned altura)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a64166d5bfc900c862633929743dfdd8d">setAltitudeMaxima</a> (unsigned altitude_maxima)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_aviao.html">Aviao</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a52bb2cc34c9946e864af1e3c549fb0c9">getAvioesAssociados</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const vector&lt; <a class="el" href="class_aviao.html">Aviao</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a99f0db7026bd89812c0d15f6f424ab51">getConstRefAvioesAssociados</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_aviao.html">Aviao</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a2ade2db16bf21200ee56b3d67370622d">getRefAvioesAssociados</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#adb7b2ca9543e8c859b526eeb67d93f50">operator==</a> (const <a class="el" href="class_tipo_aviao.html">TipoAviao</a> &amp;tipo_aviao) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador que permite verificar se dois Tipos de Avião são equivalentes.  <a href="#adb7b2ca9543e8c859b526eeb67d93f50"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a92c6707946f9b1dea1fb6842b02857d6">operator&lt;</a> (const <a class="el" href="class_tipo_aviao.html">TipoAviao</a> &amp;tipo_aviao) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Oprador que verifica se o nome do tipo de um avião é "menor" do que outro.  <a href="#a92c6707946f9b1dea1fb6842b02857d6"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#afa7bb29db72530d90930abb4b9b6dbb4">_nome_tipo</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ex: A321.  <a href="#afa7bb29db72530d90930abb4b9b6dbb4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a3ffd0f7ee84a0f639235dfb06de51b80">_descricao</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ex: Airbus 321.  <a href="#a3ffd0f7ee84a0f639235dfb06de51b80"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#ab0e0db6bd901a9cadd0ef2219c1d41f8">_categoria</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ex: Médio curso.  <a href="#ab0e0db6bd901a9cadd0ef2219c1d41f8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#ad07fcbb4bd70adc3c4863077ac3a35b5">_fabricante</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ex: Airbus.  <a href="#ad07fcbb4bd70adc3c4863077ac3a35b5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_data_hora.html">DataHora</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a4bcb749c9731aadb9fb162042d386853">_data_lancamento</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Data do primeiro voo deste tipo de avião.  <a href="#a4bcb749c9731aadb9fb162042d386853"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a1815d4cd0fff353cdd0ca73a8d391b07">_preco</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Preço deste tipo de avião.  <a href="#a1815d4cd0fff353cdd0ca73a8d391b07"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a4b5eee4329b11f37abe0a242cfae8dbb">_maximo_passageiros</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Nº de passageiros máximo.  <a href="#a4b5eee4329b11f37abe0a242cfae8dbb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#ad70657f49f8e679301b93846aa0dfe22">_autonomia</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Em km.  <a href="#ad70657f49f8e679301b93846aa0dfe22"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a971a5ba2f2216a9dd67df567aae43007">_velocidade_maxima</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Em km/h.  <a href="#a971a5ba2f2216a9dd67df567aae43007"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a7c4b8e74c64bd38283c0c665724cf41a">_numero_motores</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a8a1a865fcdc26fa31c6d72ab05a464f5">_peso_vazio</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Em kg.  <a href="#a8a1a865fcdc26fa31c6d72ab05a464f5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a5b80979e86aa6a615783e35da4052125">_peso_maximo</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Em kg.  <a href="#a5b80979e86aa6a615783e35da4052125"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a63c0214f953857a0f0e3b2e8cac97cdb">_comprimento</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#ad0863e5f2878cbfa41f9b60ad46ef9cb">_envergadura</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a860c5ebf6e16244f9acac6bb2d092eec">_altura</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a15b734deaf0da2ced0926cd15447b4b9">_altitude_maxima</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_aviao.html">Aviao</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao.html#a0608ad0332fcfb48d612b8484e1a7640">_avioes_associados</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vector de apontador de <a class="el" href="class_aviao.html" title="Classe que armazena informação acerca de um avião de uma dada companhia.">Aviao</a>, que tem os aviões que actualmente estão a usar este <a class="el" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a>.  <a href="#a0608ad0332fcfb48d612b8484e1a7640"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<p>Classe que contém informação acerca de um determinadp tipo de avião. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00031">31</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+<hr/><h2>Documentação dos Construtores &amp; Destrutor</h2>
+<a class="anchor" id="aab7538c6d7a967720d6dead845321510"></a><!-- doxytag: member="TipoAviao::TipoAviao" ref="aab7538c6d7a967720d6dead845321510" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TipoAviao::TipoAviao </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00057">57</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab6a2fb59518ec5911d7cefa1080b016e"></a><!-- doxytag: member="TipoAviao::TipoAviao" ref="ab6a2fb59518ec5911d7cefa1080b016e" args="(string nome_tipo, string descricao, unsigned categoria)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TipoAviao::TipoAviao </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>nome_tipo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>descricao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>categoria</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00060">60</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a22163bbb3a8e7b41481417c3ec95c6ed"></a><!-- doxytag: member="TipoAviao::TipoAviao" ref="a22163bbb3a8e7b41481417c3ec95c6ed" args="(string nome_tipo, string descricao, unsigned categoria, string fabricante, DataHora data_lancamento, unsigned preco, unsigned maximo_passageiros, unsigned autonomia, unsigned velocidade_maxima, unsigned numero_motores, unsigned peso_vazio, unsigned peso_maximo, unsigned comprimento, unsigned envergadura, unsigned altura, unsigned altitude_maxima)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TipoAviao::TipoAviao </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>nome_tipo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>descricao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>categoria</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>fabricante</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_data_hora.html">DataHora</a>&nbsp;</td>
+          <td class="paramname"> <em>data_lancamento</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>preco</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>maximo_passageiros</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>autonomia</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>velocidade_maxima</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>numero_motores</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>peso_vazio</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>peso_maximo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>comprimento</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>envergadura</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>altura</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>altitude_maxima</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00062">62</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad3bcd79cb3631a6f1fbeb0587d84cf7d"></a><!-- doxytag: member="TipoAviao::~TipoAviao" ref="ad3bcd79cb3631a6f1fbeb0587d84cf7d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual TipoAviao::~TipoAviao </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00070">70</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos métodos</h2>
+<a class="anchor" id="a4465be98db8e469e8ab2e310650887d1"></a><!-- doxytag: member="TipoAviao::getAltitudeMaxima" ref="a4465be98db8e469e8ab2e310650887d1" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned TipoAviao::getAltitudeMaxima </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00087">87</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00050">_altitude_maxima</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00255">TipoAviaoDB::infoTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9d1cc57b5aa3094071fb1afca2e9a378"></a><!-- doxytag: member="TipoAviao::getAltura" ref="a9d1cc57b5aa3094071fb1afca2e9a378" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned TipoAviao::getAltura </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00086">86</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00049">_altura</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00255">TipoAviaoDB::infoTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a73518c45c99345bc1276901398e28ddb"></a><!-- doxytag: member="TipoAviao::getAutonomia" ref="a73518c45c99345bc1276901398e28ddb" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned TipoAviao::getAutonomia </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00079">79</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00041">_autonomia</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00255">TipoAviaoDB::infoTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a52bb2cc34c9946e864af1e3c549fb0c9"></a><!-- doxytag: member="TipoAviao::getAvioesAssociados" ref="a52bb2cc34c9946e864af1e3c549fb0c9" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_aviao.html">Aviao</a>*&gt; TipoAviao::getAvioesAssociados </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00107">107</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00053">_avioes_associados</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6a410fc3cf96ec6d7cebf971985cd21d"></a><!-- doxytag: member="TipoAviao::getCategoria" ref="a6a410fc3cf96ec6d7cebf971985cd21d" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned TipoAviao::getCategoria </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00074">74</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00035">_categoria</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00143">cmpTipoAviaoCategoria()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a> e <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00255">TipoAviaoDB::infoTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab7c4e7058a8d8cbc143b6bb558b69aa5"></a><!-- doxytag: member="TipoAviao::getComprimento" ref="ab7c4e7058a8d8cbc143b6bb558b69aa5" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned TipoAviao::getComprimento </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00084">84</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00047">_comprimento</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00255">TipoAviaoDB::infoTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a99f0db7026bd89812c0d15f6f424ab51"></a><!-- doxytag: member="TipoAviao::getConstRefAvioesAssociados" ref="a99f0db7026bd89812c0d15f6f424ab51" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vector&lt;<a class="el" href="class_aviao.html">Aviao</a>*&gt;&amp; TipoAviao::getConstRefAvioesAssociados </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00109">109</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00053">_avioes_associados</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9bb8d29339bfebfabb436880bc8ac4fa"></a><!-- doxytag: member="TipoAviao::getDataLancamento" ref="a9bb8d29339bfebfabb436880bc8ac4fa" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data_hora.html">DataHora</a> TipoAviao::getDataLancamento </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00076">76</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00038">_data_lancamento</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00255">TipoAviaoDB::infoTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3a398874fba59860ec9091ee24f0d894"></a><!-- doxytag: member="TipoAviao::getDescricao" ref="a3a398874fba59860ec9091ee24f0d894" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string TipoAviao::getDescricao </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00073">73</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00034">_descricao</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00139">cmpTipoAviaoDescricao()</a> e <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00255">TipoAviaoDB::infoTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2af88b84afc095e299e407d296103f67"></a><!-- doxytag: member="TipoAviao::getEnvergadura" ref="a2af88b84afc095e299e407d296103f67" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned TipoAviao::getEnvergadura </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00085">85</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00048">_envergadura</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00255">TipoAviaoDB::infoTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a02cf109cc6c860e275b25914fe494771"></a><!-- doxytag: member="TipoAviao::getFabricante" ref="a02cf109cc6c860e275b25914fe494771" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string TipoAviao::getFabricante </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00075">75</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00037">_fabricante</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00255">TipoAviaoDB::infoTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a20334d8bf1df6d3a3c9e94c1a3be3982"></a><!-- doxytag: member="TipoAviao::getMaximoPassageiros" ref="a20334d8bf1df6d3a3c9e94c1a3be3982" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned TipoAviao::getMaximoPassageiros </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00078">78</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00040">_maximo_passageiros</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02358">CRUD::checkInNextPassageiro()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a> e <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00255">TipoAviaoDB::infoTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a774ccd8ea84fe300c4776da5d1aacef9"></a><!-- doxytag: member="TipoAviao::getNomeTipo" ref="a774ccd8ea84fe300c4776da5d1aacef9" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string TipoAviao::getNomeTipo </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00072">72</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00033">_nome_tipo</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00135">cmpTipoAviaoTipo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00211">CRUD::infoAviao()</a> e <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00255">TipoAviaoDB::infoTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a85bffb930fdcdbbbb7555f0693805325"></a><!-- doxytag: member="TipoAviao::getNumeroMotores" ref="a85bffb930fdcdbbbb7555f0693805325" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned TipoAviao::getNumeroMotores </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00081">81</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00043">_numero_motores</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00255">TipoAviaoDB::infoTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aed7cf8c7da70eb7e97b9ed541b1e538e"></a><!-- doxytag: member="TipoAviao::getPesoMaximo" ref="aed7cf8c7da70eb7e97b9ed541b1e538e" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned TipoAviao::getPesoMaximo </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00083">83</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00045">_peso_maximo</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00255">TipoAviaoDB::infoTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ace09fe64b331a63f77993800e922d559"></a><!-- doxytag: member="TipoAviao::getPesoVazio" ref="ace09fe64b331a63f77993800e922d559" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned TipoAviao::getPesoVazio </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00082">82</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00044">_peso_vazio</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00255">TipoAviaoDB::infoTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a250cecbf40f8946ed73c9a3961c1be32"></a><!-- doxytag: member="TipoAviao::getPreco" ref="a250cecbf40f8946ed73c9a3961c1be32" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned TipoAviao::getPreco </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00077">77</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00039">_preco</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00255">TipoAviaoDB::infoTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2ade2db16bf21200ee56b3d67370622d"></a><!-- doxytag: member="TipoAviao::getRefAvioesAssociados" ref="a2ade2db16bf21200ee56b3d67370622d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_aviao.html">Aviao</a>*&gt;&amp; TipoAviao::getRefAvioesAssociados </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00111">111</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00053">_avioes_associados</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00070">CRUD::addAviao()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00437">CRUD::delTipoAviaoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2d6fef3040a59fba278cd5f2aa56038f"></a><!-- doxytag: member="TipoAviao::getVelocidadeMaxima" ref="a2d6fef3040a59fba278cd5f2aa56038f" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned TipoAviao::getVelocidadeMaxima </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00080">80</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00042">_velocidade_maxima</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00255">TipoAviaoDB::infoTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a92c6707946f9b1dea1fb6842b02857d6"></a><!-- doxytag: member="TipoAviao::operator&lt;" ref="a92c6707946f9b1dea1fb6842b02857d6" args="(const TipoAviao &amp;tipo_aviao) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TipoAviao::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_tipo_aviao.html">TipoAviao</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>tipo_aviao</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Oprador que verifica se o nome do tipo de um avião é "menor" do que outro. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8cpp_source.html#l00026">26</a> do ficheiro <a class="el" href="_tipo_aviao_8cpp_source.html">TipoAviao.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00033">_nome_tipo</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adb7b2ca9543e8c859b526eeb67d93f50"></a><!-- doxytag: member="TipoAviao::operator==" ref="adb7b2ca9543e8c859b526eeb67d93f50" args="(const TipoAviao &amp;tipo_aviao) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TipoAviao::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_tipo_aviao.html">TipoAviao</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>tipo_aviao</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operador que permite verificar se dois Tipos de Avião são equivalentes. </p>
+<p>Compara o nome do tipo de avião. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8cpp_source.html#l00018">18</a> do ficheiro <a class="el" href="_tipo_aviao_8cpp_source.html">TipoAviao.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00033">_nome_tipo</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a64166d5bfc900c862633929743dfdd8d"></a><!-- doxytag: member="TipoAviao::setAltitudeMaxima" ref="a64166d5bfc900c862633929743dfdd8d" args="(unsigned altitude_maxima)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviao::setAltitudeMaxima </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>altitude_maxima</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00104">104</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00050">_altitude_maxima</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">TipoAviaoDB::editTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2a5f270530b6d260294aee3820216284"></a><!-- doxytag: member="TipoAviao::setAltura" ref="a2a5f270530b6d260294aee3820216284" args="(unsigned altura)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviao::setAltura </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>altura</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00103">103</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00049">_altura</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">TipoAviaoDB::editTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a51bfa9769e7d8b9114bee8e7c86b597c"></a><!-- doxytag: member="TipoAviao::setAutonomia" ref="a51bfa9769e7d8b9114bee8e7c86b597c" args="(unsigned autonomia)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviao::setAutonomia </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>autonomia</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00096">96</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00041">_autonomia</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">TipoAviaoDB::editTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a98434f1bec8b93047455f7d98f2b22ef"></a><!-- doxytag: member="TipoAviao::setCategoria" ref="a98434f1bec8b93047455f7d98f2b22ef" args="(unsigned categoria)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviao::setCategoria </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>categoria</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00091">91</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00035">_categoria</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">TipoAviaoDB::editTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad395441996555e26911c856f5a562787"></a><!-- doxytag: member="TipoAviao::setComprimento" ref="ad395441996555e26911c856f5a562787" args="(unsigned comprimento)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviao::setComprimento </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>comprimento</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00101">101</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00047">_comprimento</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">TipoAviaoDB::editTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a50fecf0f87860148bd55829e184ad261"></a><!-- doxytag: member="TipoAviao::setDataLancamento" ref="a50fecf0f87860148bd55829e184ad261" args="(DataHora data_lancamento)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviao::setDataLancamento </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_data_hora.html">DataHora</a>&nbsp;</td>
+          <td class="paramname"> <em>data_lancamento</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00093">93</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00038">_data_lancamento</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">TipoAviaoDB::editTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a28f489161d7a16fc85dbc283e9d97094"></a><!-- doxytag: member="TipoAviao::setDescricao" ref="a28f489161d7a16fc85dbc283e9d97094" args="(string descricao)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviao::setDescricao </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>descricao</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00090">90</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00034">_descricao</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">TipoAviaoDB::editTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a220bfcf1fc03aa0e56ce6c54a57cb941"></a><!-- doxytag: member="TipoAviao::setEnvergadura" ref="a220bfcf1fc03aa0e56ce6c54a57cb941" args="(unsigned envergadura)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviao::setEnvergadura </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>envergadura</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00102">102</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00048">_envergadura</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">TipoAviaoDB::editTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac44a5bf79c8974ab126ab8851dd57d8f"></a><!-- doxytag: member="TipoAviao::setFabricante" ref="ac44a5bf79c8974ab126ab8851dd57d8f" args="(string fabricante)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviao::setFabricante </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>fabricante</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00092">92</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00037">_fabricante</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">TipoAviaoDB::editTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5366a37d8f6da0bf8b4d6950bc3c40c1"></a><!-- doxytag: member="TipoAviao::setMaximoPassageiros" ref="a5366a37d8f6da0bf8b4d6950bc3c40c1" args="(unsigned maximo_passageiros)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviao::setMaximoPassageiros </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>maximo_passageiros</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00095">95</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00040">_maximo_passageiros</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">TipoAviaoDB::editTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a45474a503074a9f03f5b09620cb3c84b"></a><!-- doxytag: member="TipoAviao::setNomeTipo" ref="a45474a503074a9f03f5b09620cb3c84b" args="(string nome_tipo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviao::setNomeTipo </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>nome_tipo</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00089">89</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00033">_nome_tipo</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">TipoAviaoDB::editTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5be72bb26d14ab86024ab2c63584c4d1"></a><!-- doxytag: member="TipoAviao::setNumeroMotores" ref="a5be72bb26d14ab86024ab2c63584c4d1" args="(unsigned numero_motores)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviao::setNumeroMotores </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>numero_motores</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00098">98</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00043">_numero_motores</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">TipoAviaoDB::editTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a29565a0fec98631ea212456061242dfb"></a><!-- doxytag: member="TipoAviao::setPesoMaximo" ref="a29565a0fec98631ea212456061242dfb" args="(unsigned peso_maximo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviao::setPesoMaximo </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>peso_maximo</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00100">100</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00045">_peso_maximo</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">TipoAviaoDB::editTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a12eb815a8c09c69c268cccb32b223c8e"></a><!-- doxytag: member="TipoAviao::setPesoVazio" ref="a12eb815a8c09c69c268cccb32b223c8e" args="(unsigned peso_vazio)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviao::setPesoVazio </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>peso_vazio</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00099">99</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00044">_peso_vazio</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">TipoAviaoDB::editTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a66c7b9a861377ce4edaf196656b63274"></a><!-- doxytag: member="TipoAviao::setPreco" ref="a66c7b9a861377ce4edaf196656b63274" args="(unsigned preco)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviao::setPreco </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>preco</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00094">94</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00039">_preco</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">TipoAviaoDB::editTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a58e4fb196ee4621c6c4142208f9007cb"></a><!-- doxytag: member="TipoAviao::setVelocidadeMaxima" ref="a58e4fb196ee4621c6c4142208f9007cb" args="(unsigned velocidade_maxima)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviao::setVelocidadeMaxima </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&nbsp;</td>
+          <td class="paramname"> <em>velocidade_maxima</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00097">97</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_8h_source.html#l00042">_velocidade_maxima</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">TipoAviaoDB::editTipoAviao()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos dados membro</h2>
+<a class="anchor" id="a15b734deaf0da2ced0926cd15447b4b9"></a><!-- doxytag: member="TipoAviao::_altitude_maxima" ref="a15b734deaf0da2ced0926cd15447b4b9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned <a class="el" href="class_tipo_aviao.html#a15b734deaf0da2ced0926cd15447b4b9">TipoAviao::_altitude_maxima</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00050">50</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_8h_source.html#l00087">getAltitudeMaxima()</a> e <a class="el" href="_tipo_aviao_8h_source.html#l00104">setAltitudeMaxima()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a860c5ebf6e16244f9acac6bb2d092eec"></a><!-- doxytag: member="TipoAviao::_altura" ref="a860c5ebf6e16244f9acac6bb2d092eec" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned <a class="el" href="class_tipo_aviao.html#a860c5ebf6e16244f9acac6bb2d092eec">TipoAviao::_altura</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00049">49</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_8h_source.html#l00086">getAltura()</a> e <a class="el" href="_tipo_aviao_8h_source.html#l00103">setAltura()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad70657f49f8e679301b93846aa0dfe22"></a><!-- doxytag: member="TipoAviao::_autonomia" ref="ad70657f49f8e679301b93846aa0dfe22" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned <a class="el" href="class_tipo_aviao.html#ad70657f49f8e679301b93846aa0dfe22">TipoAviao::_autonomia</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Em km. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00041">41</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_8h_source.html#l00079">getAutonomia()</a> e <a class="el" href="_tipo_aviao_8h_source.html#l00096">setAutonomia()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0608ad0332fcfb48d612b8484e1a7640"></a><!-- doxytag: member="TipoAviao::_avioes_associados" ref="a0608ad0332fcfb48d612b8484e1a7640" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_aviao.html">Aviao</a>*&gt; <a class="el" href="class_tipo_aviao.html#a0608ad0332fcfb48d612b8484e1a7640">TipoAviao::_avioes_associados</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vector de apontador de <a class="el" href="class_aviao.html" title="Classe que armazena informação acerca de um avião de uma dada companhia.">Aviao</a>, que tem os aviões que actualmente estão a usar este <a class="el" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a>. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00053">53</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_8h_source.html#l00107">getAvioesAssociados()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00109">getConstRefAvioesAssociados()</a> e <a class="el" href="_tipo_aviao_8h_source.html#l00111">getRefAvioesAssociados()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab0e0db6bd901a9cadd0ef2219c1d41f8"></a><!-- doxytag: member="TipoAviao::_categoria" ref="ab0e0db6bd901a9cadd0ef2219c1d41f8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned <a class="el" href="class_tipo_aviao.html#ab0e0db6bd901a9cadd0ef2219c1d41f8">TipoAviao::_categoria</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ex: Médio curso. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00035">35</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_8h_source.html#l00074">getCategoria()</a> e <a class="el" href="_tipo_aviao_8h_source.html#l00091">setCategoria()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a63c0214f953857a0f0e3b2e8cac97cdb"></a><!-- doxytag: member="TipoAviao::_comprimento" ref="a63c0214f953857a0f0e3b2e8cac97cdb" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned <a class="el" href="class_tipo_aviao.html#a63c0214f953857a0f0e3b2e8cac97cdb">TipoAviao::_comprimento</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00047">47</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_8h_source.html#l00084">getComprimento()</a> e <a class="el" href="_tipo_aviao_8h_source.html#l00101">setComprimento()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4bcb749c9731aadb9fb162042d386853"></a><!-- doxytag: member="TipoAviao::_data_lancamento" ref="a4bcb749c9731aadb9fb162042d386853" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data_hora.html">DataHora</a> <a class="el" href="class_tipo_aviao.html#a4bcb749c9731aadb9fb162042d386853">TipoAviao::_data_lancamento</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Data do primeiro voo deste tipo de avião. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00038">38</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_8h_source.html#l00076">getDataLancamento()</a> e <a class="el" href="_tipo_aviao_8h_source.html#l00093">setDataLancamento()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3ffd0f7ee84a0f639235dfb06de51b80"></a><!-- doxytag: member="TipoAviao::_descricao" ref="a3ffd0f7ee84a0f639235dfb06de51b80" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string <a class="el" href="class_tipo_aviao.html#a3ffd0f7ee84a0f639235dfb06de51b80">TipoAviao::_descricao</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ex: Airbus 321. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00034">34</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_8h_source.html#l00073">getDescricao()</a> e <a class="el" href="_tipo_aviao_8h_source.html#l00090">setDescricao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad0863e5f2878cbfa41f9b60ad46ef9cb"></a><!-- doxytag: member="TipoAviao::_envergadura" ref="ad0863e5f2878cbfa41f9b60ad46ef9cb" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned <a class="el" href="class_tipo_aviao.html#ad0863e5f2878cbfa41f9b60ad46ef9cb">TipoAviao::_envergadura</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00048">48</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_8h_source.html#l00085">getEnvergadura()</a> e <a class="el" href="_tipo_aviao_8h_source.html#l00102">setEnvergadura()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad07fcbb4bd70adc3c4863077ac3a35b5"></a><!-- doxytag: member="TipoAviao::_fabricante" ref="ad07fcbb4bd70adc3c4863077ac3a35b5" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string <a class="el" href="class_tipo_aviao.html#ad07fcbb4bd70adc3c4863077ac3a35b5">TipoAviao::_fabricante</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ex: Airbus. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00037">37</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_8h_source.html#l00075">getFabricante()</a> e <a class="el" href="_tipo_aviao_8h_source.html#l00092">setFabricante()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4b5eee4329b11f37abe0a242cfae8dbb"></a><!-- doxytag: member="TipoAviao::_maximo_passageiros" ref="a4b5eee4329b11f37abe0a242cfae8dbb" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned <a class="el" href="class_tipo_aviao.html#a4b5eee4329b11f37abe0a242cfae8dbb">TipoAviao::_maximo_passageiros</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Nº de passageiros máximo. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00040">40</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_8h_source.html#l00078">getMaximoPassageiros()</a> e <a class="el" href="_tipo_aviao_8h_source.html#l00095">setMaximoPassageiros()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afa7bb29db72530d90930abb4b9b6dbb4"></a><!-- doxytag: member="TipoAviao::_nome_tipo" ref="afa7bb29db72530d90930abb4b9b6dbb4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string <a class="el" href="class_tipo_aviao.html#afa7bb29db72530d90930abb4b9b6dbb4">TipoAviao::_nome_tipo</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ex: A321. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00033">33</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_8h_source.html#l00072">getNomeTipo()</a>, <a class="el" href="_tipo_aviao_8cpp_source.html#l00026">operator&lt;()</a>, <a class="el" href="_tipo_aviao_8cpp_source.html#l00018">operator==()</a> e <a class="el" href="_tipo_aviao_8h_source.html#l00089">setNomeTipo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7c4b8e74c64bd38283c0c665724cf41a"></a><!-- doxytag: member="TipoAviao::_numero_motores" ref="a7c4b8e74c64bd38283c0c665724cf41a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned <a class="el" href="class_tipo_aviao.html#a7c4b8e74c64bd38283c0c665724cf41a">TipoAviao::_numero_motores</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00043">43</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_8h_source.html#l00081">getNumeroMotores()</a> e <a class="el" href="_tipo_aviao_8h_source.html#l00098">setNumeroMotores()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5b80979e86aa6a615783e35da4052125"></a><!-- doxytag: member="TipoAviao::_peso_maximo" ref="a5b80979e86aa6a615783e35da4052125" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned <a class="el" href="class_tipo_aviao.html#a5b80979e86aa6a615783e35da4052125">TipoAviao::_peso_maximo</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Em kg. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00045">45</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_8h_source.html#l00083">getPesoMaximo()</a> e <a class="el" href="_tipo_aviao_8h_source.html#l00100">setPesoMaximo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8a1a865fcdc26fa31c6d72ab05a464f5"></a><!-- doxytag: member="TipoAviao::_peso_vazio" ref="a8a1a865fcdc26fa31c6d72ab05a464f5" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned <a class="el" href="class_tipo_aviao.html#a8a1a865fcdc26fa31c6d72ab05a464f5">TipoAviao::_peso_vazio</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Em kg. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00044">44</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_8h_source.html#l00082">getPesoVazio()</a> e <a class="el" href="_tipo_aviao_8h_source.html#l00099">setPesoVazio()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1815d4cd0fff353cdd0ca73a8d391b07"></a><!-- doxytag: member="TipoAviao::_preco" ref="a1815d4cd0fff353cdd0ca73a8d391b07" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned <a class="el" href="class_tipo_aviao.html#a1815d4cd0fff353cdd0ca73a8d391b07">TipoAviao::_preco</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Preço deste tipo de avião. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00039">39</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_8h_source.html#l00077">getPreco()</a> e <a class="el" href="_tipo_aviao_8h_source.html#l00094">setPreco()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a971a5ba2f2216a9dd67df567aae43007"></a><!-- doxytag: member="TipoAviao::_velocidade_maxima" ref="a971a5ba2f2216a9dd67df567aae43007" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned <a class="el" href="class_tipo_aviao.html#a971a5ba2f2216a9dd67df567aae43007">TipoAviao::_velocidade_maxima</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Em km/h. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_8h_source.html#l00042">42</a> do ficheiro <a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_8h_source.html#l00080">getVelocidadeMaxima()</a> e <a class="el" href="_tipo_aviao_8h_source.html#l00097">setVelocidadeMaxima()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
+<li><a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a></li>
+<li><a class="el" href="_tipo_aviao_8cpp_source.html">TipoAviao.cpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:39 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

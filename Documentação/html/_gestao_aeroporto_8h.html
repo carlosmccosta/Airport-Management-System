@@ -1,0 +1,534 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência ao ficheiro GestaoAeroporto.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Funções</a> &#124;
+<a href="#var-members">Variáveis</a>  </div>
+  <div class="headertitle">
+<h1>Referência ao ficheiro GestaoAeroporto.h</h1>  </div>
+</div>
+<div class="contents">
+
+<p>Ficheiro que contém os métodos <a class="el" href="namespace_c_r_u_d.html">CRUD</a> (manutenção de dados), de cada classe.  
+<a href="#_details">Mais...</a></p>
+<code>#include &quot;<a class="el" href="_aeroporto_8h_source.html">Aeroporto.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_data_hora_8h_source.html">DataHora.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_aviao_8h_source.html">Aviao.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_tipo_aviao_8h_source.html">TipoAviao.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_companhia_8h_source.html">Companhia.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_tripulante_8h_source.html">Tripulante.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_piloto_8h_source.html">Piloto.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_hospedeiro_8h_source.html">Hospedeiro.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_voo_8h_source.html">Voo.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_porta_embarque_8h_source.html">PortaEmbarque.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br/>
+<code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;string&gt;</code><br/>
+<code>#include &lt;fstream&gt;</code><br/>
+<code>#include &lt;iostream&gt;</code><br/>
+<code>#include &lt;sstream&gt;</code><br/>
+<code>#include &lt;cstdlib&gt;</code><br/>
+<code>#include &lt;cstdio&gt;</code><br/>
+<code>#include &lt;iomanip&gt;</code><br/>
+<code>#include &lt;limits&gt;</code><br/>
+<code>#include &lt;time.h&gt;</code><br/>
+<code>#include &lt;algorithm&gt;</code><br/>
+<code>#include &lt;utility&gt;</code><br/>
+<code>#include &lt;functional&gt;</code><br/>
+
+<p><a href="_gestao_aeroporto_8h_source.html">Ir para o código fonte deste ficheiro.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html">CRUD</a></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a97c29a8c421a476911fb79e82887e154">CRUD::addAviao</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona um Avião a uma companhia com os dados introduzidos pelo utilizador.  <a href="#a97c29a8c421a476911fb79e82887e154"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#afa45e579d61ab0c7e0a6f11c0a21d143">CRUD::addAviao</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia, <a class="el" href="class_aviao.html">Aviao</a> *aviao)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona um apontador de Avião a uma companhia.  <a href="#afa45e579d61ab0c7e0a6f11c0a21d143"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#af275583bc4c8ade7d2b4a0c604421122">CRUD::cmpAviaoMatricula</a> (const <a class="el" href="class_aviao.html">Aviao</a> *av1, const <a class="el" href="class_aviao.html">Aviao</a> *av2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função usada para a ordenação do vector de aviões segundo a Matricula.  <a href="#af275583bc4c8ade7d2b4a0c604421122"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#aecbb4b4130cd5e50a9bf04619ed61f6d">CRUD::cmpAviaoNome</a> (const <a class="el" href="class_aviao.html">Aviao</a> *av1, const <a class="el" href="class_aviao.html">Aviao</a> *av2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função usada para a ordenação do vector de aviões segundo o nome.  <a href="#aecbb4b4130cd5e50a9bf04619ed61f6d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#aab417fe2c623ffb62edf974ad93bf6da">CRUD::cmpAviaoProximaRevisao</a> (const <a class="el" href="class_aviao.html">Aviao</a> *av1, const <a class="el" href="class_aviao.html">Aviao</a> *av2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função usada para a ordenação do vector de aviões segundo a DataProximaRevisao.  <a href="#aab417fe2c623ffb62edf974ad93bf6da"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a93d562d68e20b890b21cf6148b36c38e">CRUD::listAviao</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia, bool final_pause=true)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mostra todas os Aviões de uma <a class="el" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> numa tabela, pedindo ao utilizador o parâmetro que quer usar para fazer a ordenação da tabela.  <a href="#a93d562d68e20b890b21cf6148b36c38e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a2115b8974a4713a77d6d688f4447d208">CRUD::selAviao</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Selecciona um Avião de uma <a class="el" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a>, de uma lista de aviões.  <a href="#a2115b8974a4713a77d6d688f4447d208"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_aviao.html">Aviao</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a409303e144641aef0a8f73221ecaa5ba">CRUD::selAviaoPtr</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Selecciona um Avião de uma <a class="el" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a>, de uma lista de aviões.  <a href="#a409303e144641aef0a8f73221ecaa5ba"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a6ea2822405b50724fa256842ecd309ed">CRUD::infoAviao</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que mostra ao utilizador os atributos dum avião.  <a href="#a6ea2822405b50724fa256842ecd309ed"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#aed6dec6084043c9c09b5d5afafe9dd84">CRUD::editAviao</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, <a class="el" href="class_companhia.html">Companhia</a> *companhia)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que permite ao utilizador editar os atributos de um avião.  <a href="#aed6dec6084043c9c09b5d5afafe9dd84"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a214da311c5e57d732860a53b9dc94ce1">CRUD::delAviao</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que elimina um dado avião caso não esteja associado a um voo.  <a href="#a214da311c5e57d732860a53b9dc94ce1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a48e8be165995da576e38e3b941eff981">CRUD::delAviao</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia, size_t indice)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que elimina o avião que stá no indice do vector de apontadores para aviões da companhia, caso não esteja associado a um voo.  <a href="#a48e8be165995da576e38e3b941eff981"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#ad70ecdc706be4708ea06a87205376158">CRUD::delAviaoPtr</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia, <a class="el" href="class_aviao.html">Aviao</a> *aviao_ptr)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que remove do vector de *Aviao de uma companhia o apontador aviao_ptr. Não apaga o aviao, só o apontador.  <a href="#ad70ecdc706be4708ea06a87205376158"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#aa66940134d988d2fc30109c70a28aba1">CRUD::delTipoAviaoAviao</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia, <a class="el" href="class_aviao.html">Aviao</a> *aviao)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que remove da frota o tipo de avião, se não estiver a ser utilizado.  <a href="#aa66940134d988d2fc30109c70a28aba1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#af57f3a566f5dc0f61fbdd7a03569eae8">CRUD::addTripulante</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona um tripulante a uma companhia com os dados introduzidos pelo utilizador.  <a href="#af57f3a566f5dc0f61fbdd7a03569eae8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a833f1a7f5a023b59a49a51fd40b18592">CRUD::addTripulante</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia, <a class="el" href="class_tripulante.html">Tripulante</a> *tripulante)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona um tripulante a uma companhia, verificando se já exitem nessa companhia um tripulante com o mesmo número.  <a href="#a833f1a7f5a023b59a49a51fd40b18592"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a8de060e9b18850936e78aad287b137d0">CRUD::cmpTripulanteNome</a> (const <a class="el" href="class_tripulante.html">Tripulante</a> *tripulante_1, const <a class="el" href="class_tripulante.html">Tripulante</a> *tripulante_2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compara se o nome de um tripulante é menor do que outro.  <a href="#a8de060e9b18850936e78aad287b137d0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a6263c9e6d2d969c9b4e2f73de5c6822d">CRUD::cmpTripulanteNumero</a> (const <a class="el" href="class_tripulante.html">Tripulante</a> *tripulante_1, const <a class="el" href="class_tripulante.html">Tripulante</a> *tripulante_2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compara se o número de um tripulante é menor do que outro.  <a href="#a6263c9e6d2d969c9b4e2f73de5c6822d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a1b65ba1ee0b6c87b194b5d3d12914d73">CRUD::cmpTripulanteCategoria</a> (const <a class="el" href="class_tripulante.html">Tripulante</a> *tripulante_1, const <a class="el" href="class_tripulante.html">Tripulante</a> *tripulante_2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compara se a categoria de um tripulante é menor do que outra.  <a href="#a1b65ba1ee0b6c87b194b5d3d12914d73"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#aff184481a3b44a2c331521df89886b6a">CRUD::cmpTripulanteSalarioHora</a> (const <a class="el" href="class_tripulante.html">Tripulante</a> *tripulante_1, const <a class="el" href="class_tripulante.html">Tripulante</a> *tripulante_2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compara se o salário/hora de um tripulante é menor do que outro.  <a href="#aff184481a3b44a2c331521df89886b6a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a1d98e86d69dbb5b4570b329707e68340">CRUD::cmpTripulanteNumeroHorasTrabalho</a> (const <a class="el" href="class_tripulante.html">Tripulante</a> *tripulante_1, const <a class="el" href="class_tripulante.html">Tripulante</a> *tripulante_2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compara se o número de horas de trabalho de um tripulante é menor do que outro.  <a href="#a1d98e86d69dbb5b4570b329707e68340"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#aba319e3a73979e629ba4f3961b758b74">CRUD::cmpTripulanteTipoContrato</a> (const <a class="el" href="class_tripulante.html">Tripulante</a> *tripulante_1, const <a class="el" href="class_tripulante.html">Tripulante</a> *tripulante_2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compara se o tipo de contrato de um tripulante é menor do que outro.  <a href="#aba319e3a73979e629ba4f3961b758b74"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a3a35f0450b90e3c78195dafb6de40bb2">CRUD::cmpTripulanteExpiracaoContrato</a> (const <a class="el" href="class_tripulante.html">Tripulante</a> *tripulante_1, const <a class="el" href="class_tripulante.html">Tripulante</a> *tripulante_2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compara se o data de expiração do contrato de um tripulante é menor do que outra.  <a href="#a3a35f0450b90e3c78195dafb6de40bb2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a11d2b8e4a251124482366d501af0183a">CRUD::listTripulante</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia, bool final_pause=true)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mostra todos os tripulantes de uma companhia, segundo o critério de ordenação que o utilizador selecionou.  <a href="#a11d2b8e4a251124482366d501af0183a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#ae5f90258685e1e722d3b46010e5cce54">CRUD::selTripulante</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Selecciona um <a class="el" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> de uma <a class="el" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a>, de uma lista de tripulantes.  <a href="#ae5f90258685e1e722d3b46010e5cce54"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tripulante.html">Tripulante</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#aedaae08a826460c290c90639d63253a5">CRUD::selTripulantePtr</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Selecciona um <a class="el" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> de uma <a class="el" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a>, de uma lista de tripulantes.  <a href="#aedaae08a826460c290c90639d63253a5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a3e4a7bb31f42db5e5397bd0a79bca254">CRUD::infoTripulante</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que mostra ao utilizador os atributos dum tripulante.  <a href="#a3e4a7bb31f42db5e5397bd0a79bca254"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a185959224e7bc4b30793dfd252fa4a55">CRUD::editTripulante</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, <a class="el" href="class_companhia.html">Companhia</a> *companhia)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que permite ao utilizador editar os atributos de um <a class="el" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a>.  <a href="#a185959224e7bc4b30793dfd252fa4a55"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a4310d5884fda0863327ddfbe4f8c66d8">CRUD::delTripulante</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elimina um <a class="el" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> de uma <a class="el" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a>.  <a href="#a4310d5884fda0863327ddfbe4f8c66d8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a88c2c1e797c4d930e9e61d4a883138c4">CRUD::delTripulante</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia, size_t indice)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elimina um <a class="el" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a> de uma <a class="el" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> perguntando ao utilizador o índice.  <a href="#a88c2c1e797c4d930e9e61d4a883138c4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a56ba6f30054320267290dd1ddf6fe8fc">CRUD::delTripulantePtr</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia, <a class="el" href="class_tripulante.html">Tripulante</a> *tripulante_ptr)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que remove do vector de *Tripulante de uma companhia o apontador tripulante_ptr. Não apaga o tripulante, só o apontador.  <a href="#a56ba6f30054320267290dd1ddf6fe8fc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a78d826fa8f2b1f900ebdabfa8c51ebda">CRUD::addPlanoVoo</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, <a class="el" href="class_companhia.html">Companhia</a> *companhia)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona um Plano de <a class="el" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> a uma companhia com os dados introduzidos pelo utilizador.  <a href="#a78d826fa8f2b1f900ebdabfa8c51ebda"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#ad6ca36e26bca733e250ac072491ac82c">CRUD::addPlanoVoo</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia, <a class="el" href="class_voo.html">Voo</a> *voo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona um Plano de <a class="el" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> a uma companhia.  <a href="#ad6ca36e26bca733e250ac072491ac82c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a39d273d72b15fb9f7f4d565a118d73fe">CRUD::cmpVooNumeroVoo</a> (const <a class="el" href="class_voo.html">Voo</a> *voo1, const <a class="el" href="class_voo.html">Voo</a> *voo2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compara se o número de um voo é menor do que outro.  <a href="#a39d273d72b15fb9f7f4d565a118d73fe"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#aa320aa5ce0443534f46bae2ad87e116f">CRUD::cmpVooOrigem</a> (const <a class="el" href="class_voo.html">Voo</a> *voo1, const <a class="el" href="class_voo.html">Voo</a> *voo2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compara se a origem de um voo é menor do que outra.  <a href="#aa320aa5ce0443534f46bae2ad87e116f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a408389d535459cc8969e54e1b86f67eb">CRUD::cmpVooDestino</a> (const <a class="el" href="class_voo.html">Voo</a> *voo1, const <a class="el" href="class_voo.html">Voo</a> *voo2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compara se o destino de um voo é menor do que outro.  <a href="#a408389d535459cc8969e54e1b86f67eb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a7a673112718ff3931947f3d802144d84">CRUD::cmpVooDataSaida</a> (const <a class="el" href="class_voo.html">Voo</a> *voo1, const <a class="el" href="class_voo.html">Voo</a> *voo2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compara se a data de saida de um voo é menor do que outra.  <a href="#a7a673112718ff3931947f3d802144d84"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a118f28047ceebf662a6764b2b016ecde">CRUD::cmpVooDataChegada</a> (const <a class="el" href="class_voo.html">Voo</a> *voo1, const <a class="el" href="class_voo.html">Voo</a> *voo2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compara se a data de chegada de um voo é menor do que outra.  <a href="#a118f28047ceebf662a6764b2b016ecde"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a0b20d07359ae739573f4ab9ae8644173">CRUD::cmpVooAtraso</a> (const <a class="el" href="class_voo.html">Voo</a> *voo1, const <a class="el" href="class_voo.html">Voo</a> *voo2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compara se o atraso de um voo é menor do que outro.  <a href="#a0b20d07359ae739573f4ab9ae8644173"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a103d10cd7a44e1a4cda11250f49baa8a">CRUD::cmpVooCancelado</a> (const <a class="el" href="class_voo.html">Voo</a> *voo1, const <a class="el" href="class_voo.html">Voo</a> *voo2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Verifica se o primeiro voo foi cancelado.  <a href="#a103d10cd7a44e1a4cda11250f49baa8a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a9cb3b711757edecbf3f6110797017024">CRUD::listPlanoVoo</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia, bool final_pause=true)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Lista todas os Planos de voo de uma <a class="el" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a>, ordenados segundo o critério que o utilizador seleccionou.  <a href="#a9cb3b711757edecbf3f6110797017024"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#aa3378c67723f889acdf660c528dfd145">CRUD::selPlanoVoo</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Selecciona um plano de voo de uma <a class="el" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a>, de uma lista de planos de voo.  <a href="#aa3378c67723f889acdf660c528dfd145"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_voo.html">Voo</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a7d829ff6ef5916b54813224b797175c0">CRUD::selPlanoVooPtr</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Selecciona um plano de voo de uma <a class="el" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a>, de uma lista de planos de voo (retorna o apontador).  <a href="#a7d829ff6ef5916b54813224b797175c0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#abfb11d818854fed25cca7fbd930fe178">CRUD::infoPlanoVoo</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia, <a class="el" href="class_voo.html">Voo</a> *voo=NULL)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que mostra ao utilizador os atributos dum plano de voo.  <a href="#abfb11d818854fed25cca7fbd930fe178"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a1ebd242271ee4688ee993534000d2274">CRUD::editPlanoVoo</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, <a class="el" href="class_companhia.html">Companhia</a> *companhia)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que permite ao utilizador editar os atributos de um <a class="el" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a>.  <a href="#a1ebd242271ee4688ee993534000d2274"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a915c40b5d12b2f053eaef60ed2768d77">CRUD::delPlanoVoo</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, <a class="el" href="class_companhia.html">Companhia</a> *companhia)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elimina um Plano de <a class="el" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> de uma <a class="el" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> perguntando ao utilizador o índice.  <a href="#a915c40b5d12b2f053eaef60ed2768d77"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a2e7f2a6a3d494ee4114614c5e94b994e">CRUD::delPlanoVoo</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, <a class="el" href="class_companhia.html">Companhia</a> *companhia, size_t indice)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elimina um Plano de <a class="el" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> de uma <a class="el" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> que está situada no índice fornecido (no vector de voos, dentro da companhia).  <a href="#a2e7f2a6a3d494ee4114614c5e94b994e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a374085644fe12ddc745810c8543ad802">CRUD::delPlanoVooPtr</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, <a class="el" href="class_companhia.html">Companhia</a> *companhia, <a class="el" href="class_voo.html">Voo</a> *voo_ptr)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que remove do vector de *Voo de uma companhia o apontador voo_ptr. Não apaga o voo, só o apontador.  <a href="#a374085644fe12ddc745810c8543ad802"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a46335f86db676b32222c965a4c25cb51">CRUD::addAeroporto</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona um aeroporto com os dados forneceidos pelo utilizador.  <a href="#a46335f86db676b32222c965a4c25cb51"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#afabd88ec06d4e7717cb20b669b9df13a">CRUD::editAeroporto</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Altera um aeroporto com os dados introduzidos pelo utilizador.  <a href="#afabd88ec06d4e7717cb20b669b9df13a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a8de0d4585bd990a2ae7fd89172929b6d">CRUD::infoAeroporto</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Imprime as informações acerca do aeroporto.  <a href="#a8de0d4585bd990a2ae7fd89172929b6d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a7edc37ee39cd2dda75e78022424da2d6">CRUD::addCompanhia</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona uma companhia a um aeroporto com os dados introduzidos pelo utilizador.  <a href="#a7edc37ee39cd2dda75e78022424da2d6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a555ef166bb8e217d84f79ba90fa28f6f">CRUD::addCompanhia</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, <a class="el" href="class_companhia.html">Companhia</a> *companhia)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona uma companhia a um aeroporto.  <a href="#a555ef166bb8e217d84f79ba90fa28f6f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a1ac209ed4a2e1b3fc93d0d874679c3e2">CRUD::cmpCompanhiaSigla</a> (const <a class="el" href="class_companhia.html">Companhia</a> *c1, const <a class="el" href="class_companhia.html">Companhia</a> *c2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função usada para a ordenação do vector de companhias segundo a Sigla.  <a href="#a1ac209ed4a2e1b3fc93d0d874679c3e2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a1228ef407e817039aac17e347e9d734b">CRUD::cmpCompanhiaNome</a> (const <a class="el" href="class_companhia.html">Companhia</a> *c1, const <a class="el" href="class_companhia.html">Companhia</a> *c2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função usada para a ordenação do vector de companhias segundo o Nome.  <a href="#a1228ef407e817039aac17e347e9d734b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a4576c2be1375e4945c54b3a27b85a878">CRUD::cmpCompanhiaTaxa</a> (const <a class="el" href="class_companhia.html">Companhia</a> *c1, const <a class="el" href="class_companhia.html">Companhia</a> *c2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função usada para a ordenação do vector de companhia segundo a taxa de utilização dos blacões de check-in.  <a href="#a4576c2be1375e4945c54b3a27b85a878"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a3fb46714aabd67d87d7165ba01e86d80">CRUD::listCompanhia</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, bool final_pause=false)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Lista todas as companhias de um aeroporto.  <a href="#a3fb46714aabd67d87d7165ba01e86d80"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a8329cc2dc4bf3e40d808a2a8d2ad326d">CRUD::selCompanhia</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Selecciona uma companhia de um aeroporto, de uma lista de Companhias.  <a href="#a8329cc2dc4bf3e40d808a2a8d2ad326d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_companhia.html">Companhia</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a7562909f38a326f6ff0c81162288ef35">CRUD::selCompanhiaPtr</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Selecciona uma companhia de um aeroporto, de uma lista de Companhias (retorna apontador).  <a href="#a7562909f38a326f6ff0c81162288ef35"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#aa8a0e3c699283e91951a94086e8c9346">CRUD::infoCompanhia</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que mostra ao utilizador os atributos dum plano de uma companhia.  <a href="#aa8a0e3c699283e91951a94086e8c9346"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a28d15b0ceea1ea4ce68904a50272fcd3">CRUD::editCompanhia</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, <a class="el" href="class_companhia.html">Companhia</a> *companhia=NULL)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que permite ao utilizador editar os atributos de uma <a class="el" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a>.  <a href="#a28d15b0ceea1ea4ce68904a50272fcd3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#aa19b997a03d3baf8940b8f910beeacc7">CRUD::delCompanhia</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elimina uma companhia de um aeroporto selecionada pelo utilizador.  <a href="#aa19b997a03d3baf8940b8f910beeacc7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a61786034ad6569f93e66bb07a3a04a47">CRUD::delCompanhia</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, size_t indice)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elimina um Plano de <a class="el" href="class_voo.html" title="Classe que armazena informação acerca de um voo de uma dada companhia.">Voo</a> de uma <a class="el" href="class_companhia.html" title="Classe que armazena informação acerca de uma Companhia de um dado Aeroporto.">Companhia</a> que está situada no índice fornecido (no vector de voos, dentro da companhia).  <a href="#a61786034ad6569f93e66bb07a3a04a47"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a5238a86280234b522b5252e295c32e52">CRUD::delCompanhiaPtr</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, <a class="el" href="class_companhia.html">Companhia</a> *companhia_ptr)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que remove do vector de *Companhia o apontador companhia_ptr. Não apaga a companhia, só o apontador.  <a href="#a5238a86280234b522b5252e295c32e52"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a203c708fead23afb7b933ce60897ee55">CRUD::addPassageiro</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona um passageiro a um aeroporto com os dados introduzidos pelo utilizador.  <a href="#a203c708fead23afb7b933ce60897ee55"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a7e862448b6d2238d7fe245bb44234168">CRUD::addPassageiro</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, <a class="el" href="class_passageiro.html">Passageiro</a> *passageiro)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona um passageiro a um aeroporto (classe <a class="el" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a>).  <a href="#a7e862448b6d2238d7fe245bb44234168"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a59a2e98b080a0b116067e148ebe650cb">CRUD::cmpPassageiroNome</a> (const <a class="el" href="class_passageiro.html">Passageiro</a> *p1, const <a class="el" href="class_passageiro.html">Passageiro</a> *p2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função usada para a ordenação do vector de Passageiros segundo o Nome.  <a href="#a59a2e98b080a0b116067e148ebe650cb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#aa70bae8e80f956d1da54842e6934f625">CRUD::cmpPassageiroBI</a> (const <a class="el" href="class_passageiro.html">Passageiro</a> *p1, const <a class="el" href="class_passageiro.html">Passageiro</a> *p2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função usada para a ordenação do vector de Passageiros segundo o BI.  <a href="#aa70bae8e80f956d1da54842e6934f625"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#ac28787664abbb701daed2ee1cea8914a">CRUD::cmpPassageiroNumero</a> (const <a class="el" href="class_passageiro.html">Passageiro</a> *p1, const <a class="el" href="class_passageiro.html">Passageiro</a> *p2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função usada para a ordenação do vector de Passageiros segundo o Numero de voo.  <a href="#ac28787664abbb701daed2ee1cea8914a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a4b91de9efccb5fe7ed02a3c53d12a4a4">CRUD::listPassageiro</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, bool final_pause=true)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Lista todas os passageiros de um aeroporto.  <a href="#a4b91de9efccb5fe7ed02a3c53d12a4a4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a5cc759c35209a9fec94f7e7dbe1d8dcd">CRUD::selPassageiro</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Selecciona um passageiro de um aeroporto, de uma lista de passageiros.  <a href="#a5cc759c35209a9fec94f7e7dbe1d8dcd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_passageiro.html">Passageiro</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a40421c1e611d3dca272696af4fbe5830">CRUD::selPassageiroPtr</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Selecciona um passageiro de um aeroporto, de uma lista de passageiros (retorna apontador).  <a href="#a40421c1e611d3dca272696af4fbe5830"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a2ff3c7376b8cd8a7c0ccbb4b9f46cb66">CRUD::infoPassageiro</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, <a class="el" href="class_passageiro.html">Passageiro</a> *passageiro=NULL)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que mostra ao utilizador os atributos dum <a class="el" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a>.  <a href="#a2ff3c7376b8cd8a7c0ccbb4b9f46cb66"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a509ff88bbcc55f52f76185441b08c6b1">CRUD::editPassageiro</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que permite ao utilizador editar os atributos de um <a class="el" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a>.  <a href="#a509ff88bbcc55f52f76185441b08c6b1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#aeeae59dc951e893e81d9c7e42bf54bbe">CRUD::delPassageiro</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elimina um passageiro de um aeroporto perguntando ao utilizador o índice.  <a href="#aeeae59dc951e893e81d9c7e42bf54bbe"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#ae6dc3806670cfef1b325abc1ffb05ebb">CRUD::delPassageiro</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, size_t indice)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elimina um passageiro de um aeroporto.  <a href="#ae6dc3806670cfef1b325abc1ffb05ebb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a848fd1dd4b43af9e751e45307519dbca">CRUD::delPassageiroPtr</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, <a class="el" href="class_passageiro.html">Passageiro</a> *passageiro)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Eliminda o apontador de um passageiro no vector de passageiros no aeroporto fornecido.  <a href="#a848fd1dd4b43af9e751e45307519dbca"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a8061d08e022b84d8d161f885046ba746">CRUD::initCheckIn</a> (<a class="el" href="class_voo.html">Voo</a> *voo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que cria a fila do check-in.  <a href="#a8061d08e022b84d8d161f885046ba746"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a5bdacec886fdd63f3849775efd48c74d">CRUD::checkIn</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, <a class="el" href="class_voo.html">Voo</a> *voo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que simula o check-in dos passageiros.  <a href="#a5bdacec886fdd63f3849775efd48c74d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a9d2bda16dea0eef7863bd20b7efcbed5">CRUD::checkInNextPassageiro</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, <a class="el" href="class_voo.html">Voo</a> *voo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que permite o check-in do próximo passageiro que está na fila_check_in para o voo dado.  <a href="#a9d2bda16dea0eef7863bd20b7efcbed5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a82606bfae6b810a64c0441a9d7156319">CRUD::printPriorityQueue</a> (<a class="el" href="class_voo.html">Voo</a> *voo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que imprime a lista dos passageiros que estão na fila de embarque do voo (usada no meno dos voos).  <a href="#a82606bfae6b810a64c0441a9d7156319"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#ad22fb75b9a60883bee1d0f289e2d4b03">CRUD::chamadaEmbarqueVoo</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, <a class="el" href="class_voo.html">Voo</a> *voo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que simula a chamada dos passageiros para o embarque.  <a href="#ad22fb75b9a60883bee1d0f289e2d4b03"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#ac747fedac554dabb132c3f03c64cec27">CRUD::printPassageirosPortaEmbarque</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que imprime a lista dos passageiros que estão na fila de embarque do voo (usada no menu das portas de embarque).  <a href="#ac747fedac554dabb132c3f03c64cec27"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a5b1aaf654db05246026daf56ea3c3603">CRUD::chamadaEmbarqueVooPortaEmbarque</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#ac1dfae19eb23fa7971e72473d85e9fb4">CRUD::fecharVoo</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, <a class="el" href="class_voo.html">Voo</a> *voo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que termina o check-in de um voo e coloca-o na tabela de dispersão.  <a href="#ac1dfae19eb23fa7971e72473d85e9fb4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a41a0c23dfeb13c57e01fab5635a124aa">CRUD::listHashSetVoos</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que lista todos os voos que estão na hash_set_voos.  <a href="#a41a0c23dfeb13c57e01fab5635a124aa"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a76ebb4bcb8c9bdda45415e331c9b5986">CRUD::listHashSetVoosEntreDatasCriterio</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#af9598ea1004ce1a6cf772699d334f372">CRUD::searchHashSetVoos</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que dado o id de um avião mostra as informações a ele asssociadas.  <a href="#af9598ea1004ce1a6cf772699d334f372"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#ad86fd7b7937c6d6f7d27d55b591676d7">CRUD::addVooHashSetVoos</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que adiciona um voo à tabela dos voos fechados (fechando o voo escolhido).  <a href="#ad86fd7b7937c6d6f7d27d55b591676d7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a0bd86df1d5b4b409232e37d9d297bdb8">CRUD::delVooHashSetVoos</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que elimina um voo da tabela de voos fechados.  <a href="#a0bd86df1d5b4b409232e37d9d297bdb8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a34b67797aa96cd621cc89da52df70162">CRUD::listTaxasBalcoesEntreDatas</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que mostra a soma das taxas de utilização dos balcões de check-in das companhia num determinado intervalo de tempo (entre datas).  <a href="#a34b67797aa96cd621cc89da52df70162"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#ae844821229bb3cc2081680890aa88c03">CRUD::listTaxasBalcoesVooEntreDatas</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que mostra a soma das taxas de utilização dos balcões de check-in das companhias para um dado voo que ocorreu entre as datas dadas pelo utilizador.  <a href="#ae844821229bb3cc2081680890aa88c03"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a6146fb1cd7b5c0e1402e9b688a84d4d7">CRUD::listTaxasBalcoesVoosEntreDatas</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que mostra a soma das taxas de utilização dos balcões de check-in das companhias para os voos que estão dentro das datas limite fornecidas pelo utilizador (mostra os voos com as respectivas taxas, bem como a taxa total).  <a href="#a6146fb1cd7b5c0e1402e9b688a84d4d7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a5781a2ad93bca9915b21977f475c8a39">CRUD::listTaxasPortasEmbarqueEntreDatas</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que mostra a soma das taxas de utilização das portas de embarque entre as datas limite fornecidas pelo utilizador.  <a href="#a5781a2ad93bca9915b21977f475c8a39"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#af150f9aabe5940271bd6b5d5fc402ec7">CRUD::listTaxasPortasEmbarqueVooEntreDatas</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que mostra a soma das taxas de utilização da porta de embarque selecionada pelo utilizador.  <a href="#af150f9aabe5940271bd6b5d5fc402ec7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a7d9397c06cdd67c8991e8ff540ee08cd">CRUD::listTaxasPortasEmbarqueVoosEntreDatas</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#aba6c929892bf533d91bf4c1c77009c6d">CRUD::addPortaEmbarque</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona uma porta de embarque a um aeroporto com os dados introduzidos pelo utilizador.  <a href="#aba6c929892bf533d91bf4c1c77009c6d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#af0114518e432ed05352de875a2b6aa71">CRUD::addPortaEmbarque</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, <a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *porta)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona uma porta de embarque a um aeroporto (classe <a class="el" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a>).  <a href="#af0114518e432ed05352de875a2b6aa71"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a22254bca34f6ef53ffd6e39d6a4c6669">CRUD::cmpPortaEmbarqueNumero</a> (const <a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *obj1, const <a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *obj2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função usada para a ordenação do vector de portas de embarque segundo o numero.  <a href="#a22254bca34f6ef53ffd6e39d6a4c6669"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a5325d9bb1594e4bae0608570ffd01aa6">CRUD::cmpPortaEmbarqueLocalizacao</a> (const <a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *obj1, const <a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *obj2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função usada para a ordenação do vector de portas de embarque segundo a localizacao.  <a href="#a5325d9bb1594e4bae0608570ffd01aa6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a218376c5cc10107a18372d9059b80735">CRUD::cmpPortaEmbarqueCapacidadePass</a> (const <a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *obj1, const <a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *obj2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função usada para a ordenação do vector de portas de embarque segundo a capacidade.  <a href="#a218376c5cc10107a18372d9059b80735"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a19ef4b558f9d55577a55be74139808f4">CRUD::cmpPortaEmbarqueCategoriaAvioes</a> (const <a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *obj1, const <a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *obj2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função usada para a ordenação do vector de portas de embarque segundo a categoria.  <a href="#a19ef4b558f9d55577a55be74139808f4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a7647f859789dc3140035ef0a28435996">CRUD::listPortaEmbarque</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, bool final_pause=true, bool no_order=false)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Lista todas as portas de embarque de um aeroporto.  <a href="#a7647f859789dc3140035ef0a28435996"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#aba832c4e286ade904ff1bc3830cc7397">CRUD::selPortaEmbarque</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Selecciona uma porta de embarque de um aeroporto, de uma lista de portas de embarque.  <a href="#aba832c4e286ade904ff1bc3830cc7397"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#ad27bcb3580d2e842a2c34f4527053e2d">CRUD::selPortaEmbarquePtr</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Selecciona uma porta de embarque de um aeroporto, de uma lista de portas de embarque (retorna apontador).  <a href="#ad27bcb3580d2e842a2c34f4527053e2d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a3354db4b9ee07ddf9a265a63c68f118e">CRUD::selPortaEmbarque</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, size_t index)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Selecciona uma porta de embarque de um aeroporto, de uma lista de portas de embarque.  <a href="#a3354db4b9ee07ddf9a265a63c68f118e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#ac546f57a0c322a7ae72c3b5219ae11bc">CRUD::infoPortaEmbarque</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que mostra ao utilizador os atributos duma porta de embarque.  <a href="#ac546f57a0c322a7ae72c3b5219ae11bc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a8cf308cc2af50fdb5d8120179729def1">CRUD::editPortaEmbarque</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que permite ao utilizador editar os atributos de uma porta de embarque.  <a href="#a8cf308cc2af50fdb5d8120179729def1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a410e14ea9d7117aefe5b58ab159d5edc">CRUD::updatePortaEmbarqueDisp</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, unsigned capacidade_pass, unsigned categoria)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que actualiza a disponibilidade de uma porta de embarque e retorna-a.  <a href="#a410e14ea9d7117aefe5b58ab159d5edc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a3053b3c48f6bc2a8a9f0a38ed3f17d26">CRUD::delPortaEmbarque</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elimina uma porta de embarque de um aeroporto perguntando ao utilizador o índice.  <a href="#a3053b3c48f6bc2a8a9f0a38ed3f17d26"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#adec40372aca0454804d8eb1dad26eaa7">CRUD::delPortaEmbarque</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, size_t indice)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elimina uma porta de embarque de um aeroporto.  <a href="#adec40372aca0454804d8eb1dad26eaa7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a85591adc0b2dc075cb3ec63419f5faae">CRUD::delPortaEmbarquePtr</a> (<a class="el" href="class_aeroporto.html">Aeroporto</a> *<a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a>, <a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *porta_ptr)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elimina a porta de embarque passada como apontador do vector em aeroporto.  <a href="#a85591adc0b2dc075cb3ec63419f5faae"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#af6f91f1490005fe533ebce456e540e7e">CRUD::delVooPtrPortaEmbarque</a> (<a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *porta_embarque, <a class="el" href="class_voo.html">Voo</a> *voo_a_remover)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Função que elimina do vector de voos associados à porta de embarque o voo dado (só apontador para o voo).  <a href="#af6f91f1490005fe533ebce456e540e7e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#ad230926f5df64abda00a302d8046960a">CRUD::addTripulanteVoo</a> (<a class="el" href="class_companhia.html">Companhia</a> *companhia)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona um tripulante a uma companhia com os dados introduzidos pelo utilizador.  <a href="#ad230926f5df64abda00a302d8046960a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#ad1d1406e8ab0af2c8c73a42130fb2698">CRUD::addTripulanteVoo</a> (<a class="el" href="class_voo.html">Voo</a> *voo, <a class="el" href="class_tripulante.html">Tripulante</a> *tripulante)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona um tripulante a uma companhia (classe <a class="el" href="class_tripulante.html" title="Classe que armazena informação acerca de um tripulante de uma dada companhia aérea.">Tripulante</a>).  <a href="#ad1d1406e8ab0af2c8c73a42130fb2698"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a7416dbb1154f3215ada026415ebdc532">CRUD::listTripulanteVoo</a> (<a class="el" href="class_voo.html">Voo</a> *voo, bool final_pause=true)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Lista todas os tripulantes de uma companhia.  <a href="#a7416dbb1154f3215ada026415ebdc532"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#aeebe43348bba41d3c0adcf97ff07a586">CRUD::selTripulanteVoo</a> (<a class="el" href="class_voo.html">Voo</a> *voo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Selecciona um tripulante de uma companhia, de uma lista de passageiros.  <a href="#aeebe43348bba41d3c0adcf97ff07a586"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tripulante.html">Tripulante</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a8589a4c33a3092a0bed545e7cac84087">CRUD::selTripulanteVooPtr</a> (<a class="el" href="class_voo.html">Voo</a> *voo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Selecciona um tripulante de uma companhia, de uma lista de passageiros (retorna apontador).  <a href="#a8589a4c33a3092a0bed545e7cac84087"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a1e76da7fcc4bb976fe78aa8dd389191f">CRUD::delTripulanteVoo</a> (<a class="el" href="class_voo.html">Voo</a> *voo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elimina um tripulante de uma companhia perguntando ao utilizador o índice.  <a href="#a1e76da7fcc4bb976fe78aa8dd389191f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#aaa3f0f2d17af754de32aa28726d0ffce">CRUD::delTripulanteVoo</a> (<a class="el" href="class_voo.html">Voo</a> *voo, size_t indice)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elimina um tripulante de uma companhia.  <a href="#aaa3f0f2d17af754de32aa28726d0ffce"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#ab0ae01cc65e2568fece194522e86a227">CRUD::loaddb</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Carrega os dados do ficheiro por defeito.  <a href="#ab0ae01cc65e2568fece194522e86a227"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#abc3e2da36d8052264f995bdb1f6eb6dd">CRUD::loaddb</a> (string filename)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Carrega os dados do ficheiro fornecido como parametro.  <a href="#abc3e2da36d8052264f995bdb1f6eb6dd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a5aea6e00626d711dca95af97e7816072">CRUD::savedb</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Grava os dados no ficheiro por defeito.  <a href="#a5aea6e00626d711dca95af97e7816072"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a99b4c556fdda277090ea3b8e8c714989">CRUD::savedb</a> (string filename)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Grava os dados no ficheiro fornecido como parametro.  <a href="#a99b4c556fdda277090ea3b8e8c714989"></a><br/></td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">int&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a5e1d7b80ab6291c93614d099e2301941">CRUD::calcVectorIndex</a> (const vector&lt; T &gt; &amp;vec, T elem)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">T&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#ae365371a25065179324e48d629ce319d">CRUD::getVectorElem</a> (vector&lt; T &gt; &amp;vec, int index)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">int&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a1f7be543a2cacdd1e0866f15c4351c2c">CRUD::calcBSTIndex</a> (<a class="el" href="class_b_s_t.html">BST</a>&lt; T &gt; &amp;bst, T elem)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">T&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#a70b14a31096bfaea36bf16a415e61031">CRUD::getBSTElem</a> (<a class="el" href="class_b_s_t.html">BST</a>&lt; T &gt; &amp;bst, size_t index)</td></tr>
+<tr><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" align="right" valign="top">unsigned&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_c_r_u_d.html#ab5be2cb7a5cc9b1ce11dc55b28da65fe">CRUD::calcBSTSize</a> (const <a class="el" href="class_b_s_t.html">BST</a>&lt; T &gt; &amp;bst)</td></tr>
+<tr><td colspan="2"><h2><a name="var-members"></a>
+Variáveis</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tipo_aviao_d_b.html">TipoAviaoDB</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gestao_aeroporto_8h.html#a4994e68789d5089c86d5d2d93999b3aa">tipo_aviao_DB</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_aeroporto.html">Aeroporto</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gestao_aeroporto_8h.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_porta_embarque.html">PortaEmbarque</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gestao_aeroporto_8h.html#ab63067c6d255c35788072e39942b5a49">porta_embarque_actual</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_passageiro.html">Passageiro</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gestao_aeroporto_8h.html#a2f9f609decd4e4491130f06151ae6201">passageiro_actual</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_companhia.html">Companhia</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gestao_aeroporto_8h.html#afe45cd3ba547703f801336605aad01ca">companhia_actual</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_aviao.html">Aviao</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gestao_aeroporto_8h.html#a27838f69d8293300ba5b0e89d00c373b">aviao_actual</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tipo_aviao.html">TipoAviao</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gestao_aeroporto_8h.html#a199fc6b6d89c1e75bea5f646a667b4fc">tipo_aviao_actual</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tripulante.html">Tripulante</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gestao_aeroporto_8h.html#a3d9d610fded6d0d28885a0c5421c8a10">tripulante_actual</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_voo.html">Voo</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gestao_aeroporto_8h.html#a1bb45e4d680721a4df0ca10f94a35dbf">voo_actual</a></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<p>Ficheiro que contém os métodos <a class="el" href="namespace_c_r_u_d.html">CRUD</a> (manutenção de dados), de cada classe. </p>
+<p>PROJECTO: Projecto 2 - Gestão do embarque dos passageiros num aeroporto (check-in/embarque) <br/>
+ FICHEIRO: <a class="el" href="_gestao_aeroporto_8h.html" title="Ficheiro que contém os métodos CRUD (manutenção de dados), de cada classe.">GestaoAeroporto.h</a> <br/>
+ DESCRIÇÃO: Ficheiro que contém os métodos <a class="el" href="namespace_c_r_u_d.html">CRUD</a> (manutenção de dados), de cada classe. <br/>
+</p>
+<p>TURMA / GRUPO: 2MIEIC1 / 4 <br/>
+ AUTORES:</p>
+<ul>
+<li>Carlos Miguel Correia da Costa</li>
+<li>Daniela Filipa Neves Cardeano</li>
+<li>Vítor Amálio Maia Martins Moreira </li>
+</ul>
+
+<p>Definido no ficheiro <a class="el" href="_gestao_aeroporto_8h_source.html">GestaoAeroporto.h</a>.</p>
+<hr/><h2>Documentação das variáveis</h2>
+<a class="anchor" id="a3efe5262adbbbd26d0bed657361b225e"></a><!-- doxytag: member="GestaoAeroporto.h::aeroporto" ref="a3efe5262adbbbd26d0bed657361b225e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_aeroporto.html">Aeroporto</a> <a class="el" href="main_8cpp.html#a3efe5262adbbbd26d0bed657361b225e">aeroporto</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="main_8cpp_source.html#l00028">28</a> do ficheiro <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03648">CRUD::loaddb()</a>, <a class="el" href="main_8cpp_source.html#l00092">opAddVooHashSetVoos()</a>, <a class="el" href="main_8cpp_source.html#l00082">opChamadaEmbarqueVoo()</a>, <a class="el" href="main_8cpp_source.html#l00084">opChamadaEmbarqueVooPortaEmbarque()</a>, <a class="el" href="main_8cpp_source.html#l00081">opCheckIn()</a>, <a class="el" href="main_8cpp_source.html#l00067">opDelCompanhia()</a>, <a class="el" href="main_8cpp_source.html#l00073">opDelPassageiro()</a>, <a class="el" href="main_8cpp_source.html#l00070">opDelPlanoVoo()</a>, <a class="el" href="main_8cpp_source.html#l00074">opDelPortaEmbarque()</a>, <a class="el" href="main_8cpp_source.html#l00093">opDelVooHashSetVoos()</a>, <a class="el" href="main_8cpp_source.html#l00057">opEditAeroporto()</a>, <a class="el" href="main_8cpp_source.html#l00061">opEditAviao()</a>, <a class="el" href="main_8cpp_source.html#l00058">opEditCompanhia()</a>, <a class="el" href="main_8cpp_source.html#l00059">opEditCompanhiaActual()</a>, <a class="el" href="main_8cpp_source.html#l00064">opEditPassageiro()</a>, <a class="el" href="main_8cpp_source.html#l00062">opEditPlanoVoo()</a>, <a class="el" href="main_8cpp_source.html#l00065">opEditPortaEmbarque()</a>, <a class="el" href="main_8cpp_source.html#l00063">opEditTripulante()</a>, <a class="el" href="main_8cpp_source.html#l00087">opFecharVoo()</a>, <a class="el" href="main_8cpp_source.html#l00048">opInfoAeroporto()</a>, <a class="el" href="main_8cpp_source.html#l00054">opInfoPassageiro()</a>, <a class="el" href="main_8cpp_source.html#l00055">opInfoPortaEmbarque()</a>, <a class="el" href="main_8cpp_source.html#l00089">opListHashSetVoos()</a>, <a class="el" href="main_8cpp_source.html#l00090">opListHashSetVoosEntreDatasCriterio()</a>, <a class="el" href="main_8cpp_source.html#l00095">opListTaxasBalcoesEntreDatas()</a>, <a class="el" href="main_8cpp_source.html#l00096">opListTaxasBalcoesVooEntreDatas()</a>, <a class="el" href="main_8cpp_source.html#l00097">opListTaxasBalcoesVoosEntreDatas()</a>, <a class="el" href="main_8cpp_source.html#l00098">opListTaxasPortasEmbarqueEntreDatas()</a>, <a class="el" href="main_8cpp_source.html#l00099">opListTaxasPortasEmbarqueVooEntreDatas()</a>, <a class="el" href="main_8cpp_source.html#l00100">opListTaxasPortasEmbarqueVoosEntreDatas()</a>, <a class="el" href="main_8cpp_source.html#l00039">opNewCompanhia()</a>, <a class="el" href="main_8cpp_source.html#l00045">opNewPassageiro()</a>, <a class="el" href="main_8cpp_source.html#l00042">opNewPlanoVoo()</a>, <a class="el" href="main_8cpp_source.html#l00046">opNewPortaEmbarque()</a>, <a class="el" href="main_8cpp_source.html#l00085">opPrintPassageirosPortaEmbarque()</a>, <a class="el" href="main_8cpp_source.html#l00091">opSearchHashSetVoos()</a>, <a class="el" href="main_8cpp_source.html#l00076">opSelCompanhia()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l04080">CRUD::savedb()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a27838f69d8293300ba5b0e89d00c373b"></a><!-- doxytag: member="GestaoAeroporto.h::aviao_actual" ref="a27838f69d8293300ba5b0e89d00c373b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_aviao.html">Aviao</a>* aviao_actual</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00197">CRUD::selAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afe45cd3ba547703f801336605aad01ca"></a><!-- doxytag: member="GestaoAeroporto.h::companhia_actual" ref="afe45cd3ba547703f801336605aad01ca" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_companhia.html">Companhia</a>* companhia_actual</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00023">CRUD::addAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00938">CRUD::addPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02918">CRUD::addPortaEmbarque()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01879">CRUD::delCompanhia()</a>, <a class="el" href="main_8cpp_source.html#l00069">opDelAviao()</a>, <a class="el" href="main_8cpp_source.html#l00070">opDelPlanoVoo()</a>, <a class="el" href="main_8cpp_source.html#l00071">opDelTripulante()</a>, <a class="el" href="main_8cpp_source.html#l00061">opEditAviao()</a>, <a class="el" href="main_8cpp_source.html#l00059">opEditCompanhiaActual()</a>, <a class="el" href="main_8cpp_source.html#l00062">opEditPlanoVoo()</a>, <a class="el" href="main_8cpp_source.html#l00063">opEditTripulante()</a>, <a class="el" href="main_8cpp_source.html#l00051">opInfoAviao()</a>, <a class="el" href="main_8cpp_source.html#l00049">opInfoCompanhia()</a>, <a class="el" href="main_8cpp_source.html#l00052">opInfoPlanoVoo()</a>, <a class="el" href="main_8cpp_source.html#l00053">opInfoTripulante()</a>, <a class="el" href="main_8cpp_source.html#l00041">opNewAviao()</a>, <a class="el" href="main_8cpp_source.html#l00042">opNewPlanoVoo()</a>, <a class="el" href="main_8cpp_source.html#l00043">opNewTripulante()</a>, <a class="el" href="main_8cpp_source.html#l00044">opNewTripulanteVoo()</a>, <a class="el" href="main_8cpp_source.html#l00077">opSelCompanhiaPlanoVoo()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01762">CRUD::selCompanhia()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2f9f609decd4e4491130f06151ae6201"></a><!-- doxytag: member="GestaoAeroporto.h::passageiro_actual" ref="a2f9f609decd4e4491130f06151ae6201" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_passageiro.html">Passageiro</a>* passageiro_actual</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02428">CRUD::chamadaEmbarqueVoo()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02131">CRUD::selPassageiro()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab63067c6d255c35788072e39942b5a49"></a><!-- doxytag: member="GestaoAeroporto.h::porta_embarque_actual" ref="ab63067c6d255c35788072e39942b5a49" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_porta_embarque.html">PortaEmbarque</a>* porta_embarque_actual</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03176">CRUD::selPortaEmbarque()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a199fc6b6d89c1e75bea5f646a667b4fc"></a><!-- doxytag: member="GestaoAeroporto.h::tipo_aviao_actual" ref="a199fc6b6d89c1e75bea5f646a667b4fc" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tipo_aviao.html">TipoAviao</a>* tipo_aviao_actual</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4994e68789d5089c86d5d2d93999b3aa"></a><!-- doxytag: member="GestaoAeroporto.h::tipo_aviao_DB" ref="a4994e68789d5089c86d5d2d93999b3aa" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tipo_aviao_d_b.html">TipoAviaoDB</a> <a class="el" href="main_8cpp.html#a4994e68789d5089c86d5d2d93999b3aa">tipo_aviao_DB</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="main_8cpp_source.html#l00029">29</a> do ficheiro <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00023">CRUD::addAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00254">CRUD::editAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03648">CRUD::loaddb()</a>, <a class="el" href="main_8cpp_source.html#l00104">main()</a>, <a class="el" href="main_8cpp_source.html#l00068">opDelTipoAviao()</a>, <a class="el" href="main_8cpp_source.html#l00060">opEditTipoAviao()</a>, <a class="el" href="main_8cpp_source.html#l00050">opInfoTipoAviao()</a>, <a class="el" href="main_8cpp_source.html#l00040">opNewTipoAviao()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l04080">CRUD::savedb()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3d9d610fded6d0d28885a0c5421c8a10"></a><!-- doxytag: member="GestaoAeroporto.h::tripulante_actual" ref="a3d9d610fded6d0d28885a0c5421c8a10" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tripulante.html">Tripulante</a>* tripulante_actual</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00718">CRUD::selTripulante()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1bb45e4d680721a4df0ca10f94a35dbf"></a><!-- doxytag: member="GestaoAeroporto.h::voo_actual" ref="a1bb45e4d680721a4df0ca10f94a35dbf" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_voo.html">Voo</a>* voo_actual</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00023">CRUD::addAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01920">CRUD::addPassageiro()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02918">CRUD::addPortaEmbarque()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00465">CRUD::addTripulante()</a>, <a class="el" href="main_8cpp_source.html#l00082">opChamadaEmbarqueVoo()</a>, <a class="el" href="main_8cpp_source.html#l00081">opCheckIn()</a>, <a class="el" href="main_8cpp_source.html#l00072">opDelTripulanteVoo()</a>, <a class="el" href="main_8cpp_source.html#l00087">opFecharVoo()</a>, <a class="el" href="main_8cpp_source.html#l00052">opInfoPlanoVoo()</a>, <a class="el" href="main_8cpp_source.html#l00080">opInitCheckIn()</a>, <a class="el" href="main_8cpp_source.html#l00083">opPrintFilaPrioridadeEmbarque()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01186">CRUD::selPlanoVoo()</a>.</p>
+
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:37 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

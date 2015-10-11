@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Exceptions.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>Exceptions.h</h1>  </div>
+</div>
+<div class="contents">
+<a href="_exceptions_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00015"></a>00015 <span class="preprocessor">#ifndef EXCEPTIONS_H_</span>
+<a name="l00016"></a>00016 <span class="preprocessor"></span><span class="preprocessor">#define EXCEPTIONS_H_</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;exception&gt;</span>
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 <span class="keyword">using</span> std::ostream;
+<a name="l00023"></a>00023 <span class="keyword">using</span> std::string;
+<a name="l00024"></a>00024 <span class="keyword">using</span> std::exception;
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;  Exceptions  &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00033"></a><a class="code" href="class_exceptions.html">00033</a> <span class="comment"></span><span class="keyword">class </span><a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a>: <span class="keyword">public</span> exception {
+<a name="l00034"></a>00034 <span class="keyword">protected</span>:
+<a name="l00035"></a><a class="code" href="class_exceptions.html#aafac44528c7bbbcd2b3a256e372e27d5">00035</a>         <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_exceptions.html#aafac44528c7bbbcd2b3a256e372e27d5">_errorMessage</a>;
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037 <span class="keyword">public</span>:
+<a name="l00038"></a><a class="code" href="class_exceptions.html#acff435721d0079a587d55591871b7694">00038</a>         <span class="keyword">explicit</span> <a class="code" href="class_exceptions.html#acff435721d0079a587d55591871b7694">Exceptions</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* pStr) : <a class="code" href="class_exceptions.html#aafac44528c7bbbcd2b3a256e372e27d5">_errorMessage</a>(pStr) {}
+<a name="l00039"></a>00039 
+<a name="l00046"></a><a class="code" href="class_exceptions.html#a685326f5a494147683fa900e85169b16">00046</a>         <span class="keyword">virtual</span> <a class="code" href="class_exceptions.html#a685326f5a494147683fa900e85169b16">~Exceptions</a>() throw() {}
+<a name="l00047"></a><a class="code" href="class_exceptions.html#ae4fda78dda243044b12187b77bf95b34">00047</a>         <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_exceptions.html#ae4fda78dda243044b12187b77bf95b34">what</a>() <span class="keyword">const</span> throw() { <span class="keywordflow">return</span> <a class="code" href="class_exceptions.html#aafac44528c7bbbcd2b3a256e372e27d5">_errorMessage</a>; }
+<a name="l00048"></a>00048 };
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;  ExElementAlreadyExists  &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00054"></a>00054 <span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
+<a name="l00055"></a><a class="code" href="class_ex_element_already_exists.html">00055</a> <span class="keyword">class </span><a class="code" href="class_ex_element_already_exists.html" title="Classe usada no tratamento de excepções que sinaliza que um dado elemento já existe num dado contento...">ExElementAlreadyExists</a>: <span class="keyword">public</span> <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a> {
+<a name="l00056"></a>00056 <span class="keyword">private</span>:
+<a name="l00057"></a><a class="code" href="class_ex_element_already_exists.html#a39a93912c36c19a0cccb50d90f8150ca">00057</a>         T <a class="code" href="class_ex_element_already_exists.html#a39a93912c36c19a0cccb50d90f8150ca">_elementoRepetido</a>;
+<a name="l00058"></a>00058 <span class="keyword">public</span>:
+<a name="l00059"></a><a class="code" href="class_ex_element_already_exists.html#ae8fc9dee9283b307a0ada787cde95f42">00059</a>         <span class="keyword">explicit</span> <a class="code" href="class_ex_element_already_exists.html#ae8fc9dee9283b307a0ada787cde95f42">ExElementAlreadyExists</a>(T elemento_repetido, <span class="keyword">const</span> <span class="keywordtype">char</span>* pStr = <span class="stringliteral">&quot;Elemento já existe no vector!&quot;</span>) :
+<a name="l00060"></a>00060                 <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a>(pStr), <a class="code" href="class_ex_element_already_exists.html#a39a93912c36c19a0cccb50d90f8150ca">_elementoRepetido</a>(elemento_repetido) {}
+<a name="l00061"></a><a class="code" href="class_ex_element_already_exists.html#ab11978f2b8ba5369cf3fb63699f702c2">00061</a>         <span class="keyword">virtual</span> <a class="code" href="class_ex_element_already_exists.html#ab11978f2b8ba5369cf3fb63699f702c2">~ExElementAlreadyExists</a>() throw() {}
+<a name="l00062"></a>00062 
+<a name="l00063"></a><a class="code" href="class_ex_element_already_exists.html#a707561b0aed9979c9c2f136b76a1899b">00063</a>         T <a class="code" href="class_ex_element_already_exists.html#a707561b0aed9979c9c2f136b76a1899b">getElementoRepetido</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_ex_element_already_exists.html#a39a93912c36c19a0cccb50d90f8150ca">_elementoRepetido</a>; }
+<a name="l00064"></a>00064 };
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;  ExElementDoesntExists  &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00069"></a>00069 <span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
+<a name="l00070"></a><a class="code" href="class_ex_element_doesnt_exists.html">00070</a> <span class="keyword">class </span><a class="code" href="class_ex_element_doesnt_exists.html" title="Classe usada no tratamento de excepções que sinaliza que um dado elemento já existe num dado contento...">ExElementDoesntExists</a>: <span class="keyword">public</span> <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a> {
+<a name="l00071"></a>00071 <span class="keyword">private</span>:
+<a name="l00072"></a><a class="code" href="class_ex_element_doesnt_exists.html#a1af4cf98414a96188dd50372dbabd8a8">00072</a>         T <a class="code" href="class_ex_element_doesnt_exists.html#a1af4cf98414a96188dd50372dbabd8a8">_elementoInexistente</a>;
+<a name="l00073"></a>00073 <span class="keyword">public</span>:
+<a name="l00074"></a><a class="code" href="class_ex_element_doesnt_exists.html#a0150e2f58e77c018a85e1e0d8cce8366">00074</a>         <span class="keyword">explicit</span> <a class="code" href="class_ex_element_doesnt_exists.html#a0150e2f58e77c018a85e1e0d8cce8366">ExElementDoesntExists</a>(T elementoInexistente, <span class="keyword">const</span> <span class="keywordtype">char</span>* pStr = <span class="stringliteral">&quot;Elemento não existe no vector!&quot;</span>) :
+<a name="l00075"></a>00075                 <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a>(pStr), <a class="code" href="class_ex_element_doesnt_exists.html#a1af4cf98414a96188dd50372dbabd8a8">_elementoInexistente</a>(elementoInexistente) {}
+<a name="l00076"></a><a class="code" href="class_ex_element_doesnt_exists.html#ac92df60793d49ec098d1a3b80a37f5ab">00076</a>         <span class="keyword">virtual</span> <a class="code" href="class_ex_element_doesnt_exists.html#ac92df60793d49ec098d1a3b80a37f5ab">~ExElementDoesntExists</a>() throw() {}
+<a name="l00077"></a>00077 
+<a name="l00078"></a><a class="code" href="class_ex_element_doesnt_exists.html#a714dc8e32100f096e168da9781f8957d">00078</a>         T <a class="code" href="class_ex_element_doesnt_exists.html#a714dc8e32100f096e168da9781f8957d">getElementoInexistente</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_ex_element_doesnt_exists.html#a1af4cf98414a96188dd50372dbabd8a8">_elementoInexistente</a>; }
+<a name="l00079"></a>00079 };
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 
+<a name="l00083"></a>00083 <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
+<a name="l00084"></a>00084 ostream &amp; operator&lt;&lt;(ostream &amp; obj, const ExElementAlreadyExists&lt;T&gt; &amp; exception);
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;  ExOutOfRange  &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00090"></a><a class="code" href="class_ex_out_of_range.html">00090</a> <span class="comment"></span><span class="keyword">class </span><a class="code" href="class_ex_out_of_range.html" title="Classe usada no tratamento de excepções que sinaliza que um elemento que se está a tentar aceder está...">ExOutOfRange</a>: <span class="keyword">public</span> <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a> {
+<a name="l00091"></a>00091 <span class="keyword">public</span>:
+<a name="l00092"></a><a class="code" href="class_ex_out_of_range.html#acd2af7f085776e93291036d6eafb44a7">00092</a>         <span class="keyword">explicit</span> <a class="code" href="class_ex_out_of_range.html#acd2af7f085776e93291036d6eafb44a7">ExOutOfRange</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* pStr = <span class="stringliteral">&quot;Valor fora do domínio do vector!&quot;</span>) : <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a>(pStr) {}
+<a name="l00093"></a><a class="code" href="class_ex_out_of_range.html#aa3fa5e34b87d13048dd3c321dad08847">00093</a>         <span class="keyword">virtual</span> <a class="code" href="class_ex_out_of_range.html#aa3fa5e34b87d13048dd3c321dad08847">~ExOutOfRange</a>() throw() {}
+<a name="l00094"></a>00094 };
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;  ExEmptyVector  &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00098"></a><a class="code" href="class_ex_empty_vector.html">00098</a> <span class="comment"></span><span class="keyword">class </span><a class="code" href="class_ex_empty_vector.html" title="Classe usada no tratamento de excepções que sinaliza que um vector se encontra vazio.">ExEmptyVector</a>: <span class="keyword">public</span> <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a> {
+<a name="l00099"></a>00099 <span class="keyword">public</span>:
+<a name="l00100"></a><a class="code" href="class_ex_empty_vector.html#a9c100a439c8c79931524143b44ccee38">00100</a>         <span class="keyword">explicit</span> <a class="code" href="class_ex_empty_vector.html#a9c100a439c8c79931524143b44ccee38">ExEmptyVector</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* pStr = <span class="stringliteral">&quot;O vector encontra-se vazio!&quot;</span>) : <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a>(pStr) {}
+<a name="l00101"></a><a class="code" href="class_ex_empty_vector.html#acb8e0d9730d5598efb210276f4795ff7">00101</a>         <span class="keyword">virtual</span> <a class="code" href="class_ex_empty_vector.html#acb8e0d9730d5598efb210276f4795ff7">~ExEmptyVector</a>() throw() {}
+<a name="l00102"></a>00102 };
+<a name="l00103"></a>00103 
+<a name="l00104"></a>00104 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;  ExNoInterval  &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00106"></a><a class="code" href="class_ex_no_interval.html">00106</a> <span class="comment"></span><span class="keyword">class </span><a class="code" href="class_ex_no_interval.html" title="Classe usada no tratamento de excepções que sinaliza que um vector se encontra vazio.">ExNoInterval</a>: <span class="keyword">public</span> <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a> {
+<a name="l00107"></a>00107 <span class="keyword">public</span>:
+<a name="l00108"></a><a class="code" href="class_ex_no_interval.html#a81fdec189a0601d271cdf55dc0525bc4">00108</a>         <span class="keyword">explicit</span> <a class="code" href="class_ex_no_interval.html#a81fdec189a0601d271cdf55dc0525bc4">ExNoInterval</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* pStr = <span class="stringliteral">&quot;O intervalo começa e acaba em zero!&quot;</span>) : <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a>(pStr) {}
+<a name="l00109"></a><a class="code" href="class_ex_no_interval.html#a833410ba1ad21583e749e82fe1f0f880">00109</a>         <span class="keyword">virtual</span> <a class="code" href="class_ex_no_interval.html#a833410ba1ad21583e749e82fe1f0f880">~ExNoInterval</a>() throw() {}
+<a name="l00110"></a>00110 };
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;  ExElementInUse  &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00114"></a>00114 <span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;
+<a name="l00115"></a><a class="code" href="class_ex_element_in_use.html">00115</a> <span class="keyword">class </span><a class="code" href="class_ex_element_in_use.html" title="Classe usada no tratamento de excepções que sinaliza que um vector se encontra vazio.">ExElementInUse</a>: <span class="keyword">public</span> <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a> {
+<a name="l00116"></a><a class="code" href="class_ex_element_in_use.html#a3d267d5a7715a7a46a56c0ddbf16e3c9">00116</a>         T <a class="code" href="class_ex_element_in_use.html#a3d267d5a7715a7a46a56c0ddbf16e3c9">_dependent_objects</a>;   <span class="comment">//Objectos que dependem do elemento que estava a se tentar apagar</span>
+<a name="l00117"></a>00117 <span class="keyword">public</span>:
+<a name="l00118"></a><a class="code" href="class_ex_element_in_use.html#ab1210f05f993ea1261842e1061baa820">00118</a>         <span class="keyword">explicit</span> <a class="code" href="class_ex_element_in_use.html#ab1210f05f993ea1261842e1061baa820">ExElementInUse</a>(T dependent_objects, <span class="keyword">const</span> <span class="keywordtype">char</span>* pStr = <span class="stringliteral">&quot;Não é possível eliminar o elemento seleccionado\nporque está a ser usado por outros componentes do programa neste momento!&quot;</span>)
+<a name="l00119"></a>00119         : <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a>(pStr), <a class="code" href="class_ex_element_in_use.html#a3d267d5a7715a7a46a56c0ddbf16e3c9">_dependent_objects</a>(dependent_objects) {}
+<a name="l00120"></a><a class="code" href="class_ex_element_in_use.html#a86b7e9d87a22a656eb9a5be5df17778c">00120</a>         <span class="keyword">virtual</span> <a class="code" href="class_ex_element_in_use.html#a86b7e9d87a22a656eb9a5be5df17778c">~ExElementInUse</a>() throw() {}
+<a name="l00121"></a>00121 };
+<a name="l00122"></a>00122 
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;  ExInvalidDateTime  &lt;&lt;&lt;&lt;&lt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00126"></a>00126 <span class="comment"></span>
+<a name="l00129"></a><a class="code" href="class_ex_invalid_date_time.html">00129</a> <span class="keyword">class </span><a class="code" href="class_ex_invalid_date_time.html" title="Classe usada no tratamento de excepções que sinaliza que o utilizador introduziu uma DataHora num for...">ExInvalidDateTime</a>: <span class="keyword">public</span> <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a> {
+<a name="l00130"></a>00130 <span class="keyword">private</span>:
+<a name="l00131"></a><a class="code" href="class_ex_invalid_date_time.html#aacd24b755e81c02edfb25f1f7a2fb546">00131</a>         <span class="keywordtype">string</span> <a class="code" href="class_ex_invalid_date_time.html#aacd24b755e81c02edfb25f1f7a2fb546">_Data</a>;
+<a name="l00132"></a>00132 <span class="keyword">public</span>:
+<a name="l00133"></a><a class="code" href="class_ex_invalid_date_time.html#ae24bb436695a2dc896790aa9d6bd8121">00133</a>         <span class="keyword">explicit</span> <a class="code" href="class_ex_invalid_date_time.html#ae24bb436695a2dc896790aa9d6bd8121">ExInvalidDateTime</a>(<span class="keywordtype">string</span> data, <span class="keyword">const</span> <span class="keywordtype">char</span>* pStr = <span class="stringliteral">&quot;Data/Hora no formato errado! (DD/MM/AAAA HH:mm)&quot;</span>) :
+<a name="l00134"></a>00134                 <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a>(pStr), <a class="code" href="class_ex_invalid_date_time.html#aacd24b755e81c02edfb25f1f7a2fb546">_Data</a>(data) {}
+<a name="l00135"></a><a class="code" href="class_ex_invalid_date_time.html#a28a2a8a4d7f03e7d31ae8d61d13ea87f">00135</a>         <span class="keyword">virtual</span> <a class="code" href="class_ex_invalid_date_time.html#a28a2a8a4d7f03e7d31ae8d61d13ea87f">~ExInvalidDateTime</a>() throw() {}
+<a name="l00136"></a>00136 
+<a name="l00137"></a><a class="code" href="class_ex_invalid_date_time.html#a989b941775b2cce04e31319c1343c3d2">00137</a>         <span class="keywordtype">string</span> <a class="code" href="class_ex_invalid_date_time.html#a989b941775b2cce04e31319c1343c3d2">getData</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_ex_invalid_date_time.html#aacd24b755e81c02edfb25f1f7a2fb546">_Data</a>; }
+<a name="l00138"></a>00138 };
+<a name="l00139"></a>00139 
+<a name="l00141"></a>00141 ostream &amp; <a class="code" href="_atraso_8cpp.html#a9d47ab9c63b2477f152e306ea353fe03" title="Operador que imprime um objecto do tipo Atraso no formato AAAA/MM/DD HH:mm.">operator&lt;&lt;</a>(ostream &amp; obj, <span class="keyword">const</span> <a class="code" href="class_ex_invalid_date_time.html" title="Classe usada no tratamento de excepções que sinaliza que o utilizador introduziu uma DataHora num for...">ExInvalidDateTime</a> &amp; data);
+<a name="l00142"></a>00142 
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144 
+<a name="l00145"></a>00145 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;  ExInvalidAtraso  &lt;&lt;&lt;&lt;&lt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00147"></a>00147 <span class="comment"></span>
+<a name="l00152"></a><a class="code" href="class_ex_invalid_atraso.html">00152</a> <span class="keyword">class </span><a class="code" href="class_ex_invalid_atraso.html" title="Classe usada no tratamento de excepções que sinaliza que o utilizador introduziu um Atraso num format...">ExInvalidAtraso</a>: <span class="keyword">public</span> <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a> {
+<a name="l00153"></a>00153 <span class="keyword">private</span>:
+<a name="l00154"></a><a class="code" href="class_ex_invalid_atraso.html#a357bddafc7f9579f5343fee20b066e39">00154</a>         <span class="keywordtype">string</span> <a class="code" href="class_ex_invalid_atraso.html#a357bddafc7f9579f5343fee20b066e39">_Atraso</a>;
+<a name="l00155"></a>00155 <span class="keyword">public</span>:
+<a name="l00156"></a><a class="code" href="class_ex_invalid_atraso.html#a3a41033613e0256c464dd968556e54b9">00156</a>         <span class="keyword">explicit</span> <a class="code" href="class_ex_invalid_atraso.html#a3a41033613e0256c464dd968556e54b9">ExInvalidAtraso</a>(<span class="keywordtype">string</span> atraso, <span class="keyword">const</span> <span class="keywordtype">char</span>* pStr = <span class="stringliteral">&quot;Atraso no formato errado! (HH:mm ou HH:mm:DD)&quot;</span>) :
+<a name="l00157"></a>00157                 <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a>(pStr), <a class="code" href="class_ex_invalid_atraso.html#a357bddafc7f9579f5343fee20b066e39">_Atraso</a>(atraso) {}
+<a name="l00158"></a><a class="code" href="class_ex_invalid_atraso.html#aa57eee2b7dd0db385a5f09f08c05b07c">00158</a>         <span class="keyword">virtual</span> <a class="code" href="class_ex_invalid_atraso.html#aa57eee2b7dd0db385a5f09f08c05b07c">~ExInvalidAtraso</a>() throw() {}
+<a name="l00159"></a>00159 
+<a name="l00160"></a><a class="code" href="class_ex_invalid_atraso.html#aefdc9a1a09299fe08e5ac82b72c05f19">00160</a>         <span class="keywordtype">string</span> <a class="code" href="class_ex_invalid_atraso.html#aefdc9a1a09299fe08e5ac82b72c05f19">getAtraso</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_ex_invalid_atraso.html#a357bddafc7f9579f5343fee20b066e39">_Atraso</a>; }
+<a name="l00161"></a>00161 };
+<a name="l00162"></a>00162 
+<a name="l00164"></a>00164 ostream &amp; <a class="code" href="_atraso_8cpp.html#a9d47ab9c63b2477f152e306ea353fe03" title="Operador que imprime um objecto do tipo Atraso no formato AAAA/MM/DD HH:mm.">operator&lt;&lt;</a>(ostream &amp; obj, <span class="keyword">const</span> <a class="code" href="class_ex_invalid_atraso.html" title="Classe usada no tratamento de excepções que sinaliza que o utilizador introduziu um Atraso num format...">ExInvalidAtraso</a> &amp; atraso);
+<a name="l00165"></a>00165 
+<a name="l00166"></a>00166 
+<a name="l00167"></a>00167 
+<a name="l00168"></a>00168 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;  ExCorruptedFile  &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00170"></a><a class="code" href="class_ex_corrupted_file.html">00170</a> <span class="comment"></span><span class="keyword">class </span><a class="code" href="class_ex_corrupted_file.html" title="Classe usado no tratamento de excepções que sinaliza que um dado ficheiro que de dados está corrupto ...">ExCorruptedFile</a>: <span class="keyword">public</span> <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a> {
+<a name="l00171"></a>00171 <span class="keyword">private</span>:
+<a name="l00172"></a><a class="code" href="class_ex_corrupted_file.html#aaf862bb51158cccaaaed5415a0fe3c3f">00172</a>         <span class="keywordtype">string</span> <a class="code" href="class_ex_corrupted_file.html#aaf862bb51158cccaaaed5415a0fe3c3f">_filename</a>;
+<a name="l00173"></a>00173 
+<a name="l00174"></a>00174 <span class="keyword">public</span>:
+<a name="l00175"></a><a class="code" href="class_ex_corrupted_file.html#a1fc4aa3d31f9ef903ed627c497fac2ff">00175</a>         <span class="keyword">explicit</span> <a class="code" href="class_ex_corrupted_file.html#a1fc4aa3d31f9ef903ed627c497fac2ff">ExCorruptedFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* pStr = <span class="stringliteral">&quot;Ficheiro com os dados corrompido!&quot;</span>) : <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a>(pStr) {}
+<a name="l00176"></a><a class="code" href="class_ex_corrupted_file.html#af9d7070df19333d81adf21699c40b91d">00176</a>         <span class="keywordtype">string</span> <a class="code" href="class_ex_corrupted_file.html#af9d7070df19333d81adf21699c40b91d">getFilename</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_ex_corrupted_file.html#aaf862bb51158cccaaaed5415a0fe3c3f">_filename</a>; }
+<a name="l00177"></a><a class="code" href="class_ex_corrupted_file.html#a6aac265ece0e513adc58bfeb0575c7ab">00177</a>         <span class="keyword">virtual</span> <a class="code" href="class_ex_corrupted_file.html#a6aac265ece0e513adc58bfeb0575c7ab">~ExCorruptedFile</a>() throw() {}
+<a name="l00178"></a>00178 };
+<a name="l00179"></a>00179 
+<a name="l00181"></a>00181 ostream &amp; <a class="code" href="_atraso_8cpp.html#a9d47ab9c63b2477f152e306ea353fe03" title="Operador que imprime um objecto do tipo Atraso no formato AAAA/MM/DD HH:mm.">operator&lt;&lt; </a>(ostream &amp; obj, <span class="keyword">const</span> <a class="code" href="class_ex_corrupted_file.html" title="Classe usado no tratamento de excepções que sinaliza que um dado ficheiro que de dados está corrupto ...">ExCorruptedFile</a> &amp; exception);
+<a name="l00182"></a>00182 
+<a name="l00183"></a>00183 
+<a name="l00184"></a>00184 
+<a name="l00185"></a>00185 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;  ExNoOpenFile  &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00187"></a><a class="code" href="class_ex_no_open_file.html">00187</a> <span class="comment"></span><span class="keyword">class </span><a class="code" href="class_ex_no_open_file.html" title="Classe usado no tratamento de excepções que sinaliza que não foi possível abrir o ficheiro especifica...">ExNoOpenFile</a>: <span class="keyword">public</span> <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a> {
+<a name="l00188"></a>00188 <span class="keyword">private</span>:
+<a name="l00189"></a><a class="code" href="class_ex_no_open_file.html#ad407f8646230f7cb1e2711a1f7d6af2c">00189</a>         <span class="keywordtype">string</span> <a class="code" href="class_ex_no_open_file.html#ad407f8646230f7cb1e2711a1f7d6af2c">_filename</a>;
+<a name="l00190"></a>00190 
+<a name="l00191"></a>00191 <span class="keyword">public</span>:
+<a name="l00192"></a><a class="code" href="class_ex_no_open_file.html#aec3370c0491f94b7657c76c35427d613">00192</a>         <span class="keyword">explicit</span> <a class="code" href="class_ex_no_open_file.html#aec3370c0491f94b7657c76c35427d613">ExNoOpenFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* pStr = <span class="stringliteral">&quot;Não foi possível abrir o ficheiro!&quot;</span>) : <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a>(pStr) {}
+<a name="l00193"></a><a class="code" href="class_ex_no_open_file.html#a16a53a52224541229d5b5841eacaee25">00193</a>         <span class="keyword">virtual</span> <a class="code" href="class_ex_no_open_file.html#a16a53a52224541229d5b5841eacaee25">~ExNoOpenFile</a>() throw() {}
+<a name="l00194"></a><a class="code" href="class_ex_no_open_file.html#a419f5278e966139cb4f6634c8135975d">00194</a>         <span class="keywordtype">string</span> <a class="code" href="class_ex_no_open_file.html#a419f5278e966139cb4f6634c8135975d">getFilename</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_ex_no_open_file.html#ad407f8646230f7cb1e2711a1f7d6af2c">_filename</a>; }
+<a name="l00195"></a>00195 };
+<a name="l00196"></a>00196 
+<a name="l00198"></a>00198 ostream &amp; <a class="code" href="_atraso_8cpp.html#a9d47ab9c63b2477f152e306ea353fe03" title="Operador que imprime um objecto do tipo Atraso no formato AAAA/MM/DD HH:mm.">operator&lt;&lt; </a>(ostream &amp; obj, <span class="keyword">const</span> <a class="code" href="class_ex_no_open_file.html" title="Classe usado no tratamento de excepções que sinaliza que não foi possível abrir o ficheiro especifica...">ExNoOpenFile</a> &amp; exception);
+<a name="l00199"></a>00199 
+<a name="l00200"></a>00200 <span class="comment">//&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;  ExPortasFull  &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+<a name="l00202"></a><a class="code" href="class_ex_portas_full.html">00202</a> <span class="comment"></span><span class="keyword">class </span><a class="code" href="class_ex_portas_full.html" title="Classe usada no tratamento de excepções que sinaliza que as portas de embarque não têm espaco para um...">ExPortasFull</a>: <span class="keyword">public</span> <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a> {
+<a name="l00203"></a>00203 <span class="keyword">public</span>:
+<a name="l00204"></a><a class="code" href="class_ex_portas_full.html#ac97c2d10ffd6190b041ba0b7458a700a">00204</a>         <span class="keyword">explicit</span> <a class="code" href="class_ex_portas_full.html#ac97c2d10ffd6190b041ba0b7458a700a">ExPortasFull</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* pStr = <span class="stringliteral">&quot;Não existem portas de embarque com lugares suficientes para este voo!&quot;</span>) : <a class="code" href="class_exceptions.html" title="Superclasse de tratamento de excepções.">Exceptions</a>(pStr) {}
+<a name="l00205"></a><a class="code" href="class_ex_portas_full.html#a42297594c9ffc2b567e03ae2da88738e">00205</a>         <span class="keyword">virtual</span> <a class="code" href="class_ex_portas_full.html#a42297594c9ffc2b567e03ae2da88738e">~ExPortasFull</a>() throw() {}
+<a name="l00206"></a>00206 };
+<a name="l00207"></a>00207 
+<a name="l00208"></a>00208 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:36 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

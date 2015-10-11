@@ -1,0 +1,625 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: TipoAviaoDB.cpp Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>TipoAviaoDB.cpp</h1>  </div>
+</div>
+<div class="contents">
+<a href="_tipo_aviao_d_b_8cpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_tipo_aviao_d_b_8h.html" title="Classe que contém uma base de dados de tipos de aviões.">TipoAviaoDB.h</a>&quot;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a><a class="code" href="class_tipo_aviao_d_b.html#aedb7b0566b3373596ad258e7f87e0840">00017</a> <a class="code" href="class_tipo_aviao_d_b.html#aedb7b0566b3373596ad258e7f87e0840">TipoAviaoDB::~TipoAviaoDB</a>()
+<a name="l00018"></a>00018 {
+<a name="l00019"></a>00019         <span class="keywordflow">for</span>(vector&lt;TipoAviao* &gt;::iterator it = <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.begin() ; it!=<a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.end() ; ++it)
+<a name="l00020"></a>00020                 <span class="keyword">delete</span> (*it);
+<a name="l00021"></a>00021 }
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 
+<a name="l00024"></a><a class="code" href="class_tipo_aviao_d_b.html#a91c643bfc8949c053321b1519f22a958">00024</a> <span class="keywordtype">string</span> <a class="code" href="class_tipo_aviao_d_b.html#a91c643bfc8949c053321b1519f22a958">TipoAviaoDB::getNomeTipoAviaoCin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* mensagem) {
+<a name="l00025"></a>00025         <span class="comment">//Verifica-se se o nome do tipo de avião já existe.</span>
+<a name="l00026"></a>00026         <span class="keywordtype">string</span> nome_tipo;
+<a name="l00027"></a>00027         <span class="keywordtype">bool</span> nome_repetido;
+<a name="l00028"></a>00028         <span class="keywordflow">do</span> {
+<a name="l00029"></a>00029                 nome_repetido = <span class="keyword">false</span>;
+<a name="l00030"></a>00030                 cout &lt;&lt; mensagem &lt;&lt; flush;
+<a name="l00031"></a>00031                 <a class="code" href="utils_8cpp.html#aec9a81a0766b1243f091fa5e47abde63" title="getline que faz o sync para não ler lixo do buffer.">getlineCin</a>(nome_tipo);
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033                 <span class="keywordflow">for</span> (vector&lt;TipoAviao*&gt;::const_iterator it = <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.begin(); it != <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.end(); ++it)
+<a name="l00034"></a>00034                         <span class="keywordflow">if</span> (nome_tipo == (*it)-&gt;getNomeTipo()) {
+<a name="l00035"></a>00035                                 nome_repetido = <span class="keyword">true</span>;
+<a name="l00036"></a>00036                                 cout &lt;&lt; <span class="stringliteral">&quot;O nome introduzido já existe!&quot;</span> &lt;&lt; endl &lt;&lt; endl;
+<a name="l00037"></a>00037                                 <span class="keywordflow">break</span>;
+<a name="l00038"></a>00038                         }
+<a name="l00039"></a>00039         } <span class="keywordflow">while</span>(nome_repetido);
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041         <span class="keywordflow">return</span> nome_tipo;
+<a name="l00042"></a>00042 }
+<a name="l00043"></a>00043 
+<a name="l00044"></a><a class="code" href="class_tipo_aviao_d_b.html#ac046a08500ab7fc8b6f094f47ddf1e83">00044</a> <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#ac046a08500ab7fc8b6f094f47ddf1e83" title="Adiciona um tipo de aviao à base de dados com os dados introduzidos pelo utilizador.">TipoAviaoDB::addTipoAviao</a>() {
+<a name="l00045"></a>00045         cout &lt;&lt; endl &lt;&lt; endl;
+<a name="l00046"></a>00046         <span class="comment">//Variáveis a recolher</span>
+<a name="l00047"></a>00047         <span class="keywordtype">string</span> nome_tipo;                               <span class="comment">//Ex: A321</span>
+<a name="l00048"></a>00048         <span class="keywordtype">string</span> descricao;                               <span class="comment">//Ex: Airbus 321</span>
+<a name="l00049"></a>00049         <span class="keywordtype">unsigned</span> categoria;                             <span class="comment">//Ex: Médio curso</span>
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051         <span class="keywordtype">string</span> fabricante;                              <span class="comment">//Ex: Airbus</span>
+<a name="l00052"></a>00052         <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> data_lancamento;               <span class="comment">//Data do primeiro voo deste tipo de avião</span>
+<a name="l00053"></a>00053         <span class="keywordtype">unsigned</span> preco;                                 <span class="comment">//Preço deste tipo de avião</span>
+<a name="l00054"></a>00054         <span class="keywordtype">unsigned</span> maximo_passageiros;    <span class="comment">//Nº de passageiros máximo</span>
+<a name="l00055"></a>00055         <span class="keywordtype">unsigned</span> autonomia;                             <span class="comment">//Em km</span>
+<a name="l00056"></a>00056         <span class="keywordtype">unsigned</span> velocidade_maxima;             <span class="comment">//Em km/h</span>
+<a name="l00057"></a>00057         <span class="keywordtype">unsigned</span> numero_motores;
+<a name="l00058"></a>00058         <span class="keywordtype">unsigned</span> peso_vazio;                    <span class="comment">//Em kg</span>
+<a name="l00059"></a>00059         <span class="keywordtype">unsigned</span> peso_maximo;                   <span class="comment">//Em kg</span>
+<a name="l00060"></a>00060         <span class="comment">//Medidas em metros</span>
+<a name="l00061"></a>00061         <span class="keywordtype">unsigned</span> comprimento;
+<a name="l00062"></a>00062         <span class="keywordtype">unsigned</span> envergadura;
+<a name="l00063"></a>00063         <span class="keywordtype">unsigned</span> altura;
+<a name="l00064"></a>00064         <span class="keywordtype">unsigned</span> altitude_maxima;
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066         <span class="comment">//Recolha dos dados</span>
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068         nome_tipo = <a class="code" href="class_tipo_aviao_d_b.html#a91c643bfc8949c053321b1519f22a958">getNomeTipoAviaoCin</a>(<span class="stringliteral">&quot;Introduza o nome do tipo de avião: &quot;</span>);
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070         cout &lt;&lt; <span class="stringliteral">&quot;Introduza a descrição: &quot;</span> &lt;&lt; flush;
+<a name="l00071"></a>00071         <a class="code" href="utils_8cpp.html#aec9a81a0766b1243f091fa5e47abde63" title="getline que faz o sync para não ler lixo do buffer.">getlineCin</a>(descricao);
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073         cout &lt;&lt; <span class="stringliteral">&quot;Categorias de Aviões a associar ao tipo de avião:\n&quot;</span> &lt;&lt; endl;
+<a name="l00074"></a>00074         <a class="code" href="class_porta_embarque.html#afeaaa93c208548d2a74f1f34110673bb">PortaEmbarque::listCategoriasAvioesInfo</a>();
+<a name="l00075"></a>00075         categoria = get_uint_cin &lt;unsigned&gt;(<span class="stringliteral">&quot;Introduza a categoria do avião:\n&quot;</span>, <a class="code" href="class_porta_embarque.html#a367d51244e4dd345449791242ce62b79">PortaEmbarque::getRefCategoriasAvioesInfo</a>().size(), 0, <span class="keyword">false</span>);
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077         cout &lt;&lt; <span class="stringliteral">&quot;Introduza o fabricante: &quot;</span> &lt;&lt; flush;
+<a name="l00078"></a>00078         <a class="code" href="utils_8cpp.html#aec9a81a0766b1243f091fa5e47abde63" title="getline que faz o sync para não ler lixo do buffer.">getlineCin</a>(fabricante);
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080         data_lancamento.<a class="code" href="class_data_hora.html#a10c7ae9216d4bbca2b661a72fb1363c7" title="Método que pede ao utilizador para introduzir uma data no formato &amp;lt;AAAA/MM/DD HH:mm&amp;gt;.">getDataHoraCin</a>(<span class="stringliteral">&quot;Introduza a data/hora do primeiro voo (AAAA/MM/DD HH:mm): &quot;</span>);
+<a name="l00081"></a>00081         preco = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza o preço (em euros): &quot;</span>);
+<a name="l00082"></a>00082         maximo_passageiros = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza o número de passageiros máximo: &quot;</span>);
+<a name="l00083"></a>00083         autonomia = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza a autonomia (km): &quot;</span>);
+<a name="l00084"></a>00084         velocidade_maxima = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza a velocidade máxima (km/h): &quot;</span>);
+<a name="l00085"></a>00085         numero_motores = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza o número de motores: &quot;</span>);
+<a name="l00086"></a>00086         peso_vazio = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza o peso vazio (kg): &quot;</span>);
+<a name="l00087"></a>00087         peso_maximo = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza o peso máximo (kg): &quot;</span>);
+<a name="l00088"></a>00088         comprimento = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza o comprimento (m): &quot;</span>);
+<a name="l00089"></a>00089         envergadura = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza a envergadura (m): &quot;</span>);
+<a name="l00090"></a>00090         altura = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza a altura (m):&quot;</span>);
+<a name="l00091"></a>00091         altitude_maxima = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza a altitude máxima (m):&quot;</span>);
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093         <span class="comment">//Criação do avião a partir dos dados recolhidos</span>
+<a name="l00094"></a>00094         <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a>* novo_aviao = <span class="keyword">new</span> <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a>(nome_tipo,
+<a name="l00095"></a>00095                         descricao,
+<a name="l00096"></a>00096                         categoria,
+<a name="l00097"></a>00097                         fabricante,
+<a name="l00098"></a>00098                         data_lancamento,
+<a name="l00099"></a>00099                         preco,
+<a name="l00100"></a>00100                         maximo_passageiros,
+<a name="l00101"></a>00101                         autonomia,
+<a name="l00102"></a>00102                         velocidade_maxima,
+<a name="l00103"></a>00103                         numero_motores,
+<a name="l00104"></a>00104                         peso_vazio,
+<a name="l00105"></a>00105                         peso_maximo,
+<a name="l00106"></a>00106                         comprimento,
+<a name="l00107"></a>00107                         envergadura,
+<a name="l00108"></a>00108                         altura,
+<a name="l00109"></a>00109                         altitude_maxima);
+<a name="l00110"></a>00110 
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112         <span class="comment">//Adicionamento do tipo de aviao criado à base de dados</span>
+<a name="l00113"></a>00113         <span class="keywordflow">try</span> {
+<a name="l00114"></a>00114                 <a class="code" href="class_tipo_aviao_d_b.html#ac046a08500ab7fc8b6f094f47ddf1e83" title="Adiciona um tipo de aviao à base de dados com os dados introduzidos pelo utilizador.">addTipoAviao</a>(novo_aviao);
+<a name="l00115"></a>00115                 cout &lt;&lt; <span class="stringliteral">&quot;Adicionado com sucesso!&quot;</span> &lt;&lt; endl;
+<a name="l00116"></a>00116         } <span class="keywordflow">catch</span> (<a class="code" href="class_ex_element_already_exists.html" title="Classe usada no tratamento de excepções que sinaliza que um dado elemento já existe num dado contento...">ExElementAlreadyExists&lt;TipoAviao&gt;</a> &amp;e) {
+<a name="l00117"></a>00117                 <span class="keyword">delete</span> novo_aviao;
+<a name="l00118"></a>00118                 cout &lt;&lt; e.<a class="code" href="class_exceptions.html#ae4fda78dda243044b12187b77bf95b34">what</a>() &lt;&lt; endl;
+<a name="l00119"></a>00119         }
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121         <a class="code" href="utils_8cpp.html#a385f5a2e2bc6628450b6280692396851" title="Limpa as flags do cin e fica à espera de um input para prosseguir.">getch</a>();
+<a name="l00122"></a>00122 }
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124 
+<a name="l00125"></a><a class="code" href="class_tipo_aviao_d_b.html#af9038727fc9464a241859b258ec11d1d">00125</a> <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#ac046a08500ab7fc8b6f094f47ddf1e83" title="Adiciona um tipo de aviao à base de dados com os dados introduzidos pelo utilizador.">TipoAviaoDB::addTipoAviao</a>(<a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a> *tipo_aviao) {
+<a name="l00126"></a>00126         vector&lt;TipoAviao*&gt;::const_iterator it;
+<a name="l00127"></a>00127 
+<a name="l00128"></a>00128         <span class="keywordflow">for</span> (it = <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.begin(); it != <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.end(); ++it)
+<a name="l00129"></a>00129                 <span class="keywordflow">if</span> ((*tipo_aviao) == *(*it))
+<a name="l00130"></a>00130                         <span class="keywordflow">throw</span> <a class="code" href="class_ex_element_already_exists.html" title="Classe usada no tratamento de excepções que sinaliza que um dado elemento já existe num dado contento...">ExElementAlreadyExists&lt;TipoAviao&gt;</a> (*tipo_aviao);
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132         <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.push_back(tipo_aviao);
+<a name="l00133"></a>00133 }
+<a name="l00134"></a>00134 
+<a name="l00135"></a><a class="code" href="_tipo_aviao_d_b_8h.html#a02e35f3f9452b343b9c23e4fb0270db3">00135</a> <span class="keywordtype">bool</span> <a class="code" href="_tipo_aviao_d_b_8cpp.html#a02e35f3f9452b343b9c23e4fb0270db3" title="Compara se o Tipo de um tipo de avião é menor do que outro.">cmpTipoAviaoTipo</a>(<span class="keyword">const</span> <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a> *ta1, <span class="keyword">const</span> <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a> *ta2) {
+<a name="l00136"></a>00136         <span class="keywordflow">return</span> (ta1-&gt;<a class="code" href="class_tipo_aviao.html#a774ccd8ea84fe300c4776da5d1aacef9">getNomeTipo</a>() &lt; ta2-&gt;<a class="code" href="class_tipo_aviao.html#a774ccd8ea84fe300c4776da5d1aacef9">getNomeTipo</a>());
+<a name="l00137"></a>00137 }
+<a name="l00138"></a>00138 
+<a name="l00139"></a><a class="code" href="_tipo_aviao_d_b_8h.html#a473d6f2ed0c960075bf216029729050b">00139</a> <span class="keywordtype">bool</span> <a class="code" href="_tipo_aviao_d_b_8cpp.html#a473d6f2ed0c960075bf216029729050b" title="Compara se a descrição de um tipo de avião é menor do que outro.">cmpTipoAviaoDescricao</a>(<span class="keyword">const</span> <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a> *ta1, <span class="keyword">const</span> <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a> *ta2) {
+<a name="l00140"></a>00140         <span class="keywordflow">return</span> (ta1-&gt;<a class="code" href="class_tipo_aviao.html#a3a398874fba59860ec9091ee24f0d894">getDescricao</a>() &lt; ta2-&gt;<a class="code" href="class_tipo_aviao.html#a3a398874fba59860ec9091ee24f0d894">getDescricao</a>());
+<a name="l00141"></a>00141 }
+<a name="l00142"></a>00142 
+<a name="l00143"></a><a class="code" href="_tipo_aviao_d_b_8h.html#aa8f6acc2d853b5f21837e2bb38a38217">00143</a> <span class="keywordtype">bool</span> <a class="code" href="_tipo_aviao_d_b_8cpp.html#aa8f6acc2d853b5f21837e2bb38a38217" title="Compara se a categoria de um tipo de avião é menor do que outro.">cmpTipoAviaoCategoria</a>(<span class="keyword">const</span> <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a> *ta1, <span class="keyword">const</span> <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a> *ta2) {
+<a name="l00144"></a>00144         <span class="keywordflow">return</span> (ta1-&gt;<a class="code" href="class_tipo_aviao.html#a6a410fc3cf96ec6d7cebf971985cd21d">getCategoria</a>() &lt; ta2-&gt;<a class="code" href="class_tipo_aviao.html#a6a410fc3cf96ec6d7cebf971985cd21d">getCategoria</a>());
+<a name="l00145"></a>00145 }
+<a name="l00146"></a>00146 
+<a name="l00147"></a><a class="code" href="class_tipo_aviao_d_b.html#a3cf170fb74857ca0f5047c91394f7acd">00147</a> <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#a3cf170fb74857ca0f5047c91394f7acd" title="Lista todos os Tipos de avião da base de dados de TipoAviaoDB.">TipoAviaoDB::listTipoAviao</a>(<span class="keywordtype">bool</span> final_pause) {
+<a name="l00148"></a>00148         cout &lt;&lt; endl &lt;&lt; endl;
+<a name="l00149"></a>00149         <span class="keywordflow">if</span> (<a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.size() == 0) {
+<a name="l00150"></a>00150                 <span class="keywordflow">throw</span> <a class="code" href="class_ex_empty_vector.html" title="Classe usada no tratamento de excepções que sinaliza que um vector se encontra vazio.">ExEmptyVector</a>(<span class="stringliteral">&quot;Não existem tipos de aviao na base de dados!&quot;</span>);
+<a name="l00151"></a>00151         }
+<a name="l00152"></a>00152 
+<a name="l00153"></a>00153         <span class="comment">//Selecção do método de ordenação</span>
+<a name="l00154"></a>00154         <span class="keywordtype">string</span> str_title_ordenacao = <span class="stringliteral">&quot;Método de ordenação&quot;</span>;
+<a name="l00155"></a>00155 
+<a name="l00156"></a>00156         vector &lt;string&gt; colNames_ordenacao;
+<a name="l00157"></a>00157         colNames_ordenacao.push_back(<span class="keywordtype">string</span>(<span class="stringliteral">&quot;Critério de ordenação&quot;</span>));
+<a name="l00158"></a>00158 
+<a name="l00159"></a>00159         vector &lt; vector&lt;string&gt; &gt; col_ordenacao;
+<a name="l00160"></a>00160         vector &lt;string&gt; parametros_ordenacao;
+<a name="l00161"></a>00161         parametros_ordenacao.push_back((<span class="keywordtype">string</span>)<span class="stringliteral">&quot;Tipo&quot;</span>);
+<a name="l00162"></a>00162         parametros_ordenacao.push_back((<span class="keywordtype">string</span>)<span class="stringliteral">&quot;Descrição&quot;</span>);
+<a name="l00163"></a>00163         parametros_ordenacao.push_back((<span class="keywordtype">string</span>)<span class="stringliteral">&quot;Categoria&quot;</span>);
+<a name="l00164"></a>00164         col_ordenacao.push_back(parametros_ordenacao);
+<a name="l00165"></a>00165 
+<a name="l00166"></a>00166         cout &lt;&lt; endl &lt;&lt; endl;
+<a name="l00167"></a>00167         <a class="code" href="utils_8cpp.html#a0daf13ac8da9785b3895a6d1e48d4a2f" title="Método que imprime uma tabela com os dados de um vector de colunas (vector de strings).">printMenu</a>(str_title_ordenacao, col_ordenacao, colNames_ordenacao);
+<a name="l00168"></a>00168 
+<a name="l00169"></a>00169         cout &lt;&lt; endl &lt;&lt; endl;
+<a name="l00170"></a>00170         <span class="keywordtype">size_t</span> metodo = <a class="code" href="utils_8h.html#ac9672a3dce6f69b4d1a82cbcc253a2e8" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_uint_cin</a>(<span class="stringliteral">&quot;Selecione o critério de ordenação que quer usar: &quot;</span>, parametros_ordenacao.size());
+<a name="l00171"></a>00171         cout &lt;&lt; endl;
+<a name="l00172"></a>00172 
+<a name="l00173"></a>00173         <span class="comment">//Listagem ordenada dos tipos de avião</span>
+<a name="l00174"></a>00174         <span class="keywordtype">string</span> str_title = <span class="stringliteral">&quot;Lista de avioes&quot;</span>;
+<a name="l00175"></a>00175         vector &lt; vector&lt;string&gt; &gt; col;
+<a name="l00176"></a>00176 
+<a name="l00177"></a>00177         col.push_back(vector&lt;string&gt; ());
+<a name="l00178"></a>00178         col.push_back(vector&lt;string&gt; ());
+<a name="l00179"></a>00179         col.push_back(vector&lt;string&gt; ());
+<a name="l00180"></a>00180 
+<a name="l00181"></a>00181         vector &lt;string&gt; colNames;
+<a name="l00182"></a>00182 
+<a name="l00183"></a>00183 
+<a name="l00184"></a>00184         <span class="comment">//Ordenação do vector de acordo com o parâmetro fornecido</span>
+<a name="l00185"></a>00185         <span class="keywordflow">switch</span> (metodo) {
+<a name="l00186"></a>00186                 <span class="keywordflow">case</span> 0: {
+<a name="l00187"></a>00187                         sort(<a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.begin(), <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.end(), cmpTipoAviaoTipo);
+<a name="l00188"></a>00188                         colNames.push_back((<span class="keywordtype">string</span>)<span class="stringliteral">&quot;Tipo&quot;</span>);
+<a name="l00189"></a>00189                         colNames.push_back((<span class="keywordtype">string</span>)<span class="stringliteral">&quot;Descrição&quot;</span>);
+<a name="l00190"></a>00190                         colNames.push_back((<span class="keywordtype">string</span>)<span class="stringliteral">&quot;Categoria&quot;</span>);
+<a name="l00191"></a>00191 
+<a name="l00192"></a>00192                         <span class="keywordtype">size_t</span> i = 0;
+<a name="l00193"></a>00193                         <span class="keywordflow">for</span> (vector &lt;TipoAviao*&gt;::const_iterator it_tipoaviao = <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.begin(); it_tipoaviao != <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.end(); ++it_tipoaviao) {
+<a name="l00194"></a>00194                                 col[i++].push_back((*it_tipoaviao)-&gt;getNomeTipo());
+<a name="l00195"></a>00195                                 col[i++].push_back((*it_tipoaviao)-&gt;getDescricao());
+<a name="l00196"></a>00196                                 col[i].push_back( <a class="code" href="class_porta_embarque.html#a7d6306fb78b61ced492170eded29ad50">PortaEmbarque::getInfoEnumCategoriasAvioes</a>((*it_tipoaviao)-&gt;getCategoria() ) );
+<a name="l00197"></a>00197                                 i = 0;
+<a name="l00198"></a>00198                         }
+<a name="l00199"></a>00199                         <span class="keywordflow">break</span>;
+<a name="l00200"></a>00200                 }
+<a name="l00201"></a>00201 
+<a name="l00202"></a>00202                 <span class="keywordflow">case</span> 1: {
+<a name="l00203"></a>00203                         sort(<a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.begin(), <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.end(), cmpTipoAviaoDescricao);
+<a name="l00204"></a>00204                         colNames.push_back((<span class="keywordtype">string</span>)<span class="stringliteral">&quot;Descrição&quot;</span>);
+<a name="l00205"></a>00205                         colNames.push_back((<span class="keywordtype">string</span>)<span class="stringliteral">&quot;Tipo&quot;</span>);
+<a name="l00206"></a>00206                         colNames.push_back((<span class="keywordtype">string</span>)<span class="stringliteral">&quot;Categoria&quot;</span>);
+<a name="l00207"></a>00207 
+<a name="l00208"></a>00208                         <span class="keywordtype">size_t</span> i = 0;
+<a name="l00209"></a>00209                         <span class="keywordflow">for</span> (vector &lt;TipoAviao*&gt;::const_iterator it_tipoaviao = <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.begin(); it_tipoaviao != <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.end(); ++it_tipoaviao) {
+<a name="l00210"></a>00210                                 col[i++].push_back((*it_tipoaviao)-&gt;getNomeTipo());
+<a name="l00211"></a>00211                                 col[i++].push_back((*it_tipoaviao)-&gt;getDescricao());
+<a name="l00212"></a>00212                                 col[i].push_back( <a class="code" href="class_porta_embarque.html#a7d6306fb78b61ced492170eded29ad50">PortaEmbarque::getInfoEnumCategoriasAvioes</a>((*it_tipoaviao)-&gt;getCategoria() ) );
+<a name="l00213"></a>00213                                 i = 0;
+<a name="l00214"></a>00214                         }
+<a name="l00215"></a>00215                         <span class="keywordflow">break</span>;
+<a name="l00216"></a>00216                 }
+<a name="l00217"></a>00217 
+<a name="l00218"></a>00218                 <span class="keywordflow">case</span> 2: {
+<a name="l00219"></a>00219                         sort(<a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.begin(), <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.end(), cmpTipoAviaoCategoria);
+<a name="l00220"></a>00220                         colNames.push_back((<span class="keywordtype">string</span>)<span class="stringliteral">&quot;Categoria&quot;</span>);
+<a name="l00221"></a>00221                         colNames.push_back((<span class="keywordtype">string</span>)<span class="stringliteral">&quot;Tipo&quot;</span>);
+<a name="l00222"></a>00222                         colNames.push_back((<span class="keywordtype">string</span>)<span class="stringliteral">&quot;Descrição&quot;</span>);
+<a name="l00223"></a>00223 
+<a name="l00224"></a>00224                         <span class="keywordtype">size_t</span> i = 0;
+<a name="l00225"></a>00225                         <span class="keywordflow">for</span> (vector &lt;TipoAviao*&gt;::const_iterator it_tipoaviao = <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.begin(); it_tipoaviao != <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.end(); ++it_tipoaviao) {
+<a name="l00226"></a>00226                                 col[i++].push_back( <a class="code" href="class_porta_embarque.html#a7d6306fb78b61ced492170eded29ad50">PortaEmbarque::getInfoEnumCategoriasAvioes</a>((*it_tipoaviao)-&gt;getCategoria() ) );
+<a name="l00227"></a>00227                                 col[i++].push_back((*it_tipoaviao)-&gt;getNomeTipo());
+<a name="l00228"></a>00228                                 col[i].push_back( (*it_tipoaviao)-&gt;getDescricao() );
+<a name="l00229"></a>00229                                 i = 0;
+<a name="l00230"></a>00230                         }
+<a name="l00231"></a>00231                         <span class="keywordflow">break</span>;
+<a name="l00232"></a>00232                 }
+<a name="l00233"></a>00233         }
+<a name="l00234"></a>00234 
+<a name="l00235"></a>00235         cout &lt;&lt; endl &lt;&lt; endl;
+<a name="l00236"></a>00236         <a class="code" href="utils_8cpp.html#a0daf13ac8da9785b3895a6d1e48d4a2f" title="Método que imprime uma tabela com os dados de um vector de colunas (vector de strings).">printMenu</a>(str_title, col, colNames, <span class="keyword">true</span>);
+<a name="l00237"></a>00237 
+<a name="l00238"></a>00238         <span class="keywordflow">if</span> (final_pause)
+<a name="l00239"></a>00239                 <a class="code" href="utils_8cpp.html#a385f5a2e2bc6628450b6280692396851" title="Limpa as flags do cin e fica à espera de um input para prosseguir.">getch</a>();
+<a name="l00240"></a>00240 }
+<a name="l00241"></a>00241 
+<a name="l00242"></a>00242 
+<a name="l00243"></a><a class="code" href="class_tipo_aviao_d_b.html#abddea6714023737d98684acdb785d21b">00243</a> <span class="keywordtype">size_t</span> <a class="code" href="class_tipo_aviao_d_b.html#abddea6714023737d98684acdb785d21b" title="Selecciona um tipo de aviao de uma base de dados, de uma lista de Tipos de aviões.">TipoAviaoDB::selTipoAviao</a>() {
+<a name="l00244"></a>00244         <a class="code" href="class_tipo_aviao_d_b.html#a3cf170fb74857ca0f5047c91394f7acd" title="Lista todos os Tipos de avião da base de dados de TipoAviaoDB.">listTipoAviao</a>();
+<a name="l00245"></a>00245         cout &lt;&lt; endl &lt;&lt; endl;
+<a name="l00246"></a>00246         <span class="keywordtype">size_t</span> indice = get_uint_cin&lt;size_t&gt;(<span class="stringliteral">&quot;\nIntroduza o índice (0 para retroceder): &quot;</span>, <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.size(), 0, <span class="keyword">true</span>);
+<a name="l00247"></a>00247         <span class="keywordflow">return</span> indice;
+<a name="l00248"></a>00248 }
+<a name="l00249"></a>00249 
+<a name="l00250"></a>00250 
+<a name="l00251"></a><a class="code" href="class_tipo_aviao_d_b.html#abf2fc6d9d0767212eecec75686e480be">00251</a> <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a>* <a class="code" href="class_tipo_aviao_d_b.html#abf2fc6d9d0767212eecec75686e480be" title="Selecciona um tipo de aviao de uma base de dados, de uma lista de Tipos de aviões.">TipoAviaoDB::selTipoAviaoPtr</a>() {
+<a name="l00252"></a>00252         <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>[ <a class="code" href="class_tipo_aviao_d_b.html#abddea6714023737d98684acdb785d21b" title="Selecciona um tipo de aviao de uma base de dados, de uma lista de Tipos de aviões.">selTipoAviao</a>() ];
+<a name="l00253"></a>00253 }
+<a name="l00254"></a>00254 
+<a name="l00255"></a><a class="code" href="class_tipo_aviao_d_b.html#a69635301f8256252d1c9a1585d39dbc3">00255</a> <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#a69635301f8256252d1c9a1585d39dbc3" title="Método que mostra ao utilizador os atributos dum tipo de avião.">TipoAviaoDB::infoTipoAviao</a>() {
+<a name="l00256"></a>00256         cout &lt;&lt; endl &lt;&lt; endl;
+<a name="l00257"></a>00257         <span class="keywordtype">size_t</span> indice = <a class="code" href="class_tipo_aviao_d_b.html#abddea6714023737d98684acdb785d21b" title="Selecciona um tipo de aviao de uma base de dados, de uma lista de Tipos de aviões.">selTipoAviao</a>();
+<a name="l00258"></a>00258 
+<a name="l00259"></a>00259         <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a> *tipo_aviao = <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>[indice];
+<a name="l00260"></a>00260 
+<a name="l00261"></a>00261         <span class="keywordtype">string</span> str_title = <span class="stringliteral">&quot;Informações sobre o tipo de avião&quot;</span>;
+<a name="l00262"></a>00262 
+<a name="l00263"></a>00263         vector &lt;string&gt; colNames;                                       <span class="comment">// nomes de colunas não são usados, logo vão strings vazias</span>
+<a name="l00264"></a>00264         colNames.push_back(<span class="keywordtype">string</span>(<span class="stringliteral">&quot;&quot;</span>));
+<a name="l00265"></a>00265         colNames.push_back(<span class="keywordtype">string</span>(<span class="stringliteral">&quot;&quot;</span>));
+<a name="l00266"></a>00266 
+<a name="l00267"></a>00267         vector &lt; vector&lt;string&gt; &gt; col;
+<a name="l00268"></a>00268         vector &lt;string&gt; dados;
+<a name="l00269"></a>00269 
+<a name="l00270"></a>00270         <span class="comment">//Nomes dos atributos</span>
+<a name="l00271"></a>00271         col.push_back(<a class="code" href="class_comandos.html#a8fb700ff5cc51cab404b7408d3ae256b" title="Vectores com as listas de parámetros que podem ser alterados em cada classe.">Comandos::_tipo_aviao_op_list</a>);
+<a name="l00272"></a>00272 
+<a name="l00273"></a>00273         dados.push_back( tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a774ccd8ea84fe300c4776da5d1aacef9">getNomeTipo</a>() );
+<a name="l00274"></a>00274         dados.push_back( tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a3a398874fba59860ec9091ee24f0d894">getDescricao</a>() );
+<a name="l00275"></a>00275         dados.push_back( <a class="code" href="class_porta_embarque.html#a7d6306fb78b61ced492170eded29ad50">PortaEmbarque::getInfoEnumCategoriasAvioes</a>( tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a6a410fc3cf96ec6d7cebf971985cd21d">getCategoria</a>() ) );
+<a name="l00276"></a>00276         dados.push_back( tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a02cf109cc6c860e275b25914fe494771">getFabricante</a>() );
+<a name="l00277"></a>00277         dados.push_back( to_string&lt;DataHora&gt;(tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a9bb8d29339bfebfabb436880bc8ac4fa">getDataLancamento</a>()) );
+<a name="l00278"></a>00278         dados.push_back( to_string&lt;unsigned&gt;(tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a250cecbf40f8946ed73c9a3961c1be32">getPreco</a>()) );
+<a name="l00279"></a>00279         dados.push_back( to_string&lt;unsigned&gt;(tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a20334d8bf1df6d3a3c9e94c1a3be3982">getMaximoPassageiros</a>()) );
+<a name="l00280"></a>00280         dados.push_back( to_string&lt;unsigned&gt;(tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a73518c45c99345bc1276901398e28ddb">getAutonomia</a>()) );
+<a name="l00281"></a>00281         dados.push_back( to_string&lt;unsigned&gt;(tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a2d6fef3040a59fba278cd5f2aa56038f">getVelocidadeMaxima</a>()) );
+<a name="l00282"></a>00282         dados.push_back( to_string&lt;unsigned&gt;(tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a85bffb930fdcdbbbb7555f0693805325">getNumeroMotores</a>()) );
+<a name="l00283"></a>00283         dados.push_back( to_string&lt;unsigned&gt;(tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#ace09fe64b331a63f77993800e922d559">getPesoVazio</a>()) );
+<a name="l00284"></a>00284         dados.push_back( to_string&lt;unsigned&gt;(tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#aed7cf8c7da70eb7e97b9ed541b1e538e">getPesoMaximo</a>()) );
+<a name="l00285"></a>00285         dados.push_back( to_string&lt;unsigned&gt;(tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#ab7c4e7058a8d8cbc143b6bb558b69aa5">getComprimento</a>()) );
+<a name="l00286"></a>00286         dados.push_back( to_string&lt;unsigned&gt;(tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a2af88b84afc095e299e407d296103f67">getEnvergadura</a>()) );
+<a name="l00287"></a>00287         dados.push_back( to_string&lt;unsigned&gt;(tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a9d1cc57b5aa3094071fb1afca2e9a378">getAltura</a>()) );
+<a name="l00288"></a>00288         dados.push_back( to_string&lt;unsigned&gt;(tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a4465be98db8e469e8ab2e310650887d1">getAltitudeMaxima</a>()) );
+<a name="l00289"></a>00289 
+<a name="l00290"></a>00290 
+<a name="l00291"></a>00291         <span class="comment">//Dados relativos aos atributos</span>
+<a name="l00292"></a>00292         col.push_back(dados);
+<a name="l00293"></a>00293 
+<a name="l00294"></a>00294         cout &lt;&lt; endl &lt;&lt; endl;
+<a name="l00295"></a>00295         <a class="code" href="utils_8cpp.html#a0daf13ac8da9785b3895a6d1e48d4a2f" title="Método que imprime uma tabela com os dados de um vector de colunas (vector de strings).">printMenu</a>(str_title, col, colNames, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);
+<a name="l00296"></a>00296         <a class="code" href="utils_8cpp.html#a385f5a2e2bc6628450b6280692396851" title="Limpa as flags do cin e fica à espera de um input para prosseguir.">getch</a>();
+<a name="l00297"></a>00297 }
+<a name="l00298"></a>00298 
+<a name="l00299"></a>00299 
+<a name="l00300"></a><a class="code" href="class_tipo_aviao_d_b.html#a9a8c464abdb9fdf37b910f0468cff173">00300</a> <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#a9a8c464abdb9fdf37b910f0468cff173" title="Método que pede fornece ao utilizador a possibilidade de editar TipoAviao que já estão criados...">TipoAviaoDB::editTipoAviao</a>() {
+<a name="l00301"></a>00301         <span class="keywordtype">bool</span> continuar;
+<a name="l00302"></a>00302         <span class="keywordflow">do</span> {
+<a name="l00303"></a>00303                 cout &lt;&lt; endl &lt;&lt; endl;
+<a name="l00304"></a>00304                 <span class="comment">//Selecção do avião</span>
+<a name="l00305"></a>00305                 <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a>* tipo_aviao = <a class="code" href="class_tipo_aviao_d_b.html#abf2fc6d9d0767212eecec75686e480be" title="Selecciona um tipo de aviao de uma base de dados, de uma lista de Tipos de aviões.">selTipoAviaoPtr</a>();
+<a name="l00306"></a>00306 
+<a name="l00307"></a>00307                 <span class="comment">//Escolha do atr5ibuto a editar</span>
+<a name="l00308"></a>00308                 <span class="keywordtype">string</span> titulo(<span class="stringliteral">&quot;Atributos dos tipos de aviões&quot;</span>);
+<a name="l00309"></a>00309                 <span class="keywordtype">string</span> col_name(<span class="stringliteral">&quot;Atributos&quot;</span>);
+<a name="l00310"></a>00310                 vector &lt;string&gt; nome_coluna;
+<a name="l00311"></a>00311                 vector &lt; vector &lt;string&gt; &gt; colunas;
+<a name="l00312"></a>00312                 colunas.push_back(<a class="code" href="class_comandos.html#a8fb700ff5cc51cab404b7408d3ae256b" title="Vectores com as listas de parámetros que podem ser alterados em cada classe.">Comandos::_tipo_aviao_op_list</a>);
+<a name="l00313"></a>00313                 nome_coluna.push_back(col_name);
+<a name="l00314"></a>00314 
+<a name="l00315"></a>00315                 cout &lt;&lt; endl &lt;&lt; endl;
+<a name="l00316"></a>00316                 <a class="code" href="utils_8cpp.html#a0daf13ac8da9785b3895a6d1e48d4a2f" title="Método que imprime uma tabela com os dados de um vector de colunas (vector de strings).">printMenu</a>(titulo, colunas, nome_coluna);
+<a name="l00317"></a>00317                 <span class="keywordtype">int</span> indice_atributo = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Escolha o atributo que quer editar: &quot;</span>, <a class="code" href="class_comandos.html#a8fb700ff5cc51cab404b7408d3ae256b" title="Vectores com as listas de parámetros que podem ser alterados em cada classe.">Comandos::_tipo_aviao_op_list</a>.size());
+<a name="l00318"></a>00318                 cout &lt;&lt; endl &lt;&lt; endl;
+<a name="l00319"></a>00319 
+<a name="l00320"></a>00320                 <span class="keywordtype">string</span> str_temp;
+<a name="l00321"></a>00321                 <span class="keywordtype">unsigned</span> uns_temp;
+<a name="l00322"></a>00322                 <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> data_hora_temp;
+<a name="l00323"></a>00323 
+<a name="l00324"></a>00324                 <span class="keywordflow">switch</span> (indice_atributo) {
+<a name="l00325"></a>00325                 <span class="keywordflow">case</span> 0:
+<a name="l00326"></a>00326                         {
+<a name="l00327"></a>00327                                 str_temp = <a class="code" href="class_tipo_aviao_d_b.html#a91c643bfc8949c053321b1519f22a958">getNomeTipoAviaoCin</a>(<span class="stringliteral">&quot;Introduza o novo nome para o tipo de avião: &quot;</span>);
+<a name="l00328"></a>00328                                 tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a45474a503074a9f03f5b09620cb3c84b">setNomeTipo</a>(str_temp);
+<a name="l00329"></a>00329                                 <span class="keywordflow">break</span>;
+<a name="l00330"></a>00330                         }
+<a name="l00331"></a>00331 
+<a name="l00332"></a>00332                 <span class="keywordflow">case</span> 1:
+<a name="l00333"></a>00333                         {
+<a name="l00334"></a>00334                                 cout &lt;&lt; <span class="stringliteral">&quot;Introduza a nova descrição para o tipo de avião: &quot;</span>;
+<a name="l00335"></a>00335                                 <a class="code" href="utils_8cpp.html#aec9a81a0766b1243f091fa5e47abde63" title="getline que faz o sync para não ler lixo do buffer.">getlineCin</a>(str_temp);
+<a name="l00336"></a>00336                                 tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a28f489161d7a16fc85dbc283e9d97094">setDescricao</a>(str_temp);
+<a name="l00337"></a>00337                                 <span class="keywordflow">break</span>;
+<a name="l00338"></a>00338                         }
+<a name="l00339"></a>00339 
+<a name="l00340"></a>00340                 <span class="keywordflow">case</span> 2:
+<a name="l00341"></a>00341                         {
+<a name="l00342"></a>00342                                 cout &lt;&lt; <span class="stringliteral">&quot;Categorias de Aviões a associar ao tipo de avião:\n&quot;</span> &lt;&lt; endl;
+<a name="l00343"></a>00343                                 <a class="code" href="class_porta_embarque.html#afeaaa93c208548d2a74f1f34110673bb">PortaEmbarque::listCategoriasAvioesInfo</a>();
+<a name="l00344"></a>00344                                 <span class="keywordtype">unsigned</span> uns_temp = get_uint_cin &lt;unsigned&gt;(<span class="stringliteral">&quot;Introduza a nova categoria do tipo de avião:\n&quot;</span>, <a class="code" href="class_porta_embarque.html#a367d51244e4dd345449791242ce62b79">PortaEmbarque::getRefCategoriasAvioesInfo</a>().size(), 0, <span class="keyword">false</span>);
+<a name="l00345"></a>00345                                 tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a98434f1bec8b93047455f7d98f2b22ef">setCategoria</a>(uns_temp);
+<a name="l00346"></a>00346                                 <span class="keywordflow">break</span>;
+<a name="l00347"></a>00347                         }
+<a name="l00348"></a>00348 
+<a name="l00349"></a>00349                 <span class="keywordflow">case</span> 3:
+<a name="l00350"></a>00350                         {
+<a name="l00351"></a>00351                                 cout &lt;&lt; <span class="stringliteral">&quot;Introduza o novo fabricante para o tipo de avião: &quot;</span>;
+<a name="l00352"></a>00352                                 <a class="code" href="utils_8cpp.html#aec9a81a0766b1243f091fa5e47abde63" title="getline que faz o sync para não ler lixo do buffer.">getlineCin</a>(str_temp);
+<a name="l00353"></a>00353                                 tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#ac44a5bf79c8974ab126ab8851dd57d8f">setFabricante</a>(str_temp);
+<a name="l00354"></a>00354                                 <span class="keywordflow">break</span>;
+<a name="l00355"></a>00355                         }
+<a name="l00356"></a>00356 
+<a name="l00357"></a>00357                 <span class="keywordflow">case</span> 4:
+<a name="l00358"></a>00358                         {
+<a name="l00359"></a>00359                                 data_hora_temp.<a class="code" href="class_data_hora.html#a10c7ae9216d4bbca2b661a72fb1363c7" title="Método que pede ao utilizador para introduzir uma data no formato &amp;lt;AAAA/MM/DD HH:mm&amp;gt;.">getDataHoraCin</a>(<span class="stringliteral">&quot;Introduza a nova data de lançamento deste tipo de avião (AAAA/MM/DD HH:mm): &quot;</span>);
+<a name="l00360"></a>00360                                 tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a50fecf0f87860148bd55829e184ad261">setDataLancamento</a>(data_hora_temp);
+<a name="l00361"></a>00361                                 <span class="keywordflow">break</span>;
+<a name="l00362"></a>00362                         }
+<a name="l00363"></a>00363 
+<a name="l00364"></a>00364                 <span class="keywordflow">case</span> 5:
+<a name="l00365"></a>00365                         {
+<a name="l00366"></a>00366                                 uns_temp = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza o novo preço para este tipo de avião (euros): &quot;</span>);
+<a name="l00367"></a>00367                                 tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a66c7b9a861377ce4edaf196656b63274">setPreco</a>(uns_temp);
+<a name="l00368"></a>00368                                 <span class="keywordflow">break</span>;
+<a name="l00369"></a>00369                         }
+<a name="l00370"></a>00370 
+<a name="l00371"></a>00371                 <span class="keywordflow">case</span> 6:
+<a name="l00372"></a>00372                         {
+<a name="l00373"></a>00373                                 uns_temp = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza o número máximo de passageiros para este tipo de avião: &quot;</span>);
+<a name="l00374"></a>00374                                 tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a5366a37d8f6da0bf8b4d6950bc3c40c1">setMaximoPassageiros</a>(uns_temp);
+<a name="l00375"></a>00375                                 <span class="keywordflow">break</span>;
+<a name="l00376"></a>00376                         }
+<a name="l00377"></a>00377 
+<a name="l00378"></a>00378                 <span class="keywordflow">case</span> 7:
+<a name="l00379"></a>00379                         {
+<a name="l00380"></a>00380                                 uns_temp = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza a autonomia para este tipo de avião (km): &quot;</span>);
+<a name="l00381"></a>00381                                 tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a51bfa9769e7d8b9114bee8e7c86b597c">setAutonomia</a>(uns_temp);
+<a name="l00382"></a>00382                                 <span class="keywordflow">break</span>;
+<a name="l00383"></a>00383                         }
+<a name="l00384"></a>00384 
+<a name="l00385"></a>00385                 <span class="keywordflow">case</span> 8:
+<a name="l00386"></a>00386                         {
+<a name="l00387"></a>00387                                 uns_temp = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza a velocidade máxima que este tipo de avião atinge (km/h): &quot;</span>);
+<a name="l00388"></a>00388                                 tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a58e4fb196ee4621c6c4142208f9007cb">setVelocidadeMaxima</a>(uns_temp);
+<a name="l00389"></a>00389                                 <span class="keywordflow">break</span>;
+<a name="l00390"></a>00390                         }
+<a name="l00391"></a>00391 
+<a name="l00392"></a>00392                 <span class="keywordflow">case</span> 9:
+<a name="l00393"></a>00393                         {
+<a name="l00394"></a>00394                                 uns_temp = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza o número de motores que este tipo de avião tem: &quot;</span>);
+<a name="l00395"></a>00395                                 tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a5be72bb26d14ab86024ab2c63584c4d1">setNumeroMotores</a>(uns_temp);
+<a name="l00396"></a>00396                                 <span class="keywordflow">break</span>;
+<a name="l00397"></a>00397                         }
+<a name="l00398"></a>00398 
+<a name="l00399"></a>00399                 <span class="keywordflow">case</span> 10:
+<a name="l00400"></a>00400                         {
+<a name="l00401"></a>00401                                 uns_temp = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza o peso vazio que deste tipo de avião (kg): &quot;</span>);
+<a name="l00402"></a>00402                                 tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a12eb815a8c09c69c268cccb32b223c8e">setPesoVazio</a>(uns_temp);
+<a name="l00403"></a>00403                                 <span class="keywordflow">break</span>;
+<a name="l00404"></a>00404                         }
+<a name="l00405"></a>00405 
+<a name="l00406"></a>00406                 <span class="keywordflow">case</span> 11:
+<a name="l00407"></a>00407                         {
+<a name="l00408"></a>00408                                 uns_temp = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza o peso máximo que este tipo de avião pode suportar(kg): &quot;</span>);
+<a name="l00409"></a>00409                                 tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a29565a0fec98631ea212456061242dfb">setPesoMaximo</a>(uns_temp);
+<a name="l00410"></a>00410                                 <span class="keywordflow">break</span>;
+<a name="l00411"></a>00411                         }
+<a name="l00412"></a>00412 
+<a name="l00413"></a>00413                 <span class="keywordflow">case</span> 12:
+<a name="l00414"></a>00414                         {
+<a name="l00415"></a>00415                                 uns_temp = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza o comprimento deste tipo de avião (m): &quot;</span>);
+<a name="l00416"></a>00416                                 tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#ad395441996555e26911c856f5a562787">setComprimento</a>(uns_temp);
+<a name="l00417"></a>00417                                 <span class="keywordflow">break</span>;
+<a name="l00418"></a>00418                         }
+<a name="l00419"></a>00419 
+<a name="l00420"></a>00420                 <span class="keywordflow">case</span> 13:
+<a name="l00421"></a>00421                         {
+<a name="l00422"></a>00422                                 uns_temp = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza a envergadura deste tipo de avião (m): &quot;</span>);
+<a name="l00423"></a>00423                                 tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a220bfcf1fc03aa0e56ce6c54a57cb941">setEnvergadura</a>(uns_temp);
+<a name="l00424"></a>00424                                 <span class="keywordflow">break</span>;
+<a name="l00425"></a>00425                         }
+<a name="l00426"></a>00426 
+<a name="l00427"></a>00427                 <span class="keywordflow">case</span> 14:
+<a name="l00428"></a>00428                         {
+<a name="l00429"></a>00429                                 uns_temp = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza a altura deste tipo de avião (m): &quot;</span>);
+<a name="l00430"></a>00430                                 tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a2a5f270530b6d260294aee3820216284">setAltura</a>(uns_temp);
+<a name="l00431"></a>00431                                 <span class="keywordflow">break</span>;
+<a name="l00432"></a>00432                         }
+<a name="l00433"></a>00433 
+<a name="l00434"></a>00434                 <span class="keywordflow">case</span> 15:
+<a name="l00435"></a>00435                         {
+<a name="l00436"></a>00436                                 uns_temp = <a class="code" href="utils_8cpp.html#aed561a6879d1d46975f653d51e9237c4" title="Mostra a &amp;quot;message&amp;quot; ao utilizador e espera por um input de um número entre min (default é 0)...">get_int_cin</a>(<span class="stringliteral">&quot;Introduza a altitude máxima a que este tipo de avião pode voar (m): &quot;</span>);
+<a name="l00437"></a>00437                                 tipo_aviao-&gt;<a class="code" href="class_tipo_aviao.html#a64166d5bfc900c862633929743dfdd8d">setAltitudeMaxima</a>(uns_temp);
+<a name="l00438"></a>00438                                 <span class="keywordflow">break</span>;
+<a name="l00439"></a>00439                         }
+<a name="l00440"></a>00440                 }
+<a name="l00441"></a>00441 
+<a name="l00442"></a>00442                 <span class="comment">//Pergunta ao utilizador se quer continuar a editar o tipo de avião</span>
+<a name="l00443"></a>00443                 continuar = <a class="code" href="utils_8cpp.html#a555c71c65819b8bca6c4a733d2d601b9" title="Pergunta message ao utilizador e retorna Sim/Não.">get_yes_no</a>(<span class="stringliteral">&quot;\n\nDeseja continuar a editar este tipo de avião (S/N): &quot;</span>);
+<a name="l00444"></a>00444 
+<a name="l00445"></a>00445         } <span class="keywordflow">while</span> (continuar);
+<a name="l00446"></a>00446 }
+<a name="l00447"></a>00447 
+<a name="l00448"></a>00448 
+<a name="l00449"></a><a class="code" href="class_tipo_aviao_d_b.html#a009388c6952829a1e02955f4b5330a27">00449</a> <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#a009388c6952829a1e02955f4b5330a27" title="Elimina um tipo de aviao da base de dados TipoAviaoDB perguntando ao utilizador o índice...">TipoAviaoDB::delTipoAviao</a>() {
+<a name="l00450"></a>00450         <span class="keywordflow">try</span> {
+<a name="l00451"></a>00451                 <span class="keywordtype">size_t</span> indice = <a class="code" href="class_tipo_aviao_d_b.html#abddea6714023737d98684acdb785d21b" title="Selecciona um tipo de aviao de uma base de dados, de uma lista de Tipos de aviões.">selTipoAviao</a>();
+<a name="l00452"></a>00452                 <a class="code" href="class_tipo_aviao_d_b.html#a009388c6952829a1e02955f4b5330a27" title="Elimina um tipo de aviao da base de dados TipoAviaoDB perguntando ao utilizador o índice...">delTipoAviao</a>(indice);
+<a name="l00453"></a>00453                 cout &lt;&lt; <span class="stringliteral">&quot;Removido com sucesso!&quot;</span> &lt;&lt; endl;
+<a name="l00454"></a>00454         } <span class="keywordflow">catch</span> (exception &amp; e) {
+<a name="l00455"></a>00455                 cout &lt;&lt; e.what() &lt;&lt; endl;
+<a name="l00456"></a>00456         }
+<a name="l00457"></a>00457 
+<a name="l00458"></a>00458         <a class="code" href="utils_8cpp.html#a385f5a2e2bc6628450b6280692396851" title="Limpa as flags do cin e fica à espera de um input para prosseguir.">getch</a>();
+<a name="l00459"></a>00459 }
+<a name="l00460"></a>00460 
+<a name="l00461"></a>00461 
+<a name="l00462"></a><a class="code" href="class_tipo_aviao_d_b.html#a58f216ee1e09f27c0cead468f696d815">00462</a> <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#a009388c6952829a1e02955f4b5330a27" title="Elimina um tipo de aviao da base de dados TipoAviaoDB perguntando ao utilizador o índice...">TipoAviaoDB::delTipoAviao</a>(<span class="keywordtype">size_t</span> indice) {
+<a name="l00463"></a>00463         <span class="keywordflow">if</span> ((indice &lt; 0) &amp;&amp; (indice &gt;= <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.size()))
+<a name="l00464"></a>00464                 <span class="keywordflow">throw</span> <a class="code" href="class_ex_out_of_range.html" title="Classe usada no tratamento de excepções que sinaliza que um elemento que se está a tentar aceder está...">ExOutOfRange</a>();
+<a name="l00465"></a>00465 
+<a name="l00466"></a>00466         <span class="keyword">const</span> vector &lt;Aviao*&gt;&amp; avioes_associados = <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>[indice]-&gt;getConstRefAvioesAssociados();
+<a name="l00467"></a>00467         <span class="keywordflow">if</span> (avioes_associados.size() &gt; 0)
+<a name="l00468"></a>00468                 <span class="keywordflow">throw</span> <a class="code" href="class_ex_element_in_use.html" title="Classe usada no tratamento de excepções que sinaliza que um vector se encontra vazio.">ExElementInUse</a>&lt;<span class="keyword">const</span> vector &lt;Aviao*&gt;&amp; &gt;(avioes_associados);
+<a name="l00469"></a>00469 
+<a name="l00470"></a>00470         vector&lt;TipoAviao*&gt;::iterator it = <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.begin();
+<a name="l00471"></a>00471 
+<a name="l00472"></a>00472         <span class="keyword">delete</span> *(it + indice);
+<a name="l00473"></a>00473         <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.erase(it + indice);
+<a name="l00474"></a>00474 }
+<a name="l00475"></a>00475 
+<a name="l00476"></a>00476 
+<a name="l00477"></a><a class="code" href="class_tipo_aviao_d_b.html#a59df4870cf7127ce2b065d99ff0b6af2">00477</a> <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#a59df4870cf7127ce2b065d99ff0b6af2" title="Carrega a base de dados de aviões a partir do nome de ficheiro predefinido.">TipoAviaoDB::loaddb_tipos_aviao</a>() {
+<a name="l00478"></a>00478         <a class="code" href="class_tipo_aviao_d_b.html#a59df4870cf7127ce2b065d99ff0b6af2" title="Carrega a base de dados de aviões a partir do nome de ficheiro predefinido.">loaddb_tipos_aviao</a>(<a class="code" href="utils_8h.html#ae2f1051dab2f5ca920a4d7f78d0c0bed">FILE_SAVE_DB_TIPOS_AVIAO</a>);
+<a name="l00479"></a>00479 }
+<a name="l00480"></a>00480 
+<a name="l00481"></a>00481 
+<a name="l00482"></a><a class="code" href="class_tipo_aviao_d_b.html#aa5a256fb86ef372c11687765bb09d0b4">00482</a> <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#a59df4870cf7127ce2b065d99ff0b6af2" title="Carrega a base de dados de aviões a partir do nome de ficheiro predefinido.">TipoAviaoDB::loaddb_tipos_aviao</a>(<span class="keywordtype">string</span> filename) {
+<a name="l00483"></a>00483         ifstream file;
+<a name="l00484"></a>00484         file.open(filename.c_str());
+<a name="l00485"></a>00485 
+<a name="l00486"></a>00486         <span class="keywordflow">if</span> (file.is_open()) {
+<a name="l00487"></a>00487                 <span class="keywordtype">string</span> linha;
+<a name="l00488"></a>00488                 vector&lt;string&gt; vec_str;
+<a name="l00489"></a>00489 
+<a name="l00490"></a>00490                 getline(file, linha);
+<a name="l00491"></a>00491 
+<a name="l00492"></a>00492                 <span class="keywordtype">size_t</span> numero_tipo_aviao = atoi(linha.c_str());
+<a name="l00493"></a>00493 
+<a name="l00494"></a>00494                 <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; numero_tipo_aviao; ++i) {
+<a name="l00495"></a>00495                         getline(file, linha);
+<a name="l00496"></a>00496                         vec_str = <a class="code" href="utils_8cpp.html#a7db7a33a90c53907236c65b823712ffb" title="Função que separa uma string em substrings sempre que encontrar o caracter delimitador (&amp;quot;delim&amp;q...">split</a>(linha, <a class="code" href="utils_8h.html#aec96c42054844c11adc3e25a50349b28">SAVE_DELIM</a>);
+<a name="l00497"></a>00497 
+<a name="l00498"></a>00498                         <span class="keywordflow">if</span> (vec_str.size() != CLASS_TIPO_AVIAO_ATTR_SIZE)
+<a name="l00499"></a>00499                                 <span class="keywordflow">throw</span> <a class="code" href="class_ex_corrupted_file.html" title="Classe usado no tratamento de excepções que sinaliza que um dado ficheiro que de dados está corrupto ...">ExCorruptedFile</a>();
+<a name="l00500"></a>00500 
+<a name="l00501"></a>00501                         <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a>* novo_tipo_aviao = <span class="keyword">new</span> <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a>(
+<a name="l00502"></a>00502                                         vec_str[0],
+<a name="l00503"></a>00503                                         vec_str[1],
+<a name="l00504"></a>00504                                         atoi(vec_str[2].c_str()),
+<a name="l00505"></a>00505                                         vec_str[3],
+<a name="l00506"></a>00506                                         vec_str[4],
+<a name="l00507"></a>00507                                         atoi(vec_str[5].c_str()),
+<a name="l00508"></a>00508                                         atoi(vec_str[6].c_str()),
+<a name="l00509"></a>00509                                         atoi(vec_str[7].c_str()),
+<a name="l00510"></a>00510                                         atoi(vec_str[8].c_str()),
+<a name="l00511"></a>00511                                         atoi(vec_str[9].c_str()),
+<a name="l00512"></a>00512                                         atoi(vec_str[10].c_str()),
+<a name="l00513"></a>00513                                         atoi(vec_str[11].c_str()),
+<a name="l00514"></a>00514                                         atoi(vec_str[12].c_str()),
+<a name="l00515"></a>00515                                         atoi(vec_str[13].c_str()),
+<a name="l00516"></a>00516                                         atoi(vec_str[14].c_str()),
+<a name="l00517"></a>00517                                         atoi(vec_str[15].c_str()) );
+<a name="l00518"></a>00518 
+<a name="l00519"></a>00519                         <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.push_back(novo_tipo_aviao);
+<a name="l00520"></a>00520                 }
+<a name="l00521"></a>00521         }
+<a name="l00522"></a>00522 
+<a name="l00523"></a>00523         file.close();
+<a name="l00524"></a>00524 }
+<a name="l00525"></a>00525 
+<a name="l00526"></a>00526 
+<a name="l00527"></a><a class="code" href="class_tipo_aviao_d_b.html#a1aaa37e1ef1da0980b2d95d689f34103">00527</a> <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#a1aaa37e1ef1da0980b2d95d689f34103" title="Guarda a base de dados para o ficheiro de de texto com o nome predefinido.">TipoAviaoDB::savedb_tipos_aviao</a>() {
+<a name="l00528"></a>00528         <a class="code" href="class_tipo_aviao_d_b.html#a1aaa37e1ef1da0980b2d95d689f34103" title="Guarda a base de dados para o ficheiro de de texto com o nome predefinido.">savedb_tipos_aviao</a>(<a class="code" href="utils_8h.html#ae2f1051dab2f5ca920a4d7f78d0c0bed">FILE_SAVE_DB_TIPOS_AVIAO</a>);
+<a name="l00529"></a>00529 }
+<a name="l00530"></a>00530 
+<a name="l00531"></a>00531 
+<a name="l00532"></a><a class="code" href="class_tipo_aviao_d_b.html#aa177f3eeb63d7f1de37673b6358a15ba">00532</a> <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#a1aaa37e1ef1da0980b2d95d689f34103" title="Guarda a base de dados para o ficheiro de de texto com o nome predefinido.">TipoAviaoDB::savedb_tipos_aviao</a>(<span class="keywordtype">string</span> filename) {
+<a name="l00533"></a>00533         ofstream file;
+<a name="l00534"></a>00534         file.open(filename.c_str());
+<a name="l00535"></a>00535 
+<a name="l00536"></a>00536         <span class="keywordflow">if</span> (file.is_open()) {
+<a name="l00537"></a>00537                 file &lt;&lt; <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>.size() &lt;&lt; endl;
+<a name="l00538"></a>00538 
+<a name="l00539"></a>00539                 <span class="keywordflow">for</span> (vector&lt;TipoAviao*&gt;::const_iterator it = <a class="code" href="class_tipo_aviao_d_b.html#a890101481d183129ecefa2d5e599fb8f">getRefTiposAviao</a>().begin(); it != <a class="code" href="class_tipo_aviao_d_b.html#a890101481d183129ecefa2d5e599fb8f">getRefTiposAviao</a>().end(); ++it) {
+<a name="l00540"></a>00540                         file &lt;&lt; (*it)-&gt;getNomeTipo() &lt;&lt; <a class="code" href="utils_8h.html#aec96c42054844c11adc3e25a50349b28">SAVE_DELIM</a>;
+<a name="l00541"></a>00541                         file &lt;&lt; (*it)-&gt;getDescricao() &lt;&lt; <a class="code" href="utils_8h.html#aec96c42054844c11adc3e25a50349b28">SAVE_DELIM</a>;
+<a name="l00542"></a>00542                         file &lt;&lt; (*it)-&gt;getCategoria() &lt;&lt; <a class="code" href="utils_8h.html#aec96c42054844c11adc3e25a50349b28">SAVE_DELIM</a>;
+<a name="l00543"></a>00543                         file &lt;&lt; (*it)-&gt;getFabricante() &lt;&lt; <a class="code" href="utils_8h.html#aec96c42054844c11adc3e25a50349b28">SAVE_DELIM</a>;
+<a name="l00544"></a>00544                         file &lt;&lt; (*it)-&gt;getDataLancamento() &lt;&lt; <a class="code" href="utils_8h.html#aec96c42054844c11adc3e25a50349b28">SAVE_DELIM</a>;
+<a name="l00545"></a>00545                         file &lt;&lt; (*it)-&gt;getPreco() &lt;&lt; <a class="code" href="utils_8h.html#aec96c42054844c11adc3e25a50349b28">SAVE_DELIM</a>;
+<a name="l00546"></a>00546                         file &lt;&lt; (*it)-&gt;getMaximoPassageiros() &lt;&lt; <a class="code" href="utils_8h.html#aec96c42054844c11adc3e25a50349b28">SAVE_DELIM</a>;
+<a name="l00547"></a>00547                         file &lt;&lt; (*it)-&gt;getAutonomia() &lt;&lt; <a class="code" href="utils_8h.html#aec96c42054844c11adc3e25a50349b28">SAVE_DELIM</a>;
+<a name="l00548"></a>00548                         file &lt;&lt; (*it)-&gt;getVelocidadeMaxima() &lt;&lt; <a class="code" href="utils_8h.html#aec96c42054844c11adc3e25a50349b28">SAVE_DELIM</a>;
+<a name="l00549"></a>00549                         file &lt;&lt; (*it)-&gt;getNumeroMotores() &lt;&lt; <a class="code" href="utils_8h.html#aec96c42054844c11adc3e25a50349b28">SAVE_DELIM</a>;
+<a name="l00550"></a>00550                         file &lt;&lt; (*it)-&gt;getPesoVazio() &lt;&lt; <a class="code" href="utils_8h.html#aec96c42054844c11adc3e25a50349b28">SAVE_DELIM</a>;
+<a name="l00551"></a>00551                         file &lt;&lt; (*it)-&gt;getPesoMaximo() &lt;&lt; <a class="code" href="utils_8h.html#aec96c42054844c11adc3e25a50349b28">SAVE_DELIM</a>;
+<a name="l00552"></a>00552                         file &lt;&lt; (*it)-&gt;getComprimento() &lt;&lt; <a class="code" href="utils_8h.html#aec96c42054844c11adc3e25a50349b28">SAVE_DELIM</a>;
+<a name="l00553"></a>00553                         file &lt;&lt; (*it)-&gt;getEnvergadura() &lt;&lt; <a class="code" href="utils_8h.html#aec96c42054844c11adc3e25a50349b28">SAVE_DELIM</a>;
+<a name="l00554"></a>00554                         file &lt;&lt; (*it)-&gt;getAltura() &lt;&lt; <a class="code" href="utils_8h.html#aec96c42054844c11adc3e25a50349b28">SAVE_DELIM</a>;
+<a name="l00555"></a>00555                         file &lt;&lt; (*it)-&gt;getAltitudeMaxima() &lt;&lt; endl;
+<a name="l00556"></a>00556                 }
+<a name="l00557"></a>00557 
+<a name="l00558"></a>00558                 file.close();
+<a name="l00559"></a>00559                 <span class="keywordflow">return</span>;
+<a name="l00560"></a>00560         }
+<a name="l00561"></a>00561 
+<a name="l00562"></a>00562         <span class="keywordflow">throw</span> <a class="code" href="class_ex_no_open_file.html" title="Classe usado no tratamento de excepções que sinaliza que não foi possível abrir o ficheiro especifica...">ExNoOpenFile</a>();
+<a name="l00563"></a>00563 }
+<a name="l00564"></a>00564 
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:37 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

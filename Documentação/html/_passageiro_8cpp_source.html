@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Passageiro.cpp Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>Passageiro.cpp</h1>  </div>
+</div>
+<div class="contents">
+<a href="_passageiro_8cpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_passageiro_8h.html" title="Classe que contém informação associada a um passageiro de um voo.">Passageiro.h</a>&quot;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 
+<a name="l00018"></a><a class="code" href="class_passageiro.html#ae9bbaedcd746b8602a9d77fabd035ea8">00018</a> <span class="keywordtype">bool</span> <a class="code" href="class_passageiro.html#ae9bbaedcd746b8602a9d77fabd035ea8" title="Operador que verifica se dois passageiros são equivalentes, verificando se têm o mesmo voo e mesmo nú...">Passageiro::operator==</a>(<span class="keyword">const</span> <a class="code" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a> &amp;passageiro) {
+<a name="l00019"></a>00019         <span class="keywordflow">if</span> ( this-&gt;<a class="code" href="class_pessoa.html#a0f98792e85f39c8ec73b16f18733ab2e">getBI</a>() == passageiro.<a class="code" href="class_pessoa.html#a0f98792e85f39c8ec73b16f18733ab2e">getBI</a>() )
+<a name="l00020"></a>00020                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00021"></a>00021         <span class="keywordflow">else</span>
+<a name="l00022"></a>00022                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00023"></a>00023 }
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025 
+<a name="l00026"></a><a class="code" href="class_passageiro.html#a9186b400490815bea8bafa9cfaf354e1">00026</a> <span class="keywordtype">bool</span> <a class="code" href="class_passageiro.html#a9186b400490815bea8bafa9cfaf354e1" title="Operador que verifica se o número do lugar do avião de um Passageiro é menor do que outro Passageiro...">Passageiro::operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="class_passageiro.html" title="Classe que contém informação associada a um passageiro de um determinado voo.">Passageiro</a> &amp;passageiro)<span class="keyword"> const </span>{
+<a name="l00027"></a>00027         <span class="keywordflow">return</span> (this-&gt;<a class="code" href="class_pessoa.html#a0f98792e85f39c8ec73b16f18733ab2e">getBI</a>() &lt; passageiro.<a class="code" href="class_pessoa.html#a0f98792e85f39c8ec73b16f18733ab2e">getBI</a>());
+<a name="l00028"></a>00028 }
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031 <span class="comment">//Inicialização do vector que contem a informação associada a cada tipo da enumeração necessidades_especiais_t</span>
+<a name="l00032"></a>00032 vector &lt;string&gt; <a class="code" href="class_passageiro.html#aa45f61ea012de81566e6bc89e3573b66">Passageiro::_necessidades_especiais_info</a>;
+<a name="l00033"></a>00033 
+<a name="l00034"></a><a class="code" href="class_passageiro.html#a2553ea40c89d848a28e4440b8ca43179">00034</a> <span class="keywordtype">void</span> <a class="code" href="class_passageiro.html#a2553ea40c89d848a28e4440b8ca43179">Passageiro::init_necessidades_especiais_info</a>() {
+<a name="l00035"></a>00035         <a class="code" href="class_passageiro.html#aa45f61ea012de81566e6bc89e3573b66">_necessidades_especiais_info</a>.clear();
+<a name="l00036"></a>00036         <a class="code" href="class_passageiro.html#aa45f61ea012de81566e6bc89e3573b66">_necessidades_especiais_info</a>.push_back(<span class="stringliteral">&quot;Passageiro com cadeira de rodas&quot;</span>);
+<a name="l00037"></a>00037         <a class="code" href="class_passageiro.html#aa45f61ea012de81566e6bc89e3573b66">_necessidades_especiais_info</a>.push_back(<span class="stringliteral">&quot;Passageiro idoso&quot;</span>);
+<a name="l00038"></a>00038         <a class="code" href="class_passageiro.html#aa45f61ea012de81566e6bc89e3573b66">_necessidades_especiais_info</a>.push_back(<span class="stringliteral">&quot;Passageiro de menor idade desacompanhado&quot;</span>);
+<a name="l00039"></a>00039         <a class="code" href="class_passageiro.html#aa45f61ea012de81566e6bc89e3573b66">_necessidades_especiais_info</a>.push_back(<span class="stringliteral">&quot;Passageiro sem necessidades especiais&quot;</span>);
+<a name="l00040"></a>00040 }
+<a name="l00041"></a>00041 
+<a name="l00042"></a><a class="code" href="class_passageiro.html#a480bf0bff877ec31f339b9194b38052a">00042</a> <span class="keywordtype">void</span> <a class="code" href="class_passageiro.html#a480bf0bff877ec31f339b9194b38052a">Passageiro::listNecessidadesEspeciaisInfo</a>() {
+<a name="l00043"></a>00043         vector &lt; vector &lt;string&gt; &gt; info;
+<a name="l00044"></a>00044         info.push_back(<a class="code" href="class_passageiro.html#aa45f61ea012de81566e6bc89e3573b66">_necessidades_especiais_info</a>);
+<a name="l00045"></a>00045         <span class="keywordtype">string</span> title = (string)<span class="stringliteral">&quot;Possiveis necessidades especiais&quot;</span>;
+<a name="l00046"></a>00046         vector &lt;string&gt; colnames;
+<a name="l00047"></a>00047         colnames.push_back(<span class="stringliteral">&quot;&quot;</span>);
+<a name="l00048"></a>00048         <a class="code" href="utils_8cpp.html#a0daf13ac8da9785b3895a6d1e48d4a2f" title="Método que imprime uma tabela com os dados de um vector de colunas (vector de strings).">printMenu</a>(title, info, colnames, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);
+<a name="l00049"></a>00049         cout &lt;&lt; endl;
+<a name="l00050"></a>00050 }
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:37 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

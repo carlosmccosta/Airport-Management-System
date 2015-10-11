@@ -1,0 +1,781 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência à classe Template BST&lt; Comparable &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&nbsp;dos&nbsp;componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pri-methods">Membros privados</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a> &#124;
+<a href="#friends">Amigos</a>  </div>
+  <div class="headertitle">
+<h1>Referência à classe Template BST&lt; Comparable &gt;</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="BST" -->
+<p><code>#include &lt;<a class="el" href="_b_s_t_8h_source.html">BST.h</a>&gt;</code></p>
+
+<p><a href="class_b_s_t-members.html">Mostrar lista completa dos membros</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a3185a79cf472271f122a97d0f59022d1">BST</a> (const Comparable &amp;notFound)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a163232cc6ffcbd1a51707efcc3fa36ca">BST</a> (const <a class="el" href="class_b_s_t.html">BST</a> &amp;rhs)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#abf3125f968641c8726101c5dd18f36be">~BST</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const Comparable &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a34fd17be76f49a77573185f29dede6be">findMin</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const Comparable &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#aee725fe273c0b3641070883b50eee271">findMax</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const Comparable &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a337dce7f94a881e253635cbf3ac7eacf">find</a> (const Comparable &amp;x) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a8018fc7d6c15b2564c10ddcc4316c64d">isEmpty</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a5270473db9e17e1737b92dd0d6cd0ee5">printTree</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a050d829503a88714c4ad0773cf6d3af6">makeEmpty</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a2b117df6521c7d61dac75ff2c938bae7">insert</a> (const Comparable &amp;x)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a6f01a0b44daf82a42022b6eb4c0df7a2">remove</a> (const Comparable &amp;x)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_b_s_t.html">BST</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#aa80c39f454c89d4a202be3d1445823f3">operator=</a> (const <a class="el" href="class_b_s_t.html">BST</a> &amp;rhs)</td></tr>
+<tr><td colspan="2"><h2><a name="pri-methods"></a>
+Membros privados</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const Comparable &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a7b020e9eb1dbcebd65f0de6803062607">elementAt</a> (<a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *t) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a85378385a0c683af6942649367ceb1e3">insert</a> (const Comparable &amp;x, <a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *&amp;t) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#aa0adaeade5fd57945de437d0a36e345b">remove</a> (const Comparable &amp;x, <a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *&amp;t) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#afdd16dca1e021dd7c64de0f5732f8120">findMin</a> (<a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *t) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#acf08e1a540542b2c7a422616b6568e31">findMax</a> (<a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *t) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a3c8ff3dde4d291cb5dd2dafa3c51e5d2">find</a> (const Comparable &amp;x, <a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *t) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#adf7cde06c85ed43f66ff88ccd263a648">makeEmpty</a> (<a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *&amp;t) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#ace2d68a869023df8700c42e6830a7e2c">printTree</a> (<a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *t) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#ad1b7bb1aed2b00bb0341f5fe044b8e5b">clone</a> (<a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *t) const </td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a48d08a19c48c0c260a7d5db37149ad0f">root</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const Comparable&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a93811f042c4201e993fe39638c15f251">ITEM_NOT_FOUND</a></td></tr>
+<tr><td colspan="2"><h2><a name="friends"></a>
+Amigos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#aab3993acac2ab24a0b59edb0c3acc775">BSTItrIn&lt; Comparable &gt;</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a45a55df6f11541416d4ea7684c575c1a">BSTItrPre&lt; Comparable &gt;</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a5dc153694be266f6e772659486219da7">BSTItrPost&lt; Comparable &gt;</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_s_t.html#a26ff00bc0d87069aed877f10fd3c80a8">BSTItrLevel&lt; Comparable &gt;</a></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<h3>template&lt;class Comparable&gt;<br/>
+ class BST&lt; Comparable &gt;</h3>
+
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00044">44</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+<hr/><h2>Documentação dos Construtores &amp; Destrutor</h2>
+<a class="anchor" id="a3185a79cf472271f122a97d0f59022d1"></a><!-- doxytag: member="BST::BST" ref="a3185a79cf472271f122a97d0f59022d1" args="(const Comparable &amp;notFound)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::<a class="el" href="class_b_s_t.html">BST</a> </td>
+          <td>(</td>
+          <td class="paramtype">const Comparable &amp;&nbsp;</td>
+          <td class="paramname"> <em>notFound</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [explicit]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00087">87</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a163232cc6ffcbd1a51707efcc3fa36ca"></a><!-- doxytag: member="BST::BST" ref="a163232cc6ffcbd1a51707efcc3fa36ca" args="(const BST &amp;rhs)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::<a class="el" href="class_b_s_t.html">BST</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt; &amp;&nbsp;</td>
+          <td class="paramname"> <em>rhs</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00092">92</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abf3125f968641c8726101c5dd18f36be"></a><!-- doxytag: member="BST::~BST" ref="abf3125f968641c8726101c5dd18f36be" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::~<a class="el" href="class_b_s_t.html">BST</a> </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00099">99</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00136">BST&lt; Comparable &gt;::makeEmpty()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos métodos</h2>
+<a class="anchor" id="ad1b7bb1aed2b00bb0341f5fe044b8e5b"></a><!-- doxytag: member="BST::clone" ref="ad1b7bb1aed2b00bb0341f5fe044b8e5b" args="(BinaryNode&lt; Comparable &gt; *t) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; * <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::clone </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *&nbsp;</td>
+          <td class="paramname"> <em>t</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00302">302</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00029">BinaryNode&lt; Comparable &gt;::element</a>, <a class="el" href="_b_s_t_8h_source.html#l00030">BinaryNode&lt; Comparable &gt;::left</a> e <a class="el" href="_b_s_t_8h_source.html#l00031">BinaryNode&lt; Comparable &gt;::right</a>.</p>
+
+<p>Referenciado por <a class="el" href="_b_s_t_8h_source.html#l00160">BST&lt; Comparable &gt;::operator=()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7b020e9eb1dbcebd65f0de6803062607"></a><!-- doxytag: member="BST::elementAt" ref="a7b020e9eb1dbcebd65f0de6803062607" args="(BinaryNode&lt; Comparable &gt; *t) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const Comparable &amp; <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::elementAt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *&nbsp;</td>
+          <td class="paramname"> <em>t</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00173">173</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00029">BinaryNode&lt; Comparable &gt;::element</a> e <a class="el" href="_b_s_t_8h_source.html#l00065">BST&lt; Comparable &gt;::ITEM_NOT_FOUND</a>.</p>
+
+<p>Referenciado por <a class="el" href="_b_s_t_8h_source.html#l00130">BST&lt; Comparable &gt;::find()</a>, <a class="el" href="_b_s_t_8h_source.html#l00123">BST&lt; Comparable &gt;::findMax()</a> e <a class="el" href="_b_s_t_8h_source.html#l00117">BST&lt; Comparable &gt;::findMin()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a337dce7f94a881e253635cbf3ac7eacf"></a><!-- doxytag: member="BST::find" ref="a337dce7f94a881e253635cbf3ac7eacf" args="(const Comparable &amp;x) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const Comparable &amp; <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::find </td>
+          <td>(</td>
+          <td class="paramtype">const Comparable &amp;&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00130">130</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00173">BST&lt; Comparable &gt;::elementAt()</a> e <a class="el" href="_b_s_t_8h_source.html#l00064">BST&lt; Comparable &gt;::root</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02966">CRUD::addPortaEmbarque()</a> e <a class="el" href="_b_s_t_8h_source.html#l00244">BST&lt; Comparable &gt;::find()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3c8ff3dde4d291cb5dd2dafa3c51e5d2"></a><!-- doxytag: member="BST::find" ref="a3c8ff3dde4d291cb5dd2dafa3c51e5d2" args="(const Comparable &amp;x, BinaryNode&lt; Comparable &gt; *t) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; * <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::find </td>
+          <td>(</td>
+          <td class="paramtype">const Comparable &amp;&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *&nbsp;</td>
+          <td class="paramname"> <em>t</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const<code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00244">244</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00029">BinaryNode&lt; Comparable &gt;::element</a>, <a class="el" href="_b_s_t_8h_source.html#l00130">BST&lt; Comparable &gt;::find()</a>, <a class="el" href="_b_s_t_8h_source.html#l00030">BinaryNode&lt; Comparable &gt;::left</a> e <a class="el" href="_b_s_t_8h_source.html#l00031">BinaryNode&lt; Comparable &gt;::right</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aee725fe273c0b3641070883b50eee271"></a><!-- doxytag: member="BST::findMax" ref="aee725fe273c0b3641070883b50eee271" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const Comparable &amp; <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::findMax </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00123">123</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00173">BST&lt; Comparable &gt;::elementAt()</a> e <a class="el" href="_b_s_t_8h_source.html#l00064">BST&lt; Comparable &gt;::root</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acf08e1a540542b2c7a422616b6568e31"></a><!-- doxytag: member="BST::findMax" ref="acf08e1a540542b2c7a422616b6568e31" args="(BinaryNode&lt; Comparable &gt; *t) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; * <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::findMax </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *&nbsp;</td>
+          <td class="paramname"> <em>t</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00233">233</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00031">BinaryNode&lt; Comparable &gt;::right</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a34fd17be76f49a77573185f29dede6be"></a><!-- doxytag: member="BST::findMin" ref="a34fd17be76f49a77573185f29dede6be" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const Comparable &amp; <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::findMin </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00117">117</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00173">BST&lt; Comparable &gt;::elementAt()</a> e <a class="el" href="_b_s_t_8h_source.html#l00064">BST&lt; Comparable &gt;::root</a>.</p>
+
+<p>Referenciado por <a class="el" href="_b_s_t_8h_source.html#l00221">BST&lt; Comparable &gt;::findMin()</a> e <a class="el" href="_b_s_t_8h_source.html#l00198">BST&lt; Comparable &gt;::remove()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afdd16dca1e021dd7c64de0f5732f8120"></a><!-- doxytag: member="BST::findMin" ref="afdd16dca1e021dd7c64de0f5732f8120" args="(BinaryNode&lt; Comparable &gt; *t) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; * <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::findMin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *&nbsp;</td>
+          <td class="paramname"> <em>t</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00221">221</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00117">BST&lt; Comparable &gt;::findMin()</a> e <a class="el" href="_b_s_t_8h_source.html#l00030">BinaryNode&lt; Comparable &gt;::left</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a85378385a0c683af6942649367ceb1e3"></a><!-- doxytag: member="BST::insert" ref="a85378385a0c683af6942649367ceb1e3" args="(const Comparable &amp;x, BinaryNode&lt; Comparable &gt; *&amp;t) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype">const Comparable &amp;&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *&amp;&nbsp;</td>
+          <td class="paramname"> <em>t</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const<code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00184">184</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00029">BinaryNode&lt; Comparable &gt;::element</a>, <a class="el" href="_b_s_t_8h_source.html#l00105">BST&lt; Comparable &gt;::insert()</a>, <a class="el" href="_b_s_t_8h_source.html#l00030">BinaryNode&lt; Comparable &gt;::left</a> e <a class="el" href="_b_s_t_8h_source.html#l00031">BinaryNode&lt; Comparable &gt;::right</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2b117df6521c7d61dac75ff2c938bae7"></a><!-- doxytag: member="BST::insert" ref="a2b117df6521c7d61dac75ff2c938bae7" args="(const Comparable &amp;x)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype">const Comparable &amp;&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00105">105</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00064">BST&lt; Comparable &gt;::root</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02966">CRUD::addPortaEmbarque()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03239">CRUD::editPortaEmbarque()</a>, <a class="el" href="_b_s_t_8h_source.html#l00184">BST&lt; Comparable &gt;::insert()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03311">CRUD::updatePortaEmbarqueDisp()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8018fc7d6c15b2564c10ddcc4316c64d"></a><!-- doxytag: member="BST::isEmpty" ref="a8018fc7d6c15b2564c10ddcc4316c64d" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::isEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00142">142</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00064">BST&lt; Comparable &gt;::root</a>.</p>
+
+<p>Referenciado por <a class="el" href="_b_s_t_8h_source.html#l00430">BSTItrIn&lt; Comparable &gt;::BSTItrIn()</a>, <a class="el" href="_b_s_t_8h_source.html#l00471">BSTItrLevel&lt; Comparable &gt;::BSTItrLevel()</a>, <a class="el" href="_b_s_t_8h_source.html#l00333">BSTItrPost&lt; Comparable &gt;::BSTItrPost()</a>, <a class="el" href="_b_s_t_8h_source.html#l00387">BSTItrPre&lt; Comparable &gt;::BSTItrPre()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l02996">CRUD::listPortaEmbarque()</a>, <a class="el" href="_b_s_t_8h_source.html#l00149">BST&lt; Comparable &gt;::printTree()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03311">CRUD::updatePortaEmbarqueDisp()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adf7cde06c85ed43f66ff88ccd263a648"></a><!-- doxytag: member="BST::makeEmpty" ref="adf7cde06c85ed43f66ff88ccd263a648" args="(BinaryNode&lt; Comparable &gt; *&amp;t) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::makeEmpty </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *&amp;&nbsp;</td>
+          <td class="paramname"> <em>t</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Internal method to make subtree empty. </p>
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00278">278</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00030">BinaryNode&lt; Comparable &gt;::left</a>, <a class="el" href="_b_s_t_8h_source.html#l00136">BST&lt; Comparable &gt;::makeEmpty()</a> e <a class="el" href="_b_s_t_8h_source.html#l00031">BinaryNode&lt; Comparable &gt;::right</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a050d829503a88714c4ad0773cf6d3af6"></a><!-- doxytag: member="BST::makeEmpty" ref="a050d829503a88714c4ad0773cf6d3af6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::makeEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00136">136</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00064">BST&lt; Comparable &gt;::root</a>.</p>
+
+<p>Referenciado por <a class="el" href="_b_s_t_8h_source.html#l00278">BST&lt; Comparable &gt;::makeEmpty()</a>, <a class="el" href="_b_s_t_8h_source.html#l00160">BST&lt; Comparable &gt;::operator=()</a> e <a class="el" href="_b_s_t_8h_source.html#l00099">BST&lt; Comparable &gt;::~BST()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa80c39f454c89d4a202be3d1445823f3"></a><!-- doxytag: member="BST::operator=" ref="aa80c39f454c89d4a202be3d1445823f3" args="(const BST &amp;rhs)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt; &amp; <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt; &amp;&nbsp;</td>
+          <td class="paramname"> <em>rhs</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00160">160</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00302">BST&lt; Comparable &gt;::clone()</a>, <a class="el" href="_b_s_t_8h_source.html#l00136">BST&lt; Comparable &gt;::makeEmpty()</a> e <a class="el" href="_b_s_t_8h_source.html#l00064">BST&lt; Comparable &gt;::root</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5270473db9e17e1737b92dd0d6cd0ee5"></a><!-- doxytag: member="BST::printTree" ref="a5270473db9e17e1737b92dd0d6cd0ee5" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::printTree </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00149">149</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00142">BST&lt; Comparable &gt;::isEmpty()</a> e <a class="el" href="_b_s_t_8h_source.html#l00064">BST&lt; Comparable &gt;::root</a>.</p>
+
+<p>Referenciado por <a class="el" href="_b_s_t_8h_source.html#l00290">BST&lt; Comparable &gt;::printTree()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ace2d68a869023df8700c42e6830a7e2c"></a><!-- doxytag: member="BST::printTree" ref="ace2d68a869023df8700c42e6830a7e2c" args="(BinaryNode&lt; Comparable &gt; *t) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::printTree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *&nbsp;</td>
+          <td class="paramname"> <em>t</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00290">290</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00029">BinaryNode&lt; Comparable &gt;::element</a>, <a class="el" href="_b_s_t_8h_source.html#l00030">BinaryNode&lt; Comparable &gt;::left</a>, <a class="el" href="_b_s_t_8h_source.html#l00149">BST&lt; Comparable &gt;::printTree()</a> e <a class="el" href="_b_s_t_8h_source.html#l00031">BinaryNode&lt; Comparable &gt;::right</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa0adaeade5fd57945de437d0a36e345b"></a><!-- doxytag: member="BST::remove" ref="aa0adaeade5fd57945de437d0a36e345b" args="(const Comparable &amp;x, BinaryNode&lt; Comparable &gt; *&amp;t) const " -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::remove </td>
+          <td>(</td>
+          <td class="paramtype">const Comparable &amp;&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_binary_node.html">BinaryNode</a>&lt; Comparable &gt; *&amp;&nbsp;</td>
+          <td class="paramname"> <em>t</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const<code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00198">198</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00029">BinaryNode&lt; Comparable &gt;::element</a>, <a class="el" href="_b_s_t_8h_source.html#l00117">BST&lt; Comparable &gt;::findMin()</a>, <a class="el" href="_b_s_t_8h_source.html#l00030">BinaryNode&lt; Comparable &gt;::left</a> e <a class="el" href="_b_s_t_8h_source.html#l00031">BinaryNode&lt; Comparable &gt;::right</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6f01a0b44daf82a42022b6eb4c0df7a2"></a><!-- doxytag: member="BST::remove" ref="a6f01a0b44daf82a42022b6eb4c0df7a2" args="(const Comparable &amp;x)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::remove </td>
+          <td>(</td>
+          <td class="paramtype">const Comparable &amp;&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00111">111</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referências <a class="el" href="_b_s_t_8h_source.html#l00064">BST&lt; Comparable &gt;::root</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03365">CRUD::delPortaEmbarque()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03390">CRUD::delPortaEmbarquePtr()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l01245">CRUD::editPlanoVoo()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03239">CRUD::editPortaEmbarque()</a> e <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03311">CRUD::updatePortaEmbarqueDisp()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação das classes amigas e funções relacionadas</h2>
+<a class="anchor" id="aab3993acac2ab24a0b59edb0c3acc775"></a><!-- doxytag: member="BST::BSTItrIn&lt; Comparable &gt;" ref="aab3993acac2ab24a0b59edb0c3acc775" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_b_s_t_itr_in.html">BSTItrIn</a>&lt; Comparable &gt;<code> [friend]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00078">78</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a26ff00bc0d87069aed877f10fd3c80a8"></a><!-- doxytag: member="BST::BSTItrLevel&lt; Comparable &gt;" ref="a26ff00bc0d87069aed877f10fd3c80a8" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_b_s_t_itr_level.html">BSTItrLevel</a>&lt; Comparable &gt;<code> [friend]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00081">81</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5dc153694be266f6e772659486219da7"></a><!-- doxytag: member="BST::BSTItrPost&lt; Comparable &gt;" ref="a5dc153694be266f6e772659486219da7" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_b_s_t_itr_post.html">BSTItrPost</a>&lt; Comparable &gt;<code> [friend]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00080">80</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a45a55df6f11541416d4ea7684c575c1a"></a><!-- doxytag: member="BST::BSTItrPre&lt; Comparable &gt;" ref="a45a55df6f11541416d4ea7684c575c1a" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_b_s_t_itr_pre.html">BSTItrPre</a>&lt; Comparable &gt;<code> [friend]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00079">79</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos dados membro</h2>
+<a class="anchor" id="a93811f042c4201e993fe39638c15f251"></a><!-- doxytag: member="BST::ITEM_NOT_FOUND" ref="a93811f042c4201e993fe39638c15f251" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const Comparable <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::<a class="el" href="class_b_s_t.html#a93811f042c4201e993fe39638c15f251">ITEM_NOT_FOUND</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00065">65</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_b_s_t_8h_source.html#l00173">BST&lt; Comparable &gt;::elementAt()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a48d08a19c48c0c260a7d5db37149ad0f"></a><!-- doxytag: member="BST::root" ref="a48d08a19c48c0c260a7d5db37149ad0f" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Comparable&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_binary_node.html">BinaryNode</a>&lt;Comparable&gt;* <a class="el" href="class_b_s_t.html">BST</a>&lt; Comparable &gt;::<a class="el" href="class_b_s_t.html#a48d08a19c48c0c260a7d5db37149ad0f">root</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_b_s_t_8h_source.html#l00064">64</a> do ficheiro <a class="el" href="_b_s_t_8h_source.html">BST.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_b_s_t_8h_source.html#l00430">BSTItrIn&lt; Comparable &gt;::BSTItrIn()</a>, <a class="el" href="_b_s_t_8h_source.html#l00471">BSTItrLevel&lt; Comparable &gt;::BSTItrLevel()</a>, <a class="el" href="_b_s_t_8h_source.html#l00333">BSTItrPost&lt; Comparable &gt;::BSTItrPost()</a>, <a class="el" href="_b_s_t_8h_source.html#l00387">BSTItrPre&lt; Comparable &gt;::BSTItrPre()</a>, <a class="el" href="_b_s_t_8h_source.html#l00130">BST&lt; Comparable &gt;::find()</a>, <a class="el" href="_b_s_t_8h_source.html#l00123">BST&lt; Comparable &gt;::findMax()</a>, <a class="el" href="_b_s_t_8h_source.html#l00117">BST&lt; Comparable &gt;::findMin()</a>, <a class="el" href="_b_s_t_8h_source.html#l00105">BST&lt; Comparable &gt;::insert()</a>, <a class="el" href="_b_s_t_8h_source.html#l00142">BST&lt; Comparable &gt;::isEmpty()</a>, <a class="el" href="_b_s_t_8h_source.html#l00136">BST&lt; Comparable &gt;::makeEmpty()</a>, <a class="el" href="_b_s_t_8h_source.html#l00160">BST&lt; Comparable &gt;::operator=()</a>, <a class="el" href="_b_s_t_8h_source.html#l00149">BST&lt; Comparable &gt;::printTree()</a> e <a class="el" href="_b_s_t_8h_source.html#l00111">BST&lt; Comparable &gt;::remove()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir do seguinte ficheiro:<ul>
+<li><a class="el" href="_b_s_t_8h_source.html">BST.h</a></li>
+</ul>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:38 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

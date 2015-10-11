@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência à classe ExInvalidDateTime</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&nbsp;dos&nbsp;componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a>  </div>
+  <div class="headertitle">
+<h1>Referência à classe ExInvalidDateTime</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="ExInvalidDateTime" --><!-- doxytag: inherits="Exceptions" -->
+<p>Classe usada no tratamento de excepções que sinaliza que o utilizador introduziu uma <a class="el" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> num formato errado.  
+<a href="#_details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png"/> Diagrama de heranças da classe ExInvalidDateTime</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+ <div class="center">
+  <img src="class_ex_invalid_date_time.png" usemap="#ExInvalidDateTime_map" alt=""/>
+  <map id="ExInvalidDateTime_map" name="ExInvalidDateTime_map">
+<area href="class_exceptions.html" alt="Exceptions" shape="rect" coords="0,0,115,24"/>
+</map>
+</div>
+
+<p><a href="class_ex_invalid_date_time-members.html">Mostrar lista completa dos membros</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ex_invalid_date_time.html#ae24bb436695a2dc896790aa9d6bd8121">ExInvalidDateTime</a> (string data, const char *pStr=&quot;Data/Hora no formato errado! (DD/MM/AAAA HH:mm)&quot;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ex_invalid_date_time.html#a28a2a8a4d7f03e7d31ae8d61d13ea87f">~ExInvalidDateTime</a> ()  throw ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ex_invalid_date_time.html#a989b941775b2cce04e31319c1343c3d2">getData</a> () const </td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ex_invalid_date_time.html#aacd24b755e81c02edfb25f1f7a2fb546">_Data</a></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<p>Classe usada no tratamento de excepções que sinaliza que o utilizador introduziu uma <a class="el" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> num formato errado. </p>
+<p>Formato aceite: AAAA/MM/DD HH:mm </p>
+
+<p>Definido na linha <a class="el" href="_exceptions_8h_source.html#l00129">129</a> do ficheiro <a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>.</p>
+<hr/><h2>Documentação dos Construtores &amp; Destrutor</h2>
+<a class="anchor" id="ae24bb436695a2dc896790aa9d6bd8121"></a><!-- doxytag: member="ExInvalidDateTime::ExInvalidDateTime" ref="ae24bb436695a2dc896790aa9d6bd8121" args="(string data, const char *pStr=&quot;Data/Hora no formato errado! (DD/MM/AAAA HH:mm)&quot;)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ExInvalidDateTime::ExInvalidDateTime </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>pStr</em> = <code>&quot;Data/Hora&nbsp;no&nbsp;formato&nbsp;errado!&nbsp;(DD/MM/AAAA&nbsp;HH:mm)&quot;</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, explicit]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_exceptions_8h_source.html#l00133">133</a> do ficheiro <a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a28a2a8a4d7f03e7d31ae8d61d13ea87f"></a><!-- doxytag: member="ExInvalidDateTime::~ExInvalidDateTime" ref="a28a2a8a4d7f03e7d31ae8d61d13ea87f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ExInvalidDateTime::~ExInvalidDateTime </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td>  throw ()<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_exceptions_8h_source.html#l00135">135</a> do ficheiro <a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos métodos</h2>
+<a class="anchor" id="a989b941775b2cce04e31319c1343c3d2"></a><!-- doxytag: member="ExInvalidDateTime::getData" ref="a989b941775b2cce04e31319c1343c3d2" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ExInvalidDateTime::getData </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_exceptions_8h_source.html#l00137">137</a> do ficheiro <a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>.</p>
+
+<p>Referências <a class="el" href="_exceptions_8h_source.html#l00131">_Data</a>.</p>
+
+<p>Referenciado por <a class="el" href="_exceptions_8cpp_source.html#l00023">operator&lt;&lt;()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos dados membro</h2>
+<a class="anchor" id="aacd24b755e81c02edfb25f1f7a2fb546"></a><!-- doxytag: member="ExInvalidDateTime::_Data" ref="aacd24b755e81c02edfb25f1f7a2fb546" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string <a class="el" href="class_ex_invalid_date_time.html#aacd24b755e81c02edfb25f1f7a2fb546">ExInvalidDateTime::_Data</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_exceptions_8h_source.html#l00131">131</a> do ficheiro <a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_exceptions_8h_source.html#l00137">getData()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir do seguinte ficheiro:<ul>
+<li><a class="el" href="_exceptions_8h_source.html">Exceptions.h</a></li>
+</ul>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:39 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

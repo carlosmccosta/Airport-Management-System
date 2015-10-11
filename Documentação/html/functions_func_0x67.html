@@ -1,0 +1,516 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Componentes membro - Funções</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&nbsp;dos&nbsp;componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;classes</span></a></li>
+      <li class="current"><a href="functions.html"><span>Componentes&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="functions.html"><span>Tudo</span></a></li>
+      <li class="current"><a href="functions_func.html"><span>Funções</span></a></li>
+      <li><a href="functions_vars.html"><span>Variáveis</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerações</span></a></li>
+      <li><a href="functions_eval.html"><span>Valores&nbsp;da&nbsp;enumeração</span></a></li>
+      <li><a href="functions_rela.html"><span>Funções&nbsp;associadas</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs3">
+    <ul class="tablist">
+      <li><a href="functions_func.html#index_a"><span>a</span></a></li>
+      <li><a href="functions_func_0x62.html#index_b"><span>b</span></a></li>
+      <li><a href="functions_func_0x63.html#index_c"><span>c</span></a></li>
+      <li><a href="functions_func_0x64.html#index_d"><span>d</span></a></li>
+      <li><a href="functions_func_0x65.html#index_e"><span>e</span></a></li>
+      <li><a href="functions_func_0x66.html#index_f"><span>f</span></a></li>
+      <li class="current"><a href="functions_func_0x67.html#index_g"><span>g</span></a></li>
+      <li><a href="functions_func_0x68.html#index_h"><span>h</span></a></li>
+      <li><a href="functions_func_0x69.html#index_i"><span>i</span></a></li>
+      <li><a href="functions_func_0x6c.html#index_l"><span>l</span></a></li>
+      <li><a href="functions_func_0x6d.html#index_m"><span>m</span></a></li>
+      <li><a href="functions_func_0x6f.html#index_o"><span>o</span></a></li>
+      <li><a href="functions_func_0x70.html#index_p"><span>p</span></a></li>
+      <li><a href="functions_func_0x72.html#index_r"><span>r</span></a></li>
+      <li><a href="functions_func_0x73.html#index_s"><span>s</span></a></li>
+      <li><a href="functions_func_0x74.html#index_t"><span>t</span></a></li>
+      <li><a href="functions_func_0x76.html#index_v"><span>v</span></a></li>
+      <li><a href="functions_func_0x77.html#index_w"><span>w</span></a></li>
+      <li><a href="functions_func_0x7e.html#index_~"><span>~</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+&nbsp;
+
+<h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>getAltitudeMaxima()
+: <a class="el" href="class_tipo_aviao.html#a4465be98db8e469e8ab2e310650887d1">TipoAviao</a>
+</li>
+<li>getAltura()
+: <a class="el" href="class_tipo_aviao.html#a9d1cc57b5aa3094071fb1afca2e9a378">TipoAviao</a>
+</li>
+<li>getAno()
+: <a class="el" href="class_data_hora.html#a46fabd024e06558aeca721692e93cf5d">DataHora</a>
+</li>
+<li>getAtraso()
+: <a class="el" href="class_ex_invalid_atraso.html#aefdc9a1a09299fe08e5ac82b72c05f19">ExInvalidAtraso</a>
+, <a class="el" href="class_voo.html#a04512b561142c64d0f6566ecd2548315">Voo</a>
+</li>
+<li>getAtrasoCin()
+: <a class="el" href="class_atraso.html#a2b70ed328a9166e75ec66f85e11af777">Atraso</a>
+</li>
+<li>getAutonomia()
+: <a class="el" href="class_tipo_aviao.html#a73518c45c99345bc1276901398e28ddb">TipoAviao</a>
+</li>
+<li>getAviao()
+: <a class="el" href="class_voo.html#a43118fe514ecee00df85a29e86cf7579">Voo</a>
+</li>
+<li>getAvioes()
+: <a class="el" href="class_companhia.html#a52eea07b14f7425105fc581d81db67d5">Companhia</a>
+</li>
+<li>getAvioesAssociados()
+: <a class="el" href="class_tipo_aviao.html#a52bb2cc34c9946e864af1e3c549fb0c9">TipoAviao</a>
+</li>
+<li>getBI()
+: <a class="el" href="class_pessoa.html#a0f98792e85f39c8ec73b16f18733ab2e">Pessoa</a>
+</li>
+<li>getBICin()
+: <a class="el" href="class_companhia.html#a91852f433f2bec4aeccd7d95a6a1a3ad">Companhia</a>
+</li>
+<li>getCancelado()
+: <a class="el" href="class_voo.html#ac8700643e70b2fc5f7eba67b24564151">Voo</a>
+</li>
+<li>getCapacidadePass()
+: <a class="el" href="class_porta_embarque.html#a67a34efed74ff422cce41d8c12077c58">PortaEmbarque</a>
+, <a class="el" href="class_porta_embarque_ptr.html#af6da79734abd9ad7bda5e190386bf619">PortaEmbarquePtr</a>
+</li>
+<li>getCategoria()
+: <a class="el" href="class_tipo_aviao.html#a6a410fc3cf96ec6d7cebf971985cd21d">TipoAviao</a>
+, <a class="el" href="class_tripulante.html#a44030a837e2e1297adfcca6d1bc9edca">Tripulante</a>
+</li>
+<li>getCategoriaAvioes()
+: <a class="el" href="class_porta_embarque.html#a0824c04c596ba864be0b10f202d4da7d">PortaEmbarque</a>
+, <a class="el" href="class_porta_embarque_ptr.html#a638b4ddb60a140a748813867ff188a2b">PortaEmbarquePtr</a>
+</li>
+<li>getCompanhia()
+: <a class="el" href="class_aviao.html#a8f1d60b6ce84bc4a70a960ca618c6c59">Aviao</a>
+, <a class="el" href="class_tripulante.html#aab4faafb1d3abc41ea3b25058f8c0e1c">Tripulante</a>
+, <a class="el" href="class_voo.html#aca97a89695c7858fc3f396711874a684">Voo</a>
+</li>
+<li>getCompanhias()
+: <a class="el" href="class_aeroporto.html#abeb18431340a50a16622207c490f8300">Aeroporto</a>
+</li>
+<li>getComprimento()
+: <a class="el" href="class_tipo_aviao.html#ab7c4e7058a8d8cbc143b6bb558b69aa5">TipoAviao</a>
+</li>
+<li>getConstRefAvioes()
+: <a class="el" href="class_companhia.html#a499f08d829ad45c685ea93cac8fb3e2e">Companhia</a>
+</li>
+<li>getConstRefAvioesAssociados()
+: <a class="el" href="class_tipo_aviao.html#a99f0db7026bd89812c0d15f6f424ab51">TipoAviao</a>
+</li>
+<li>getConstRefCompanhias()
+: <a class="el" href="class_aeroporto.html#a48408a8fc13cb3cef7bc938e8875380c">Aeroporto</a>
+</li>
+<li>getConstRefFilaCheckIn()
+: <a class="el" href="class_voo.html#a5532519f2fe8ba4063720c909e60108a">Voo</a>
+</li>
+<li>getConstRefFrota()
+: <a class="el" href="class_companhia.html#a5169ee0728e4c74b085bf428a10d9c37">Companhia</a>
+</li>
+<li>getConstRefHashSetVoos()
+: <a class="el" href="class_aeroporto.html#a0ce15b3d26b406f5cd972122c4113a59">Aeroporto</a>
+</li>
+<li>getConstRefPassageirosAeroporto()
+: <a class="el" href="class_aeroporto.html#a944c07e8c93aa9cf190e1638f2297e7c">Aeroporto</a>
+</li>
+<li>getConstRefPassageirosVoo()
+: <a class="el" href="class_voo.html#a74f7d3b192830545b2086f8b3e672c66">Voo</a>
+</li>
+<li>getConstRefPassageirosVooPQ()
+: <a class="el" href="class_voo.html#a15dd590b0ac5ed38384146097eb6048c">Voo</a>
+</li>
+<li>getConstRefPortasEmbarqueBST()
+: <a class="el" href="class_aeroporto.html#ad43c18ebb816b36cfc613ced5a540ffd">Aeroporto</a>
+</li>
+<li>getConstRefTiposAviao()
+: <a class="el" href="class_tipo_aviao_d_b.html#a193ae2f3aa37d62ab1fd1580814555a7">TipoAviaoDB</a>
+</li>
+<li>getConstRefTripulacao()
+: <a class="el" href="class_companhia.html#a4898e81df144529092a62bc8a7dce335">Companhia</a>
+</li>
+<li>getConstRefTripulantesVoo()
+: <a class="el" href="class_voo.html#ad8f7d13eb60f801d43707108d61ae479">Voo</a>
+</li>
+<li>getConstRefVecSubMenus()
+: <a class="el" href="class_menu.html#a87a907f00a6e90e328d955f68ef51664">Menu</a>
+</li>
+<li>getConstRefVoos()
+: <a class="el" href="class_companhia.html#ae1c44df0e3c67d5ff9bf2bbb6eb26eff">Companhia</a>
+</li>
+<li>getConstRefVoosPortaEmbarque()
+: <a class="el" href="class_porta_embarque.html#a23574aa567a4ad7d7f31dfa242ba46e3">PortaEmbarque</a>
+</li>
+<li>getContacto()
+: <a class="el" href="class_pessoa.html#a30c7fb4ef95a8602cae34bedc0c0b140">Pessoa</a>
+</li>
+<li>getData()
+: <a class="el" href="class_ex_invalid_date_time.html#a989b941775b2cce04e31319c1343c3d2">ExInvalidDateTime</a>
+</li>
+<li>getDataConstrucao()
+: <a class="el" href="class_aviao.html#a123c8216aebd8132517102aa29ab43a9">Aviao</a>
+</li>
+<li>getDatahoraChegada()
+: <a class="el" href="class_voo.html#a09e218a0b6e84275275eb8c657460855">Voo</a>
+</li>
+<li>getDataHoraCin()
+: <a class="el" href="class_data_hora.html#a10c7ae9216d4bbca2b661a72fb1363c7">DataHora</a>
+</li>
+<li>getDatahoraSaida()
+: <a class="el" href="class_voo.html#a15e5526268e219ccb1887886d39b510a">Voo</a>
+</li>
+<li>getDataLancamento()
+: <a class="el" href="class_tipo_aviao.html#a9bb8d29339bfebfabb436880bc8ac4fa">TipoAviao</a>
+</li>
+<li>getDescricao()
+: <a class="el" href="class_tipo_aviao.html#a3a398874fba59860ec9091ee24f0d894">TipoAviao</a>
+</li>
+<li>getDestino()
+: <a class="el" href="class_voo.html#aceb49be2ccb5b47a944c14d725e4094a">Voo</a>
+</li>
+<li>getDia()
+: <a class="el" href="class_atraso.html#a070f489d3e2f156789ae499ad8b9dc71">Atraso</a>
+, <a class="el" href="class_data_hora.html#a16d8c496f0acdb14b36548ab21cc2173">DataHora</a>
+</li>
+<li>getElementoInexistente()
+: <a class="el" href="class_ex_element_doesnt_exists.html#a714dc8e32100f096e168da9781f8957d">ExElementDoesntExists&lt; T &gt;</a>
+</li>
+<li>getElementoRepetido()
+: <a class="el" href="class_ex_element_already_exists.html#a707561b0aed9979c9c2f136b76a1899b">ExElementAlreadyExists&lt; T &gt;</a>
+</li>
+<li>getEnvergadura()
+: <a class="el" href="class_tipo_aviao.html#a2af88b84afc095e299e407d296103f67">TipoAviao</a>
+</li>
+<li>getExpiracaoContrato()
+: <a class="el" href="class_tripulante.html#a688488b096effc981db9326fad4c92c0">Tripulante</a>
+</li>
+<li>getFabricante()
+: <a class="el" href="class_tipo_aviao.html#a02cf109cc6c860e275b25914fe494771">TipoAviao</a>
+</li>
+<li>getFechado()
+: <a class="el" href="class_voo.html#a9969ce21539cf8de391f4c969a77075c">Voo</a>
+</li>
+<li>getFilaCheckIn()
+: <a class="el" href="class_voo.html#a09324dd0a605eb2cd6355a0354d586d1">Voo</a>
+</li>
+<li>getFilename()
+: <a class="el" href="class_ex_corrupted_file.html#af9d7070df19333d81adf21699c40b91d">ExCorruptedFile</a>
+, <a class="el" href="class_ex_no_open_file.html#a419f5278e966139cb4f6634c8135975d">ExNoOpenFile</a>
+</li>
+<li>getFrota()
+: <a class="el" href="class_companhia.html#af36571c64c1c4e0abf6f4ff179b865b3">Companhia</a>
+</li>
+<li>getHashSetVoos()
+: <a class="el" href="class_aeroporto.html#a14c7d35d71daec06b14e5370ea4b8186">Aeroporto</a>
+</li>
+<li>getHora()
+: <a class="el" href="class_data_hora.html#af950e1a5afa1931cebb481e51acff9c3">DataHora</a>
+, <a class="el" href="class_atraso.html#a055da85fe8e5d76a8792975d3dc67212">Atraso</a>
+</li>
+<li>getIdade()
+: <a class="el" href="class_pessoa.html#a1f19e7ce09adedfbe6ca5d21a00a6107">Pessoa</a>
+</li>
+<li>getInfoEnumCategoriasAvioes()
+: <a class="el" href="class_porta_embarque.html#a7d6306fb78b61ced492170eded29ad50">PortaEmbarque</a>
+</li>
+<li>getInfoEnumNecessidadesEspeciais()
+: <a class="el" href="class_passageiro.html#a57a107794c535626ab99cd3b1b23fe32">Passageiro</a>
+</li>
+<li>getLocalizacao()
+: <a class="el" href="class_aeroporto.html#ab60922f70933e79e1566036f3c43f989">Aeroporto</a>
+, <a class="el" href="class_porta_embarque.html#aed4f94b39edad04e504e3bebd8eff8e9">PortaEmbarque</a>
+, <a class="el" href="class_porta_embarque_ptr.html#a03a43b7310dd97c436d697c607f9178a">PortaEmbarquePtr</a>
+</li>
+<li>getMatricula()
+: <a class="el" href="class_aviao.html#ab61ad91be0cfc72e29dd06504cfb7089">Aviao</a>
+</li>
+<li>getMatriculaAviaoCin()
+: <a class="el" href="class_companhia.html#a925007b855c5cba8a69a94851e544473">Companhia</a>
+</li>
+<li>getMaximoPassageiros()
+: <a class="el" href="class_tipo_aviao.html#a20334d8bf1df6d3a3c9e94c1a3be3982">TipoAviao</a>
+</li>
+<li>getMensagemSaida()
+: <a class="el" href="class_menu.html#a698f19b65f9c86721bb364c0fc6e9c05">Menu</a>
+</li>
+<li>getMes()
+: <a class="el" href="class_data_hora.html#aca0305a615d4f1bf4e45f7872f226532">DataHora</a>
+</li>
+<li>getMin()
+: <a class="el" href="class_atraso.html#a9f984c261a7d503dbd8d64b370e46e69">Atraso</a>
+, <a class="el" href="class_data_hora.html#a55d8380fff71bd2d9e038e2c7463c9ac">DataHora</a>
+</li>
+<li>getMorada()
+: <a class="el" href="class_pessoa.html#ac8fe94831a8f7fb219ccf3b970be9339">Pessoa</a>
+</li>
+<li>getNacionalidade()
+: <a class="el" href="class_pessoa.html#a9e738fdea54649d2a265db3b3fd023a7">Pessoa</a>
+</li>
+<li>getNecessidades_especiais()
+: <a class="el" href="class_passageiro.html#a5fdfa8906ad98650c4af8184dd443604">Passageiro</a>
+</li>
+<li>getNome()
+: <a class="el" href="class_aeroporto.html#a802f17bc1861e6e6a973febdd20d19e5">Aeroporto</a>
+, <a class="el" href="class_aviao.html#a922ff675728d611ba5a503fbf9d70950">Aviao</a>
+, <a class="el" href="class_companhia.html#ad3f4f203360153529468735db6067d35">Companhia</a>
+, <a class="el" href="class_menu.html#a1e245afec77341e5977ebba360884b8e">Menu</a>
+, <a class="el" href="class_pessoa.html#a8d4d2f40ba5634f49b0ce181fee7f0a7">Pessoa</a>
+</li>
+<li>getNomeTipo()
+: <a class="el" href="class_tipo_aviao.html#a774ccd8ea84fe300c4776da5d1aacef9">TipoAviao</a>
+</li>
+<li>getNomeTipoAviaoCin()
+: <a class="el" href="class_tipo_aviao_d_b.html#a91c643bfc8949c053321b1519f22a958">TipoAviaoDB</a>
+</li>
+<li>getNumero()
+: <a class="el" href="class_porta_embarque.html#ab717c017137bee29a6afbbb546119bbb">PortaEmbarque</a>
+, <a class="el" href="class_porta_embarque_ptr.html#ae546544b213ae6c0b0ad2ae52e90a00a">PortaEmbarquePtr</a>
+, <a class="el" href="class_tripulante.html#a3df2f3250f9d3ac8f70c18a2071aab16">Tripulante</a>
+</li>
+<li>getNumeroHorasTrabalho()
+: <a class="el" href="class_tripulante.html#a6cd43d9402fedfb8b9e1d2097d22792f">Tripulante</a>
+</li>
+<li>getNumeroLugarAviao()
+: <a class="el" href="class_passageiro.html#adbc8e53b535a129f511384c1f245cf18">Passageiro</a>
+</li>
+<li>getNumeroMotores()
+: <a class="el" href="class_tipo_aviao.html#a85bffb930fdcdbbbb7555f0693805325">TipoAviao</a>
+</li>
+<li>getNumeroPassageiros()
+: <a class="el" href="class_voo.html#a74fb82bc8ea29880637538cc573c2367">Voo</a>
+</li>
+<li>getNumeroTripulanteCin()
+: <a class="el" href="class_companhia.html#aa527b174cf46e639f7ef4c6cba6d36ef">Companhia</a>
+</li>
+<li>getNumeroVoo()
+: <a class="el" href="class_voo.html#ae253d766c67019c99f302fcfb5ee4bbb">Voo</a>
+</li>
+<li>getNumeroVooCin()
+: <a class="el" href="class_companhia.html#a95924f02e1c83e3cf3d754d488796cbf">Companhia</a>
+</li>
+<li>getOrigem()
+: <a class="el" href="class_voo.html#a8d4223a934696a69a1192796fdc0d1e7">Voo</a>
+</li>
+<li>getPais()
+: <a class="el" href="class_aeroporto.html#a2783ba5d10157cd9a4f26c87905140e0">Aeroporto</a>
+</li>
+<li>getPassageirosAeroporto()
+: <a class="el" href="class_aeroporto.html#ab27738a295f2316803f52ce64249038f">Aeroporto</a>
+</li>
+<li>getPassageirosVoo()
+: <a class="el" href="class_voo.html#a829589c9dc9f4dd7fdc854ee1a8f2666">Voo</a>
+</li>
+<li>getPassageirosVooPQ()
+: <a class="el" href="class_voo.html#a14ea38cbd6673a97ab9364e61c218fcf">Voo</a>
+</li>
+<li>getPesoBagagem()
+: <a class="el" href="class_passageiro.html#ad15d557d4993798f2a0a53ce6b1f369b">Passageiro</a>
+</li>
+<li>getPesoMaxBagagem()
+: <a class="el" href="class_aviao.html#a6453a12e1fd32e975aeee4af919e1d5d">Aviao</a>
+</li>
+<li>getPesoMaximo()
+: <a class="el" href="class_tipo_aviao.html#aed7cf8c7da70eb7e97b9ed541b1e538e">TipoAviao</a>
+</li>
+<li>getPesoVazio()
+: <a class="el" href="class_tipo_aviao.html#ace09fe64b331a63f77993800e922d559">TipoAviao</a>
+</li>
+<li>getPortaEmbarque()
+: <a class="el" href="class_voo.html#a95d2a115330f697e418034caf7be6e3e">Voo</a>
+</li>
+<li>getPortasEmbarqueBST()
+: <a class="el" href="class_aeroporto.html#a279095ede988dfbda00d7d5a859a25b5">Aeroporto</a>
+</li>
+<li>getPreco()
+: <a class="el" href="class_tipo_aviao.html#a250cecbf40f8946ed73c9a3961c1be32">TipoAviao</a>
+</li>
+<li>getPrimeiroVoo()
+: <a class="el" href="class_aviao.html#a726b4dec070b09ee778d963c7019982b">Aviao</a>
+</li>
+<li>getProximaRevisao()
+: <a class="el" href="class_aviao.html#abede23896587012305b6500631994d72">Aviao</a>
+</li>
+<li>getRefAvioes()
+: <a class="el" href="class_companhia.html#ac2f4bc5e4762859ed2769b92ccb563bb">Companhia</a>
+</li>
+<li>getRefAvioesAssociados()
+: <a class="el" href="class_tipo_aviao.html#a2ade2db16bf21200ee56b3d67370622d">TipoAviao</a>
+</li>
+<li>getRefCategoriasAvioesInfo()
+: <a class="el" href="class_porta_embarque.html#a367d51244e4dd345449791242ce62b79">PortaEmbarque</a>
+</li>
+<li>getRefCompanhias()
+: <a class="el" href="class_aeroporto.html#a6deeaf6c7df5ad34390c935901ce1979">Aeroporto</a>
+</li>
+<li>getRefFilaCheckIn()
+: <a class="el" href="class_voo.html#a98275cbac8a4d6c9fad71a31a17d2ad3">Voo</a>
+</li>
+<li>getRefFrota()
+: <a class="el" href="class_companhia.html#a29942c8a1df1d759aab8e454c841890d">Companhia</a>
+</li>
+<li>getRefHashSetVoos()
+: <a class="el" href="class_aeroporto.html#a67acb1057835e699e1877582ae70719c">Aeroporto</a>
+</li>
+<li>getRefNecessidadesEspeciaisInfo()
+: <a class="el" href="class_passageiro.html#aa838b0d371ae6a02ad6b0c1dce312bbb">Passageiro</a>
+</li>
+<li>getRefPassageirosAeroporto()
+: <a class="el" href="class_aeroporto.html#a4a39fa9aae95dc8bad919cd99c19e47d">Aeroporto</a>
+</li>
+<li>getRefPassageirosVoo()
+: <a class="el" href="class_voo.html#ae2d2b2370516cc033c6504b66f78e9bb">Voo</a>
+</li>
+<li>getRefPassageirosVooPQ()
+: <a class="el" href="class_voo.html#a3b0f777a0e4773ded17b5fb412936ba3">Voo</a>
+</li>
+<li>getRefPortasEmbarqueBST()
+: <a class="el" href="class_aeroporto.html#a1004d7bc650130cda60181c0e59c7801">Aeroporto</a>
+</li>
+<li>getRefTiposAviao()
+: <a class="el" href="class_tipo_aviao_d_b.html#a890101481d183129ecefa2d5e599fb8f">TipoAviaoDB</a>
+</li>
+<li>getRefTripulacao()
+: <a class="el" href="class_companhia.html#a57864bd9079c5e85bea493d7e24db190">Companhia</a>
+</li>
+<li>getRefTripulantesVoo()
+: <a class="el" href="class_voo.html#a43cbc9b5ae7863a20619a018f0896a7a">Voo</a>
+</li>
+<li>getRefVecSubMenus()
+: <a class="el" href="class_menu.html#a1a14aedc74e20237c4dc0f3faf44a4bc">Menu</a>
+</li>
+<li>getRefVoos()
+: <a class="el" href="class_companhia.html#a6604c4b71805095409c9a8a0f72e913b">Companhia</a>
+</li>
+<li>getRefVoosPortaEmbarque()
+: <a class="el" href="class_porta_embarque.html#a3e5122f6129e5a3108dde1a4b7b9a5f2">PortaEmbarque</a>
+</li>
+<li>getSalarioHora()
+: <a class="el" href="class_tripulante.html#aac3a702d3255f7ae7ddca69906e73941">Tripulante</a>
+</li>
+<li>getSigla()
+: <a class="el" href="class_companhia.html#ade16b281e7bc7ca34d58c293eacfe238">Companhia</a>
+</li>
+<li>getTaxaBalcoes()
+: <a class="el" href="class_companhia.html#ae90dabe51b656bb65420b91824230eb3">Companhia</a>
+</li>
+<li>getTaxaPortasEmbarque()
+: <a class="el" href="class_aeroporto.html#abb93a440617f3a689934f0d6971d1c79">Aeroporto</a>
+</li>
+<li>getTipoAviao()
+: <a class="el" href="class_aviao.html#a25a1860c3a9fa80ee6e0df1462c92301">Aviao</a>
+</li>
+<li>getTipoContrato()
+: <a class="el" href="class_tripulante.html#ae0d99e70be5f1c6fbed796c9a1ecc143">Tripulante</a>
+</li>
+<li>getTiposAviao()
+: <a class="el" href="class_tipo_aviao_d_b.html#a5ee1ed8e004160c5b587f19a967c461f">TipoAviaoDB</a>
+</li>
+<li>getTripulacao()
+: <a class="el" href="class_companhia.html#a801356880461b65144606750f6868c4f">Companhia</a>
+</li>
+<li>getTripulantesVoo()
+: <a class="el" href="class_voo.html#aeaef4dcb1b29af8d0d0301f091a3964a">Voo</a>
+</li>
+<li>getUltimaRevisao()
+: <a class="el" href="class_aviao.html#a51ca93e1d06c02b15c2f2ceed25fdfba">Aviao</a>
+</li>
+<li>getVagasPass()
+: <a class="el" href="class_porta_embarque_ptr.html#ac3c7ee5de6c4da95b1764de8c00cc2c6">PortaEmbarquePtr</a>
+, <a class="el" href="class_porta_embarque.html#ad831c890baf557e8227d4c19ba2f6e54">PortaEmbarque</a>
+</li>
+<li>getVecSubMenus()
+: <a class="el" href="class_menu.html#a2e2d6c37e87e6e9c10375972a364707e">Menu</a>
+</li>
+<li>getVelocidadeMaxima()
+: <a class="el" href="class_tipo_aviao.html#a2d6fef3040a59fba278cd5f2aa56038f">TipoAviao</a>
+</li>
+<li>getVoo()
+: <a class="el" href="class_passageiro.html#aaebcbee7f9a47100ecfb854e2145a4c8">Passageiro</a>
+</li>
+<li>getVooActual()
+: <a class="el" href="class_aviao.html#aa3568b17fa0e1495f6a8fcabb8c7ac59">Aviao</a>
+, <a class="el" href="class_tripulante.html#a50d33c84ed628733becd0e37d7210cb4">Tripulante</a>
+</li>
+<li>getVoos()
+: <a class="el" href="class_companhia.html#a129e72f946b1284e92a279853bacfded">Companhia</a>
+</li>
+<li>getVoosPortaEmbarque()
+: <a class="el" href="class_porta_embarque.html#aace4863b8b06eea72c0b99d1e2b12fa6">PortaEmbarque</a>
+</li>
+<li>go()
+: <a class="el" href="class_menu.html#a4ffdd38f7393883198e06c1048cc1bc6">Menu</a>
+</li>
+</ul>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:38 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

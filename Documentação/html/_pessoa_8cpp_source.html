@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Pessoa.cpp Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>Pessoa.cpp</h1>  </div>
+</div>
+<div class="contents">
+<a href="_pessoa_8cpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_pessoa_8h.html" title="Classe que contém informação acerca de uma Pessoa.">Pessoa.h</a>&quot;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 
+<a name="l00018"></a><a class="code" href="class_pessoa.html#a76cb893f8e46233efaf91c6b03ebad3a">00018</a> <span class="keywordtype">bool</span> <a class="code" href="class_pessoa.html#a76cb893f8e46233efaf91c6b03ebad3a" title="Operador que verifica se duas pessoas são equivalentes, comparando o seu BI.">Pessoa::operator==</a>(<span class="keyword">const</span> <a class="code" href="class_pessoa.html" title="Classe que contém informação acerca de uma Pessoa.">Pessoa</a> &amp;pessoa) {
+<a name="l00019"></a>00019         <span class="keywordflow">if</span> (<a class="code" href="class_pessoa.html#a605be21277f253c2397e1d997bf7fb29">_BI</a> == pessoa.<a class="code" href="class_pessoa.html#a605be21277f253c2397e1d997bf7fb29">_BI</a>)
+<a name="l00020"></a>00020                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00021"></a>00021         <span class="keywordflow">else</span>
+<a name="l00022"></a>00022                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00023"></a>00023 }
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025 
+<a name="l00026"></a><a class="code" href="class_pessoa.html#afd566cd91d65f5a708f25b5e2abbd6b3">00026</a> <span class="keywordtype">bool</span> <a class="code" href="class_pessoa.html#afd566cd91d65f5a708f25b5e2abbd6b3" title="Operador que verifica se o nome de uma Pessoa é &amp;quot;menor&amp;quot; do que outra.">Pessoa::operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="class_pessoa.html" title="Classe que contém informação acerca de uma Pessoa.">Pessoa</a> &amp;pessoa) {
+<a name="l00027"></a>00027         <span class="keywordflow">if</span> (<a class="code" href="class_pessoa.html#a2e48ddfc442a6b1d30477ad23cf851d4">_nome</a> &lt; pessoa.<a class="code" href="class_pessoa.html#a2e48ddfc442a6b1d30477ad23cf851d4">_nome</a>)
+<a name="l00028"></a>00028                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00029"></a>00029         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_pessoa.html#a2e48ddfc442a6b1d30477ad23cf851d4">_nome</a> &gt; pessoa.<a class="code" href="class_pessoa.html#a2e48ddfc442a6b1d30477ad23cf851d4">_nome</a>)
+<a name="l00030"></a>00030                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00031"></a>00031         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_pessoa.html#a605be21277f253c2397e1d997bf7fb29">_BI</a> &lt; pessoa.<a class="code" href="class_pessoa.html#a605be21277f253c2397e1d997bf7fb29">_BI</a>)
+<a name="l00032"></a>00032                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00033"></a>00033         <span class="keywordflow">else</span>
+<a name="l00034"></a>00034                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00035"></a>00035 }
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:37 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência à classe hash_voo_operators</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&nbsp;dos&nbsp;componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pub-static-attribs">Atributos Públicos Estáticos</a>  </div>
+  <div class="headertitle">
+<h1>Referência à classe hash_voo_operators</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="hash_voo_operators" -->
+<p><code>#include &lt;<a class="el" href="_aeroporto_8h_source.html">Aeroporto.h</a>&gt;</code></p>
+
+<p><a href="classhash__voo__operators-members.html">Mostrar lista completa dos membros</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhash__voo__operators.html#ae34ffbe66a1dea69e2533f0aba1fc462">operator()</a> (const <a class="el" href="class_voo.html">Voo</a> *key) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhash__voo__operators.html#adc35f76616e6e7203751f413612c677d">operator()</a> (const <a class="el" href="class_voo.html">Voo</a> *key1, const <a class="el" href="class_voo.html">Voo</a> *key2) const </td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Atributos Públicos Estáticos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhash__voo__operators.html#ab9d14271a907dadc0181e4135d99eecc">bucket_size</a> = 4</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhash__voo__operators.html#a3af021b29f03753e7ef9299898ef2105">min_buckets</a> = 8</td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+
+<p>Definido na linha <a class="el" href="_aeroporto_8h_source.html#l00084">84</a> do ficheiro <a class="el" href="_aeroporto_8h_source.html">Aeroporto.h</a>.</p>
+<hr/><h2>Documentação dos métodos</h2>
+<a class="anchor" id="ae34ffbe66a1dea69e2533f0aba1fc462"></a><!-- doxytag: member="hash_voo_operators::operator()" ref="ae34ffbe66a1dea69e2533f0aba1fc462" args="(const Voo *key) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t hash_voo_operators::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_voo.html">Voo</a> *&nbsp;</td>
+          <td class="paramname"> <em>key</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_aeroporto_8h_source.html#l00091">91</a> do ficheiro <a class="el" href="_aeroporto_8h_source.html">Aeroporto.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00083">Voo::getNumeroVoo()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adc35f76616e6e7203751f413612c677d"></a><!-- doxytag: member="hash_voo_operators::operator()" ref="adc35f76616e6e7203751f413612c677d" args="(const Voo *key1, const Voo *key2) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hash_voo_operators::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_voo.html">Voo</a> *&nbsp;</td>
+          <td class="paramname"> <em>key1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_voo.html">Voo</a> *&nbsp;</td>
+          <td class="paramname"> <em>key2</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_aeroporto_8h_source.html#l00095">95</a> do ficheiro <a class="el" href="_aeroporto_8h_source.html">Aeroporto.h</a>.</p>
+
+<p>Referências <a class="el" href="_voo_8h_source.html#l00083">Voo::getNumeroVoo()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos dados membro</h2>
+<a class="anchor" id="ab9d14271a907dadc0181e4135d99eecc"></a><!-- doxytag: member="hash_voo_operators::bucket_size" ref="ab9d14271a907dadc0181e4135d99eecc" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t <a class="el" href="classhash__voo__operators.html#ab9d14271a907dadc0181e4135d99eecc">hash_voo_operators::bucket_size</a> = 4<code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_aeroporto_8h_source.html#l00088">88</a> do ficheiro <a class="el" href="_aeroporto_8h_source.html">Aeroporto.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3af021b29f03753e7ef9299898ef2105"></a><!-- doxytag: member="hash_voo_operators::min_buckets" ref="a3af021b29f03753e7ef9299898ef2105" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t <a class="el" href="classhash__voo__operators.html#a3af021b29f03753e7ef9299898ef2105">hash_voo_operators::min_buckets</a> = 8<code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_aeroporto_8h_source.html#l00089">89</a> do ficheiro <a class="el" href="_aeroporto_8h_source.html">Aeroporto.h</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir do seguinte ficheiro:<ul>
+<li><a class="el" href="_aeroporto_8h_source.html">Aeroporto.h</a></li>
+</ul>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:39 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: PortaEmbarque.cpp Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>PortaEmbarque.cpp</h1>  </div>
+</div>
+<div class="contents">
+<a href="_porta_embarque_8cpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="_porta_embarque_8h.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque.h</a>&quot;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 
+<a name="l00018"></a><a class="code" href="class_porta_embarque.html#aecfd0f236844608b47a53c4e1c80dd47">00018</a> <span class="keywordtype">bool</span> <a class="code" href="class_porta_embarque.html#aecfd0f236844608b47a53c4e1c80dd47" title="Operador que permite verificar se duas portas de embarque são equivalentes, comparando o seu número e...">PortaEmbarque::operator==</a>(<span class="keyword">const</span> <a class="code" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a> &amp;porta_embarque)<span class="keyword"> const </span>{
+<a name="l00019"></a>00019         <span class="keywordflow">if</span> ((<a class="code" href="class_porta_embarque.html#a1ee6113dc71a6b198adba137fe3f457d" title="Ex: P01.">_numero</a> == porta_embarque.<a class="code" href="class_porta_embarque.html#a1ee6113dc71a6b198adba137fe3f457d" title="Ex: P01.">_numero</a>) &amp;&amp; (<a class="code" href="class_porta_embarque.html#a590ee8de2c0e8ea4e7a75b5fc2206ee4" title="Ex: Norte.">_localizacao</a> == porta_embarque.<a class="code" href="class_porta_embarque.html#a590ee8de2c0e8ea4e7a75b5fc2206ee4" title="Ex: Norte.">_localizacao</a>))
+<a name="l00020"></a>00020                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00021"></a>00021         <span class="keywordflow">else</span>
+<a name="l00022"></a>00022                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00023"></a>00023 }
+<a name="l00024"></a>00024 
+<a name="l00025"></a><a class="code" href="class_porta_embarque.html#a35be0c9b886ad86f1a13b3dcc1cb9da5">00025</a> <span class="keywordtype">bool</span> <a class="code" href="class_porta_embarque.html#a35be0c9b886ad86f1a13b3dcc1cb9da5" title="Operador que verifica se o número de uma porta de embarque é menor do que outra.">PortaEmbarque::operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="class_porta_embarque.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque</a> &amp;porta_embarque)<span class="keyword"> const </span>{
+<a name="l00026"></a>00026         <span class="keywordflow">if</span> (<a class="code" href="class_porta_embarque.html#a1ee6113dc71a6b198adba137fe3f457d" title="Ex: P01.">_numero</a> &lt; porta_embarque.<a class="code" href="class_porta_embarque.html#a1ee6113dc71a6b198adba137fe3f457d" title="Ex: P01.">_numero</a>)
+<a name="l00027"></a>00027                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00028"></a>00028         <span class="keywordflow">else</span>
+<a name="l00029"></a>00029                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00030"></a>00030 }
+<a name="l00031"></a>00031 
+<a name="l00032"></a><a class="code" href="class_porta_embarque_ptr.html#a42cadf866c2e507d50b50bb3275ec61e">00032</a> <span class="keywordtype">bool</span> <a class="code" href="class_porta_embarque_ptr.html#a42cadf866c2e507d50b50bb3275ec61e" title="Operador que permite verificar se duas portas de embarque são equivalentes, comparando o seu número e...">PortaEmbarquePtr::operator==</a>(<span class="keyword">const</span> <a class="code" href="class_porta_embarque_ptr.html" title="Classe que contém apontador para a classe PortaEmbarque (usada na BST).">PortaEmbarquePtr</a> &amp;porta_embarque)<span class="keyword"> const</span>{
+<a name="l00033"></a>00033         <span class="keywordflow">if</span> ((<a class="code" href="class_porta_embarque_ptr.html#a03a1252f9b882a4a94921c946f8eed27">porta</a>-&gt;<a class="code" href="class_porta_embarque.html#ab717c017137bee29a6afbbb546119bbb">getNumero</a>() == porta_embarque.<a class="code" href="class_porta_embarque_ptr.html#ae546544b213ae6c0b0ad2ae52e90a00a">getNumero</a>()) &amp;&amp; (<a class="code" href="class_porta_embarque_ptr.html#a03a1252f9b882a4a94921c946f8eed27">porta</a>-&gt;<a class="code" href="class_porta_embarque.html#aed4f94b39edad04e504e3bebd8eff8e9">getLocalizacao</a>() == porta_embarque.<a class="code" href="class_porta_embarque_ptr.html#a03a43b7310dd97c436d697c607f9178a">getLocalizacao</a>()))
+<a name="l00034"></a>00034                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00035"></a>00035         <span class="keywordflow">else</span>
+<a name="l00036"></a>00036                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00037"></a>00037 }
+<a name="l00038"></a>00038 
+<a name="l00039"></a><a class="code" href="class_porta_embarque_ptr.html#a9007f161756a18d197248ca0216aeab0">00039</a> <span class="keywordtype">bool</span> <a class="code" href="class_porta_embarque_ptr.html#a9007f161756a18d197248ca0216aeab0" title="Operador que verifica se o número de uma porta de embarque é menor do que outra.">PortaEmbarquePtr::operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="class_porta_embarque_ptr.html" title="Classe que contém apontador para a classe PortaEmbarque (usada na BST).">PortaEmbarquePtr</a> &amp;porta_embarque)<span class="keyword"> const</span>{
+<a name="l00040"></a>00040         <span class="keywordflow">if</span> (<a class="code" href="class_porta_embarque_ptr.html#a03a1252f9b882a4a94921c946f8eed27">porta</a>-&gt;<a class="code" href="class_porta_embarque.html#ad831c890baf557e8227d4c19ba2f6e54">getVagasPass</a>() &lt; porta_embarque.<a class="code" href="class_porta_embarque_ptr.html#ac3c7ee5de6c4da95b1764de8c00cc2c6">getVagasPass</a>())
+<a name="l00041"></a>00041                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00042"></a>00042         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_porta_embarque_ptr.html#a03a1252f9b882a4a94921c946f8eed27">porta</a>-&gt;<a class="code" href="class_porta_embarque.html#ad831c890baf557e8227d4c19ba2f6e54">getVagasPass</a>() &gt; porta_embarque.<a class="code" href="class_porta_embarque_ptr.html#ac3c7ee5de6c4da95b1764de8c00cc2c6">getVagasPass</a>())
+<a name="l00043"></a>00043                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00044"></a>00044         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_porta_embarque_ptr.html#a03a1252f9b882a4a94921c946f8eed27">porta</a>-&gt;<a class="code" href="class_porta_embarque.html#a0824c04c596ba864be0b10f202d4da7d">getCategoriaAvioes</a>() &lt; porta_embarque.<a class="code" href="class_porta_embarque_ptr.html#a638b4ddb60a140a748813867ff188a2b">getCategoriaAvioes</a>())
+<a name="l00045"></a>00045                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00046"></a>00046         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_porta_embarque_ptr.html#a03a1252f9b882a4a94921c946f8eed27">porta</a>-&gt;<a class="code" href="class_porta_embarque.html#a0824c04c596ba864be0b10f202d4da7d">getCategoriaAvioes</a>() &gt; porta_embarque.<a class="code" href="class_porta_embarque_ptr.html#a638b4ddb60a140a748813867ff188a2b">getCategoriaAvioes</a>())
+<a name="l00047"></a>00047                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00048"></a>00048         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_porta_embarque_ptr.html#a03a1252f9b882a4a94921c946f8eed27">porta</a>-&gt;<a class="code" href="class_porta_embarque.html#ab717c017137bee29a6afbbb546119bbb">getNumero</a>() &lt; porta_embarque.<a class="code" href="class_porta_embarque_ptr.html#ae546544b213ae6c0b0ad2ae52e90a00a">getNumero</a>())
+<a name="l00049"></a>00049                 <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00050"></a>00050         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_porta_embarque_ptr.html#a03a1252f9b882a4a94921c946f8eed27">porta</a>-&gt;<a class="code" href="class_porta_embarque.html#ab717c017137bee29a6afbbb546119bbb">getNumero</a>() &gt; porta_embarque.<a class="code" href="class_porta_embarque_ptr.html#ae546544b213ae6c0b0ad2ae52e90a00a">getNumero</a>())
+<a name="l00051"></a>00051                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00052"></a>00052         <span class="keywordflow">else</span>
+<a name="l00053"></a>00053                 <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 <span class="comment">/*</span>
+<a name="l00057"></a>00057 <span class="comment">        if (porta-&gt;getVagasPass() &lt; porta_embarque.getVagasPass())</span>
+<a name="l00058"></a>00058 <span class="comment">        {</span>
+<a name="l00059"></a>00059 <span class="comment">                return false;</span>
+<a name="l00060"></a>00060 <span class="comment">        }</span>
+<a name="l00061"></a>00061 <span class="comment">        else if (porta-&gt;getVagasPass() == porta_embarque.getVagasPass())</span>
+<a name="l00062"></a>00062 <span class="comment">        {</span>
+<a name="l00063"></a>00063 <span class="comment">                if (porta-&gt;getCategoriaAvioes() &lt; porta_embarque.getCategoriaAvioes())</span>
+<a name="l00064"></a>00064 <span class="comment">                {</span>
+<a name="l00065"></a>00065 <span class="comment">                        return false;</span>
+<a name="l00066"></a>00066 <span class="comment">                }</span>
+<a name="l00067"></a>00067 <span class="comment">                else if (porta-&gt;getCategoriaAvioes() == porta_embarque.getCategoriaAvioes())</span>
+<a name="l00068"></a>00068 <span class="comment">                {</span>
+<a name="l00069"></a>00069 <span class="comment">                        if (porta-&gt;getCapacidadePass() &lt; porta_embarque.getCapacidadePass())</span>
+<a name="l00070"></a>00070 <span class="comment">                        {</span>
+<a name="l00071"></a>00071 <span class="comment">                                return false;</span>
+<a name="l00072"></a>00072 <span class="comment">                        }</span>
+<a name="l00073"></a>00073 <span class="comment">                        else if (porta-&gt;getCapacidadePass() == porta_embarque.getCapacidadePass())</span>
+<a name="l00074"></a>00074 <span class="comment">                        {</span>
+<a name="l00075"></a>00075 <span class="comment">                                if (porta-&gt;getNumero() &lt; porta_embarque.getNumero())</span>
+<a name="l00076"></a>00076 <span class="comment">                                {</span>
+<a name="l00077"></a>00077 <span class="comment">                                        return false;</span>
+<a name="l00078"></a>00078 <span class="comment">                                }</span>
+<a name="l00079"></a>00079 <span class="comment">                                else</span>
+<a name="l00080"></a>00080 <span class="comment">                                        return true;</span>
+<a name="l00081"></a>00081 <span class="comment">                        }</span>
+<a name="l00082"></a>00082 <span class="comment">                        else</span>
+<a name="l00083"></a>00083 <span class="comment">                                return true;</span>
+<a name="l00084"></a>00084 <span class="comment">                }</span>
+<a name="l00085"></a>00085 <span class="comment">                else</span>
+<a name="l00086"></a>00086 <span class="comment">                        return true;</span>
+<a name="l00087"></a>00087 <span class="comment">        }</span>
+<a name="l00088"></a>00088 <span class="comment">        else</span>
+<a name="l00089"></a>00089 <span class="comment">                return true;*/</span>
+<a name="l00090"></a>00090 }
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092 <span class="comment">//Inicialização do vector que contem a informação associada a cada tipo da enumeração necessidades_especiais_t</span>
+<a name="l00093"></a>00093 vector &lt;string&gt; <a class="code" href="class_porta_embarque.html#ab8d6b16c824b047a4eccbd9e08e974a6">PortaEmbarque::_categorias_avioes_info</a>;
+<a name="l00094"></a>00094 
+<a name="l00095"></a><a class="code" href="class_porta_embarque.html#a57b0a871b37e3cb22c997715af00e12e">00095</a> <span class="keywordtype">void</span> <a class="code" href="class_porta_embarque.html#a57b0a871b37e3cb22c997715af00e12e">PortaEmbarque::init_categorias_avioes_info</a>() {
+<a name="l00096"></a>00096         <a class="code" href="class_porta_embarque.html#ab8d6b16c824b047a4eccbd9e08e974a6">_categorias_avioes_info</a>.clear();
+<a name="l00097"></a>00097         <a class="code" href="class_porta_embarque.html#ab8d6b16c824b047a4eccbd9e08e974a6">_categorias_avioes_info</a>.push_back(<span class="stringliteral">&quot;Médio Curso&quot;</span>);
+<a name="l00098"></a>00098         <a class="code" href="class_porta_embarque.html#ab8d6b16c824b047a4eccbd9e08e974a6">_categorias_avioes_info</a>.push_back(<span class="stringliteral">&quot;Longo Curso&quot;</span>);
+<a name="l00099"></a>00099 }
+<a name="l00100"></a>00100 
+<a name="l00101"></a><a class="code" href="class_porta_embarque.html#afeaaa93c208548d2a74f1f34110673bb">00101</a> <span class="keywordtype">void</span> <a class="code" href="class_porta_embarque.html#afeaaa93c208548d2a74f1f34110673bb">PortaEmbarque::listCategoriasAvioesInfo</a>() {
+<a name="l00102"></a>00102         vector &lt; vector &lt;string&gt; &gt; info;
+<a name="l00103"></a>00103         info.push_back(<a class="code" href="class_porta_embarque.html#ab8d6b16c824b047a4eccbd9e08e974a6">_categorias_avioes_info</a>);
+<a name="l00104"></a>00104         <span class="keywordtype">string</span> title = (string)<span class="stringliteral">&quot;Possiveis categorias de aviões&quot;</span>;
+<a name="l00105"></a>00105         vector &lt;string&gt; colnames;
+<a name="l00106"></a>00106         colnames.push_back(<span class="stringliteral">&quot;&quot;</span>);
+<a name="l00107"></a>00107         <a class="code" href="utils_8cpp.html#a0daf13ac8da9785b3895a6d1e48d4a2f" title="Método que imprime uma tabela com os dados de um vector de colunas (vector de strings).">printMenu</a>(title, info, colnames, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">true</span>);
+<a name="l00108"></a>00108         cout &lt;&lt; endl;
+<a name="l00109"></a>00109 }
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:37 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: TipoAviaoDB.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>TipoAviaoDB.h</h1>  </div>
+</div>
+<div class="contents">
+<a href="_tipo_aviao_d_b_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00016"></a>00016 <span class="preprocessor">#ifndef TIPOAVIAODB_H_</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span><span class="preprocessor">#define TIPOAVIAODB_H_</span>
+<a name="l00018"></a>00018 <span class="preprocessor"></span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;algorithm&gt;</span>
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="_tipo_aviao_8h.html" title="Classe que contém a informação associada a cada tipo de avião.">TipoAviao.h</a>&quot;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="_data_hora_8h.html" title="Classe que contém informação associada a uma data e hora.">DataHora.h</a>&quot;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="_exceptions_8h.html" title="Classe que contém a informação associada a todas as excepcoes implementadas.">Exceptions.h</a>&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="_comandos_8h.html" title="Classe que armazena os comandos possíveis para cada classe.">Comandos.h</a>&quot;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="utils_8h.html" title="Ficheiro com funções úteis para a interface com o utilizador.">utils.h</a>&quot;</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="_porta_embarque_8h.html" title="Classe que contém informação de uma dada porta de embarque de um aeroporto.">PortaEmbarque.h</a>&quot;</span>
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 <span class="keyword">using</span> std::vector;
+<a name="l00033"></a>00033 <span class="keyword">using</span> std::string;
+<a name="l00034"></a>00034 <span class="keyword">using</span> std::ifstream;
+<a name="l00035"></a>00035 <span class="keyword">using</span> std::ofstream;
+<a name="l00036"></a>00036 <span class="keyword">using</span> std::endl;
+<a name="l00037"></a>00037 <span class="keyword">using</span> std::flush;
+<a name="l00038"></a>00038 <span class="keyword">using</span> std::cout;
+<a name="l00039"></a>00039 <span class="keyword">using</span> std::cin;
+<a name="l00040"></a>00040 <span class="keyword">using</span> std::find_if;
+<a name="l00041"></a>00041 <span class="keyword">using</span> std::sort;
+<a name="l00042"></a>00042 <span class="comment">//using std::bind2nd;</span>
+<a name="l00043"></a>00043 <span class="comment">//using std::equal_to;</span>
+<a name="l00044"></a>00044 
+<a name="l00046"></a>00046 <span class="keywordtype">bool</span> <a class="code" href="_tipo_aviao_d_b_8cpp.html#a02e35f3f9452b343b9c23e4fb0270db3" title="Compara se o Tipo de um tipo de avião é menor do que outro.">cmpTipoAviaoTipo</a>(<span class="keyword">const</span> <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a> *ta1, <span class="keyword">const</span> <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a> *ta2);
+<a name="l00048"></a>00048 <span class="keywordtype">bool</span> <a class="code" href="_tipo_aviao_d_b_8cpp.html#a473d6f2ed0c960075bf216029729050b" title="Compara se a descrição de um tipo de avião é menor do que outro.">cmpTipoAviaoDescricao</a>(<span class="keyword">const</span> <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a> *ta1, <span class="keyword">const</span> <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a> *ta2);
+<a name="l00050"></a>00050 <span class="keywordtype">bool</span> <a class="code" href="_tipo_aviao_d_b_8cpp.html#aa8f6acc2d853b5f21837e2bb38a38217" title="Compara se a categoria de um tipo de avião é menor do que outro.">cmpTipoAviaoCategoria</a>(<span class="keyword">const</span> <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a> *ta1, <span class="keyword">const</span> <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a> *ta2);
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 
+<a name="l00054"></a><a class="code" href="class_tipo_aviao_d_b.html">00054</a> <span class="keyword">class </span><a class="code" href="class_tipo_aviao_d_b.html" title="Classe que contém uma base de dados de tipos de aviões.  .">TipoAviaoDB</a> {
+<a name="l00055"></a>00055 <span class="keyword">private</span>:
+<a name="l00056"></a><a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">00056</a>         vector &lt;TipoAviao*&gt; <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>;
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058 <span class="keyword">public</span>:
+<a name="l00059"></a>00059         <span class="keyword">virtual</span> <a class="code" href="class_tipo_aviao_d_b.html#aedb7b0566b3373596ad258e7f87e0840">~TipoAviaoDB</a>();
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061         <span class="keywordtype">string</span> <a class="code" href="class_tipo_aviao_d_b.html#a91c643bfc8949c053321b1519f22a958">getNomeTipoAviaoCin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* mensagem);
+<a name="l00062"></a>00062 
+<a name="l00063"></a><a class="code" href="class_tipo_aviao_d_b.html#a5ee1ed8e004160c5b587f19a967c461f">00063</a>         vector &lt;TipoAviao*&gt; <a class="code" href="class_tipo_aviao_d_b.html#a5ee1ed8e004160c5b587f19a967c461f">getTiposAviao</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>; }
+<a name="l00064"></a>00064         <span class="comment">//Variante dos gets para os vectores, usadas em iteradores constantes</span>
+<a name="l00065"></a><a class="code" href="class_tipo_aviao_d_b.html#a193ae2f3aa37d62ab1fd1580814555a7">00065</a>         <span class="keyword">const</span> vector &lt;TipoAviao*&gt;&amp; <a class="code" href="class_tipo_aviao_d_b.html#a193ae2f3aa37d62ab1fd1580814555a7">getConstRefTiposAviao</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>; }
+<a name="l00066"></a>00066         <span class="comment">//Variante do get do vector que permite alterá-lo através da referência que é dada</span>
+<a name="l00067"></a><a class="code" href="class_tipo_aviao_d_b.html#a890101481d183129ecefa2d5e599fb8f">00067</a>         vector &lt;TipoAviao*&gt;&amp; <a class="code" href="class_tipo_aviao_d_b.html#a890101481d183129ecefa2d5e599fb8f">getRefTiposAviao</a>() { <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a>; }
+<a name="l00068"></a>00068 
+<a name="l00070"></a>00070         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#ac046a08500ab7fc8b6f094f47ddf1e83" title="Adiciona um tipo de aviao à base de dados com os dados introduzidos pelo utilizador.">addTipoAviao</a>();
+<a name="l00071"></a>00071 
+<a name="l00077"></a>00077         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#ac046a08500ab7fc8b6f094f47ddf1e83" title="Adiciona um tipo de aviao à base de dados com os dados introduzidos pelo utilizador.">addTipoAviao</a>(<a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a> *tipo_aviao);
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079 
+<a name="l00081"></a>00081         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#a3cf170fb74857ca0f5047c91394f7acd" title="Lista todos os Tipos de avião da base de dados de TipoAviaoDB.">listTipoAviao</a>(<span class="keywordtype">bool</span> final_pause = <span class="keyword">true</span>);
+<a name="l00082"></a>00082 
+<a name="l00087"></a>00087         <span class="keywordtype">size_t</span> <a class="code" href="class_tipo_aviao_d_b.html#abddea6714023737d98684acdb785d21b" title="Selecciona um tipo de aviao de uma base de dados, de uma lista de Tipos de aviões.">selTipoAviao</a>();
+<a name="l00088"></a>00088 
+<a name="l00093"></a>00093         <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a>* <a class="code" href="class_tipo_aviao_d_b.html#abf2fc6d9d0767212eecec75686e480be" title="Selecciona um tipo de aviao de uma base de dados, de uma lista de Tipos de aviões.">selTipoAviaoPtr</a>();
+<a name="l00094"></a>00094 
+<a name="l00096"></a>00096         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#a69635301f8256252d1c9a1585d39dbc3" title="Método que mostra ao utilizador os atributos dum tipo de avião.">infoTipoAviao</a>();
+<a name="l00097"></a>00097 
+<a name="l00102"></a>00102         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#a9a8c464abdb9fdf37b910f0468cff173" title="Método que pede fornece ao utilizador a possibilidade de editar TipoAviao que já estão criados...">editTipoAviao</a>();
+<a name="l00103"></a>00103 
+<a name="l00105"></a>00105         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#a009388c6952829a1e02955f4b5330a27" title="Elimina um tipo de aviao da base de dados TipoAviaoDB perguntando ao utilizador o índice...">delTipoAviao</a>();
+<a name="l00106"></a>00106 
+<a name="l00108"></a>00108         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#a009388c6952829a1e02955f4b5330a27" title="Elimina um tipo de aviao da base de dados TipoAviaoDB perguntando ao utilizador o índice...">delTipoAviao</a>(<span class="keywordtype">size_t</span> index);
+<a name="l00109"></a>00109 
+<a name="l00111"></a>00111         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#a59df4870cf7127ce2b065d99ff0b6af2" title="Carrega a base de dados de aviões a partir do nome de ficheiro predefinido.">loaddb_tipos_aviao</a>();
+<a name="l00112"></a>00112 
+<a name="l00114"></a>00114         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#a59df4870cf7127ce2b065d99ff0b6af2" title="Carrega a base de dados de aviões a partir do nome de ficheiro predefinido.">loaddb_tipos_aviao</a>(<span class="keywordtype">string</span> filename);
+<a name="l00115"></a>00115 
+<a name="l00117"></a>00117         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#a1aaa37e1ef1da0980b2d95d689f34103" title="Guarda a base de dados para o ficheiro de de texto com o nome predefinido.">savedb_tipos_aviao</a>();
+<a name="l00118"></a>00118 
+<a name="l00120"></a>00120         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao_d_b.html#a1aaa37e1ef1da0980b2d95d689f34103" title="Guarda a base de dados para o ficheiro de de texto com o nome predefinido.">savedb_tipos_aviao</a>(<span class="keywordtype">string</span> filename);
+<a name="l00121"></a>00121 };
+<a name="l00122"></a>00122 
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:37 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

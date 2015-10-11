@@ -1,0 +1,596 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência à classe TipoAviaoDB</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&nbsp;dos&nbsp;componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a>  </div>
+  <div class="headertitle">
+<h1>Referência à classe TipoAviaoDB</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="TipoAviaoDB" -->
+<p>Classe que contém uma base de dados de tipos de aviões. <br/>
+.  
+<a href="#_details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_tipo_aviao_d_b_8h_source.html">TipoAviaoDB.h</a>&gt;</code></p>
+
+<p><a href="class_tipo_aviao_d_b-members.html">Mostrar lista completa dos membros</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao_d_b.html#aedb7b0566b3373596ad258e7f87e0840">~TipoAviaoDB</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao_d_b.html#a91c643bfc8949c053321b1519f22a958">getNomeTipoAviaoCin</a> (const char *mensagem)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_tipo_aviao.html">TipoAviao</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao_d_b.html#a5ee1ed8e004160c5b587f19a967c461f">getTiposAviao</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const vector&lt; <a class="el" href="class_tipo_aviao.html">TipoAviao</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao_d_b.html#a193ae2f3aa37d62ab1fd1580814555a7">getConstRefTiposAviao</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_tipo_aviao.html">TipoAviao</a> * &gt; &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao_d_b.html#a890101481d183129ecefa2d5e599fb8f">getRefTiposAviao</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao_d_b.html#ac046a08500ab7fc8b6f094f47ddf1e83">addTipoAviao</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona um tipo de aviao à base de dados com os dados introduzidos pelo utilizador.  <a href="#ac046a08500ab7fc8b6f094f47ddf1e83"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao_d_b.html#af9038727fc9464a241859b258ec11d1d">addTipoAviao</a> (<a class="el" href="class_tipo_aviao.html">TipoAviao</a> *tipo_aviao)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adiciona um tipo de avião à base de dados verificando se o nome desse tipo já existe.  <a href="#af9038727fc9464a241859b258ec11d1d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao_d_b.html#a3cf170fb74857ca0f5047c91394f7acd">listTipoAviao</a> (bool final_pause=true)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Lista todos os Tipos de avião da base de dados de <a class="el" href="class_tipo_aviao_d_b.html" title="Classe que contém uma base de dados de tipos de aviões.  .">TipoAviaoDB</a>.  <a href="#a3cf170fb74857ca0f5047c91394f7acd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao_d_b.html#abddea6714023737d98684acdb785d21b">selTipoAviao</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Selecciona um tipo de aviao de uma base de dados, de uma lista de Tipos de aviões.  <a href="#abddea6714023737d98684acdb785d21b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tipo_aviao.html">TipoAviao</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao_d_b.html#abf2fc6d9d0767212eecec75686e480be">selTipoAviaoPtr</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Selecciona um tipo de aviao de uma base de dados, de uma lista de Tipos de aviões.  <a href="#abf2fc6d9d0767212eecec75686e480be"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao_d_b.html#a69635301f8256252d1c9a1585d39dbc3">infoTipoAviao</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que mostra ao utilizador os atributos dum tipo de avião.  <a href="#a69635301f8256252d1c9a1585d39dbc3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao_d_b.html#a9a8c464abdb9fdf37b910f0468cff173">editTipoAviao</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que pede fornece ao utilizador a possibilidade de editar <a class="el" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a> que já estão criados.  <a href="#a9a8c464abdb9fdf37b910f0468cff173"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao_d_b.html#a009388c6952829a1e02955f4b5330a27">delTipoAviao</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elimina um tipo de aviao da base de dados <a class="el" href="class_tipo_aviao_d_b.html" title="Classe que contém uma base de dados de tipos de aviões.  .">TipoAviaoDB</a> perguntando ao utilizador o índice.  <a href="#a009388c6952829a1e02955f4b5330a27"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao_d_b.html#a58f216ee1e09f27c0cead468f696d815">delTipoAviao</a> (size_t index)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elimina o tipo de aviao da base de dados que está no índice fornecido.  <a href="#a58f216ee1e09f27c0cead468f696d815"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao_d_b.html#a59df4870cf7127ce2b065d99ff0b6af2">loaddb_tipos_aviao</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Carrega a base de dados de aviões a partir do nome de ficheiro predefinido.  <a href="#a59df4870cf7127ce2b065d99ff0b6af2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao_d_b.html#aa5a256fb86ef372c11687765bb09d0b4">loaddb_tipos_aviao</a> (string filename)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Carrega a base de dados de aviões a partir do nome de ficheiro fornecido.  <a href="#aa5a256fb86ef372c11687765bb09d0b4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao_d_b.html#a1aaa37e1ef1da0980b2d95d689f34103">savedb_tipos_aviao</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Guarda a base de dados para o ficheiro de de texto com o nome predefinido.  <a href="#a1aaa37e1ef1da0980b2d95d689f34103"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao_d_b.html#aa177f3eeb63d7f1de37673b6358a15ba">savedb_tipos_aviao</a> (string filename)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Guarda a base de dados para o ficheiro de de texto com o nome fornecido.  <a href="#aa177f3eeb63d7f1de37673b6358a15ba"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_tipo_aviao.html">TipoAviao</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">_tipos_aviao</a></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<p>Classe que contém uma base de dados de tipos de aviões. <br/>
+. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00054">54</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8h_source.html">TipoAviaoDB.h</a>.</p>
+<hr/><h2>Documentação dos Construtores &amp; Destrutor</h2>
+<a class="anchor" id="aedb7b0566b3373596ad258e7f87e0840"></a><!-- doxytag: member="TipoAviaoDB::~TipoAviaoDB" ref="aedb7b0566b3373596ad258e7f87e0840" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TipoAviaoDB::~TipoAviaoDB </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00017">17</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8cpp_source.html">TipoAviaoDB.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00056">_tipos_aviao</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos métodos</h2>
+<a class="anchor" id="ac046a08500ab7fc8b6f094f47ddf1e83"></a><!-- doxytag: member="TipoAviaoDB::addTipoAviao" ref="ac046a08500ab7fc8b6f094f47ddf1e83" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviaoDB::addTipoAviao </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Adiciona um tipo de aviao à base de dados com os dados introduzidos pelo utilizador. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00044">44</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8cpp_source.html">TipoAviaoDB.cpp</a>.</p>
+
+<p>Referências <a class="el" href="utils_8cpp_source.html#l00035">get_int_cin()</a>, <a class="el" href="utils_8cpp_source.html#l00018">getch()</a>, <a class="el" href="_data_hora_8cpp_source.html#l00051">DataHora::getDataHoraCin()</a>, <a class="el" href="utils_8cpp_source.html#l00028">getlineCin()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00024">getNomeTipoAviaoCin()</a>, <a class="el" href="_porta_embarque_8h_source.html#l00083">PortaEmbarque::getRefCategoriasAvioesInfo()</a>, <a class="el" href="_porta_embarque_8cpp_source.html#l00101">PortaEmbarque::listCategoriasAvioesInfo()</a> e <a class="el" href="_exceptions_8h_source.html#l00047">Exceptions::what()</a>.</p>
+
+<p>Referenciado por <a class="el" href="main_8cpp_source.html#l00040">opNewTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af9038727fc9464a241859b258ec11d1d"></a><!-- doxytag: member="TipoAviaoDB::addTipoAviao" ref="af9038727fc9464a241859b258ec11d1d" args="(TipoAviao *tipo_aviao)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviaoDB::addTipoAviao </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_tipo_aviao.html">TipoAviao</a> *&nbsp;</td>
+          <td class="paramname"> <em>tipo_aviao</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Adiciona um tipo de avião à base de dados verificando se o nome desse tipo já existe. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>tipo_aviao</em>&nbsp;</td><td>Apontador para um tipo de avião, que já existe numa base de dados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Retorna:</b></dt><dd>True se a adição foi feita com sucesso. Caso contrário é lançada uma excepção. </dd></dl>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00125">125</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8cpp_source.html">TipoAviaoDB.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00056">_tipos_aviao</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a009388c6952829a1e02955f4b5330a27"></a><!-- doxytag: member="TipoAviaoDB::delTipoAviao" ref="a009388c6952829a1e02955f4b5330a27" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviaoDB::delTipoAviao </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Elimina um tipo de aviao da base de dados <a class="el" href="class_tipo_aviao_d_b.html" title="Classe que contém uma base de dados de tipos de aviões.  .">TipoAviaoDB</a> perguntando ao utilizador o índice. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00449">449</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8cpp_source.html">TipoAviaoDB.cpp</a>.</p>
+
+<p>Referências <a class="el" href="utils_8cpp_source.html#l00018">getch()</a> e <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00243">selTipoAviao()</a>.</p>
+
+<p>Referenciado por <a class="el" href="main_8cpp_source.html#l00068">opDelTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a58f216ee1e09f27c0cead468f696d815"></a><!-- doxytag: member="TipoAviaoDB::delTipoAviao" ref="a58f216ee1e09f27c0cead468f696d815" args="(size_t index)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviaoDB::delTipoAviao </td>
+          <td>(</td>
+          <td class="paramtype">size_t&nbsp;</td>
+          <td class="paramname"> <em>index</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Elimina o tipo de aviao da base de dados que está no índice fornecido. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00462">462</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8cpp_source.html">TipoAviaoDB.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00056">_tipos_aviao</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9a8c464abdb9fdf37b910f0468cff173"></a><!-- doxytag: member="TipoAviaoDB::editTipoAviao" ref="a9a8c464abdb9fdf37b910f0468cff173" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviaoDB::editTipoAviao </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Método que pede fornece ao utilizador a possibilidade de editar <a class="el" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a> que já estão criados. </p>
+<p>Começa por pedir ao utilziador que atributos do tipo de avião existente pretende modificar e depois pede os novos dados. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">300</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8cpp_source.html">TipoAviaoDB.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_comandos_8h_source.html#l00028">Comandos::_tipo_aviao_op_list</a>, <a class="el" href="utils_8cpp_source.html#l00035">get_int_cin()</a>, <a class="el" href="utils_8cpp_source.html#l00073">get_yes_no()</a>, <a class="el" href="_data_hora_8cpp_source.html#l00051">DataHora::getDataHoraCin()</a>, <a class="el" href="utils_8cpp_source.html#l00028">getlineCin()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00024">getNomeTipoAviaoCin()</a>, <a class="el" href="_porta_embarque_8h_source.html#l00083">PortaEmbarque::getRefCategoriasAvioesInfo()</a>, <a class="el" href="_porta_embarque_8cpp_source.html#l00101">PortaEmbarque::listCategoriasAvioesInfo()</a>, <a class="el" href="utils_8cpp_source.html#l00133">printMenu()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00251">selTipoAviaoPtr()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00104">TipoAviao::setAltitudeMaxima()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00103">TipoAviao::setAltura()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00096">TipoAviao::setAutonomia()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00091">TipoAviao::setCategoria()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00101">TipoAviao::setComprimento()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00093">TipoAviao::setDataLancamento()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00090">TipoAviao::setDescricao()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00102">TipoAviao::setEnvergadura()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00092">TipoAviao::setFabricante()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00095">TipoAviao::setMaximoPassageiros()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00089">TipoAviao::setNomeTipo()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00098">TipoAviao::setNumeroMotores()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00100">TipoAviao::setPesoMaximo()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00099">TipoAviao::setPesoVazio()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00094">TipoAviao::setPreco()</a> e <a class="el" href="_tipo_aviao_8h_source.html#l00097">TipoAviao::setVelocidadeMaxima()</a>.</p>
+
+<p>Referenciado por <a class="el" href="main_8cpp_source.html#l00060">opEditTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a193ae2f3aa37d62ab1fd1580814555a7"></a><!-- doxytag: member="TipoAviaoDB::getConstRefTiposAviao" ref="a193ae2f3aa37d62ab1fd1580814555a7" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vector&lt;<a class="el" href="class_tipo_aviao.html">TipoAviao</a>*&gt;&amp; TipoAviaoDB::getConstRefTiposAviao </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00065">65</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8h_source.html">TipoAviaoDB.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00056">_tipos_aviao</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a91c643bfc8949c053321b1519f22a958"></a><!-- doxytag: member="TipoAviaoDB::getNomeTipoAviaoCin" ref="a91c643bfc8949c053321b1519f22a958" args="(const char *mensagem)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string TipoAviaoDB::getNomeTipoAviaoCin </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>mensagem</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00024">24</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8cpp_source.html">TipoAviaoDB.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00056">_tipos_aviao</a> e <a class="el" href="utils_8cpp_source.html#l00028">getlineCin()</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00044">addTipoAviao()</a> e <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">editTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a890101481d183129ecefa2d5e599fb8f"></a><!-- doxytag: member="TipoAviaoDB::getRefTiposAviao" ref="a890101481d183129ecefa2d5e599fb8f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_tipo_aviao.html">TipoAviao</a>*&gt;&amp; TipoAviaoDB::getRefTiposAviao </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00067">67</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8h_source.html">TipoAviaoDB.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00056">_tipos_aviao</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l03648">CRUD::loaddb()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l04080">CRUD::savedb()</a> e <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00532">savedb_tipos_aviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5ee1ed8e004160c5b587f19a967c461f"></a><!-- doxytag: member="TipoAviaoDB::getTiposAviao" ref="a5ee1ed8e004160c5b587f19a967c461f" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_tipo_aviao.html">TipoAviao</a>*&gt; TipoAviaoDB::getTiposAviao </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00063">63</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8h_source.html">TipoAviaoDB.h</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00056">_tipos_aviao</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a69635301f8256252d1c9a1585d39dbc3"></a><!-- doxytag: member="TipoAviaoDB::infoTipoAviao" ref="a69635301f8256252d1c9a1585d39dbc3" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviaoDB::infoTipoAviao </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Método que mostra ao utilizador os atributos dum tipo de avião. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00255">255</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8cpp_source.html">TipoAviaoDB.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_comandos_8h_source.html#l00028">Comandos::_tipo_aviao_op_list</a>, <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00056">_tipos_aviao</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00087">TipoAviao::getAltitudeMaxima()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00086">TipoAviao::getAltura()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00079">TipoAviao::getAutonomia()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00074">TipoAviao::getCategoria()</a>, <a class="el" href="utils_8cpp_source.html#l00018">getch()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00084">TipoAviao::getComprimento()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00076">TipoAviao::getDataLancamento()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00073">TipoAviao::getDescricao()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00085">TipoAviao::getEnvergadura()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00075">TipoAviao::getFabricante()</a>, <a class="el" href="_porta_embarque_8h_source.html#l00084">PortaEmbarque::getInfoEnumCategoriasAvioes()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00078">TipoAviao::getMaximoPassageiros()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00072">TipoAviao::getNomeTipo()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00081">TipoAviao::getNumeroMotores()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00083">TipoAviao::getPesoMaximo()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00082">TipoAviao::getPesoVazio()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00077">TipoAviao::getPreco()</a>, <a class="el" href="_tipo_aviao_8h_source.html#l00080">TipoAviao::getVelocidadeMaxima()</a>, <a class="el" href="utils_8cpp_source.html#l00133">printMenu()</a> e <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00243">selTipoAviao()</a>.</p>
+
+<p>Referenciado por <a class="el" href="main_8cpp_source.html#l00050">opInfoTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3cf170fb74857ca0f5047c91394f7acd"></a><!-- doxytag: member="TipoAviaoDB::listTipoAviao" ref="a3cf170fb74857ca0f5047c91394f7acd" args="(bool final_pause=true)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviaoDB::listTipoAviao </td>
+          <td>(</td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>final_pause</em> = <code>true</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Lista todos os Tipos de avião da base de dados de <a class="el" href="class_tipo_aviao_d_b.html" title="Classe que contém uma base de dados de tipos de aviões.  .">TipoAviaoDB</a>. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00147">147</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8cpp_source.html">TipoAviaoDB.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00056">_tipos_aviao</a>, <a class="el" href="utils_8h_source.html#l00084">get_uint_cin()</a>, <a class="el" href="utils_8cpp_source.html#l00018">getch()</a>, <a class="el" href="_porta_embarque_8h_source.html#l00084">PortaEmbarque::getInfoEnumCategoriasAvioes()</a> e <a class="el" href="utils_8cpp_source.html#l00133">printMenu()</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00243">selTipoAviao()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a59df4870cf7127ce2b065d99ff0b6af2"></a><!-- doxytag: member="TipoAviaoDB::loaddb_tipos_aviao" ref="a59df4870cf7127ce2b065d99ff0b6af2" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviaoDB::loaddb_tipos_aviao </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Carrega a base de dados de aviões a partir do nome de ficheiro predefinido. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00477">477</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8cpp_source.html">TipoAviaoDB.cpp</a>.</p>
+
+<p>Referências <a class="el" href="utils_8h_source.html#l00044">FILE_SAVE_DB_TIPOS_AVIAO</a>.</p>
+
+<p>Referenciado por <a class="el" href="main_8cpp_source.html#l00104">main()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa5a256fb86ef372c11687765bb09d0b4"></a><!-- doxytag: member="TipoAviaoDB::loaddb_tipos_aviao" ref="aa5a256fb86ef372c11687765bb09d0b4" args="(string filename)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviaoDB::loaddb_tipos_aviao </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>filename</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Carrega a base de dados de aviões a partir do nome de ficheiro fornecido. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00482">482</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8cpp_source.html">TipoAviaoDB.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00056">_tipos_aviao</a>, <a class="el" href="utils_8h_source.html#l00047">SAVE_DELIM</a> e <a class="el" href="utils_8cpp_source.html#l00118">split()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa177f3eeb63d7f1de37673b6358a15ba"></a><!-- doxytag: member="TipoAviaoDB::savedb_tipos_aviao" ref="aa177f3eeb63d7f1de37673b6358a15ba" args="(string filename)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviaoDB::savedb_tipos_aviao </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>filename</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Guarda a base de dados para o ficheiro de de texto com o nome fornecido. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00532">532</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8cpp_source.html">TipoAviaoDB.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00056">_tipos_aviao</a>, <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00067">getRefTiposAviao()</a> e <a class="el" href="utils_8h_source.html#l00047">SAVE_DELIM</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1aaa37e1ef1da0980b2d95d689f34103"></a><!-- doxytag: member="TipoAviaoDB::savedb_tipos_aviao" ref="a1aaa37e1ef1da0980b2d95d689f34103" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TipoAviaoDB::savedb_tipos_aviao </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Guarda a base de dados para o ficheiro de de texto com o nome predefinido. </p>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00527">527</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8cpp_source.html">TipoAviaoDB.cpp</a>.</p>
+
+<p>Referências <a class="el" href="utils_8h_source.html#l00044">FILE_SAVE_DB_TIPOS_AVIAO</a>.</p>
+
+<p>Referenciado por <a class="el" href="main_8cpp_source.html#l00104">main()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abddea6714023737d98684acdb785d21b"></a><!-- doxytag: member="TipoAviaoDB::selTipoAviao" ref="abddea6714023737d98684acdb785d21b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t TipoAviaoDB::selTipoAviao </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Selecciona um tipo de aviao de uma base de dados, de uma lista de Tipos de aviões. </p>
+<dl class="return"><dt><b>Retorna:</b></dt><dd>O índice desse tipo de avião no vector de apontadores para tipos de avião. </dd></dl>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00243">243</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8cpp_source.html">TipoAviaoDB.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00056">_tipos_aviao</a> e <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00147">listTipoAviao()</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00449">delTipoAviao()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00255">infoTipoAviao()</a> e <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00251">selTipoAviaoPtr()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abf2fc6d9d0767212eecec75686e480be"></a><!-- doxytag: member="TipoAviaoDB::selTipoAviaoPtr" ref="abf2fc6d9d0767212eecec75686e480be" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tipo_aviao.html">TipoAviao</a> * TipoAviaoDB::selTipoAviaoPtr </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Selecciona um tipo de aviao de uma base de dados, de uma lista de Tipos de aviões. </p>
+<dl class="return"><dt><b>Retorna:</b></dt><dd>O apontador para o avião que foi selecionado. </dd></dl>
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00251">251</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8cpp_source.html">TipoAviaoDB.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00056">_tipos_aviao</a> e <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00243">selTipoAviao()</a>.</p>
+
+<p>Referenciado por <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00023">CRUD::addAviao()</a>, <a class="el" href="_gestao_aeroporto_8cpp_source.html#l00254">CRUD::editAviao()</a> e <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00300">editTipoAviao()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos dados membro</h2>
+<a class="anchor" id="acb321d816eb96f03e691edd1b285305d"></a><!-- doxytag: member="TipoAviaoDB::_tipos_aviao" ref="acb321d816eb96f03e691edd1b285305d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_tipo_aviao.html">TipoAviao</a>*&gt; <a class="el" href="class_tipo_aviao_d_b.html#acb321d816eb96f03e691edd1b285305d">TipoAviaoDB::_tipos_aviao</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00056">56</a> do ficheiro <a class="el" href="_tipo_aviao_d_b_8h_source.html">TipoAviaoDB.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00125">addTipoAviao()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00462">delTipoAviao()</a>, <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00065">getConstRefTiposAviao()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00024">getNomeTipoAviaoCin()</a>, <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00067">getRefTiposAviao()</a>, <a class="el" href="_tipo_aviao_d_b_8h_source.html#l00063">getTiposAviao()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00255">infoTipoAviao()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00147">listTipoAviao()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00482">loaddb_tipos_aviao()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00532">savedb_tipos_aviao()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00243">selTipoAviao()</a>, <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00251">selTipoAviaoPtr()</a> e <a class="el" href="_tipo_aviao_d_b_8cpp_source.html#l00017">~TipoAviaoDB()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
+<li><a class="el" href="_tipo_aviao_d_b_8h_source.html">TipoAviaoDB.h</a></li>
+<li><a class="el" href="_tipo_aviao_d_b_8cpp_source.html">TipoAviaoDB.cpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:39 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

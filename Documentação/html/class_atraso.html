@@ -1,0 +1,527 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: Referência à classe Atraso</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&nbsp;de&nbsp;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&nbsp;dos&nbsp;componentes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarquia&nbsp;de&nbsp;classes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a>  </div>
+  <div class="headertitle">
+<h1>Referência à classe Atraso</h1>  </div>
+</div>
+<div class="contents">
+<!-- doxytag: class="Atraso" -->
+<p>Classe que contém informação acerca de um atraso de um voo na sua hora de partida / chegada (dia:hora:min ou hora:min).  
+<a href="#_details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_atraso_8h_source.html">Atraso.h</a>&gt;</code></p>
+
+<p><a href="class_atraso-members.html">Mostrar lista completa dos membros</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_atraso.html#a39f0397d884006dbe56c1032cb552a6d">Atraso</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construtor vazio, que inicializa os dados da classe com valores de erro, denotando que necessitam de ser actualizados.  <a href="#a39f0397d884006dbe56c1032cb552a6d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_atraso.html#aad3023a36744281f7bbcfc4f5638f00f">Atraso</a> (int hora, int min, int dia=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_atraso.html#a629f11b29146f41a76afcaba59b4d507">Atraso</a> (string atraso)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construtor de um atraso, que recebe uma string no formato DD:HH:mm ou HH:mm e extrai os dados para os membros respectivos da classe <a class="el" href="class_atraso.html" title="Classe que contém informação acerca de um atraso de um voo na sua hora de partida / chegada (dia:hora...">Atraso</a>.  <a href="#a629f11b29146f41a76afcaba59b4d507"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_atraso.html#aa23a554b7f3f057e37a8f7def976e517">~Atraso</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_atraso.html#a055da85fe8e5d76a8792975d3dc67212">getHora</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_atraso.html#a9f984c261a7d503dbd8d64b370e46e69">getMin</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_atraso.html#a070f489d3e2f156789ae499ad8b9dc71">getDia</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_atraso.html#a580ba94c4e44575b9926ec36e562141a">setHora</a> (int hora)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_atraso.html#ad6d724c1bdd960d173ff2ec17a7d8242">setMin</a> (int min)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_atraso.html#aafc3714b68b4bcc71a1679a47eeb348e">setDia</a> (int dia)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_atraso.html">Atraso</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_atraso.html#acfb43129455763ff16d34c140be6fbd1">Parser_Atraso</a> (string atraso)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Verificação da compatibilidade de uma string com a classe <a class="el" href="class_atraso.html" title="Classe que contém informação acerca de um atraso de um voo na sua hora de partida / chegada (dia:hora...">Atraso</a>.  <a href="#acfb43129455763ff16d34c140be6fbd1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_atraso.html#a2b70ed328a9166e75ec66f85e11af777">getAtrasoCin</a> (const char *mensagem)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Método que pede ao utilizador para introduzir um atraso no formato &lt;DD:HH:mm&gt; ou &lt;HH:mm&gt;.  <a href="#a2b70ed328a9166e75ec66f85e11af777"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_atraso.html#a2e13c0b214c3606ad9a276ea17d14c11">operator==</a> (const <a class="el" href="class_atraso.html">Atraso</a> &amp;atraso) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador que permite comparar se dois atrasos são equivalentes.  <a href="#a2e13c0b214c3606ad9a276ea17d14c11"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_atraso.html#aa6096630475e01d5c2a704b073cec1ee">operator&lt;</a> (const <a class="el" href="class_atraso.html">Atraso</a> &amp;atraso) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Operador que compara se um atraso é menor do que outro.  <a href="#aa6096630475e01d5c2a704b073cec1ee"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_atraso.html#ac44063b4e12108feb696a33a6fcd46ab">_hora</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_atraso.html#a9f5372a471bc54cd23ff1403f900058c">_min</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_atraso.html#a1915240247ac80b784350e50894b03ee">_dia</a></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descrição detalhada</h2>
+<p>Classe que contém informação acerca de um atraso de um voo na sua hora de partida / chegada (dia:hora:min ou hora:min). </p>
+
+<p>Definido na linha <a class="el" href="_atraso_8h_source.html#l00033">33</a> do ficheiro <a class="el" href="_atraso_8h_source.html">Atraso.h</a>.</p>
+<hr/><h2>Documentação dos Construtores &amp; Destrutor</h2>
+<a class="anchor" id="a39f0397d884006dbe56c1032cb552a6d"></a><!-- doxytag: member="Atraso::Atraso" ref="a39f0397d884006dbe56c1032cb552a6d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Atraso::Atraso </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Construtor vazio, que inicializa os dados da classe com valores de erro, denotando que necessitam de ser actualizados. </p>
+
+<p>Definido na linha <a class="el" href="_atraso_8h_source.html#l00042">42</a> do ficheiro <a class="el" href="_atraso_8h_source.html">Atraso.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_atraso_8cpp_source.html#l00051">getAtrasoCin()</a> e <a class="el" href="_atraso_8cpp_source.html#l00018">Parser_Atraso()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aad3023a36744281f7bbcfc4f5638f00f"></a><!-- doxytag: member="Atraso::Atraso" ref="aad3023a36744281f7bbcfc4f5638f00f" args="(int hora, int min, int dia=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Atraso::Atraso </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>hora</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>dia</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_atraso_8h_source.html#l00043">43</a> do ficheiro <a class="el" href="_atraso_8h_source.html">Atraso.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a629f11b29146f41a76afcaba59b4d507"></a><!-- doxytag: member="Atraso::Atraso" ref="a629f11b29146f41a76afcaba59b4d507" args="(string atraso)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Atraso::Atraso </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>atraso</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Construtor de um atraso, que recebe uma string no formato DD:HH:mm ou HH:mm e extrai os dados para os membros respectivos da classe <a class="el" href="class_atraso.html" title="Classe que contém informação acerca de um atraso de um voo na sua hora de partida / chegada (dia:hora...">Atraso</a>. </p>
+
+<p>Definido na linha <a class="el" href="_atraso_8h_source.html#l00045">45</a> do ficheiro <a class="el" href="_atraso_8h_source.html">Atraso.h</a>.</p>
+
+<p>Referências <a class="el" href="_atraso_8cpp_source.html#l00018">Parser_Atraso()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa23a554b7f3f057e37a8f7def976e517"></a><!-- doxytag: member="Atraso::~Atraso" ref="aa23a554b7f3f057e37a8f7def976e517" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Atraso::~Atraso </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_atraso_8h_source.html#l00046">46</a> do ficheiro <a class="el" href="_atraso_8h_source.html">Atraso.h</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos métodos</h2>
+<a class="anchor" id="a2b70ed328a9166e75ec66f85e11af777"></a><!-- doxytag: member="Atraso::getAtrasoCin" ref="a2b70ed328a9166e75ec66f85e11af777" args="(const char *mensagem)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Atraso::getAtrasoCin </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>mensagem</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Método que pede ao utilizador para introduzir um atraso no formato &lt;DD:HH:mm&gt; ou &lt;HH:mm&gt;. </p>
+<p>Enquanto não for introduzido um <a class="el" href="class_atraso.html" title="Classe que contém informação acerca de um atraso de um voo na sua hora de partida / chegada (dia:hora...">Atraso</a> no formato pedido continua a pedir ao utilizador para introduzir um <a class="el" href="class_atraso.html" title="Classe que contém informação acerca de um atraso de um voo na sua hora de partida / chegada (dia:hora...">Atraso</a>. O objecto que chamou o método fica igual aos dados que o utilizador introduziu. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mensagem</em>&nbsp;</td><td>Mensagem a ser mostrado ao utilizador antes de pedir o input. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definido na linha <a class="el" href="_atraso_8cpp_source.html#l00051">51</a> do ficheiro <a class="el" href="_atraso_8cpp_source.html">Atraso.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_atraso_8h_source.html#l00042">Atraso()</a> e <a class="el" href="utils_8cpp_source.html#l00028">getlineCin()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a070f489d3e2f156789ae499ad8b9dc71"></a><!-- doxytag: member="Atraso::getDia" ref="a070f489d3e2f156789ae499ad8b9dc71" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Atraso::getDia </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_atraso_8h_source.html#l00050">50</a> do ficheiro <a class="el" href="_atraso_8h_source.html">Atraso.h</a>.</p>
+
+<p>Referências <a class="el" href="_atraso_8h_source.html#l00037">_dia</a>.</p>
+
+<p>Referenciado por <a class="el" href="_data_hora_8h_source.html#l00081">DataHora::addAtraso()</a> e <a class="el" href="_atraso_8cpp_source.html#l00098">operator&lt;&lt;()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a055da85fe8e5d76a8792975d3dc67212"></a><!-- doxytag: member="Atraso::getHora" ref="a055da85fe8e5d76a8792975d3dc67212" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Atraso::getHora </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_atraso_8h_source.html#l00048">48</a> do ficheiro <a class="el" href="_atraso_8h_source.html">Atraso.h</a>.</p>
+
+<p>Referências <a class="el" href="_atraso_8h_source.html#l00035">_hora</a>.</p>
+
+<p>Referenciado por <a class="el" href="_data_hora_8h_source.html#l00081">DataHora::addAtraso()</a> e <a class="el" href="_atraso_8cpp_source.html#l00098">operator&lt;&lt;()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9f984c261a7d503dbd8d64b370e46e69"></a><!-- doxytag: member="Atraso::getMin" ref="a9f984c261a7d503dbd8d64b370e46e69" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Atraso::getMin </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_atraso_8h_source.html#l00049">49</a> do ficheiro <a class="el" href="_atraso_8h_source.html">Atraso.h</a>.</p>
+
+<p>Referências <a class="el" href="_atraso_8h_source.html#l00036">_min</a>.</p>
+
+<p>Referenciado por <a class="el" href="_data_hora_8h_source.html#l00081">DataHora::addAtraso()</a> e <a class="el" href="_atraso_8cpp_source.html#l00098">operator&lt;&lt;()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa6096630475e01d5c2a704b073cec1ee"></a><!-- doxytag: member="Atraso::operator&lt;" ref="aa6096630475e01d5c2a704b073cec1ee" args="(const Atraso &amp;atraso) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Atraso::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_atraso.html">Atraso</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>atraso</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operador que compara se um atraso é menor do que outro. </p>
+<p>Faz uma verfificação a todos os membros de um atraso pela ordem do formato DD:HH:mm. </p>
+
+<p>Definido na linha <a class="el" href="_atraso_8cpp_source.html#l00082">82</a> do ficheiro <a class="el" href="_atraso_8cpp_source.html">Atraso.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_atraso_8h_source.html#l00037">_dia</a>, <a class="el" href="_atraso_8h_source.html#l00035">_hora</a> e <a class="el" href="_atraso_8h_source.html#l00036">_min</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2e13c0b214c3606ad9a276ea17d14c11"></a><!-- doxytag: member="Atraso::operator==" ref="a2e13c0b214c3606ad9a276ea17d14c11" args="(const Atraso &amp;atraso) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Atraso::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_atraso.html">Atraso</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>atraso</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Operador que permite comparar se dois atrasos são equivalentes. </p>
+
+<p>Definido na linha <a class="el" href="_atraso_8cpp_source.html#l00072">72</a> do ficheiro <a class="el" href="_atraso_8cpp_source.html">Atraso.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_atraso_8h_source.html#l00037">_dia</a>, <a class="el" href="_atraso_8h_source.html#l00035">_hora</a> e <a class="el" href="_atraso_8h_source.html#l00036">_min</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acfb43129455763ff16d34c140be6fbd1"></a><!-- doxytag: member="Atraso::Parser_Atraso" ref="acfb43129455763ff16d34c140be6fbd1" args="(string atraso)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_atraso.html">Atraso</a> Atraso::Parser_Atraso </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>atraso</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Verificação da compatibilidade de uma string com a classe <a class="el" href="class_atraso.html" title="Classe que contém informação acerca de um atraso de um voo na sua hora de partida / chegada (dia:hora...">Atraso</a>. </p>
+<p>Método que permite analisar se o formato de de uma string é compatível com a classe de <a class="el" href="class_atraso.html" title="Classe que contém informação acerca de um atraso de um voo na sua hora de partida / chegada (dia:hora...">Atraso</a> de um voo. </p>
+<dl><dt><b>Parâmetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>atraso</em>&nbsp;</td><td>String que deve estar no formato DD:HH:mm ou HH:mm </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Retorna:</b></dt><dd><a class="el" href="class_atraso.html" title="Classe que contém informação acerca de um atraso de um voo na sua hora de partida / chegada (dia:hora...">Atraso</a> no formato DD:HH:mm ou 00:HH:mm </dd></dl>
+
+<p>Definido na linha <a class="el" href="_atraso_8cpp_source.html#l00018">18</a> do ficheiro <a class="el" href="_atraso_8cpp_source.html">Atraso.cpp</a>.</p>
+
+<p>Referências <a class="el" href="_atraso_8h_source.html#l00042">Atraso()</a> e <a class="el" href="utils_8cpp_source.html#l00118">split()</a>.</p>
+
+<p>Referenciado por <a class="el" href="_atraso_8h_source.html#l00045">Atraso()</a> e <a class="el" href="_atraso_8cpp_source.html#l00105">operator&gt;&gt;()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aafc3714b68b4bcc71a1679a47eeb348e"></a><!-- doxytag: member="Atraso::setDia" ref="aafc3714b68b4bcc71a1679a47eeb348e" args="(int dia)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Atraso::setDia </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>dia</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_atraso_8h_source.html#l00054">54</a> do ficheiro <a class="el" href="_atraso_8h_source.html">Atraso.h</a>.</p>
+
+<p>Referências <a class="el" href="_atraso_8h_source.html#l00037">_dia</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a580ba94c4e44575b9926ec36e562141a"></a><!-- doxytag: member="Atraso::setHora" ref="a580ba94c4e44575b9926ec36e562141a" args="(int hora)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Atraso::setHora </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>hora</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_atraso_8h_source.html#l00052">52</a> do ficheiro <a class="el" href="_atraso_8h_source.html">Atraso.h</a>.</p>
+
+<p>Referências <a class="el" href="_atraso_8h_source.html#l00035">_hora</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad6d724c1bdd960d173ff2ec17a7d8242"></a><!-- doxytag: member="Atraso::setMin" ref="ad6d724c1bdd960d173ff2ec17a7d8242" args="(int min)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Atraso::setMin </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>min</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_atraso_8h_source.html#l00053">53</a> do ficheiro <a class="el" href="_atraso_8h_source.html">Atraso.h</a>.</p>
+
+<p>Referências <a class="el" href="_atraso_8h_source.html#l00036">_min</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Documentação dos dados membro</h2>
+<a class="anchor" id="a1915240247ac80b784350e50894b03ee"></a><!-- doxytag: member="Atraso::_dia" ref="a1915240247ac80b784350e50894b03ee" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_atraso.html#a1915240247ac80b784350e50894b03ee">Atraso::_dia</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_atraso_8h_source.html#l00037">37</a> do ficheiro <a class="el" href="_atraso_8h_source.html">Atraso.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_atraso_8h_source.html#l00050">getDia()</a>, <a class="el" href="_atraso_8cpp_source.html#l00082">operator&lt;()</a>, <a class="el" href="_atraso_8cpp_source.html#l00072">operator==()</a> e <a class="el" href="_atraso_8h_source.html#l00054">setDia()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac44063b4e12108feb696a33a6fcd46ab"></a><!-- doxytag: member="Atraso::_hora" ref="ac44063b4e12108feb696a33a6fcd46ab" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_atraso.html#ac44063b4e12108feb696a33a6fcd46ab">Atraso::_hora</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_atraso_8h_source.html#l00035">35</a> do ficheiro <a class="el" href="_atraso_8h_source.html">Atraso.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_atraso_8h_source.html#l00048">getHora()</a>, <a class="el" href="_atraso_8cpp_source.html#l00082">operator&lt;()</a>, <a class="el" href="_atraso_8cpp_source.html#l00072">operator==()</a> e <a class="el" href="_atraso_8h_source.html#l00052">setHora()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9f5372a471bc54cd23ff1403f900058c"></a><!-- doxytag: member="Atraso::_min" ref="a9f5372a471bc54cd23ff1403f900058c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_atraso.html#a9f5372a471bc54cd23ff1403f900058c">Atraso::_min</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definido na linha <a class="el" href="_atraso_8h_source.html#l00036">36</a> do ficheiro <a class="el" href="_atraso_8h_source.html">Atraso.h</a>.</p>
+
+<p>Referenciado por <a class="el" href="_atraso_8h_source.html#l00049">getMin()</a>, <a class="el" href="_atraso_8cpp_source.html#l00082">operator&lt;()</a>, <a class="el" href="_atraso_8cpp_source.html#l00072">operator==()</a> e <a class="el" href="_atraso_8h_source.html#l00053">setMin()</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
+<li><a class="el" href="_atraso_8h_source.html">Atraso.h</a></li>
+<li><a class="el" href="_atraso_8cpp_source.html">Atraso.cpp</a></li>
+</ul>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:38 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

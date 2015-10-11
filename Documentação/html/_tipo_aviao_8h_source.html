@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>AEDA-2MIEIC1-T4: TipoAviao.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Gerado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&nbsp;membro</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>TipoAviao.h</h1>  </div>
+</div>
+<div class="contents">
+<a href="_tipo_aviao_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00016"></a>00016 <span class="preprocessor">#ifndef TIPOAVIAO_H_</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span><span class="preprocessor">#define TIPOAVIAO_H_</span>
+<a name="l00018"></a>00018 <span class="preprocessor"></span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 <span class="comment">//Foward declarations de classes necessárias (pointers)</span>
+<a name="l00022"></a>00022 <span class="keyword">class </span><a class="code" href="class_aviao.html" title="Classe que armazena informação acerca de um avião de uma dada companhia.">Aviao</a>;
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="_data_hora_8h.html" title="Classe que contém informação associada a uma data e hora.">DataHora.h</a>&quot;</span>
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026 <span class="keyword">using</span> std::string;
+<a name="l00027"></a>00027 <span class="keyword">using</span> std::vector;
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 
+<a name="l00031"></a><a class="code" href="class_tipo_aviao.html">00031</a> <span class="keyword">class </span><a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a> {
+<a name="l00032"></a>00032 <span class="keyword">private</span>:
+<a name="l00033"></a><a class="code" href="class_tipo_aviao.html#afa7bb29db72530d90930abb4b9b6dbb4">00033</a>         <span class="keywordtype">string</span> <a class="code" href="class_tipo_aviao.html#afa7bb29db72530d90930abb4b9b6dbb4" title="Ex: A321.">_nome_tipo</a>;                              
+<a name="l00034"></a><a class="code" href="class_tipo_aviao.html#a3ffd0f7ee84a0f639235dfb06de51b80">00034</a>         <span class="keywordtype">string</span> <a class="code" href="class_tipo_aviao.html#a3ffd0f7ee84a0f639235dfb06de51b80" title="Ex: Airbus 321.">_descricao</a>;                              
+<a name="l00035"></a><a class="code" href="class_tipo_aviao.html#ab0e0db6bd901a9cadd0ef2219c1d41f8">00035</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#ab0e0db6bd901a9cadd0ef2219c1d41f8" title="Ex: Médio curso.">_categoria</a>;                    
+<a name="l00036"></a>00036 
+<a name="l00037"></a><a class="code" href="class_tipo_aviao.html#ad07fcbb4bd70adc3c4863077ac3a35b5">00037</a>         <span class="keywordtype">string</span> <a class="code" href="class_tipo_aviao.html#ad07fcbb4bd70adc3c4863077ac3a35b5" title="Ex: Airbus.">_fabricante</a>;                             
+<a name="l00038"></a><a class="code" href="class_tipo_aviao.html#a4bcb749c9731aadb9fb162042d386853">00038</a>         <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> <a class="code" href="class_tipo_aviao.html#a4bcb749c9731aadb9fb162042d386853" title="Data do primeiro voo deste tipo de avião.">_data_lancamento</a>;              
+<a name="l00039"></a><a class="code" href="class_tipo_aviao.html#a1815d4cd0fff353cdd0ca73a8d391b07">00039</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#a1815d4cd0fff353cdd0ca73a8d391b07" title="Preço deste tipo de avião.">_preco</a>;                                
+<a name="l00040"></a><a class="code" href="class_tipo_aviao.html#a4b5eee4329b11f37abe0a242cfae8dbb">00040</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#a4b5eee4329b11f37abe0a242cfae8dbb" title="Nº de passageiros máximo.">_maximo_passageiros</a>;   
+<a name="l00041"></a><a class="code" href="class_tipo_aviao.html#ad70657f49f8e679301b93846aa0dfe22">00041</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#ad70657f49f8e679301b93846aa0dfe22" title="Em km.">_autonomia</a>;                    
+<a name="l00042"></a><a class="code" href="class_tipo_aviao.html#a971a5ba2f2216a9dd67df567aae43007">00042</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#a971a5ba2f2216a9dd67df567aae43007" title="Em km/h.">_velocidade_maxima</a>;    
+<a name="l00043"></a><a class="code" href="class_tipo_aviao.html#a7c4b8e74c64bd38283c0c665724cf41a">00043</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#a7c4b8e74c64bd38283c0c665724cf41a">_numero_motores</a>;
+<a name="l00044"></a><a class="code" href="class_tipo_aviao.html#a8a1a865fcdc26fa31c6d72ab05a464f5">00044</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#a8a1a865fcdc26fa31c6d72ab05a464f5" title="Em kg.">_peso_vazio</a>;                   
+<a name="l00045"></a><a class="code" href="class_tipo_aviao.html#a5b80979e86aa6a615783e35da4052125">00045</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#a5b80979e86aa6a615783e35da4052125" title="Em kg.">_peso_maximo</a>;                  
+<a name="l00046"></a>00046         <span class="comment">//Medidas em metros</span>
+<a name="l00047"></a><a class="code" href="class_tipo_aviao.html#a63c0214f953857a0f0e3b2e8cac97cdb">00047</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#a63c0214f953857a0f0e3b2e8cac97cdb">_comprimento</a>;
+<a name="l00048"></a><a class="code" href="class_tipo_aviao.html#ad0863e5f2878cbfa41f9b60ad46ef9cb">00048</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#ad0863e5f2878cbfa41f9b60ad46ef9cb">_envergadura</a>;
+<a name="l00049"></a><a class="code" href="class_tipo_aviao.html#a860c5ebf6e16244f9acac6bb2d092eec">00049</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#a860c5ebf6e16244f9acac6bb2d092eec">_altura</a>;
+<a name="l00050"></a><a class="code" href="class_tipo_aviao.html#a15b734deaf0da2ced0926cd15447b4b9">00050</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#a15b734deaf0da2ced0926cd15447b4b9">_altitude_maxima</a>;
+<a name="l00051"></a>00051 
+<a name="l00053"></a><a class="code" href="class_tipo_aviao.html#a0608ad0332fcfb48d612b8484e1a7640">00053</a>         vector &lt;Aviao*&gt; <a class="code" href="class_tipo_aviao.html#a0608ad0332fcfb48d612b8484e1a7640" title="Vector de apontador de Aviao, que tem os aviões que actualmente estão a usar este TipoAviao...">_avioes_associados</a>;
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 <span class="keyword">public</span>:
+<a name="l00057"></a><a class="code" href="class_tipo_aviao.html#aab7538c6d7a967720d6dead845321510">00057</a>         <a class="code" href="class_tipo_aviao.html#aab7538c6d7a967720d6dead845321510">TipoAviao</a>(): <a class="code" href="class_tipo_aviao.html#a1815d4cd0fff353cdd0ca73a8d391b07" title="Preço deste tipo de avião.">_preco</a>(0), <a class="code" href="class_tipo_aviao.html#a4b5eee4329b11f37abe0a242cfae8dbb" title="Nº de passageiros máximo.">_maximo_passageiros</a>(0), <a class="code" href="class_tipo_aviao.html#ad70657f49f8e679301b93846aa0dfe22" title="Em km.">_autonomia</a>(0), <a class="code" href="class_tipo_aviao.html#a971a5ba2f2216a9dd67df567aae43007" title="Em km/h.">_velocidade_maxima</a>(0),
+<a name="l00058"></a>00058         <a class="code" href="class_tipo_aviao.html#a7c4b8e74c64bd38283c0c665724cf41a">_numero_motores</a>(0), <a class="code" href="class_tipo_aviao.html#a8a1a865fcdc26fa31c6d72ab05a464f5" title="Em kg.">_peso_vazio</a>(0), <a class="code" href="class_tipo_aviao.html#a5b80979e86aa6a615783e35da4052125" title="Em kg.">_peso_maximo</a>(0), <a class="code" href="class_tipo_aviao.html#a63c0214f953857a0f0e3b2e8cac97cdb">_comprimento</a>(0),
+<a name="l00059"></a>00059         <a class="code" href="class_tipo_aviao.html#ad0863e5f2878cbfa41f9b60ad46ef9cb">_envergadura</a>(0), <a class="code" href="class_tipo_aviao.html#a860c5ebf6e16244f9acac6bb2d092eec">_altura</a>(0), <a class="code" href="class_tipo_aviao.html#a15b734deaf0da2ced0926cd15447b4b9">_altitude_maxima</a>(0), <a class="code" href="class_tipo_aviao.html#a0608ad0332fcfb48d612b8484e1a7640" title="Vector de apontador de Aviao, que tem os aviões que actualmente estão a usar este TipoAviao...">_avioes_associados</a>() {}
+<a name="l00060"></a><a class="code" href="class_tipo_aviao.html#ab6a2fb59518ec5911d7cefa1080b016e">00060</a>         <a class="code" href="class_tipo_aviao.html#aab7538c6d7a967720d6dead845321510">TipoAviao</a>(<span class="keywordtype">string</span> nome_tipo, <span class="keywordtype">string</span> descricao, <span class="keywordtype">unsigned</span> categoria):
+<a name="l00061"></a>00061                 <a class="code" href="class_tipo_aviao.html#afa7bb29db72530d90930abb4b9b6dbb4" title="Ex: A321.">_nome_tipo</a>(nome_tipo), <a class="code" href="class_tipo_aviao.html#a3ffd0f7ee84a0f639235dfb06de51b80" title="Ex: Airbus 321.">_descricao</a>(descricao), <a class="code" href="class_tipo_aviao.html#ab0e0db6bd901a9cadd0ef2219c1d41f8" title="Ex: Médio curso.">_categoria</a>(categoria), <a class="code" href="class_tipo_aviao.html#a0608ad0332fcfb48d612b8484e1a7640" title="Vector de apontador de Aviao, que tem os aviões que actualmente estão a usar este TipoAviao...">_avioes_associados</a>() {}
+<a name="l00062"></a><a class="code" href="class_tipo_aviao.html#a22163bbb3a8e7b41481417c3ec95c6ed">00062</a>         <a class="code" href="class_tipo_aviao.html#aab7538c6d7a967720d6dead845321510">TipoAviao</a>(<span class="keywordtype">string</span> nome_tipo, <span class="keywordtype">string</span> descricao, <span class="keywordtype">unsigned</span> categoria, <span class="keywordtype">string</span> fabricante, <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> data_lancamento,
+<a name="l00063"></a>00063                         <span class="keywordtype">unsigned</span> preco, <span class="keywordtype">unsigned</span> maximo_passageiros, <span class="keywordtype">unsigned</span> autonomia, <span class="keywordtype">unsigned</span> velocidade_maxima,
+<a name="l00064"></a>00064                         <span class="keywordtype">unsigned</span> numero_motores, <span class="keywordtype">unsigned</span> peso_vazio, <span class="keywordtype">unsigned</span> peso_maximo, <span class="keywordtype">unsigned</span> comprimento,
+<a name="l00065"></a>00065                         <span class="keywordtype">unsigned</span> envergadura, <span class="keywordtype">unsigned</span> altura, <span class="keywordtype">unsigned</span> altitude_maxima) :
+<a name="l00066"></a>00066                                 <a class="code" href="class_tipo_aviao.html#afa7bb29db72530d90930abb4b9b6dbb4" title="Ex: A321.">_nome_tipo</a>(nome_tipo), <a class="code" href="class_tipo_aviao.html#a3ffd0f7ee84a0f639235dfb06de51b80" title="Ex: Airbus 321.">_descricao</a>(descricao), <a class="code" href="class_tipo_aviao.html#ab0e0db6bd901a9cadd0ef2219c1d41f8" title="Ex: Médio curso.">_categoria</a>(categoria), <a class="code" href="class_tipo_aviao.html#ad07fcbb4bd70adc3c4863077ac3a35b5" title="Ex: Airbus.">_fabricante</a>(fabricante), <a class="code" href="class_tipo_aviao.html#a4bcb749c9731aadb9fb162042d386853" title="Data do primeiro voo deste tipo de avião.">_data_lancamento</a>(data_lancamento),
+<a name="l00067"></a>00067                                 <a class="code" href="class_tipo_aviao.html#a1815d4cd0fff353cdd0ca73a8d391b07" title="Preço deste tipo de avião.">_preco</a>(preco), <a class="code" href="class_tipo_aviao.html#a4b5eee4329b11f37abe0a242cfae8dbb" title="Nº de passageiros máximo.">_maximo_passageiros</a>(maximo_passageiros), <a class="code" href="class_tipo_aviao.html#ad70657f49f8e679301b93846aa0dfe22" title="Em km.">_autonomia</a>(autonomia), <a class="code" href="class_tipo_aviao.html#a971a5ba2f2216a9dd67df567aae43007" title="Em km/h.">_velocidade_maxima</a>(velocidade_maxima),
+<a name="l00068"></a>00068                                 <a class="code" href="class_tipo_aviao.html#a7c4b8e74c64bd38283c0c665724cf41a">_numero_motores</a>(numero_motores), <a class="code" href="class_tipo_aviao.html#a8a1a865fcdc26fa31c6d72ab05a464f5" title="Em kg.">_peso_vazio</a>(peso_vazio), <a class="code" href="class_tipo_aviao.html#a5b80979e86aa6a615783e35da4052125" title="Em kg.">_peso_maximo</a>(peso_maximo), <a class="code" href="class_tipo_aviao.html#a63c0214f953857a0f0e3b2e8cac97cdb">_comprimento</a>(comprimento),
+<a name="l00069"></a>00069                                 <a class="code" href="class_tipo_aviao.html#ad0863e5f2878cbfa41f9b60ad46ef9cb">_envergadura</a>(envergadura), <a class="code" href="class_tipo_aviao.html#a860c5ebf6e16244f9acac6bb2d092eec">_altura</a>(altura), <a class="code" href="class_tipo_aviao.html#a15b734deaf0da2ced0926cd15447b4b9">_altitude_maxima</a>(altitude_maxima), <a class="code" href="class_tipo_aviao.html#a0608ad0332fcfb48d612b8484e1a7640" title="Vector de apontador de Aviao, que tem os aviões que actualmente estão a usar este TipoAviao...">_avioes_associados</a>() {}
+<a name="l00070"></a><a class="code" href="class_tipo_aviao.html#ad3bcd79cb3631a6f1fbeb0587d84cf7d">00070</a>         <span class="keyword">virtual</span> <a class="code" href="class_tipo_aviao.html#ad3bcd79cb3631a6f1fbeb0587d84cf7d">~TipoAviao</a>() {}
+<a name="l00071"></a>00071 
+<a name="l00072"></a><a class="code" href="class_tipo_aviao.html#a774ccd8ea84fe300c4776da5d1aacef9">00072</a>         <span class="keywordtype">string</span> <a class="code" href="class_tipo_aviao.html#a774ccd8ea84fe300c4776da5d1aacef9">getNomeTipo</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao.html#afa7bb29db72530d90930abb4b9b6dbb4" title="Ex: A321.">_nome_tipo</a>; }
+<a name="l00073"></a><a class="code" href="class_tipo_aviao.html#a3a398874fba59860ec9091ee24f0d894">00073</a>         <span class="keywordtype">string</span> <a class="code" href="class_tipo_aviao.html#a3a398874fba59860ec9091ee24f0d894">getDescricao</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao.html#a3ffd0f7ee84a0f639235dfb06de51b80" title="Ex: Airbus 321.">_descricao</a>; }
+<a name="l00074"></a><a class="code" href="class_tipo_aviao.html#a6a410fc3cf96ec6d7cebf971985cd21d">00074</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#a6a410fc3cf96ec6d7cebf971985cd21d">getCategoria</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao.html#ab0e0db6bd901a9cadd0ef2219c1d41f8" title="Ex: Médio curso.">_categoria</a>; }
+<a name="l00075"></a><a class="code" href="class_tipo_aviao.html#a02cf109cc6c860e275b25914fe494771">00075</a>         <span class="keywordtype">string</span> <a class="code" href="class_tipo_aviao.html#a02cf109cc6c860e275b25914fe494771">getFabricante</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao.html#ad07fcbb4bd70adc3c4863077ac3a35b5" title="Ex: Airbus.">_fabricante</a>; }
+<a name="l00076"></a><a class="code" href="class_tipo_aviao.html#a9bb8d29339bfebfabb436880bc8ac4fa">00076</a>         <a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> <a class="code" href="class_tipo_aviao.html#a9bb8d29339bfebfabb436880bc8ac4fa">getDataLancamento</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao.html#a4bcb749c9731aadb9fb162042d386853" title="Data do primeiro voo deste tipo de avião.">_data_lancamento</a>; }
+<a name="l00077"></a><a class="code" href="class_tipo_aviao.html#a250cecbf40f8946ed73c9a3961c1be32">00077</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#a250cecbf40f8946ed73c9a3961c1be32">getPreco</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao.html#a1815d4cd0fff353cdd0ca73a8d391b07" title="Preço deste tipo de avião.">_preco</a>; }
+<a name="l00078"></a><a class="code" href="class_tipo_aviao.html#a20334d8bf1df6d3a3c9e94c1a3be3982">00078</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#a20334d8bf1df6d3a3c9e94c1a3be3982">getMaximoPassageiros</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao.html#a4b5eee4329b11f37abe0a242cfae8dbb" title="Nº de passageiros máximo.">_maximo_passageiros</a>; }
+<a name="l00079"></a><a class="code" href="class_tipo_aviao.html#a73518c45c99345bc1276901398e28ddb">00079</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#a73518c45c99345bc1276901398e28ddb">getAutonomia</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao.html#ad70657f49f8e679301b93846aa0dfe22" title="Em km.">_autonomia</a>; }
+<a name="l00080"></a><a class="code" href="class_tipo_aviao.html#a2d6fef3040a59fba278cd5f2aa56038f">00080</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#a2d6fef3040a59fba278cd5f2aa56038f">getVelocidadeMaxima</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao.html#a971a5ba2f2216a9dd67df567aae43007" title="Em km/h.">_velocidade_maxima</a>; }
+<a name="l00081"></a><a class="code" href="class_tipo_aviao.html#a85bffb930fdcdbbbb7555f0693805325">00081</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#a85bffb930fdcdbbbb7555f0693805325">getNumeroMotores</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao.html#a7c4b8e74c64bd38283c0c665724cf41a">_numero_motores</a>; }
+<a name="l00082"></a><a class="code" href="class_tipo_aviao.html#ace09fe64b331a63f77993800e922d559">00082</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#ace09fe64b331a63f77993800e922d559">getPesoVazio</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao.html#a8a1a865fcdc26fa31c6d72ab05a464f5" title="Em kg.">_peso_vazio</a>; }
+<a name="l00083"></a><a class="code" href="class_tipo_aviao.html#aed7cf8c7da70eb7e97b9ed541b1e538e">00083</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#aed7cf8c7da70eb7e97b9ed541b1e538e">getPesoMaximo</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao.html#a5b80979e86aa6a615783e35da4052125" title="Em kg.">_peso_maximo</a>; }
+<a name="l00084"></a><a class="code" href="class_tipo_aviao.html#ab7c4e7058a8d8cbc143b6bb558b69aa5">00084</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#ab7c4e7058a8d8cbc143b6bb558b69aa5">getComprimento</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao.html#a63c0214f953857a0f0e3b2e8cac97cdb">_comprimento</a>; }
+<a name="l00085"></a><a class="code" href="class_tipo_aviao.html#a2af88b84afc095e299e407d296103f67">00085</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#a2af88b84afc095e299e407d296103f67">getEnvergadura</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao.html#ad0863e5f2878cbfa41f9b60ad46ef9cb">_envergadura</a>; }
+<a name="l00086"></a><a class="code" href="class_tipo_aviao.html#a9d1cc57b5aa3094071fb1afca2e9a378">00086</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#a9d1cc57b5aa3094071fb1afca2e9a378">getAltura</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao.html#a860c5ebf6e16244f9acac6bb2d092eec">_altura</a>; }
+<a name="l00087"></a><a class="code" href="class_tipo_aviao.html#a4465be98db8e469e8ab2e310650887d1">00087</a>         <span class="keywordtype">unsigned</span> <a class="code" href="class_tipo_aviao.html#a4465be98db8e469e8ab2e310650887d1">getAltitudeMaxima</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao.html#a15b734deaf0da2ced0926cd15447b4b9">_altitude_maxima</a>; }
+<a name="l00088"></a>00088 
+<a name="l00089"></a><a class="code" href="class_tipo_aviao.html#a45474a503074a9f03f5b09620cb3c84b">00089</a>         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao.html#a45474a503074a9f03f5b09620cb3c84b">setNomeTipo</a>(<span class="keywordtype">string</span> nome_tipo) { <a class="code" href="class_tipo_aviao.html#afa7bb29db72530d90930abb4b9b6dbb4" title="Ex: A321.">_nome_tipo</a> = nome_tipo; }
+<a name="l00090"></a><a class="code" href="class_tipo_aviao.html#a28f489161d7a16fc85dbc283e9d97094">00090</a>         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao.html#a28f489161d7a16fc85dbc283e9d97094">setDescricao</a>(<span class="keywordtype">string</span> descricao) { <a class="code" href="class_tipo_aviao.html#a3ffd0f7ee84a0f639235dfb06de51b80" title="Ex: Airbus 321.">_descricao</a> = descricao; }
+<a name="l00091"></a><a class="code" href="class_tipo_aviao.html#a98434f1bec8b93047455f7d98f2b22ef">00091</a>         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao.html#a98434f1bec8b93047455f7d98f2b22ef">setCategoria</a>(<span class="keywordtype">unsigned</span> categoria) { <a class="code" href="class_tipo_aviao.html#ab0e0db6bd901a9cadd0ef2219c1d41f8" title="Ex: Médio curso.">_categoria</a> = categoria; }
+<a name="l00092"></a><a class="code" href="class_tipo_aviao.html#ac44a5bf79c8974ab126ab8851dd57d8f">00092</a>         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao.html#ac44a5bf79c8974ab126ab8851dd57d8f">setFabricante</a>(<span class="keywordtype">string</span> fabricante) { <a class="code" href="class_tipo_aviao.html#ad07fcbb4bd70adc3c4863077ac3a35b5" title="Ex: Airbus.">_fabricante</a> = fabricante; }
+<a name="l00093"></a><a class="code" href="class_tipo_aviao.html#a50fecf0f87860148bd55829e184ad261">00093</a>         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao.html#a50fecf0f87860148bd55829e184ad261">setDataLancamento</a>(<a class="code" href="class_data_hora.html" title="Classe que contém informação acerca de uma data e hora (ex: 2010/09/03 12:00).">DataHora</a> data_lancamento) { <a class="code" href="class_tipo_aviao.html#a4bcb749c9731aadb9fb162042d386853" title="Data do primeiro voo deste tipo de avião.">_data_lancamento</a> = data_lancamento; }
+<a name="l00094"></a><a class="code" href="class_tipo_aviao.html#a66c7b9a861377ce4edaf196656b63274">00094</a>         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao.html#a66c7b9a861377ce4edaf196656b63274">setPreco</a>(<span class="keywordtype">unsigned</span> preco) { <a class="code" href="class_tipo_aviao.html#a1815d4cd0fff353cdd0ca73a8d391b07" title="Preço deste tipo de avião.">_preco</a> = preco; }
+<a name="l00095"></a><a class="code" href="class_tipo_aviao.html#a5366a37d8f6da0bf8b4d6950bc3c40c1">00095</a>         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao.html#a5366a37d8f6da0bf8b4d6950bc3c40c1">setMaximoPassageiros</a>(<span class="keywordtype">unsigned</span> maximo_passageiros) { <a class="code" href="class_tipo_aviao.html#a4b5eee4329b11f37abe0a242cfae8dbb" title="Nº de passageiros máximo.">_maximo_passageiros</a> = maximo_passageiros; }
+<a name="l00096"></a><a class="code" href="class_tipo_aviao.html#a51bfa9769e7d8b9114bee8e7c86b597c">00096</a>         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao.html#a51bfa9769e7d8b9114bee8e7c86b597c">setAutonomia</a>(<span class="keywordtype">unsigned</span> autonomia) { <a class="code" href="class_tipo_aviao.html#ad70657f49f8e679301b93846aa0dfe22" title="Em km.">_autonomia</a> = autonomia; }
+<a name="l00097"></a><a class="code" href="class_tipo_aviao.html#a58e4fb196ee4621c6c4142208f9007cb">00097</a>         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao.html#a58e4fb196ee4621c6c4142208f9007cb">setVelocidadeMaxima</a>(<span class="keywordtype">unsigned</span> velocidade_maxima) { <a class="code" href="class_tipo_aviao.html#a971a5ba2f2216a9dd67df567aae43007" title="Em km/h.">_velocidade_maxima</a> = velocidade_maxima; }
+<a name="l00098"></a><a class="code" href="class_tipo_aviao.html#a5be72bb26d14ab86024ab2c63584c4d1">00098</a>         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao.html#a5be72bb26d14ab86024ab2c63584c4d1">setNumeroMotores</a>(<span class="keywordtype">unsigned</span> numero_motores) { <a class="code" href="class_tipo_aviao.html#a7c4b8e74c64bd38283c0c665724cf41a">_numero_motores</a> = numero_motores; }
+<a name="l00099"></a><a class="code" href="class_tipo_aviao.html#a12eb815a8c09c69c268cccb32b223c8e">00099</a>         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao.html#a12eb815a8c09c69c268cccb32b223c8e">setPesoVazio</a>(<span class="keywordtype">unsigned</span> peso_vazio) { <a class="code" href="class_tipo_aviao.html#a8a1a865fcdc26fa31c6d72ab05a464f5" title="Em kg.">_peso_vazio</a> = peso_vazio; }
+<a name="l00100"></a><a class="code" href="class_tipo_aviao.html#a29565a0fec98631ea212456061242dfb">00100</a>         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao.html#a29565a0fec98631ea212456061242dfb">setPesoMaximo</a>(<span class="keywordtype">unsigned</span> peso_maximo) { <a class="code" href="class_tipo_aviao.html#a5b80979e86aa6a615783e35da4052125" title="Em kg.">_peso_maximo</a> = peso_maximo; }
+<a name="l00101"></a><a class="code" href="class_tipo_aviao.html#ad395441996555e26911c856f5a562787">00101</a>         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao.html#ad395441996555e26911c856f5a562787">setComprimento</a>(<span class="keywordtype">unsigned</span> comprimento) { <a class="code" href="class_tipo_aviao.html#a63c0214f953857a0f0e3b2e8cac97cdb">_comprimento</a> = comprimento; }
+<a name="l00102"></a><a class="code" href="class_tipo_aviao.html#a220bfcf1fc03aa0e56ce6c54a57cb941">00102</a>         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao.html#a220bfcf1fc03aa0e56ce6c54a57cb941">setEnvergadura</a>(<span class="keywordtype">unsigned</span> envergadura) { <a class="code" href="class_tipo_aviao.html#ad0863e5f2878cbfa41f9b60ad46ef9cb">_envergadura</a> = envergadura; }
+<a name="l00103"></a><a class="code" href="class_tipo_aviao.html#a2a5f270530b6d260294aee3820216284">00103</a>         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao.html#a2a5f270530b6d260294aee3820216284">setAltura</a>(<span class="keywordtype">unsigned</span> altura) { <a class="code" href="class_tipo_aviao.html#a860c5ebf6e16244f9acac6bb2d092eec">_altura</a> = altura; }
+<a name="l00104"></a><a class="code" href="class_tipo_aviao.html#a64166d5bfc900c862633929743dfdd8d">00104</a>         <span class="keywordtype">void</span> <a class="code" href="class_tipo_aviao.html#a64166d5bfc900c862633929743dfdd8d">setAltitudeMaxima</a>(<span class="keywordtype">unsigned</span> altitude_maxima) { <a class="code" href="class_tipo_aviao.html#a15b734deaf0da2ced0926cd15447b4b9">_altitude_maxima</a> = altitude_maxima; }
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106 
+<a name="l00107"></a><a class="code" href="class_tipo_aviao.html#a52bb2cc34c9946e864af1e3c549fb0c9">00107</a>         vector &lt;Aviao*&gt; <a class="code" href="class_tipo_aviao.html#a52bb2cc34c9946e864af1e3c549fb0c9">getAvioesAssociados</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao.html#a0608ad0332fcfb48d612b8484e1a7640" title="Vector de apontador de Aviao, que tem os aviões que actualmente estão a usar este TipoAviao...">_avioes_associados</a>; }
+<a name="l00108"></a>00108         <span class="comment">//Variante dos gets para os vectores, usadas em iteradores constantes</span>
+<a name="l00109"></a><a class="code" href="class_tipo_aviao.html#a99f0db7026bd89812c0d15f6f424ab51">00109</a>         <span class="keyword">const</span> vector &lt;Aviao*&gt;&amp; <a class="code" href="class_tipo_aviao.html#a99f0db7026bd89812c0d15f6f424ab51">getConstRefAvioesAssociados</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao.html#a0608ad0332fcfb48d612b8484e1a7640" title="Vector de apontador de Aviao, que tem os aviões que actualmente estão a usar este TipoAviao...">_avioes_associados</a>; }
+<a name="l00110"></a>00110         <span class="comment">//Variante do get do vector que permite alterá-lo através da referência que é dada</span>
+<a name="l00111"></a><a class="code" href="class_tipo_aviao.html#a2ade2db16bf21200ee56b3d67370622d">00111</a>         vector &lt;Aviao*&gt;&amp; <a class="code" href="class_tipo_aviao.html#a2ade2db16bf21200ee56b3d67370622d">getRefAvioesAssociados</a>() { <span class="keywordflow">return</span> <a class="code" href="class_tipo_aviao.html#a0608ad0332fcfb48d612b8484e1a7640" title="Vector de apontador de Aviao, que tem os aviões que actualmente estão a usar este TipoAviao...">_avioes_associados</a>; }
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113 
+<a name="l00118"></a>00118         <span class="keywordtype">bool</span> <a class="code" href="class_tipo_aviao.html#adb7b2ca9543e8c859b526eeb67d93f50" title="Operador que permite verificar se dois Tipos de Avião são equivalentes.">operator==</a>(<span class="keyword">const</span> <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a> &amp;tipo_aviao) <span class="keyword">const</span>;
+<a name="l00119"></a>00119 
+<a name="l00121"></a>00121         <span class="keywordtype">bool</span> <a class="code" href="class_tipo_aviao.html#a92c6707946f9b1dea1fb6842b02857d6" title="Oprador que verifica se o nome do tipo de um avião é &amp;quot;menor&amp;quot; do que outro.">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="class_tipo_aviao.html" title="Classe que contém informação acerca de um determinadp tipo de avião.">TipoAviao</a> &amp;tipo_aviao) <span class="keyword">const</span>;
+<a name="l00122"></a>00122 };
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Gerado em Wed Dec 22 2010 04:57:37 para AEDA-2MIEIC1-T4 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>
