@@ -1,8 +1,6 @@
 Airport-Management-System
 ==================
 
-## Overview
-
 Implementation of an airport management system capable of:
 - Manage airline companies
 - Manage passenger check-ins
